@@ -1,0 +1,6 @@
+<%@ include file="/html/init.jsp" %>
+<%@
+taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
+<span>
+  <liferay-ui:message key="name" />
+</span>

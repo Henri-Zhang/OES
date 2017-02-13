@@ -1,0 +1,5 @@
+<%@ include file="/html/init.jsp" %>
+
+<span>
+  This sign in portlet.
+</span>

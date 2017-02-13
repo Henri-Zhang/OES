@@ -1,0 +1,6 @@
+<%@ include file="/init.jsp" %>
+
+<h2>
+    ${test }
+</h2>
+

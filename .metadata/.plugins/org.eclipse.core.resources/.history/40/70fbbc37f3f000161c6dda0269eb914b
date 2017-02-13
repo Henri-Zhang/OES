@@ -1,0 +1,5 @@
+javax.portlet.display-name.sign-up-portlet=sign-up-portlet JSP
+javax.portlet.keywords.sign-up-portlet=sign-up-portlet,jsp
+javax.portlet.short-title.sign-up-portlet=sign-up-portlet JSP
+javax.portlet.title.sign-up-portlet=sign-up-portlet JSP Portlet
+sign-up-portlet.caption=Hello from sign-up-portlet JSP!

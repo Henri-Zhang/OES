@@ -1,0 +1,6 @@
+create-new-portlet=true
+default-plugin-project-maven-groupid=com.barrow
+eclipse.preferences.version=1
+include-sample-code=true
+project-module-default-build-type-option=gradle-module
+project-plugin_default-build-type-option=maven

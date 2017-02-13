@@ -1,0 +1,11 @@
+<%@ include file="/init.jsp" %>
+
+<portlet:actionURL name="signUp" var="sign-up" />
+
+<h2>
+  ${test }
+</h2>
+
+<aui:form action="sign-up" method="post" name="name">
+  <aui:button name="register" value="xxx" />
+</aui:form>

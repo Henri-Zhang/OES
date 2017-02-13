@@ -1,0 +1,17 @@
+<%@page import="javax.portlet.ActionRequest"%>
+<%@ include file="/init.jsp" %>
+
+<portlet:actionURL var="signUpURL">
+  <portlet:param name="<%= ActionRequest.ACTION_NAME %>" value="signUp"/>
+</portlet:actionURL>
+
+<h2>
+  ${test }
+</h2>
+
+<aui:form action="${signUpURL }" method="POST" name="sign-up-form">
+  <aui:input name="vic" type="text">
+    <aui:validator name="required" />
+  </aui:input>
+  <aui:button type="submit" value="Register" />
+</aui:form>

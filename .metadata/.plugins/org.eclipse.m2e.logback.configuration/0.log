@@ -1,0 +1,1004 @@
+2017-02-08 19:32:10,232 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-02-08 19:48:14,983 [ModalContext] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Collecting project info '/pom.xml' /home/barrow/workspace/oes-portlet/pom.xml
+2017-02-08 19:48:15,273 [ModalContext] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:portal-service:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 19:48:15,283 [ModalContext] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-bridges:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 19:48:15,285 [ModalContext] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-taglib:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 19:48:15,286 [ModalContext] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-java:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 19:48:16,804 [ModalContext] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.example.plugins:oes-portlet:1.0.0-SNAPSHOT @ /home/barrow/workspace/oes-portlet/pom.xml.
+2017-02-08 19:48:17,015 [ModalContext] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} is missing, no dependency information available
+2017-02-08 19:48:17,807 [ModalContext] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /oes-portlet/src/main/java
+2017-02-08 19:48:17,808 [ModalContext] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /oes-portlet/src/main/resources
+2017-02-08 19:48:17,822 [ModalContext] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /oes-portlet/src/test/java
+2017-02-08 19:48:19,183 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:portal-service:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 19:48:19,184 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-bridges:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 19:48:19,186 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-taglib:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 19:48:19,187 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-java:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 19:48:19,455 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-08 19:48:19,460 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-08 19:48:19,463 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-08 19:48:19,464 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes-portlet/src/test/resources
+2017-02-08 19:48:19,468 [Worker-19] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of oes-portlet
+2017-02-08 19:48:19,469 [Worker-19] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for oes-portlet
+2017-02-08 19:48:19,503 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} is missing, no dependency information available
+2017-02-08 19:48:19,506 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for com.liferay.maven.plugins:liferay-maven-plugin:${liferay.maven.plugin.version}: Plugin com.liferay.maven.plugins:liferay-maven-plugin:${liferay.maven.plugin.version} or one of its dependencies could not be resolved: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} has not been downloaded from it before.
+2017-02-08 19:48:19,509 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} is missing, no dependency information available
+2017-02-08 19:48:19,510 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for com.liferay.maven.plugins:liferay-maven-plugin:${liferay.maven.plugin.version}: Plugin com.liferay.maven.plugins:liferay-maven-plugin:${liferay.maven.plugin.version} or one of its dependencies could not be resolved: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} has not been downloaded from it before.
+2017-02-08 19:48:19,532 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-08 19:48:19,540 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} is missing, no dependency information available
+2017-02-08 19:48:19,577 [ModalContext] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} is missing, no dependency information available
+2017-02-08 19:48:19,578 [ModalContext] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for com.liferay.maven.plugins:liferay-maven-plugin:${liferay.maven.plugin.version}: Plugin com.liferay.maven.plugins:liferay-maven-plugin:${liferay.maven.plugin.version} or one of its dependencies could not be resolved: Failure to find com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} in https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced
+2017-02-08 19:48:19,604 [ModalContext] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} is missing, no dependency information available
+2017-02-08 19:48:19,604 [ModalContext] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for com.liferay.maven.plugins:liferay-maven-plugin:${liferay.maven.plugin.version}: Plugin com.liferay.maven.plugins:liferay-maven-plugin:${liferay.maven.plugin.version} or one of its dependencies could not be resolved: Failure to find com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} in https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced
+2017-02-08 19:48:19,613 [ModalContext] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:portal-service:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 19:48:19,614 [ModalContext] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-bridges:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 19:48:19,615 [ModalContext] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-taglib:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 19:48:19,616 [ModalContext] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-java:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 19:48:19,707 [ModalContext] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 4 sec
+2017-02-08 19:48:24,274 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-08 19:48:24,283 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-08 19:48:24,285 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-08 19:48:24,285 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes-portlet/src/test/resources
+2017-02-08 19:48:24,291 [Worker-22] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} is missing, no dependency information available
+2017-02-08 20:27:19,024 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-02-08 20:27:20,509 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:portal-service:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 20:27:20,570 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-bridges:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 20:27:20,586 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-taglib:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 20:27:20,621 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-java:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 20:27:21,025 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:portal-service:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 20:27:21,026 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-bridges:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 20:27:21,027 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-taglib:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 20:27:21,028 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-java:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 20:27:23,305 [Worker-7] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.example.plugins:oes-portlet:1.0.0-SNAPSHOT @ /home/barrow/workspace/oes-portlet/pom.xml.
+2017-02-08 20:27:23,438 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:portal-service:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 20:27:23,441 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-bridges:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 20:27:23,443 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-taglib:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 20:27:23,444 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-java:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 20:27:23,727 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} is missing, no dependency information available
+2017-02-08 20:27:23,729 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for com.liferay.maven.plugins:liferay-maven-plugin:${liferay.maven.plugin.version}: Plugin com.liferay.maven.plugins:liferay-maven-plugin:${liferay.maven.plugin.version} or one of its dependencies could not be resolved: Failure to find com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} in https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced
+2017-02-08 20:27:23,843 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} is missing, no dependency information available
+2017-02-08 20:27:23,844 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for com.liferay.maven.plugins:liferay-maven-plugin:${liferay.maven.plugin.version}: Plugin com.liferay.maven.plugins:liferay-maven-plugin:${liferay.maven.plugin.version} or one of its dependencies could not be resolved: Failure to find com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} in https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced
+2017-02-08 20:27:23,851 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:portal-service:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 20:27:23,853 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-bridges:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 20:27:23,854 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-taglib:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 20:27:23,855 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-java:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 20:27:23,874 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} is missing, no dependency information available
+2017-02-08 20:27:25,350 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:portal-service:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 20:27:25,352 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-bridges:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 20:27:25,353 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-taglib:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 20:27:25,354 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-java:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 20:27:25,860 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-08 20:27:25,869 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-08 20:27:25,890 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-08 20:27:25,890 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes-portlet/src/test/resources
+2017-02-08 20:27:25,900 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} is missing, no dependency information available
+2017-02-08 20:27:35,616 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-08 20:27:35,639 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-08 20:27:35,641 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-08 20:27:35,641 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes-portlet/src/test/resources
+2017-02-08 20:27:35,649 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} is missing, no dependency information available
+2017-02-08 21:37:35,313 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-02-08 21:37:44,631 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:portal-service:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 21:37:44,641 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-bridges:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 21:37:44,642 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-taglib:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 21:37:44,643 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-java:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 21:37:45,772 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-08 21:37:45,779 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-08 21:37:45,788 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-08 21:37:45,789 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes-portlet/src/test/resources
+2017-02-08 21:37:45,808 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} is missing, no dependency information available
+2017-02-08 21:49:03,400 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-02-08 21:49:12,267 [Worker-20] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:portal-service:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 21:49:12,286 [Worker-20] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-bridges:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 21:49:12,287 [Worker-20] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-taglib:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 21:49:12,288 [Worker-20] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-java:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 21:49:13,970 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-08 21:49:13,976 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-08 21:49:13,980 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-08 21:49:13,981 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes-portlet/src/test/resources
+2017-02-08 21:49:14,000 [Worker-20] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} is missing, no dependency information available
+2017-02-08 21:53:09,756 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-02-08 21:53:17,724 [Worker-20] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:portal-service:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 21:53:17,729 [Worker-20] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-bridges:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 21:53:17,731 [Worker-20] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-taglib:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 21:53:17,732 [Worker-20] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-java:jar:${liferay.version} is missing, no dependency information available
+2017-02-08 21:53:18,790 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-08 21:53:18,797 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-08 21:53:18,801 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-08 21:53:18,801 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes-portlet/src/test/resources
+2017-02-08 21:53:18,837 [Worker-20] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} is missing, no dependency information available
+2017-02-09 06:47:23,617 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-02-09 06:47:27,381 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:portal-service:jar:${liferay.version} is missing, no dependency information available
+2017-02-09 06:47:27,406 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-bridges:jar:${liferay.version} is missing, no dependency information available
+2017-02-09 06:47:27,408 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-taglib:jar:${liferay.version} is missing, no dependency information available
+2017-02-09 06:47:27,410 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-java:jar:${liferay.version} is missing, no dependency information available
+2017-02-09 06:47:29,182 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-09 06:47:29,188 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-09 06:47:29,193 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-09 06:47:29,193 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes-portlet/src/test/resources
+2017-02-09 06:47:29,269 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} is missing, no dependency information available
+2017-02-09 22:34:16,295 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-02-09 22:34:24,705 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:portal-service:jar:${liferay.version} is missing, no dependency information available
+2017-02-09 22:34:24,730 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-bridges:jar:${liferay.version} is missing, no dependency information available
+2017-02-09 22:34:24,731 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-taglib:jar:${liferay.version} is missing, no dependency information available
+2017-02-09 22:34:24,733 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-java:jar:${liferay.version} is missing, no dependency information available
+2017-02-09 22:34:27,699 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-09 22:34:27,704 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-09 22:34:27,706 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-09 22:34:27,706 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes-portlet/src/test/resources
+2017-02-09 22:34:27,825 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} is missing, no dependency information available
+2017-02-09 22:35:53,788 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-09 22:35:53,809 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-09 22:35:53,811 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-09 22:35:53,812 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes-portlet/src/test/resources
+2017-02-09 22:35:53,818 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} is missing, no dependency information available
+2017-02-09 22:55:17,089 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-02-09 22:55:21,883 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:portal-service:jar:${liferay.version} is missing, no dependency information available
+2017-02-09 22:55:21,910 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-bridges:jar:${liferay.version} is missing, no dependency information available
+2017-02-09 22:55:21,911 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-taglib:jar:${liferay.version} is missing, no dependency information available
+2017-02-09 22:55:21,912 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-java:jar:${liferay.version} is missing, no dependency information available
+2017-02-09 22:55:23,846 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-09 22:55:23,852 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-09 22:55:23,861 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-09 22:55:23,861 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes-portlet/src/test/resources
+2017-02-09 22:55:23,882 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} is missing, no dependency information available
+2017-02-10 20:59:40,793 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-02-10 22:23:55,777 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/archetypes/maven-archetype-quickstart/1.1/maven-archetype-quickstart-1.1.jar
+2017-02-10 22:23:56,211 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/archetypes/maven-archetype-quickstart/1.1/maven-archetype-quickstart-1.1.jar
+2017-02-10 22:23:57,321 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/archetypes/maven-archetype-quickstart/1.1/maven-archetype-quickstart-1.1.pom
+2017-02-10 22:23:57,723 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/archetypes/maven-archetype-quickstart/1.1/maven-archetype-quickstart-1.1.pom
+2017-02-10 22:25:15,978 [Worker-56] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Collecting project info '/pom.xml' /home/barrow/workspace/oes/pom.xml
+2017-02-10 22:25:18,077 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/2.6/maven-resources-plugin-2.6.jar
+2017-02-10 22:25:20,945 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/2.6/maven-resources-plugin-2.6.jar
+2017-02-10 22:25:21,429 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.1/maven-compiler-plugin-3.1.jar
+2017-02-10 22:25:28,115 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.1/maven-compiler-plugin-3.1.jar
+2017-02-10 22:25:28,826 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/2.4/maven-jar-plugin-2.4.jar
+2017-02-10 22:25:34,261 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/2.4/maven-jar-plugin-2.4.jar
+2017-02-10 22:25:39,015 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.1/maven-compiler-plugin-3.1.pom
+2017-02-10 22:25:40,136 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.1/maven-compiler-plugin-3.1.pom
+2017-02-10 22:25:40,990 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/24/maven-plugins-24.pom
+2017-02-10 22:25:46,822 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/24/maven-plugins-24.pom
+2017-02-10 22:25:49,234 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/23/maven-parent-23.pom
+2017-02-10 22:26:17,069 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2017-02-10 22:26:19,194 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/23/maven-parent-23.pom
+2017-02-10 22:26:23,462 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/apache/13/apache-13.pom
+2017-02-10 22:26:29,882 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/apache/13/apache-13.pom
+2017-02-10 22:26:34,285 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/0.1/maven-shared-utils-0.1.pom
+2017-02-10 22:26:41,334 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/0.1/maven-shared-utils-0.1.pom
+2017-02-10 22:26:44,746 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/18/maven-shared-components-18.pom
+2017-02-10 22:28:35,117 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/18/maven-shared-components-18.pom
+2017-02-10 22:30:30,209 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/22/maven-parent-22.pom
+2017-02-10 22:33:15,785 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/22/maven-parent-22.pom
+2017-02-10 22:33:35,589 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/apache/11/apache-11.pom
+2017-02-10 22:36:05,000 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/apache/11/apache-11.pom
+2017-02-10 22:36:28,011 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/2.0.1/jsr305-2.0.1.pom
+2017-02-10 22:36:34,875 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/2.0.1/jsr305-2.0.1.pom
+2017-02-10 22:36:59,342 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.pom
+2017-02-10 22:37:27,204 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.pom
+2017-02-10 22:37:45,069 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/19/maven-shared-components-19.pom
+2017-02-10 22:37:59,566 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/19/maven-shared-components-19.pom
+2017-02-10 22:38:13,880 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/2.2.1/maven-plugin-api-2.2.1.pom
+2017-02-10 22:38:15,899 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/2.2.1/maven-plugin-api-2.2.1.pom
+2017-02-10 22:38:32,132 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/maven/2.2.1/maven-2.2.1.pom
+2017-02-10 22:40:04,967 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/maven/2.2.1/maven-2.2.1.pom
+2017-02-10 22:40:20,734 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/11/maven-parent-11.pom
+2017-02-10 22:43:03,359 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/11/maven-parent-11.pom
+2017-02-10 22:43:23,975 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/apache/5/apache-5.pom
+2017-02-10 22:43:43,507 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/apache/5/apache-5.pom
+2017-02-10 22:43:54,024 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/maven-core/2.2.1/maven-core-2.2.1.pom
+2017-02-10 22:44:58,771 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/maven-core/2.2.1/maven-core-2.2.1.pom
+2017-02-10 22:45:24,182 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings/2.2.1/maven-settings-2.2.1.pom
+2017-02-10 22:45:29,126 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings/2.2.1/maven-settings-2.2.1.pom
+2017-02-10 22:46:03,669 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/2.2.1/maven-model-2.2.1.pom
+2017-02-10 22:46:36,905 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/2.2.1/maven-model-2.2.1.pom
+2017-02-10 22:46:45,653 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.11/plexus-interpolation-1.11.pom
+2017-02-10 22:46:49,328 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.11/plexus-interpolation-1.11.pom
+2017-02-10 22:47:03,494 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-parameter-documenter/2.2.1/maven-plugin-parameter-documenter-2.2.1.pom
+2017-02-10 22:47:09,050 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-parameter-documenter/2.2.1/maven-plugin-parameter-documenter-2.2.1.pom
+2017-02-10 22:47:36,137 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/slf4j/slf4j-jdk14/1.5.6/slf4j-jdk14-1.5.6.pom
+2017-02-10 22:47:37,923 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/slf4j/slf4j-jdk14/1.5.6/slf4j-jdk14-1.5.6.pom
+2017-02-10 22:47:52,383 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.5.6/slf4j-parent-1.5.6.pom
+2017-02-10 22:48:38,457 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.5.6/slf4j-parent-1.5.6.pom
+2017-02-10 22:49:08,814 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.5.6/slf4j-api-1.5.6.pom
+2017-02-10 22:49:19,626 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.5.6/slf4j-api-1.5.6.pom
+2017-02-10 22:49:38,000 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/slf4j/jcl-over-slf4j/1.5.6/jcl-over-slf4j-1.5.6.pom
+2017-02-10 22:49:42,841 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/slf4j/jcl-over-slf4j/1.5.6/jcl-over-slf4j-1.5.6.pom
+2017-02-10 22:50:46,232 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/maven-profile/2.2.1/maven-profile-2.2.1.pom
+2017-02-10 22:50:56,927 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/maven-profile/2.2.1/maven-profile-2.2.1.pom
+2017-02-10 22:51:13,146 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/2.2.1/maven-artifact-2.2.1.pom
+2017-02-10 22:51:16,926 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/2.2.1/maven-artifact-2.2.1.pom
+2017-02-10 22:51:33,873 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/maven-repository-metadata/2.2.1/maven-repository-metadata-2.2.1.pom
+2017-02-10 22:51:40,416 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/maven-repository-metadata/2.2.1/maven-repository-metadata-2.2.1.pom
+2017-02-10 22:52:28,958 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/maven-error-diagnostics/2.2.1/maven-error-diagnostics-2.2.1.pom
+2017-02-10 22:52:35,907 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/maven-error-diagnostics/2.2.1/maven-error-diagnostics-2.2.1.pom
+2017-02-10 22:53:00,221 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/maven-project/2.2.1/maven-project-2.2.1.pom
+2017-02-10 22:53:10,047 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/maven-project/2.2.1/maven-project-2.2.1.pom
+2017-02-10 22:53:48,826 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact-manager/2.2.1/maven-artifact-manager-2.2.1.pom
+2017-02-10 22:54:02,813 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact-manager/2.2.1/maven-artifact-manager-2.2.1.pom
+2017-02-10 22:54:11,038 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/backport-util-concurrent/backport-util-concurrent/3.1/backport-util-concurrent-3.1.pom
+2017-02-10 22:54:15,630 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/backport-util-concurrent/backport-util-concurrent/3.1/backport-util-concurrent-3.1.pom
+2017-02-10 22:54:44,137 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-registry/2.2.1/maven-plugin-registry-2.2.1.pom
+2017-02-10 22:54:51,305 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-registry/2.2.1/maven-plugin-registry-2.2.1.pom
+2017-02-10 22:55:05,880 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-descriptor/2.2.1/maven-plugin-descriptor-2.2.1.pom
+2017-02-10 22:55:12,401 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-descriptor/2.2.1/maven-plugin-descriptor-2.2.1.pom
+2017-02-10 22:55:32,737 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/maven-monitor/2.2.1/maven-monitor-2.2.1.pom
+2017-02-10 22:55:40,725 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/maven-monitor/2.2.1/maven-monitor-2.2.1.pom
+2017-02-10 22:56:04,280 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-sec-dispatcher/1.3/plexus-sec-dispatcher-1.3.pom
+2017-02-10 22:56:12,746 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-sec-dispatcher/1.3/plexus-sec-dispatcher-1.3.pom
+2017-02-10 22:56:34,337 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/sonatype/spice/spice-parent/12/spice-parent-12.pom
+2017-02-10 22:57:27,640 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/sonatype/spice/spice-parent/12/spice-parent-12.pom
+2017-02-10 22:57:43,782 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/sonatype/forge/forge-parent/4/forge-parent-4.pom
+2017-02-10 22:58:28,631 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/sonatype/forge/forge-parent/4/forge-parent-4.pom
+2017-02-10 22:58:49,304 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.5.5/plexus-utils-1.5.5.pom
+2017-02-10 22:59:24,924 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.5.5/plexus-utils-1.5.5.pom
+2017-02-10 22:59:37,108 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-cipher/1.4/plexus-cipher-1.4.pom
+2017-02-10 22:59:52,365 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-cipher/1.4/plexus-cipher-1.4.pom
+2017-02-10 23:00:40,257 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.pom
+2017-02-10 23:00:42,548 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.pom
+2017-02-10 23:01:00,480 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/1.5.5/plexus-containers-1.5.5.pom
+2017-02-10 23:01:28,021 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/1.5.5/plexus-containers-1.5.5.pom
+2017-02-10 23:01:57,617 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/2.0.7/plexus-2.0.7.pom
+2017-02-10 23:04:04,612 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/2.0.7/plexus-2.0.7.pom
+2017-02-10 23:04:31,092 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.2/plexus-compiler-api-2.2.pom
+2017-02-10 23:04:34,343 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.2/plexus-compiler-api-2.2.pom
+2017-02-10 23:04:46,591 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler/2.2/plexus-compiler-2.2.pom
+2017-02-10 23:05:09,372 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler/2.2/plexus-compiler-2.2.pom
+2017-02-10 23:05:25,863 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/1.3.1/plexus-components-1.3.1.pom
+2017-02-10 23:05:37,810 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/1.3.1/plexus-components-1.3.1.pom
+2017-02-10 23:05:53,498 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/3.3.1/plexus-3.3.1.pom
+2017-02-10 23:11:51,168 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/3.3.1/plexus-3.3.1.pom
+2017-02-10 23:13:15,073 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.0.8/plexus-utils-3.0.8.pom
+2017-02-10 23:13:46,788 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.0.8/plexus-utils-3.0.8.pom
+2017-02-10 23:14:41,738 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/3.2/plexus-3.2.pom
+2017-02-10 23:17:12,748 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/3.2/plexus-3.2.pom
+2017-02-10 23:17:18,040 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.2/plexus-compiler-manager-2.2.pom
+2017-02-10 23:17:24,193 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.2/plexus-compiler-manager-2.2.pom
+2017-02-10 23:17:40,135 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.2/plexus-compiler-javac-2.2.pom
+2017-02-10 23:17:44,087 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.2/plexus-compiler-javac-2.2.pom
+2017-02-10 23:18:44,400 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compilers/2.2/plexus-compilers-2.2.pom
+2017-02-10 23:20:02,107 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compilers/2.2/plexus-compilers-2.2.pom
+2017-02-10 23:21:13,047 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-container-default/1.5.5/plexus-container-default-1.5.5.pom
+2017-02-10 23:23:49,879 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-container-default/1.5.5/plexus-container-default-1.5.5.pom
+2017-02-10 23:24:38,429 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.4.5/plexus-utils-1.4.5.pom
+2017-02-10 23:24:44,997 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.4.5/plexus-utils-1.4.5.pom
+2017-02-10 23:25:12,638 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-classworlds/2.2.2/plexus-classworlds-2.2.2.pom
+2017-02-10 23:25:31,492 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-classworlds/2.2.2/plexus-classworlds-2.2.2.pom
+2017-02-10 23:25:53,866 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/xbean/xbean-reflect/3.4/xbean-reflect-3.4.pom
+2017-02-10 23:26:03,170 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/xbean/xbean-reflect/3.4/xbean-reflect-3.4.pom
+2017-02-10 23:26:16,017 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/xbean/xbean/3.4/xbean-3.4.pom
+2017-02-10 23:27:36,673 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/xbean/xbean/3.4/xbean-3.4.pom
+2017-02-10 23:27:41,962 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/log4j/log4j/1.2.12/log4j-1.2.12.pom
+2017-02-10 23:27:53,705 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/log4j/log4j/1.2.12/log4j-1.2.12.pom
+2017-02-10 23:28:07,070 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/commons-logging/commons-logging-api/1.1/commons-logging-api-1.1.pom
+2017-02-10 23:28:58,454 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/commons-logging/commons-logging-api/1.1/commons-logging-api-1.1.pom
+2017-02-10 23:29:13,320 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/google/collections/google-collections/1.0/google-collections-1.0.pom
+2017-02-10 23:29:19,474 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/google/collections/google-collections/1.0/google-collections-1.0.pom
+2017-02-10 23:29:36,225 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/google/google/1/google-1.pom
+2017-02-10 23:29:38,737 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/google/google/1/google-1.pom
+2017-02-10 23:29:39,921 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/junit/junit/3.8.2/junit-3.8.2.pom
+2017-02-10 23:29:40,248 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/junit/junit/3.8.2/junit-3.8.2.pom
+2017-02-10 23:29:40,592 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.5.1/plexus-utils-1.5.1.jar
+2017-02-10 23:29:44,709 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.5.1/plexus-utils-1.5.1.jar
+2017-02-10 23:29:44,985 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/0.1/maven-shared-utils-0.1.jar
+2017-02-10 23:29:48,030 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/0.1/maven-shared-utils-0.1.jar
+2017-02-10 23:29:48,309 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/2.0.1/jsr305-2.0.1.jar
+2017-02-10 23:29:49,418 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/2.0.1/jsr305-2.0.1.jar
+2017-02-10 23:29:49,702 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.jar
+2017-02-10 23:29:50,343 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.jar
+2017-02-10 23:29:50,642 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.jar
+2017-02-10 23:29:50,931 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.jar
+2017-02-10 23:29:51,216 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.2/plexus-compiler-api-2.2.jar
+2017-02-10 23:29:51,793 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.2/plexus-compiler-api-2.2.jar
+2017-02-10 23:29:52,078 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.2/plexus-compiler-manager-2.2.jar
+2017-02-10 23:29:52,451 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.2/plexus-compiler-manager-2.2.jar
+2017-02-10 23:29:52,734 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.2/plexus-compiler-javac-2.2.jar
+2017-02-10 23:29:53,361 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.2/plexus-compiler-javac-2.2.jar
+2017-02-10 23:29:53,642 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-container-default/1.5.5/plexus-container-default-1.5.5.jar
+2017-02-10 23:29:57,233 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-container-default/1.5.5/plexus-container-default-1.5.5.jar
+2017-02-10 23:29:58,083 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-classworlds/2.2.2/plexus-classworlds-2.2.2.jar
+2017-02-10 23:29:58,909 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-classworlds/2.2.2/plexus-classworlds-2.2.2.jar
+2017-02-10 23:29:59,675 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/xbean/xbean-reflect/3.4/xbean-reflect-3.4.jar
+2017-02-10 23:30:02,454 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/xbean/xbean-reflect/3.4/xbean-reflect-3.4.jar
+2017-02-10 23:30:02,737 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/log4j/log4j/1.2.12/log4j-1.2.12.jar
+2017-02-10 23:30:08,664 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/log4j/log4j/1.2.12/log4j-1.2.12.jar
+2017-02-10 23:30:10,558 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/commons-logging/commons-logging-api/1.1/commons-logging-api-1.1.jar
+2017-02-10 23:30:11,557 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/commons-logging/commons-logging-api/1.1/commons-logging-api-1.1.jar
+2017-02-10 23:30:11,895 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/google/collections/google-collections/1.0/google-collections-1.0.jar
+2017-02-10 23:30:24,459 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/google/collections/google-collections/1.0/google-collections-1.0.jar
+2017-02-10 23:30:24,738 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/junit/junit/3.8.2/junit-3.8.2.jar
+2017-02-10 23:30:26,160 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/junit/junit/3.8.2/junit-3.8.2.jar
+2017-02-10 23:30:28,178 [Worker-56] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.barrow:oes:0.0.1-SNAPSHOT @ /home/barrow/workspace/oes/pom.xml.
+2017-02-10 23:30:29,770 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/2.6/maven-resources-plugin-2.6.pom
+2017-02-10 23:30:30,452 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/2.6/maven-resources-plugin-2.6.pom
+2017-02-10 23:30:30,744 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/23/maven-plugins-23.pom
+2017-02-10 23:30:31,159 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/23/maven-plugins-23.pom
+2017-02-10 23:30:31,468 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/2.12.4/maven-surefire-plugin-2.12.4.pom
+2017-02-10 23:30:31,947 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/2.12.4/maven-surefire-plugin-2.12.4.pom
+2017-02-10 23:30:32,321 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire/2.12.4/surefire-2.12.4.pom
+2017-02-10 23:30:32,839 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire/2.12.4/surefire-2.12.4.pom
+2017-02-10 23:30:33,141 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/2.4/maven-jar-plugin-2.4.pom
+2017-02-10 23:30:33,557 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/2.4/maven-jar-plugin-2.4.pom
+2017-02-10 23:30:33,943 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/maven-archiver/2.5/maven-archiver-2.5.pom
+2017-02-10 23:30:34,235 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/maven-archiver/2.5/maven-archiver-2.5.pom
+2017-02-10 23:30:34,542 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/17/maven-shared-components-17.pom
+2017-02-10 23:30:34,934 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/17/maven-shared-components-17.pom
+2017-02-10 23:30:35,260 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/2.1/plexus-archiver-2.1.pom
+2017-02-10 23:30:35,556 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/2.1/plexus-archiver-2.1.pom
+2017-02-10 23:30:35,929 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/2.0.2/plexus-io-2.0.2.pom
+2017-02-10 23:30:36,221 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/2.0.2/plexus-io-2.0.2.pom
+2017-02-10 23:30:36,555 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/1.1.19/plexus-components-1.1.19.pom
+2017-02-10 23:30:37,342 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/1.1.19/plexus-components-1.1.19.pom
+2017-02-10 23:30:40,129 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/3.0.1/plexus-3.0.1.pom
+2017-02-10 23:30:40,734 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/3.0.1/plexus-3.0.1.pom
+2017-02-10 23:30:41,070 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.15/plexus-interpolation-1.15.pom
+2017-02-10 23:30:41,375 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.15/plexus-interpolation-1.15.pom
+2017-02-10 23:30:41,670 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/commons-lang/commons-lang/2.1/commons-lang-2.1.pom
+2017-02-10 23:30:42,065 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/commons-lang/commons-lang/2.1/commons-lang-2.1.pom
+2017-02-10 23:30:42,388 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/classworlds/classworlds/1.1-alpha-2/classworlds-1.1-alpha-2.jar
+2017-02-10 23:30:43,235 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/classworlds/classworlds/1.1-alpha-2/classworlds-1.1-alpha-2.jar
+2017-02-10 23:30:43,539 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/maven-archiver/2.5/maven-archiver-2.5.jar
+2017-02-10 23:30:44,129 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/maven-archiver/2.5/maven-archiver-2.5.jar
+2017-02-10 23:30:44,423 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.15/plexus-interpolation-1.15.jar
+2017-02-10 23:30:45,630 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.15/plexus-interpolation-1.15.jar
+2017-02-10 23:30:45,927 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/2.1/plexus-archiver-2.1.jar
+2017-02-10 23:30:48,118 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/2.1/plexus-archiver-2.1.jar
+2017-02-10 23:30:48,419 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/2.0.2/plexus-io-2.0.2.jar
+2017-02-10 23:30:48,873 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/2.0.2/plexus-io-2.0.2.jar
+2017-02-10 23:30:49,720 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/commons-lang/commons-lang/2.1/commons-lang-2.1.jar
+2017-02-10 23:30:50,589 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/commons-lang/commons-lang/2.1/commons-lang-2.1.jar
+2017-02-10 23:30:52,580 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/1.1/maven-filtering-1.1.pom
+2017-02-10 23:30:52,958 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/1.1/maven-filtering-1.1.pom
+2017-02-10 23:30:53,469 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/1.1/maven-filtering-1.1.jar
+2017-02-10 23:30:54,584 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/1.1/maven-filtering-1.1.jar
+2017-02-10 23:30:54,789 [Worker-56] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /oes/src/main/java
+2017-02-10 23:30:54,790 [Worker-56] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /oes/src/test/java
+2017-02-10 23:30:54,861 [Worker-56] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 3938 sec
+2017-02-10 23:30:56,503 [Worker-56] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.barrow:oes:0.0.1-SNAPSHOT @ /home/barrow/workspace/oes/pom.xml.
+2017-02-10 23:30:58,825 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream/1.3.1/xstream-1.3.1.pom
+2017-02-10 23:30:59,030 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream/1.3.1/xstream-1.3.1.pom
+2017-02-10 23:30:59,215 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream-parent/1.3.1/xstream-parent-1.3.1.pom
+2017-02-10 23:31:00,019 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream-parent/1.3.1/xstream-parent-1.3.1.pom
+2017-02-10 23:31:00,348 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.pom
+2017-02-10 23:31:00,679 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.pom
+2017-02-10 23:31:01,008 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/1.0-beta-2/maven-filtering-1.0-beta-2.pom
+2017-02-10 23:31:01,292 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/1.0-beta-2/maven-filtering-1.0-beta-2.pom
+2017-02-10 23:31:01,598 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/10/maven-shared-components-10.pom
+2017-02-10 23:31:01,867 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/10/maven-shared-components-10.pom
+2017-02-10 23:31:02,185 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/9/maven-parent-9.pom
+2017-02-10 23:31:04,744 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/9/maven-parent-9.pom
+2017-02-10 23:31:05,067 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.5.6/plexus-utils-1.5.6.pom
+2017-02-10 23:31:05,384 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.5.6/plexus-utils-1.5.6.pom
+2017-02-10 23:31:05,706 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/1.0.12/plexus-1.0.12.pom
+2017-02-10 23:31:06,309 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/1.0.12/plexus-1.0.12.pom
+2017-02-10 23:31:06,645 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.6/plexus-interpolation-1.6.pom
+2017-02-10 23:31:06,925 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.6/plexus-interpolation-1.6.pom
+2017-02-10 23:31:07,231 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream/1.3.1/xstream-1.3.1.jar
+2017-02-10 23:31:16,794 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream/1.3.1/xstream-1.3.1.jar
+2017-02-10 23:31:17,079 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar
+2017-02-10 23:31:18,157 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar
+2017-02-10 23:31:18,439 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/1.0-beta-2/maven-filtering-1.0-beta-2.jar
+2017-02-10 23:31:20,909 [Worker-56] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/1.0-beta-2/maven-filtering-1.0-beta-2.jar
+2017-02-10 23:31:21,633 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-10 23:31:21,633 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes/src/main/resources
+2017-02-10 23:31:21,635 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-10 23:31:21,635 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes/src/test/resources
+2017-02-11 06:54:15,565 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-02-11 06:54:24,285 [Worker-10] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.barrow:oes:0.0.1-SNAPSHOT @ /home/barrow/workspace/oes/pom.xml.
+2017-02-11 06:54:28,794 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-11 06:54:28,794 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes/src/main/resources
+2017-02-11 06:54:28,797 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-11 06:54:28,797 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes/src/test/resources
+2017-02-11 07:00:35,953 [main] INFO  o.e.m2e.actions.ExecutePomAction - Using existing launch configuration
+2017-02-11 07:00:52,971 [Worker-24] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/barrow/workspace/oes
+2017-02-11 07:00:52,971 [Worker-24] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean package install
+2017-02-11 07:02:54,576 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-11 07:02:54,576 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes/src/main/resources
+2017-02-11 07:02:54,578 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-11 07:02:54,578 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes/src/test/resources
+2017-02-11 07:05:46,197 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-11 07:05:46,197 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes/src/main/resources
+2017-02-11 07:05:46,198 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-11 07:05:46,198 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes/src/test/resources
+2017-02-11 07:05:56,933 [Worker-24] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2017-02-11 07:05:57,499 [Worker-24] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.barrow:oes:0.0.1-SNAPSHOT @ /home/barrow/workspace/oes/pom.xml.
+2017-02-11 07:05:58,182 [Worker-24] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /oes/src/main/java
+2017-02-11 07:05:58,183 [Worker-24] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /oes/src/test/java
+2017-02-11 07:05:59,407 [Worker-24] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for oes
+2017-02-11 07:05:59,820 [Worker-24] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 2 sec
+2017-02-11 07:06:00,510 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-11 07:06:00,511 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes/src/main/resources
+2017-02-11 07:06:00,513 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-11 07:06:00,513 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes/src/test/resources
+2017-02-11 07:06:00,513 [Worker-31] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of oes
+2017-02-11 07:06:00,514 [Worker-31] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for oes
+2017-02-11 07:06:00,523 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-11 07:06:22,959 [Worker-31] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/barrow/workspace/oes
+2017-02-11 07:06:22,959 [Worker-31] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean package install
+2017-02-11 07:09:00,132 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/archetypes/maven-archetype-webapp/1.0/maven-archetype-webapp-1.0.jar
+2017-02-11 07:09:00,418 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/archetypes/maven-archetype-webapp/1.0/maven-archetype-webapp-1.0.jar
+2017-02-11 07:09:00,704 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/archetypes/maven-archetype-webapp/1.0/maven-archetype-webapp-1.0.pom
+2017-02-11 07:09:01,050 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/archetypes/maven-archetype-webapp/1.0/maven-archetype-webapp-1.0.pom
+2017-02-11 07:09:12,974 [Worker-27] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Collecting project info '/pom.xml' /home/barrow/workspace/oes/pom.xml
+2017-02-11 07:09:13,429 [Worker-27] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.barrow:oes:0.0.1-SNAPSHOT @ /home/barrow/workspace/oes/pom.xml.
+2017-02-11 07:09:13,989 [Worker-27] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /oes/src/main/java
+2017-02-11 07:09:13,990 [Worker-27] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /oes/src/main/resources
+2017-02-11 07:09:13,991 [Worker-27] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /oes/src/test/java
+2017-02-11 07:09:16,483 [Worker-27] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 3 sec
+2017-02-11 07:09:16,766 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-11 07:09:16,771 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-11 07:09:16,774 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-11 07:09:16,775 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes/src/test/resources
+2017-02-11 07:16:39,810 [Worker-42] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-11 07:16:39,829 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-11 07:16:39,831 [Worker-42] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-11 07:16:39,832 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes/src/test/resources
+2017-02-11 07:17:00,534 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2017-02-11 07:17:20,496 [Worker-39] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/barrow/workspace/oes
+2017-02-11 07:17:20,496 [Worker-39] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean package install
+2017-02-11 07:23:04,561 [Worker-43] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-11 07:23:04,566 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-11 07:23:04,567 [Worker-43] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-11 07:23:04,568 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes/src/test/resources
+2017-02-11 07:26:13,140 [Worker-38] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-11 07:26:13,141 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-11 07:26:13,149 [Worker-38] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-11 07:26:13,150 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes/src/test/resources
+2017-02-11 07:26:27,445 [Worker-44] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-11 07:26:27,446 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-11 07:26:27,447 [Worker-44] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-11 07:26:27,448 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes/src/test/resources
+2017-02-11 07:26:59,140 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-11 07:26:59,141 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-11 07:26:59,142 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-11 07:26:59,142 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes/src/test/resources
+2017-02-11 07:28:02,076 [Worker-44] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/barrow/workspace/oes
+2017-02-11 07:28:02,076 [Worker-44] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean package install
+2017-02-11 07:34:17,315 [Worker-49] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-11 07:34:17,315 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-11 07:34:17,317 [Worker-49] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-11 07:34:17,317 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes/src/test/resources
+2017-02-11 07:34:17,318 [Worker-49] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of oes
+2017-02-11 07:34:17,318 [Worker-49] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for oes
+2017-02-11 07:34:17,338 [Worker-49] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-11 07:50:19,730 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/liferay/com.liferay.project.templates.mvc.portlet/1.0.1/com.liferay.project.templates.mvc.portlet-1.0.1.pom
+2017-02-11 07:50:19,990 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/liferay/com.liferay.project.templates.mvc.portlet/1.0.1/com.liferay.project.templates.mvc.portlet-1.0.1.pom
+2017-02-11 07:50:20,270 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/liferay/com.liferay.project.templates.mvc.portlet/1.0.1/com.liferay.project.templates.mvc.portlet-1.0.1.jar
+2017-02-11 07:50:20,684 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/liferay/com.liferay.project.templates.mvc.portlet/1.0.1/com.liferay.project.templates.mvc.portlet-1.0.1.jar
+2017-02-11 07:50:20,957 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded file:///home/barrow/.m2/repository/com/liferay/com.liferay.project.templates.mvc.portlet/1.0.1/com.liferay.project.templates.mvc.portlet-1.0.1.jar
+2017-02-11 07:50:20,960 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded file:///home/barrow/.m2/repository/com/liferay/com.liferay.project.templates.mvc.portlet/1.0.1/com.liferay.project.templates.mvc.portlet-1.0.1.pom
+2017-02-11 07:50:20,988 [ModalContext] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Collecting project info '/pom.xml' /home/barrow/workspace/oes-portlet/pom.xml
+2017-02-11 07:50:22,245 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/biz/aQute/bnd/bnd-maven-plugin/3.2.0/bnd-maven-plugin-3.2.0.pom
+2017-02-11 07:50:22,522 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/biz/aQute/bnd/bnd-maven-plugin/3.2.0/bnd-maven-plugin-3.2.0.pom
+2017-02-11 07:50:22,858 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/biz/aQute/bnd/bnd-plugin-parent/3.2.0/bnd-plugin-parent-3.2.0.pom
+2017-02-11 07:50:23,139 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/biz/aQute/bnd/bnd-plugin-parent/3.2.0/bnd-plugin-parent-3.2.0.pom
+2017-02-11 07:50:23,427 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/biz/aQute/bnd/bnd-maven-plugin/3.2.0/bnd-maven-plugin-3.2.0.jar
+2017-02-11 07:50:23,787 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/biz/aQute/bnd/bnd-maven-plugin/3.2.0/bnd-maven-plugin-3.2.0.jar
+2017-02-11 07:50:24,373 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/liferay/com.liferay.css.builder/1.0.20/com.liferay.css.builder-1.0.20.jar
+2017-02-11 07:50:25,266 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/liferay/com.liferay.css.builder/1.0.20/com.liferay.css.builder-1.0.20.jar
+2017-02-11 07:50:25,692 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/2.6/maven-jar-plugin-2.6.jar
+2017-02-11 07:50:25,980 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/2.6/maven-jar-plugin-2.6.jar
+2017-02-11 07:50:26,128 [ModalContext] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:oes-portlet:1.0.0-SNAPSHOT @ /home/barrow/workspace/oes-portlet/pom.xml.
+2017-02-11 07:50:26,410 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/liferay/portal/com.liferay.portal.kernel/2.0.0/com.liferay.portal.kernel-2.0.0.pom
+2017-02-11 07:50:26,686 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/liferay/portal/com.liferay.portal.kernel/2.0.0/com.liferay.portal.kernel-2.0.0.pom
+2017-02-11 07:50:26,971 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/liferay/portal/com.liferay.util.taglib/2.0.0/com.liferay.util.taglib-2.0.0.pom
+2017-02-11 07:50:27,251 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/liferay/portal/com.liferay.util.taglib/2.0.0/com.liferay.util.taglib-2.0.0.pom
+2017-02-11 07:50:27,613 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/javax/servlet/javax.servlet-api/3.0.1/javax.servlet-api-3.0.1.pom
+2017-02-11 07:50:27,963 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/javax/servlet/javax.servlet-api/3.0.1/javax.servlet-api-3.0.1.pom
+2017-02-11 07:50:28,251 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/net/java/jvnet-parent/1/jvnet-parent-1.pom
+2017-02-11 07:50:28,528 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/net/java/jvnet-parent/1/jvnet-parent-1.pom
+2017-02-11 07:50:28,811 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/jstl/jstl/1.2/jstl-1.2.pom
+2017-02-11 07:50:29,095 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/jstl/jstl/1.2/jstl-1.2.pom
+2017-02-11 07:50:29,378 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/osgi/org.osgi.compendium/5.0.0/org.osgi.compendium-5.0.0.pom
+2017-02-11 07:50:29,655 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/osgi/org.osgi.compendium/5.0.0/org.osgi.compendium-5.0.0.pom
+2017-02-11 07:50:29,942 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/liferay/portal/com.liferay.portal.kernel/2.0.0/com.liferay.portal.kernel-2.0.0.jar
+2017-02-11 07:50:43,852 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/liferay/portal/com.liferay.portal.kernel/2.0.0/com.liferay.portal.kernel-2.0.0.jar
+2017-02-11 07:50:44,141 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/liferay/portal/com.liferay.util.taglib/2.0.0/com.liferay.util.taglib-2.0.0.jar
+2017-02-11 07:50:46,160 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/liferay/portal/com.liferay.util.taglib/2.0.0/com.liferay.util.taglib-2.0.0.jar
+2017-02-11 07:50:46,438 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/javax/servlet/javax.servlet-api/3.0.1/javax.servlet-api-3.0.1.jar
+2017-02-11 07:50:47,432 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/javax/servlet/javax.servlet-api/3.0.1/javax.servlet-api-3.0.1.jar
+2017-02-11 07:50:47,752 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/jstl/jstl/1.2/jstl-1.2.jar
+2017-02-11 07:50:50,312 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/jstl/jstl/1.2/jstl-1.2.jar
+2017-02-11 07:50:50,592 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/osgi/org.osgi.compendium/5.0.0/org.osgi.compendium-5.0.0.jar
+2017-02-11 07:50:56,268 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/osgi/org.osgi.compendium/5.0.0/org.osgi.compendium-5.0.0.jar
+2017-02-11 07:50:58,311 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/liferay/com.liferay.css.builder/1.0.20/com.liferay.css.builder-1.0.20.pom
+2017-02-11 07:50:58,588 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/liferay/com.liferay.css.builder/1.0.20/com.liferay.css.builder-1.0.20.pom
+2017-02-11 07:50:58,949 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/2.6/maven-jar-plugin-2.6.pom
+2017-02-11 07:50:59,301 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/2.6/maven-jar-plugin-2.6.pom
+2017-02-11 07:50:59,580 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/27/maven-plugins-27.pom
+2017-02-11 07:50:59,864 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/27/maven-plugins-27.pom
+2017-02-11 07:51:00,149 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/26/maven-parent-26.pom
+2017-02-11 07:51:01,264 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/26/maven-parent-26.pom
+2017-02-11 07:51:01,551 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/apache/16/apache-16.pom
+2017-02-11 07:51:02,942 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/apache/16/apache-16.pom
+2017-02-11 07:51:03,285 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-api/2.2.1/maven-reporting-api-2.2.1.pom
+2017-02-11 07:51:03,614 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-api/2.2.1/maven-reporting-api-2.2.1.pom
+2017-02-11 07:51:03,922 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting/2.2.1/maven-reporting-2.2.1.pom
+2017-02-11 07:51:04,202 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting/2.2.1/maven-reporting-2.2.1.pom
+2017-02-11 07:51:04,485 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-sink-api/1.1/doxia-sink-api-1.1.pom
+2017-02-11 07:51:04,765 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-sink-api/1.1/doxia-sink-api-1.1.pom
+2017-02-11 07:51:05,139 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia/1.1/doxia-1.1.pom
+2017-02-11 07:51:06,584 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia/1.1/doxia-1.1.pom
+2017-02-11 07:51:06,871 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-logging-api/1.1/doxia-logging-api-1.1.pom
+2017-02-11 07:51:07,151 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-logging-api/1.1/doxia-logging-api-1.1.pom
+2017-02-11 07:51:07,441 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-container-default/1.0-alpha-30/plexus-container-default-1.0-alpha-30.pom
+2017-02-11 07:51:07,735 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-container-default/1.0-alpha-30/plexus-container-default-1.0-alpha-30.pom
+2017-02-11 07:51:08,023 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/1.0-alpha-30/plexus-containers-1.0-alpha-30.pom
+2017-02-11 07:51:08,308 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/1.0-alpha-30/plexus-containers-1.0-alpha-30.pom
+2017-02-11 07:51:08,599 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-classworlds/1.2-alpha-9/plexus-classworlds-1.2-alpha-9.pom
+2017-02-11 07:51:08,879 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-classworlds/1.2-alpha-9/plexus-classworlds-1.2-alpha-9.pom
+2017-02-11 07:51:09,165 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/1.0.10/plexus-1.0.10.pom
+2017-02-11 07:51:09,436 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/1.0.10/plexus-1.0.10.pom
+2017-02-11 07:51:09,708 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/commons-cli/commons-cli/1.2/commons-cli-1.2.pom
+2017-02-11 07:51:09,962 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/commons-cli/commons-cli/1.2/commons-cli-1.2.pom
+2017-02-11 07:51:10,236 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/11/commons-parent-11.pom
+2017-02-11 07:51:11,740 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/11/commons-parent-11.pom
+2017-02-11 07:51:12,048 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/maven-archiver/2.6/maven-archiver-2.6.pom
+2017-02-11 07:51:12,326 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/maven-archiver/2.6/maven-archiver-2.6.pom
+2017-02-11 07:51:12,611 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/20/maven-shared-components-20.pom
+2017-02-11 07:51:12,888 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/20/maven-shared-components-20.pom
+2017-02-11 07:51:13,175 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/24/maven-parent-24.pom
+2017-02-11 07:51:14,280 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/24/maven-parent-24.pom
+2017-02-11 07:51:14,569 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/apache/14/apache-14.pom
+2017-02-11 07:51:15,120 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/apache/14/apache-14.pom
+2017-02-11 07:51:15,407 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/0.7/maven-shared-utils-0.7.pom
+2017-02-11 07:51:15,690 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/0.7/maven-shared-utils-0.7.pom
+2017-02-11 07:51:15,977 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/2.8.1/plexus-archiver-2.8.1.pom
+2017-02-11 07:51:16,269 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/2.8.1/plexus-archiver-2.8.1.pom
+2017-02-11 07:51:16,555 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/1.3/plexus-components-1.3.pom
+2017-02-11 07:51:16,837 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/1.3/plexus-components-1.3.pom
+2017-02-11 07:51:17,121 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/3.3/plexus-3.3.pom
+2017-02-11 07:51:17,680 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/3.3/plexus-3.3.pom
+2017-02-11 07:51:17,969 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.0.20/plexus-utils-3.0.20.pom
+2017-02-11 07:51:18,246 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.0.20/plexus-utils-3.0.20.pom
+2017-02-11 07:51:18,576 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/2.3.2/plexus-io-2.3.2.pom
+2017-02-11 07:51:18,855 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/2.3.2/plexus-io-2.3.2.pom
+2017-02-11 07:51:19,139 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/1.2/plexus-components-1.2.pom
+2017-02-11 07:51:19,428 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/1.2/plexus-components-1.2.pom
+2017-02-11 07:51:19,718 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.9/commons-compress-1.9.pom
+2017-02-11 07:51:19,999 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.9/commons-compress-1.9.pom
+2017-02-11 07:51:20,764 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/34/commons-parent-34.pom
+2017-02-11 07:51:21,884 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/34/commons-parent-34.pom
+2017-02-11 07:51:22,176 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.21/plexus-interpolation-1.21.pom
+2017-02-11 07:51:22,453 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.21/plexus-interpolation-1.21.pom
+2017-02-11 07:51:22,737 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/2.9/plexus-archiver-2.9.pom
+2017-02-11 07:51:23,016 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/2.9/plexus-archiver-2.9.pom
+2017-02-11 07:51:23,298 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/2.4/plexus-io-2.4.pom
+2017-02-11 07:51:23,579 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/2.4/plexus-io-2.4.pom
+2017-02-11 07:51:24,343 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/commons-io/commons-io/2.2/commons-io-2.2.pom
+2017-02-11 07:51:24,624 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/commons-io/commons-io/2.2/commons-io-2.2.pom
+2017-02-11 07:51:25,391 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/24/commons-parent-24.pom
+2017-02-11 07:51:26,504 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/24/commons-parent-24.pom
+2017-02-11 07:51:26,808 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/2.2.1/maven-plugin-api-2.2.1.jar
+2017-02-11 07:51:27,086 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/2.2.1/maven-plugin-api-2.2.1.jar
+2017-02-11 07:51:27,368 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/maven-core/2.2.1/maven-core-2.2.1.jar
+2017-02-11 07:51:30,192 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/maven-core/2.2.1/maven-core-2.2.1.jar
+2017-02-11 07:51:30,380 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings/2.2.1/maven-settings-2.2.1.jar
+2017-02-11 07:51:31,078 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings/2.2.1/maven-settings-2.2.1.jar
+2017-02-11 07:51:31,906 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-parameter-documenter/2.2.1/maven-plugin-parameter-documenter-2.2.1.jar
+2017-02-11 07:51:32,534 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-parameter-documenter/2.2.1/maven-plugin-parameter-documenter-2.2.1.jar
+2017-02-11 07:51:32,811 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/slf4j/slf4j-jdk14/1.5.6/slf4j-jdk14-1.5.6.jar
+2017-02-11 07:51:33,089 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/slf4j/slf4j-jdk14/1.5.6/slf4j-jdk14-1.5.6.jar
+2017-02-11 07:51:33,365 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.5.6/slf4j-api-1.5.6.jar
+2017-02-11 07:51:33,998 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.5.6/slf4j-api-1.5.6.jar
+2017-02-11 07:51:34,278 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/slf4j/jcl-over-slf4j/1.5.6/jcl-over-slf4j-1.5.6.jar
+2017-02-11 07:51:34,831 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/slf4j/jcl-over-slf4j/1.5.6/jcl-over-slf4j-1.5.6.jar
+2017-02-11 07:51:35,107 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-api/2.2.1/maven-reporting-api-2.2.1.jar
+2017-02-11 07:51:35,463 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-api/2.2.1/maven-reporting-api-2.2.1.jar
+2017-02-11 07:51:35,741 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-sink-api/1.1/doxia-sink-api-1.1.jar
+2017-02-11 07:51:36,030 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-sink-api/1.1/doxia-sink-api-1.1.jar
+2017-02-11 07:51:36,304 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-logging-api/1.1/doxia-logging-api-1.1.jar
+2017-02-11 07:51:36,558 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-logging-api/1.1/doxia-logging-api-1.1.jar
+2017-02-11 07:51:36,788 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/maven-profile/2.2.1/maven-profile-2.2.1.jar
+2017-02-11 07:51:37,273 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/maven-profile/2.2.1/maven-profile-2.2.1.jar
+2017-02-11 07:51:37,535 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/2.2.1/maven-model-2.2.1.jar
+2017-02-11 07:51:40,331 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/2.2.1/maven-model-2.2.1.jar
+2017-02-11 07:51:40,608 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/maven-repository-metadata/2.2.1/maven-repository-metadata-2.2.1.jar
+2017-02-11 07:51:41,532 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/maven-repository-metadata/2.2.1/maven-repository-metadata-2.2.1.jar
+2017-02-11 07:51:41,810 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/maven-error-diagnostics/2.2.1/maven-error-diagnostics-2.2.1.jar
+2017-02-11 07:51:43,241 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/maven-error-diagnostics/2.2.1/maven-error-diagnostics-2.2.1.jar
+2017-02-11 07:51:43,518 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/commons-cli/commons-cli/1.2/commons-cli-1.2.jar
+2017-02-11 07:51:45,142 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/commons-cli/commons-cli/1.2/commons-cli-1.2.jar
+2017-02-11 07:51:45,421 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-descriptor/2.2.1/maven-plugin-descriptor-2.2.1.jar
+2017-02-11 07:51:46,859 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-descriptor/2.2.1/maven-plugin-descriptor-2.2.1.jar
+2017-02-11 07:51:47,136 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact-manager/2.2.1/maven-artifact-manager-2.2.1.jar
+2017-02-11 07:51:48,823 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact-manager/2.2.1/maven-artifact-manager-2.2.1.jar
+2017-02-11 07:51:49,101 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/backport-util-concurrent/backport-util-concurrent/3.1/backport-util-concurrent-3.1.jar
+2017-02-11 07:51:53,716 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/backport-util-concurrent/backport-util-concurrent/3.1/backport-util-concurrent-3.1.jar
+2017-02-11 07:51:53,994 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/maven-monitor/2.2.1/maven-monitor-2.2.1.jar
+2017-02-11 07:51:54,281 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/maven-monitor/2.2.1/maven-monitor-2.2.1.jar
+2017-02-11 07:51:54,557 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-sec-dispatcher/1.3/plexus-sec-dispatcher-1.3.jar
+2017-02-11 07:51:59,641 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-sec-dispatcher/1.3/plexus-sec-dispatcher-1.3.jar
+2017-02-11 07:51:59,927 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-cipher/1.4/plexus-cipher-1.4.jar
+2017-02-11 07:52:00,484 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-cipher/1.4/plexus-cipher-1.4.jar
+2017-02-11 07:52:00,768 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/maven-project/2.2.1/maven-project-2.2.1.jar
+2017-02-11 07:52:05,389 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/maven-project/2.2.1/maven-project-2.2.1.jar
+2017-02-11 07:52:05,565 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-registry/2.2.1/maven-plugin-registry-2.2.1.jar
+2017-02-11 07:52:05,988 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-registry/2.2.1/maven-plugin-registry-2.2.1.jar
+2017-02-11 07:52:06,165 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.11/plexus-interpolation-1.11.jar
+2017-02-11 07:52:06,887 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.11/plexus-interpolation-1.11.jar
+2017-02-11 07:52:07,454 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/2.2.1/maven-artifact-2.2.1.jar
+2017-02-11 07:52:08,733 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/2.2.1/maven-artifact-2.2.1.jar
+2017-02-11 07:52:09,002 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/maven-archiver/2.6/maven-archiver-2.6.jar
+2017-02-11 07:52:09,799 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/maven-archiver/2.6/maven-archiver-2.6.jar
+2017-02-11 07:52:10,077 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/0.7/maven-shared-utils-0.7.jar
+2017-02-11 07:52:13,323 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/0.7/maven-shared-utils-0.7.jar
+2017-02-11 07:52:13,599 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.0.20/plexus-utils-3.0.20.jar
+2017-02-11 07:52:18,033 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.0.20/plexus-utils-3.0.20.jar
+2017-02-11 07:52:18,312 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/2.9/plexus-archiver-2.9.jar
+2017-02-11 07:52:21,086 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/2.9/plexus-archiver-2.9.jar
+2017-02-11 07:52:21,365 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/2.4/plexus-io-2.4.jar
+2017-02-11 07:52:23,031 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/2.4/plexus-io-2.4.jar
+2017-02-11 07:52:23,309 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/commons-io/commons-io/2.2/commons-io-2.2.jar
+2017-02-11 07:52:26,070 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/commons-io/commons-io/2.2/commons-io-2.2.jar
+2017-02-11 07:52:26,352 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.9/commons-compress-1.9.jar
+2017-02-11 07:52:32,396 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.9/commons-compress-1.9.jar
+2017-02-11 07:52:36,065 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/liferay/com.liferay.rtl.css/1.0.5/com.liferay.rtl.css-1.0.5.pom
+2017-02-11 07:52:36,346 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/liferay/com.liferay.rtl.css/1.0.5/com.liferay.rtl.css-1.0.5.pom
+2017-02-11 07:52:36,627 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/liferay/com.liferay.sass.compiler.jni/2.0.4/com.liferay.sass.compiler.jni-2.0.4.pom
+2017-02-11 07:52:37,391 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/liferay/com.liferay.sass.compiler.jni/2.0.4/com.liferay.sass.compiler.jni-2.0.4.pom
+2017-02-11 07:52:39,146 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/liferay/com.liferay.sass.compiler.api/2.0.0/com.liferay.sass.compiler.api-2.0.0.pom
+2017-02-11 07:52:39,426 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/liferay/com.liferay.sass.compiler.api/2.0.0/com.liferay.sass.compiler.api-2.0.0.pom
+2017-02-11 07:52:39,709 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/liferay/com.liferay.sass.compiler.ruby/2.0.3/com.liferay.sass.compiler.ruby-2.0.3.pom
+2017-02-11 07:52:39,986 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/liferay/com.liferay.sass.compiler.ruby/2.0.3/com.liferay.sass.compiler.ruby-2.0.3.pom
+2017-02-11 07:52:40,268 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/jruby/jruby-complete/1.7.20/jruby-complete-1.7.20.pom
+2017-02-11 07:52:40,550 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/jruby/jruby-complete/1.7.20/jruby-complete-1.7.20.pom
+2017-02-11 07:52:40,831 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/jruby/jruby-artifacts/1.7.20/jruby-artifacts-1.7.20.pom
+2017-02-11 07:52:41,114 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/jruby/jruby-artifacts/1.7.20/jruby-artifacts-1.7.20.pom
+2017-02-11 07:52:41,358 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/jruby/jruby-parent/1.7.20/jruby-parent-1.7.20.pom
+2017-02-11 07:52:41,568 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/jruby/jruby-parent/1.7.20/jruby-parent-1.7.20.pom
+2017-02-11 07:52:41,750 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/7/oss-parent-7.pom
+2017-02-11 07:52:41,925 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/7/oss-parent-7.pom
+2017-02-11 07:52:42,105 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/ant/ant/1.9.4/ant-1.9.4.pom
+2017-02-11 07:52:42,286 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/ant/ant/1.9.4/ant-1.9.4.pom
+2017-02-11 07:52:42,467 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/ant/ant-parent/1.9.4/ant-parent-1.9.4.pom
+2017-02-11 07:52:42,643 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/ant/ant-parent/1.9.4/ant-parent-1.9.4.pom
+2017-02-11 07:52:42,825 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/ant/ant-launcher/1.9.4/ant-launcher-1.9.4.pom
+2017-02-11 07:52:43,008 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/ant/ant-launcher/1.9.4/ant-launcher-1.9.4.pom
+2017-02-11 07:52:43,206 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.0.15/plexus-utils-3.0.15.pom
+2017-02-11 07:52:43,418 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.0.15/plexus-utils-3.0.15.pom
+2017-02-11 07:52:43,662 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/slf4j/slf4j-log4j12/1.7.2/slf4j-log4j12-1.7.2.pom
+2017-02-11 07:52:43,929 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/slf4j/slf4j-log4j12/1.7.2/slf4j-log4j12-1.7.2.pom
+2017-02-11 07:52:44,211 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.2/slf4j-parent-1.7.2.pom
+2017-02-11 07:52:44,491 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.2/slf4j-parent-1.7.2.pom
+2017-02-11 07:52:44,768 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.2/slf4j-api-1.7.2.pom
+2017-02-11 07:52:45,032 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.2/slf4j-api-1.7.2.pom
+2017-02-11 07:52:45,315 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/log4j/log4j/1.2.17/log4j-1.2.17.pom
+2017-02-11 07:52:45,611 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/log4j/log4j/1.2.17/log4j-1.2.17.pom
+2017-02-11 07:52:45,894 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-build-api/0.0.7/plexus-build-api-0.0.7.pom
+2017-02-11 07:52:46,169 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-build-api/0.0.7/plexus-build-api-0.0.7.pom
+2017-02-11 07:52:46,451 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/sonatype/spice/spice-parent/15/spice-parent-15.pom
+2017-02-11 07:52:46,735 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/sonatype/spice/spice-parent/15/spice-parent-15.pom
+2017-02-11 07:52:47,050 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/liferay/com.liferay.rtl.css/1.0.5/com.liferay.rtl.css-1.0.5.jar
+2017-02-11 07:52:51,259 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/liferay/com.liferay.rtl.css/1.0.5/com.liferay.rtl.css-1.0.5.jar
+2017-02-11 07:52:51,620 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/liferay/com.liferay.sass.compiler.jni/2.0.4/com.liferay.sass.compiler.jni-2.0.4.jar
+2017-02-11 07:52:58,370 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/liferay/com.liferay.sass.compiler.jni/2.0.4/com.liferay.sass.compiler.jni-2.0.4.jar
+2017-02-11 07:52:58,673 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/liferay/com.liferay.sass.compiler.api/2.0.0/com.liferay.sass.compiler.api-2.0.0.jar
+2017-02-11 07:52:59,016 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/liferay/com.liferay.sass.compiler.api/2.0.0/com.liferay.sass.compiler.api-2.0.0.jar
+2017-02-11 07:52:59,326 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/liferay/com.liferay.sass.compiler.ruby/2.0.3/com.liferay.sass.compiler.ruby-2.0.3.jar
+2017-02-11 07:53:03,186 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/liferay/com.liferay.sass.compiler.ruby/2.0.3/com.liferay.sass.compiler.ruby-2.0.3.jar
+2017-02-11 07:53:03,450 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/jruby/jruby-complete/1.7.20/jruby-complete-1.7.20.jar
+2017-02-11 07:53:33,104 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/jruby/jruby-complete/1.7.20/jruby-complete-1.7.20.jar
+2017-02-11 07:53:33,390 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/ant/ant/1.9.4/ant-1.9.4.jar
+2017-02-11 07:53:56,865 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/ant/ant/1.9.4/ant-1.9.4.jar
+2017-02-11 07:53:57,135 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/ant/ant-launcher/1.9.4/ant-launcher-1.9.4.jar
+2017-02-11 07:53:57,439 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/ant/ant-launcher/1.9.4/ant-launcher-1.9.4.jar
+2017-02-11 07:53:57,715 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.0.15/plexus-utils-3.0.15.jar
+2017-02-11 07:53:58,519 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.0.15/plexus-utils-3.0.15.jar
+2017-02-11 07:53:58,805 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/slf4j/slf4j-log4j12/1.7.2/slf4j-log4j12-1.7.2.jar
+2017-02-11 07:53:59,081 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/slf4j/slf4j-log4j12/1.7.2/slf4j-log4j12-1.7.2.jar
+2017-02-11 07:53:59,379 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.2/slf4j-api-1.7.2.jar
+2017-02-11 07:53:59,751 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.2/slf4j-api-1.7.2.jar
+2017-02-11 07:54:00,047 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/log4j/log4j/1.2.17/log4j-1.2.17.jar
+2017-02-11 07:54:01,146 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/log4j/log4j/1.2.17/log4j-1.2.17.jar
+2017-02-11 07:54:01,420 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-build-api/0.0.7/plexus-build-api-0.0.7.jar
+2017-02-11 07:54:01,701 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-build-api/0.0.7/plexus-build-api-0.0.7.jar
+2017-02-11 07:54:02,836 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-11 07:54:02,837 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-02-11 07:54:02,849 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-11 07:54:02,849 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes-portlet/src/test/resources
+2017-02-11 07:54:02,910 [ModalContext] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /oes-portlet/src/main/java
+2017-02-11 07:54:02,910 [ModalContext] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /oes-portlet/src/main/resources
+2017-02-11 07:54:02,917 [ModalContext] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /oes-portlet/src/test/java
+2017-02-11 07:54:03,057 [ModalContext] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 222 sec
+2017-02-11 07:54:03,990 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-11 07:54:03,991 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-02-11 07:54:03,994 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-11 07:54:03,994 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes-portlet/src/test/resources
+2017-02-11 07:57:52,083 [ModalContext] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Collecting project info '/pom.xml' /home/barrow/workspace/oes-portlet/pom.xml
+2017-02-11 07:57:52,209 [ModalContext] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:oes-portlet:1.0.0-SNAPSHOT @ /home/barrow/workspace/oes-portlet/pom.xml.
+2017-02-11 07:57:52,860 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-11 07:57:52,863 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-02-11 07:57:52,870 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-11 07:57:52,870 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes-portlet/src/test/resources
+2017-02-11 07:57:52,967 [ModalContext] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /oes-portlet/src/main/java
+2017-02-11 07:57:52,967 [ModalContext] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /oes-portlet/src/main/resources
+2017-02-11 07:57:52,972 [ModalContext] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /oes-portlet/src/test/java
+2017-02-11 07:57:53,078 [ModalContext] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 0 sec
+2017-02-11 07:57:53,999 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-11 07:57:54,000 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-02-11 07:57:54,002 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-11 07:57:54,002 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes-portlet/src/test/resources
+2017-02-11 07:58:40,395 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-11 07:58:40,395 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-02-11 07:58:40,397 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-11 07:58:40,397 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes-portlet/src/test/resources
+2017-02-11 08:53:56,813 [Worker-76] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.barrow:oes:0.0.1-SNAPSHOT @ /home/barrow/workspace/oes/pom.xml.
+2017-02-11 08:53:57,339 [Worker-76] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-11 08:53:57,339 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-11 08:53:57,341 [Worker-76] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-11 08:53:57,341 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes/src/test/resources
+2017-02-11 08:53:57,341 [Worker-76] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of oes
+2017-02-11 08:53:57,342 [Worker-76] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for oes
+2017-02-11 08:53:57,345 [Worker-76] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-11 08:54:40,574 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-02-11 08:54:48,762 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-11 08:54:48,793 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-11 08:54:48,799 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-11 08:54:48,800 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes/src/test/resources
+2017-02-11 08:58:04,752 [Worker-14] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-11 08:58:04,757 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-11 08:58:04,759 [Worker-14] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-11 08:58:04,759 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes/src/test/resources
+2017-02-11 09:04:40,774 [ModalContext] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Collecting project info '/pom.xml' /home/barrow/workspace/oes-portlet/pom.xml
+2017-02-11 09:04:40,870 [ModalContext] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:portal-service:jar:${liferay.version} is missing, no dependency information available
+2017-02-11 09:04:40,883 [ModalContext] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-bridges:jar:${liferay.version} is missing, no dependency information available
+2017-02-11 09:04:40,885 [ModalContext] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-taglib:jar:${liferay.version} is missing, no dependency information available
+2017-02-11 09:04:40,887 [ModalContext] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-java:jar:${liferay.version} is missing, no dependency information available
+2017-02-11 09:04:41,433 [ModalContext] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.barrow:oes-portlet:1.0.0-SNAPSHOT @ /home/barrow/workspace/oes-portlet/pom.xml.
+2017-02-11 09:04:41,627 [ModalContext] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} is missing, no dependency information available
+2017-02-11 09:04:42,038 [ModalContext] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /oes-portlet/src/main/java
+2017-02-11 09:04:42,039 [ModalContext] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /oes-portlet/src/main/resources
+2017-02-11 09:04:42,044 [ModalContext] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /oes-portlet/src/test/java
+2017-02-11 09:04:42,945 [ModalContext] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} is missing, no dependency information available
+2017-02-11 09:04:42,946 [ModalContext] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for com.liferay.maven.plugins:liferay-maven-plugin:${liferay.maven.plugin.version}: Plugin com.liferay.maven.plugins:liferay-maven-plugin:${liferay.maven.plugin.version} or one of its dependencies could not be resolved: Failure to find com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} in https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced
+2017-02-11 09:04:42,954 [ModalContext] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} is missing, no dependency information available
+2017-02-11 09:04:42,955 [ModalContext] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for com.liferay.maven.plugins:liferay-maven-plugin:${liferay.maven.plugin.version}: Plugin com.liferay.maven.plugins:liferay-maven-plugin:${liferay.maven.plugin.version} or one of its dependencies could not be resolved: Failure to find com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} in https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced
+2017-02-11 09:04:42,959 [ModalContext] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:portal-service:jar:${liferay.version} is missing, no dependency information available
+2017-02-11 09:04:42,960 [ModalContext] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-bridges:jar:${liferay.version} is missing, no dependency information available
+2017-02-11 09:04:42,961 [ModalContext] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-taglib:jar:${liferay.version} is missing, no dependency information available
+2017-02-11 09:04:42,961 [ModalContext] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-java:jar:${liferay.version} is missing, no dependency information available
+2017-02-11 09:04:42,996 [ModalContext] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 2 sec
+2017-02-11 09:04:43,158 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:portal-service:jar:${liferay.version} is missing, no dependency information available
+2017-02-11 09:04:43,160 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-bridges:jar:${liferay.version} is missing, no dependency information available
+2017-02-11 09:04:43,164 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-taglib:jar:${liferay.version} is missing, no dependency information available
+2017-02-11 09:04:43,166 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-java:jar:${liferay.version} is missing, no dependency information available
+2017-02-11 09:04:43,209 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-11 09:04:43,210 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-11 09:04:43,213 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-11 09:04:43,213 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes-portlet/src/test/resources
+2017-02-11 09:04:43,214 [Worker-19] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of oes-portlet
+2017-02-11 09:04:43,215 [Worker-19] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for oes-portlet
+2017-02-11 09:04:43,218 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} is missing, no dependency information available
+2017-02-11 09:04:43,219 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for com.liferay.maven.plugins:liferay-maven-plugin:${liferay.maven.plugin.version}: Plugin com.liferay.maven.plugins:liferay-maven-plugin:${liferay.maven.plugin.version} or one of its dependencies could not be resolved: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} has not been downloaded from it before.
+2017-02-11 09:04:43,220 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} is missing, no dependency information available
+2017-02-11 09:04:43,221 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for com.liferay.maven.plugins:liferay-maven-plugin:${liferay.maven.plugin.version}: Plugin com.liferay.maven.plugins:liferay-maven-plugin:${liferay.maven.plugin.version} or one of its dependencies could not be resolved: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} has not been downloaded from it before.
+2017-02-11 09:04:43,237 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-11 09:04:43,244 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} is missing, no dependency information available
+2017-02-11 09:04:46,501 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-11 09:04:46,502 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-11 09:04:46,504 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-11 09:04:46,504 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes-portlet/src/test/resources
+2017-02-11 09:04:46,508 [Worker-18] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} is missing, no dependency information available
+2017-02-11 09:06:11,366 [Worker-14] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2017-02-11 09:06:11,677 [Worker-14] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.barrow:oes-portlet:1.0.0-SNAPSHOT @ /home/barrow/workspace/oes-portlet/pom.xml.
+2017-02-11 09:06:11,681 [Worker-14] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:portal-service:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:06:11,683 [Worker-14] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-bridges:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:06:11,684 [Worker-14] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-taglib:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:06:11,685 [Worker-14] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-java:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:06:11,702 [Worker-14] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:06:11,703 [Worker-14] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for com.liferay.maven.plugins:liferay-maven-plugin:7.0.0-SNAPSHOT: Plugin com.liferay.maven.plugins:liferay-maven-plugin:7.0.0-SNAPSHOT or one of its dependencies could not be resolved: Could not find artifact com.liferay.maven.plugins:liferay-maven-plugin:jar:7.0.0-SNAPSHOT
+2017-02-11 09:06:11,704 [Worker-14] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:06:11,705 [Worker-14] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for com.liferay.maven.plugins:liferay-maven-plugin:7.0.0-SNAPSHOT: Plugin com.liferay.maven.plugins:liferay-maven-plugin:7.0.0-SNAPSHOT or one of its dependencies could not be resolved: Could not find artifact com.liferay.maven.plugins:liferay-maven-plugin:jar:7.0.0-SNAPSHOT
+2017-02-11 09:06:11,707 [Worker-14] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:portal-service:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:06:11,708 [Worker-14] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-bridges:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:06:11,709 [Worker-14] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-taglib:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:06:11,710 [Worker-14] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-java:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:06:11,720 [Worker-14] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:06:11,729 [Worker-14] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:portal-service:jar:${liferay.version} is missing, no dependency information available
+2017-02-11 09:06:11,730 [Worker-14] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-bridges:jar:${liferay.version} is missing, no dependency information available
+2017-02-11 09:06:11,731 [Worker-14] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-taglib:jar:${liferay.version} is missing, no dependency information available
+2017-02-11 09:06:11,733 [Worker-14] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-java:jar:${liferay.version} is missing, no dependency information available
+2017-02-11 09:06:11,902 [Worker-14] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:06:11,903 [Worker-14] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 0 sec
+2017-02-11 09:06:12,228 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:portal-service:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:06:12,229 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-bridges:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:06:12,230 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-taglib:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:06:12,230 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-java:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:06:12,247 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:08:03,185 [Worker-11] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.barrow:oes-portlet:1.0.0-SNAPSHOT @ /home/barrow/workspace/oes-portlet/pom.xml.
+2017-02-11 09:08:03,191 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:portal-service:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:08:03,192 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-bridges:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:08:03,193 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-taglib:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:08:03,194 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-java:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:08:03,216 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:08:03,216 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for com.liferay.maven.plugins:liferay-maven-plugin:7.0.0-SNAPSHOT: Plugin com.liferay.maven.plugins:liferay-maven-plugin:7.0.0-SNAPSHOT or one of its dependencies could not be resolved: Could not find artifact com.liferay.maven.plugins:liferay-maven-plugin:jar:7.0.0-SNAPSHOT
+2017-02-11 09:08:03,218 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:08:03,219 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for com.liferay.maven.plugins:liferay-maven-plugin:7.0.0-SNAPSHOT: Plugin com.liferay.maven.plugins:liferay-maven-plugin:7.0.0-SNAPSHOT or one of its dependencies could not be resolved: Could not find artifact com.liferay.maven.plugins:liferay-maven-plugin:jar:7.0.0-SNAPSHOT
+2017-02-11 09:08:03,224 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:portal-service:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:08:03,225 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-bridges:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:08:03,226 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-taglib:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:08:03,226 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-java:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:08:03,236 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:08:03,294 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:42:10,137 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-02-11 09:42:23,080 [Worker-13] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-11 09:42:23,116 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-11 09:42:23,119 [Worker-13] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-11 09:42:23,119 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes/src/test/resources
+2017-02-11 09:42:51,250 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:portal-service:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:42:51,253 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-bridges:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:42:51,254 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-taglib:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:42:51,255 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-java:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:42:51,321 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:44:17,208 [Worker-11] ERROR o.e.m.c.i.p.r.ProjectRegistryManager - Failed to read Maven project: 1 problem was encountered while building the effective model for com.barrow:oes:[unknown-version]
+[FATAL] 'parent.artifactId' must be changed, the parent element cannot have the same groupId:artifactId as the project. @ line 109, column 15
+ for project com.barrow:oes:[unknown-version] at /home/barrow/workspace/oes-portlet/pom.xml
+org.apache.maven.project.ProjectBuildingException: 1 problem was encountered while building the effective model for com.barrow:oes:[unknown-version]
+[FATAL] 'parent.artifactId' must be changed, the parent element cannot have the same groupId:artifactId as the project. @ line 109, column 15
+ for project com.barrow:oes:[unknown-version] at /home/barrow/workspace/oes-portlet/pom.xml
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:168) ~[maven-core-3.3.9.jar:3.3.9]
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:119) ~[maven-core-3.3.9.jar:3.3.9]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readMavenProject(MavenImpl.java:636) ~[org.eclipse.m2e.core_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:816) ~[org.eclipse.m2e.core_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:1) ~[org.eclipse.m2e.core_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:176) ~[org.eclipse.m2e.core_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151) ~[org.eclipse.m2e.core_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) ~[org.eclipse.m2e.core_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.execute(ProjectRegistryManager.java:967) ~[org.eclipse.m2e.core_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectWithDependencies(ProjectRegistryManager.java:811) ~[org.eclipse.m2e.core_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.create(ProjectRegistryManager.java:192) ~[org.eclipse.m2e.core_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectManager.create(MavenProjectManager.java:80) [org.eclipse.m2e.core_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.getMavenProject(SelectionUtil.java:259) [org.eclipse.m2e.core.ui_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.editor.pom.MavenPomEditor.readMavenProject(MavenPomEditor.java:732) [org.eclipse.m2e.editor_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.m2e.editor.pom.MavenPomEditor$5.run(MavenPomEditor.java:1053) [org.eclipse.m2e.editor_1.7.0.20160603-1933.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55) [org.eclipse.core.jobs_3.8.0.v20160509-0411.jar:na]
+Caused by: org.apache.maven.model.building.ModelBuildingException: 1 problem was encountered while building the effective model for com.barrow:oes:[unknown-version]
+[FATAL] 'parent.artifactId' must be changed, the parent element cannot have the same groupId:artifactId as the project. @ line 109, column 15
+
+	at org.apache.maven.model.building.DefaultModelProblemCollector.newModelBuildingException(DefaultModelProblemCollector.java:197) ~[maven-model-builder-3.3.9.jar:3.3.9]
+	at org.apache.maven.model.building.DefaultModelBuilder.readModel(DefaultModelBuilder.java:608) ~[maven-model-builder-3.3.9.jar:3.3.9]
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:273) ~[maven-model-builder-3.3.9.jar:3.3.9]
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:161) ~[maven-core-3.3.9.jar:3.3.9]
+	... 15 common frames omitted
+2017-02-11 09:44:32,969 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:portal-service:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:44:32,970 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-bridges:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:44:32,971 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-taglib:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:44:32,972 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-java:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:44:32,996 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:portal-service:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:44:32,998 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-bridges:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:44:32,999 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-taglib:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:44:33,000 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-java:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:44:33,844 [Worker-3] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.barrow:oes-portlet:0.0.1-SNAPSHOT @ /home/barrow/workspace/oes-portlet/pom.xml.
+2017-02-11 09:44:33,847 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:portal-service:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:44:33,848 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-bridges:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:44:33,849 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-taglib:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:44:33,851 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-java:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:44:33,895 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:44:33,896 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for com.liferay.maven.plugins:liferay-maven-plugin:7.0.0-SNAPSHOT: Plugin com.liferay.maven.plugins:liferay-maven-plugin:7.0.0-SNAPSHOT or one of its dependencies could not be resolved: Could not find artifact com.liferay.maven.plugins:liferay-maven-plugin:jar:7.0.0-SNAPSHOT
+2017-02-11 09:44:33,946 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:44:33,947 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for com.liferay.maven.plugins:liferay-maven-plugin:7.0.0-SNAPSHOT: Plugin com.liferay.maven.plugins:liferay-maven-plugin:7.0.0-SNAPSHOT or one of its dependencies could not be resolved: Could not find artifact com.liferay.maven.plugins:liferay-maven-plugin:jar:7.0.0-SNAPSHOT
+2017-02-11 09:44:33,954 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:portal-service:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:44:33,955 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-bridges:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:44:33,956 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-taglib:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:44:33,957 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-java:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:44:33,971 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:44:34,195 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:45:23,327 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:portal-service:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:45:23,328 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-bridges:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:45:23,329 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-taglib:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:45:23,330 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-java:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:45:24,028 [Worker-19] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.barrow.portlet:oes-portlet:0.0.1-SNAPSHOT @ /home/barrow/workspace/oes-portlet/pom.xml.
+2017-02-11 09:45:24,031 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:portal-service:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:45:24,032 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-bridges:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:45:24,033 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-taglib:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:45:24,034 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-java:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:45:24,049 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:45:24,050 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for com.liferay.maven.plugins:liferay-maven-plugin:7.0.0-SNAPSHOT: Plugin com.liferay.maven.plugins:liferay-maven-plugin:7.0.0-SNAPSHOT or one of its dependencies could not be resolved: Could not find artifact com.liferay.maven.plugins:liferay-maven-plugin:jar:7.0.0-SNAPSHOT
+2017-02-11 09:45:24,051 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:45:24,051 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for com.liferay.maven.plugins:liferay-maven-plugin:7.0.0-SNAPSHOT: Plugin com.liferay.maven.plugins:liferay-maven-plugin:7.0.0-SNAPSHOT or one of its dependencies could not be resolved: Could not find artifact com.liferay.maven.plugins:liferay-maven-plugin:jar:7.0.0-SNAPSHOT
+2017-02-11 09:45:24,054 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:portal-service:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:45:24,055 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-bridges:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:45:24,055 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-taglib:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:45:24,056 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-java:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:45:24,066 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:45:24,281 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:45:51,284 [Worker-20] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2017-02-11 09:45:51,727 [Worker-20] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.barrow.portlet:oes-portlet:0.0.1-SNAPSHOT @ /home/barrow/workspace/oes-portlet/pom.xml.
+2017-02-11 09:45:51,729 [Worker-20] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:portal-service:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:45:51,730 [Worker-20] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-bridges:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:45:51,731 [Worker-20] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-taglib:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:45:51,733 [Worker-20] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-java:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:45:51,777 [Worker-20] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:45:51,778 [Worker-20] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for com.liferay.maven.plugins:liferay-maven-plugin:7.0.0-SNAPSHOT: Plugin com.liferay.maven.plugins:liferay-maven-plugin:7.0.0-SNAPSHOT or one of its dependencies could not be resolved: Could not find artifact com.liferay.maven.plugins:liferay-maven-plugin:jar:7.0.0-SNAPSHOT
+2017-02-11 09:45:51,779 [Worker-20] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:45:51,780 [Worker-20] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for com.liferay.maven.plugins:liferay-maven-plugin:7.0.0-SNAPSHOT: Plugin com.liferay.maven.plugins:liferay-maven-plugin:7.0.0-SNAPSHOT or one of its dependencies could not be resolved: Could not find artifact com.liferay.maven.plugins:liferay-maven-plugin:jar:7.0.0-SNAPSHOT
+2017-02-11 09:45:51,783 [Worker-20] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:portal-service:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:45:51,784 [Worker-20] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-bridges:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:45:51,785 [Worker-20] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-taglib:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:45:51,786 [Worker-20] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-java:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:45:51,796 [Worker-20] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:45:51,852 [Worker-20] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:45:51,853 [Worker-20] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 0 sec
+2017-02-11 09:45:52,248 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:portal-service:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:45:52,249 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-bridges:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:45:52,250 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-taglib:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:45:52,251 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-java:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:45:52,264 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:7.0.0-SNAPSHOT is missing, no dependency information available
+2017-02-11 09:47:14,600 [ModalContext] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Collecting project info '/pom.xml' /home/barrow/workspace/oes-portlet/pom.xml
+2017-02-11 09:47:14,690 [ModalContext] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:portal-service:jar:${liferay.version} is missing, no dependency information available
+2017-02-11 09:47:14,705 [ModalContext] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-bridges:jar:${liferay.version} is missing, no dependency information available
+2017-02-11 09:47:14,706 [ModalContext] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-taglib:jar:${liferay.version} is missing, no dependency information available
+2017-02-11 09:47:14,708 [ModalContext] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-java:jar:${liferay.version} is missing, no dependency information available
+2017-02-11 09:47:14,970 [ModalContext] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.barrow:oes-portlet:1.0.0-SNAPSHOT @ /home/barrow/workspace/oes-portlet/pom.xml.
+2017-02-11 09:47:15,121 [ModalContext] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} is missing, no dependency information available
+2017-02-11 09:47:15,462 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:portal-service:jar:${liferay.version} is missing, no dependency information available
+2017-02-11 09:47:15,463 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-bridges:jar:${liferay.version} is missing, no dependency information available
+2017-02-11 09:47:15,464 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-taglib:jar:${liferay.version} is missing, no dependency information available
+2017-02-11 09:47:15,465 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-java:jar:${liferay.version} is missing, no dependency information available
+2017-02-11 09:47:15,501 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-11 09:47:15,501 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-11 09:47:15,504 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-11 09:47:15,504 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes-portlet/src/test/resources
+2017-02-11 09:47:15,506 [Worker-19] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of oes-portlet
+2017-02-11 09:47:15,507 [Worker-19] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for oes-portlet
+2017-02-11 09:47:15,511 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} is missing, no dependency information available
+2017-02-11 09:47:15,511 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for com.liferay.maven.plugins:liferay-maven-plugin:${liferay.maven.plugin.version}: Plugin com.liferay.maven.plugins:liferay-maven-plugin:${liferay.maven.plugin.version} or one of its dependencies could not be resolved: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} has not been downloaded from it before.
+2017-02-11 09:47:15,512 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} is missing, no dependency information available
+2017-02-11 09:47:15,513 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for com.liferay.maven.plugins:liferay-maven-plugin:${liferay.maven.plugin.version}: Plugin com.liferay.maven.plugins:liferay-maven-plugin:${liferay.maven.plugin.version} or one of its dependencies could not be resolved: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} has not been downloaded from it before.
+2017-02-11 09:47:15,518 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-11 09:47:15,523 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} is missing, no dependency information available
+2017-02-11 09:47:15,537 [ModalContext] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /oes-portlet/src/main/java
+2017-02-11 09:47:15,538 [ModalContext] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /oes-portlet/src/main/resources
+2017-02-11 09:47:15,544 [ModalContext] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /oes-portlet/src/test/java
+2017-02-11 09:47:16,426 [ModalContext] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} is missing, no dependency information available
+2017-02-11 09:47:16,427 [ModalContext] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for com.liferay.maven.plugins:liferay-maven-plugin:${liferay.maven.plugin.version}: Plugin com.liferay.maven.plugins:liferay-maven-plugin:${liferay.maven.plugin.version} or one of its dependencies could not be resolved: Failure to find com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} in https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced
+2017-02-11 09:47:16,428 [ModalContext] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} is missing, no dependency information available
+2017-02-11 09:47:16,429 [ModalContext] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for com.liferay.maven.plugins:liferay-maven-plugin:${liferay.maven.plugin.version}: Plugin com.liferay.maven.plugins:liferay-maven-plugin:${liferay.maven.plugin.version} or one of its dependencies could not be resolved: Failure to find com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} in https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced
+2017-02-11 09:47:16,446 [ModalContext] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:portal-service:jar:${liferay.version} is missing, no dependency information available
+2017-02-11 09:47:16,453 [ModalContext] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-bridges:jar:${liferay.version} is missing, no dependency information available
+2017-02-11 09:47:16,455 [ModalContext] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-taglib:jar:${liferay.version} is missing, no dependency information available
+2017-02-11 09:47:16,463 [ModalContext] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-java:jar:${liferay.version} is missing, no dependency information available
+2017-02-11 09:47:16,497 [ModalContext] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 1 sec
+2017-02-11 09:47:16,634 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-11 09:47:16,672 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-11 09:47:16,674 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-11 09:47:16,675 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes-portlet/src/test/resources
+2017-02-11 09:47:16,679 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} is missing, no dependency information available
+2017-02-11 09:47:17,856 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-11 09:47:17,856 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-11 09:47:17,858 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-11 09:47:17,859 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes-portlet/src/test/resources
+2017-02-11 09:47:17,862 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} is missing, no dependency information available
+2017-02-11 09:48:23,652 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-11 09:48:23,653 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-11 09:48:23,655 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-11 09:48:23,656 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes-portlet/src/test/resources
+2017-02-11 09:48:23,659 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.maven.plugins:liferay-maven-plugin:jar:${liferay.maven.plugin.version} is missing, no dependency information available
+2017-02-11 09:51:38,953 [Worker-16] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:portal-service:jar:${liferay.version} is missing, no dependency information available
+2017-02-11 09:51:38,954 [Worker-16] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-bridges:jar:${liferay.version} is missing, no dependency information available
+2017-02-11 09:51:38,955 [Worker-16] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-taglib:jar:${liferay.version} is missing, no dependency information available
+2017-02-11 09:51:38,956 [Worker-16] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-java:jar:${liferay.version} is missing, no dependency information available
+2017-02-11 09:51:38,998 [Worker-16] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:portal-service:jar:${liferay.version} is missing, no dependency information available
+2017-02-11 09:51:38,999 [Worker-16] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-bridges:jar:${liferay.version} is missing, no dependency information available
+2017-02-11 09:51:39,000 [Worker-16] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-taglib:jar:${liferay.version} is missing, no dependency information available
+2017-02-11 09:51:39,000 [Worker-16] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.liferay.portal:util-java:jar:${liferay.version} is missing, no dependency information available
+2017-02-11 10:24:26,872 [ModalContext] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Collecting project info '/pom.xml' /home/barrow/workspace/oes-portlet/pom.xml
+2017-02-11 10:24:28,431 [ModalContext] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:oes-portlet:1.0.0-SNAPSHOT @ /home/barrow/workspace/oes-portlet/pom.xml.
+2017-02-11 10:24:29,939 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-11 10:24:29,941 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-02-11 10:24:29,963 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-11 10:24:29,964 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes-portlet/src/test/resources
+2017-02-11 10:24:30,008 [ModalContext] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /oes-portlet/src/main/java
+2017-02-11 10:24:30,008 [ModalContext] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /oes-portlet/src/main/resources
+2017-02-11 10:24:30,016 [ModalContext] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /oes-portlet/src/test/java
+2017-02-11 10:24:30,222 [ModalContext] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 3 sec
+2017-02-11 10:24:30,613 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-11 10:24:30,624 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-02-11 10:24:30,628 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-02-11 10:24:30,628 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/barrow/workspace/oes-portlet/src/test/resources
+2017-02-12 07:44:27,783 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-02-12 08:25:36,285 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-02-12 08:26:31,461 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-02-13 20:51:01,242 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-02-13 20:51:34,086 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Updating Gradle version information cache failed. Using outdated cache.
+2017-02-13 20:52:56,158 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-02-13 20:59:27,850 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.

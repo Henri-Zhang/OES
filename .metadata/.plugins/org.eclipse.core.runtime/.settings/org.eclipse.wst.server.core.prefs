@@ -1,0 +1,3 @@
+eclipse.preferences.version=1
+module-start-timeout=300000
+runtimes=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<runtimes>\n  <runtime id\="Liferay 7.x" location\="/home/barrow/Tools/liferay-ce-portal-7.0-ga3/tomcat-8.0.32" name\="Liferay 7.x" runtime-type-id\="com.liferay.ide.server.portal.runtime" timestamp\="0" vm-install-id\="1486553811757" vm-install-type-id\="org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType"/>\n</runtimes>\n

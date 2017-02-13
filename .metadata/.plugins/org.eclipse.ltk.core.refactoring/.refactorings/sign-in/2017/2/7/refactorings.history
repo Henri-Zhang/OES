@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.barrow.signup.controllert.portlet&apos; to &apos;com.barrow.signup.portlet&apos;&#x0A;- Original project: &apos;sign-in&apos;&#x0A;- Original element: &apos;sign-in/src/main/java/com.barrow.signup.controllert.portlet&apos;&#x0A;- Renamed element: &apos;sign-in/src/main/java/com.barrow.signup.portlet&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.barrow.signup.controllert.portlet&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src\/main\/java&lt;com.barrow.signup.controllert.portlet" name="com.barrow.signup.portlet" qualified="false" references="true" stamp="1486866600492" textual="false" version="1.0"/>
+</session>
