@@ -2,14 +2,22 @@ package priv.barrow.oes.portlet.signup.controller;
 
 import java.io.IOException;
 
+import javax.portlet.ActionRequest;
+import javax.portlet.ActionResponse;
 import javax.portlet.Portlet;
 import javax.portlet.PortletException;
+import javax.portlet.ProcessAction;
 import javax.portlet.RenderRequest;
 import javax.portlet.RenderResponse;
 
 import org.osgi.service.component.annotations.Component;
 
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
+import com.liferay.portal.kernel.util.ParamUtil;
+import com.liferay.portal.kernel.util.StringPool;
+
+import priv.barrow.oes.portlet.signup.constant.Constants;
+import priv.barrow.oes.portlet.signup.model.SignUpModel;
 
 /**
  * @author barrow
@@ -21,10 +29,10 @@ import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
         "com.liferay.portlet.instanceable=true",
         "javax.portlet.display-name=Sign Up",
         "javax.portlet.init-param.template-path=/",
-        "com.liferay.portlet.header-portlet-css=/css/signup/main.css",
-        "com.liferay.portlet.header-portlet-javascript=/js/signup/main.js",
-        "javax.portlet.init-param.view-template=/html/signup/view.jsp",
-        "javax.portlet.resource-bundle=content.Language",
+        "com.liferay.portlet.header-portlet-css=/css/signup/sign_up.css",
+        "com.liferay.portlet.header-portlet-javascript=/js/signup/sign_up.js",
+        "javax.portlet.init-param.view-template=/html/signup/sign_up.jsp",
+        "javax.portlet.resource-bundle=content.Language_en",
         "javax.portlet.security-role-ref=power-user,user"
     },
     service = Portlet.class
@@ -35,7 +43,25 @@ public class SignUpPortlet extends MVCPortlet {
     @Override
     public void doView(RenderRequest renderRequest, RenderResponse renderResponse)
             throws IOException, PortletException {
-        renderRequest.setAttribute("name", "Sign Up");
+
         super.doView(renderRequest, renderResponse);
     }
+
+    @ProcessAction(name = "signUp")
+    public void signUp(ActionRequest actionRequest, ActionResponse actionResponse) {
+        SignUpModel signUpModel = getSignUpModel(actionRequest);
+    }
+
+    private SignUpModel getSignUpModel(ActionRequest actionRequest) {
+        String firstName = ParamUtil.get(actionRequest, Constants.FIRST_NAME, StringPool.BLANK);
+        String lastName = ParamUtil.get(actionRequest, Constants.LAST_NAME, StringPool.BLANK);
+        String role = ParamUtil.get(actionRequest, Constants.ROLE, StringPool.BLANK);
+        String email = ParamUtil.get(actionRequest, Constants.EMAIL, StringPool.BLANK);
+        String confirmEmail = ParamUtil.get(actionRequest, Constants.CONFIRM_EMAIL, StringPool.BLANK);
+        String password = ParamUtil.get(actionRequest, Constants.PASSWORD, StringPool.BLANK);
+        String confirmPassword = ParamUtil.get(actionRequest, Constants.CONFIRM_PASSWORD, StringPool.BLANK);
+
+        return null;
+    }
+
 }
