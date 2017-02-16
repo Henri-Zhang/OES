@@ -1,2 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.service.UserLocalServiceUtil"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.theme.ThemeDisplay"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.util.WebKeys"/>
+<fullyQualifiedTypeName name="priv.barrow.oes.portlet.signup.model.SignUpModel"/>
+<fullyQualifiedTypeName name="java.util.Locale"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.util.StringPool"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.model.User"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.service.RoleLocalServiceUtil"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.model.Role"/>
+<fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.log.LogFactoryUtil"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.log.Log"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="priv.barrow.oes.portlet.signup.constant.Constants"/>
+</qualifiedTypeNameHistroy>
