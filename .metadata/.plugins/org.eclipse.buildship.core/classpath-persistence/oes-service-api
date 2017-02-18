@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+<classpathentry kind="lib" path="/home/barrow/.gradle/caches/modules-2/files-2.1/biz.aQute.bnd/biz.aQute.bndlib/3.1.0/8e45564ca80bf089276a35f916e8702e7b798cbb/biz.aQute.bndlib-3.1.0.jar" sourcepath="/home/barrow/.gradle/caches/modules-2/files-2.1/biz.aQute.bnd/biz.aQute.bndlib/3.1.0/58ab3de3dac4f7cfd835a711158d8ef7dfa2b872/biz.aQute.bndlib-3.1.0-sources.jar"/>
+<classpathentry kind="lib" path="/home/barrow/.gradle/caches/modules-2/files-2.1/com.liferay/com.liferay.osgi.util/3.0.0/767e00ee82a0366b84238001a1aa74e490d61b57/com.liferay.osgi.util-3.0.0.jar" sourcepath="/home/barrow/.gradle/caches/modules-2/files-2.1/com.liferay/com.liferay.osgi.util/3.0.0/8f551c8cf19bd924455378a2d9180ca8f5abe970/com.liferay.osgi.util-3.0.0-sources.jar"/>
+<classpathentry kind="lib" path="/home/barrow/.gradle/caches/modules-2/files-2.1/com.liferay.portal/com.liferay.portal.kernel/2.0.0/2b7c4bb22f87dcf60ccf05d45c972f3944b8e447/com.liferay.portal.kernel-2.0.0.jar" sourcepath="/home/barrow/.gradle/caches/modules-2/files-2.1/com.liferay.portal/com.liferay.portal.kernel/2.0.0/5f91fc8c20afc9b5da91f0b8fd4faf7e2977591f/com.liferay.portal.kernel-2.0.0-sources.jar"/>
+<classpathentry kind="lib" path="/home/barrow/.gradle/caches/modules-2/files-2.1/org.osgi/org.osgi.core/6.0.0/c49acdc9ac62cf69ee49cb6f1905b4fdb79ea5c/org.osgi.core-6.0.0.jar" sourcepath="/home/barrow/.gradle/caches/modules-2/files-2.1/org.osgi/org.osgi.core/6.0.0/347531f45363ed10e222b03231d49bb7df016a4d/org.osgi.core-6.0.0-sources.jar"/>
+</classpath>

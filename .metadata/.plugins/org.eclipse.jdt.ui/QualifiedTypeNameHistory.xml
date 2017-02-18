@@ -14,6 +14,8 @@
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.liferay.portal.kernel.log.LogFactoryUtil"/>
 <fullyQualifiedTypeName name="com.liferay.portal.kernel.log.Log"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="priv.barrow.oes.portlet.signup.constant.Constants"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.util.PortalUtil"/>
+<fullyQualifiedTypeName name="com.liferay.dynamic.data.mapping.kernel.DDMStructure"/>
 </qualifiedTypeNameHistroy>

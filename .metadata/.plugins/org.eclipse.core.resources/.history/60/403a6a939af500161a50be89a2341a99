@@ -1,0 +1,7 @@
+package priv.barrow.oes.portlet.addquestion.controller;
+
+import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
+
+public class AddQuestionPortlet extends MVCPortlet {
+
+}

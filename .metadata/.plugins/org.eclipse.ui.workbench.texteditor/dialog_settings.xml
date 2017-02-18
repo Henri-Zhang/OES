@@ -9,16 +9,21 @@
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
 			<item value="&#x09;"/>
+			<item value="PortalUtil"/>
+			<item value="ddm"/>
+			<item value="&#x09;&#x09;"/>
+			<item value="site_logo"/>
 		</list>
 		<list key="replacehistory">
 			<item value="    "/>
+			<item value="        "/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="346" key="DIALOG_WIDTH"/>
 		<item value="1|Cantarell|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 		<item value="474" key="DIALOG_HEIGHT"/>
-		<item value="511" key="DIALOG_X_ORIGIN"/>
-		<item value="37" key="DIALOG_Y_ORIGIN"/>
+		<item value="617" key="DIALOG_X_ORIGIN"/>
+		<item value="232" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>
