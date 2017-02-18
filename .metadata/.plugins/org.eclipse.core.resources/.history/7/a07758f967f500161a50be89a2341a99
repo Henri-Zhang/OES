@@ -1,0 +1,3 @@
+.control-menu-level-1 {
+    background-color: $control-menu-bg;
+}

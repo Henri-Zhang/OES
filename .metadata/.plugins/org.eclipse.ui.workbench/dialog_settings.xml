@@ -22,4 +22,19 @@
 			<item value="com.liferay.ide.newWizards"/>
 		</list>
 	</section>
+	<section name="ImportExportAction">
+		<item value="org.eclipse.buildship.ui.wizards.project.import" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
+		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
+			<item value="org.eclipse.jst.ejb.ui"/>
+			<item value="org.eclipse.egit.ui.internal.clone.gitclonecategory"/>
+			<item value="org.eclipse.buildship.ui.importwizards"/>
+			<item value="org.eclipse.jst.j2ee.internal"/>
+			<item value="com.liferay.ide.projects.import"/>
+			<item value="org.eclipse.m2e"/>
+			<item value="org.eclipse.oomph.importWizards"/>
+			<item value="org.eclipse.pde.ui.PluginDevelopment"/>
+			<item value="org.eclipse.team.ui.importWizards"/>
+			<item value="org.eclipse.wst.web.ui"/>
+		</list>
+	</section>
 </section>
