@@ -11,4 +11,6 @@
 
 <portlet:defineObjects />
 
-<aui:a calss="btn" href="/view-questions">Sharon</aui:a>
+<h4>Recent Update Questions:</h4>
+<aui:a calss="btn btn-lg btn-primary btn-default" href="/view-questions">View Questions</aui:a>
+<aui:a calss="btn btn-lg btn-primary btn-default" href="/add-question">Add Question</aui:a>

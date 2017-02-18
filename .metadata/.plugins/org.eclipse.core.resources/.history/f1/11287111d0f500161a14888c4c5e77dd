@@ -1,0 +1,275 @@
+/**
+ * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ */
+
+package oes.service.service;
+
+import aQute.bnd.annotation.ProviderType;
+
+import com.liferay.portal.kernel.service.ServiceWrapper;
+
+/**
+ * Provides a wrapper for {@link OESQuestionLocalService}.
+ *
+ * @author Brian Wing Shun Chan
+ * @see OESQuestionLocalService
+ * @generated
+ */
+@ProviderType
+public class OESQuestionLocalServiceWrapper implements OESQuestionLocalService,
+	ServiceWrapper<OESQuestionLocalService> {
+	public OESQuestionLocalServiceWrapper(
+		OESQuestionLocalService oesQuestionLocalService) {
+		_oesQuestionLocalService = oesQuestionLocalService;
+	}
+
+	@Override
+	public com.liferay.portal.kernel.dao.orm.ActionableDynamicQuery getActionableDynamicQuery() {
+		return _oesQuestionLocalService.getActionableDynamicQuery();
+	}
+
+	@Override
+	public com.liferay.portal.kernel.dao.orm.DynamicQuery dynamicQuery() {
+		return _oesQuestionLocalService.dynamicQuery();
+	}
+
+	@Override
+	public com.liferay.portal.kernel.dao.orm.IndexableActionableDynamicQuery getIndexableActionableDynamicQuery() {
+		return _oesQuestionLocalService.getIndexableActionableDynamicQuery();
+	}
+
+	/**
+	* @throws PortalException
+	*/
+	@Override
+	public com.liferay.portal.kernel.model.PersistedModel deletePersistedModel(
+		com.liferay.portal.kernel.model.PersistedModel persistedModel)
+		throws com.liferay.portal.kernel.exception.PortalException {
+		return _oesQuestionLocalService.deletePersistedModel(persistedModel);
+	}
+
+	@Override
+	public com.liferay.portal.kernel.model.PersistedModel getPersistedModel(
+		java.io.Serializable primaryKeyObj)
+		throws com.liferay.portal.kernel.exception.PortalException {
+		return _oesQuestionLocalService.getPersistedModel(primaryKeyObj);
+	}
+
+	/**
+	* Returns the number of oes questions.
+	*
+	* @return the number of oes questions
+	*/
+	@Override
+	public int getOESQuestionsCount() {
+		return _oesQuestionLocalService.getOESQuestionsCount();
+	}
+
+	/**
+	* Returns the OSGi service identifier.
+	*
+	* @return the OSGi service identifier
+	*/
+	@Override
+	public java.lang.String getOSGiServiceIdentifier() {
+		return _oesQuestionLocalService.getOSGiServiceIdentifier();
+	}
+
+	/**
+	* Performs a dynamic query on the database and returns the matching rows.
+	*
+	* @param dynamicQuery the dynamic query
+	* @return the matching rows
+	*/
+	@Override
+	public <T> java.util.List<T> dynamicQuery(
+		com.liferay.portal.kernel.dao.orm.DynamicQuery dynamicQuery) {
+		return _oesQuestionLocalService.dynamicQuery(dynamicQuery);
+	}
+
+	/**
+	* Performs a dynamic query on the database and returns a range of the matching rows.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link oes.service.model.impl.OESQuestionModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param dynamicQuery the dynamic query
+	* @param start the lower bound of the range of model instances
+	* @param end the upper bound of the range of model instances (not inclusive)
+	* @return the range of matching rows
+	*/
+	@Override
+	public <T> java.util.List<T> dynamicQuery(
+		com.liferay.portal.kernel.dao.orm.DynamicQuery dynamicQuery, int start,
+		int end) {
+		return _oesQuestionLocalService.dynamicQuery(dynamicQuery, start, end);
+	}
+
+	/**
+	* Performs a dynamic query on the database and returns an ordered range of the matching rows.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link oes.service.model.impl.OESQuestionModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param dynamicQuery the dynamic query
+	* @param start the lower bound of the range of model instances
+	* @param end the upper bound of the range of model instances (not inclusive)
+	* @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
+	* @return the ordered range of matching rows
+	*/
+	@Override
+	public <T> java.util.List<T> dynamicQuery(
+		com.liferay.portal.kernel.dao.orm.DynamicQuery dynamicQuery, int start,
+		int end,
+		com.liferay.portal.kernel.util.OrderByComparator<T> orderByComparator) {
+		return _oesQuestionLocalService.dynamicQuery(dynamicQuery, start, end,
+			orderByComparator);
+	}
+
+	/**
+	* Returns a range of all the oes questions.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link oes.service.model.impl.OESQuestionModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param start the lower bound of the range of oes questions
+	* @param end the upper bound of the range of oes questions (not inclusive)
+	* @return the range of oes questions
+	*/
+	@Override
+	public java.util.List<oes.service.model.OESQuestion> getOESQuestions(
+		int start, int end) {
+		return _oesQuestionLocalService.getOESQuestions(start, end);
+	}
+
+	/**
+	* Returns the number of rows matching the dynamic query.
+	*
+	* @param dynamicQuery the dynamic query
+	* @return the number of rows matching the dynamic query
+	*/
+	@Override
+	public long dynamicQueryCount(
+		com.liferay.portal.kernel.dao.orm.DynamicQuery dynamicQuery) {
+		return _oesQuestionLocalService.dynamicQueryCount(dynamicQuery);
+	}
+
+	/**
+	* Returns the number of rows matching the dynamic query.
+	*
+	* @param dynamicQuery the dynamic query
+	* @param projection the projection to apply to the query
+	* @return the number of rows matching the dynamic query
+	*/
+	@Override
+	public long dynamicQueryCount(
+		com.liferay.portal.kernel.dao.orm.DynamicQuery dynamicQuery,
+		com.liferay.portal.kernel.dao.orm.Projection projection) {
+		return _oesQuestionLocalService.dynamicQueryCount(dynamicQuery,
+			projection);
+	}
+
+	/**
+	* Adds the oes question to the database. Also notifies the appropriate model listeners.
+	*
+	* @param oesQuestion the oes question
+	* @return the oes question that was added
+	*/
+	@Override
+	public oes.service.model.OESQuestion addOESQuestion(
+		oes.service.model.OESQuestion oesQuestion) {
+		return _oesQuestionLocalService.addOESQuestion(oesQuestion);
+	}
+
+	/**
+	* Creates a new oes question with the primary key. Does not add the oes question to the database.
+	*
+	* @param questionId the primary key for the new oes question
+	* @return the new oes question
+	*/
+	@Override
+	public oes.service.model.OESQuestion createOESQuestion(long questionId) {
+		return _oesQuestionLocalService.createOESQuestion(questionId);
+	}
+
+	/**
+	* Deletes the oes question with the primary key from the database. Also notifies the appropriate model listeners.
+	*
+	* @param questionId the primary key of the oes question
+	* @return the oes question that was removed
+	* @throws PortalException if a oes question with the primary key could not be found
+	*/
+	@Override
+	public oes.service.model.OESQuestion deleteOESQuestion(long questionId)
+		throws com.liferay.portal.kernel.exception.PortalException {
+		return _oesQuestionLocalService.deleteOESQuestion(questionId);
+	}
+
+	/**
+	* Deletes the oes question from the database. Also notifies the appropriate model listeners.
+	*
+	* @param oesQuestion the oes question
+	* @return the oes question that was removed
+	*/
+	@Override
+	public oes.service.model.OESQuestion deleteOESQuestion(
+		oes.service.model.OESQuestion oesQuestion) {
+		return _oesQuestionLocalService.deleteOESQuestion(oesQuestion);
+	}
+
+	@Override
+	public oes.service.model.OESQuestion fetchOESQuestion(long questionId) {
+		return _oesQuestionLocalService.fetchOESQuestion(questionId);
+	}
+
+	/**
+	* Returns the oes question with the primary key.
+	*
+	* @param questionId the primary key of the oes question
+	* @return the oes question
+	* @throws PortalException if a oes question with the primary key could not be found
+	*/
+	@Override
+	public oes.service.model.OESQuestion getOESQuestion(long questionId)
+		throws com.liferay.portal.kernel.exception.PortalException {
+		return _oesQuestionLocalService.getOESQuestion(questionId);
+	}
+
+	/**
+	* Updates the oes question in the database or adds it if it does not yet exist. Also notifies the appropriate model listeners.
+	*
+	* @param oesQuestion the oes question
+	* @return the oes question that was updated
+	*/
+	@Override
+	public oes.service.model.OESQuestion updateOESQuestion(
+		oes.service.model.OESQuestion oesQuestion) {
+		return _oesQuestionLocalService.updateOESQuestion(oesQuestion);
+	}
+
+	@Override
+	public OESQuestionLocalService getWrappedService() {
+		return _oesQuestionLocalService;
+	}
+
+	@Override
+	public void setWrappedService(
+		OESQuestionLocalService oesQuestionLocalService) {
+		_oesQuestionLocalService = oesQuestionLocalService;
+	}
+
+	private OESQuestionLocalService _oesQuestionLocalService;
+}

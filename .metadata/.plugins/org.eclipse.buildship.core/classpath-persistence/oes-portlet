@@ -6,4 +6,5 @@
 <classpathentry kind="lib" path="/home/barrow/.gradle/caches/modules-2/files-2.1/javax.servlet/javax.servlet-api/3.0.1/6bf0ebb7efd993e222fc1112377b5e92a13b38dd/javax.servlet-api-3.0.1.jar" sourcepath="/home/barrow/.gradle/caches/modules-2/files-2.1/javax.servlet/javax.servlet-api/3.0.1/1952f91d84016a39e31346c9d18bd8c9c4a128a/javax.servlet-api-3.0.1-sources.jar"/>
 <classpathentry kind="lib" path="/home/barrow/.gradle/caches/modules-2/files-2.1/jstl/jstl/1.2/74aca283cd4f4b4f3e425f5820cda58f44409547/jstl-1.2.jar"/>
 <classpathentry kind="lib" path="/home/barrow/.gradle/caches/modules-2/files-2.1/org.osgi/osgi.cmpn/6.0.0/a3a5269424e5ea6488d30dedce8fabca11efbc3d/osgi.cmpn-6.0.0.jar" sourcepath="/home/barrow/.gradle/caches/modules-2/files-2.1/org.osgi/osgi.cmpn/6.0.0/cf4d979984a597753bf7e7df18369ec60f09a7fc/osgi.cmpn-6.0.0-sources.jar"/>
+<classpathentry kind="src" path="/oes-service-api"/>
 </classpath>

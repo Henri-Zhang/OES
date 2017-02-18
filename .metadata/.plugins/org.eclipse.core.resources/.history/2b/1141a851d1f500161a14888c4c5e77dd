@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="oes.service.model.Question">
+		<field name="questionSid" type="long" />
+		<field name="ddmContentId" type="long" />
+	</model>
+</model-hints>

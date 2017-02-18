@@ -1,0 +1,5 @@
+create table Question_OESQuestion (
+	uuid_ VARCHAR(75) null,
+	questionId LONG not null primary key,
+	structrueId LONG
+);

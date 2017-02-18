@@ -46,9 +46,12 @@
         <reference entity="AssetEntry" package-path="com.liferay.portlet.asset" />
         <reference entity="AssetTag" package-path="com.liferay.portlet.asset" />
     </entity> -->
-    <namespace>Question</namespace>
-    <entity local-service="true" name="oes-question" uuid="true">
-        <column name="questionId" primary="true" type="long" />
-        <column name="structrueId" type="long" />
+    <namespace>oes</namespace>
+    <entity local-service="true" remote-service="false" name="QuestionContentLink">
+        <column name="questionOrder" primary="true" type="long" />
+        <column name="ddmContentId" type="long" />
+        <order by="asc">
+            <order-column name="questionOrder" />
+        </order>
     </entity>
 </service-builder>

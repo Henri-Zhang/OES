@@ -38,6 +38,7 @@ public class AddQuestionPortlet extends MVCPortlet {
         long classNameId = PortalUtil.getClassNameId(DDMStructure.class);
         System.out.println("----------------" + classNameId);
         renderRequest.setAttribute("classNameId", classNameId);
+
         super.doView(renderRequest, renderResponse);
     }
 

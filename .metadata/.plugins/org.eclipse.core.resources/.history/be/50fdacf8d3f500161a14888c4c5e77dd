@@ -1,0 +1,4 @@
+create table Question_QuestionContentLink (
+	questionOrder LONG not null primary key,
+	ddmContentId LONG
+);

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean class="oes.service.service.impl.QuestionLocalServiceImpl" id="oes.service.service.QuestionLocalService" />
+	<bean class="oes.service.service.impl.QuestionServiceImpl" id="oes.service.service.QuestionService" />
+	<bean class="oes.service.service.persistence.impl.QuestionPersistenceImpl" id="oes.service.service.persistence.QuestionPersistence" parent="basePersistence" />
+</beans>
