@@ -1,4 +1,0 @@
-create table Question_Question (
-	questionOrder LONG not null primary key,
-	ddmContentId LONG
-);

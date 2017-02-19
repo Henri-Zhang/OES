@@ -1,9 +1,9 @@
 Bundle-Name: oes-service-api
-Bundle-SymbolicName: oes.service.api
+Bundle-SymbolicName: priv.barrow.api
 Bundle-Version: 1.0.0
 Export-Package:\
-	oes.service.exception,\
-	oes.service.model,\
-	oes.service.service,\
-	oes.service.service.persistence
+	priv.barrow.exception,\
+	priv.barrow.model,\
+	priv.barrow.service,\
+	priv.barrow.service.persistence
 -includeresource: META-INF/service.xml=../oes-service-service/service.xml

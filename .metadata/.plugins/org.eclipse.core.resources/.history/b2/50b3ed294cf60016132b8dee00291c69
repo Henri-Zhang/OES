@@ -1,0 +1,5 @@
+package priv.barrow.service.persistence.impl;
+
+public class QuestionRecordLinkFinderImpl extends BasePersistenceImpl<Entry> {
+
+}

@@ -1,0 +1,9 @@
+package priv.barrow.service.persistence.impl;
+
+import com.liferay.portal.kernel.service.persistence.impl.BasePersistenceImpl;
+
+import priv.barrow.model.questionRecordLink;
+
+public class QuestionRecordLinkFinderImpl extends BasePersistenceImpl<questionRecordLink> {
+
+}

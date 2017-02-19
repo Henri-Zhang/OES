@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean class="priv.barrow.service.impl.QuestionRecordLinkLocalServiceImpl" id="priv.barrow.service.QuestionRecordLinkLocalService" />
+	<bean class="priv.barrow.service.persistence.impl.QuestionRecordLinkPersistenceImpl" id="priv.barrow.service.persistence.QuestionRecordLinkPersistence" parent="basePersistence" />
+	<bean class="priv.barrow.service.persistence.impl.QuestionRecordLinkFinderImpl" id="priv.barrow.service.persistence.QuestionRecordLinkFinder" parent="basePersistence" />
+</beans>

@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-
-<model-hints>
-	<model name="oes.service.model.OESQuestion">
-		<field name="uuid" type="String" />
-		<field name="questionId" type="long" />
-		<field name="structrueId" type="long" />
-	</model>
-</model-hints>

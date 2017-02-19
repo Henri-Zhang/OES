@@ -1,4 +1,0 @@
-create table oes_questioncontentlink (
-	questionOrder LONG not null primary key,
-	ddmContentId LONG
-);

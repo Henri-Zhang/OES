@@ -1,9 +1,0 @@
-create table Question_OESQuestion (
-	questionSid LONG not null primary key,
-	ddmContentId LONG
-);
-
-create table Question_Question (
-	questionSid LONG not null primary key,
-	ddmContentId LONG
-);

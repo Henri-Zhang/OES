@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<custom-sql>
+    <sql id="oes.service.service.impl.QuestionContentLinkLocalServiceImpl.barrowTest">
+        <![CDATA[
+            SELECT COUNT(*)
+            FROM
+                oes_questioncontentlink
+        ]]>
+    </sql>
+</custom-sql>

@@ -11,6 +11,8 @@ import org.osgi.service.component.annotations.Component;
 
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
 
+import priv.barrow.service.QuestionRecordLinkLocalServiceUtil;
+
 @Component(
     immediate = true,
     property = {
@@ -32,7 +34,7 @@ public class ContentDashboardPortlet extends MVCPortlet {
     @Override
     public void doView(RenderRequest renderRequest, RenderResponse renderResponse)
             throws IOException, PortletException {
-
+        QuestionRecordLinkLocalServiceUtil.finderRecentUpdateQuestionRecordLinks(5);
         super.doView(renderRequest, renderResponse);
     }
 

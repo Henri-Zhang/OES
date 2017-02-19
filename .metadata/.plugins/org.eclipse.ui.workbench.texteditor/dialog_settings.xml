@@ -2,17 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="    " key="selection"/>
+		<item value="" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="com.liferay.util"/>
+			<item value="findRecentUpdateQuestionContentLinks"/>
+			<item value="CustomSQLUtil"/>
+			<item value="COUNT_BY_ORGANIZATION_IDS"/>
 			<item value="&#x09;"/>
 			<item value="PortalUtil"/>
 			<item value="ddm"/>
 			<item value="&#x09;&#x09;"/>
-			<item value="site_logo"/>
 		</list>
 		<list key="replacehistory">
 			<item value="    "/>
@@ -23,7 +26,7 @@
 		<item value="346" key="DIALOG_WIDTH"/>
 		<item value="1|Cantarell|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 		<item value="474" key="DIALOG_HEIGHT"/>
-		<item value="617" key="DIALOG_X_ORIGIN"/>
-		<item value="232" key="DIALOG_Y_ORIGIN"/>
+		<item value="85" key="DIALOG_X_ORIGIN"/>
+		<item value="118" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

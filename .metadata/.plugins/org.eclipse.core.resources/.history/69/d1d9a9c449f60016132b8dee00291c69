@@ -1,0 +1,4 @@
+create table OES_questionRecordLink (
+	questionOrder LONG not null primary key,
+	ddlRecordId LONG
+);
