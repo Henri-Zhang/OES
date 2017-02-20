@@ -1,6 +1,7 @@
 package priv.barrow.oes.portlet.addquestion.controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.portlet.Portlet;
 import javax.portlet.PortletException;
@@ -9,9 +10,27 @@ import javax.portlet.RenderResponse;
 
 import org.osgi.service.component.annotations.Component;
 
-import com.liferay.dynamic.data.mapping.kernel.DDMStructure;
+import com.liferay.dynamic.data.mapping.model.DDMStructure;
+import com.liferay.dynamic.data.mapping.service.DDMStructureLocalServiceUtil;
+import com.liferay.dynamic.data.mapping.storage.Fields;
+import com.liferay.dynamic.data.mapping.util.DDMUtil;
+import com.liferay.portal.kernel.dao.orm.Criterion;
+import com.liferay.portal.kernel.dao.orm.DynamicQuery;
+import com.liferay.portal.kernel.dao.orm.DynamicQueryFactoryUtil;
+import com.liferay.portal.kernel.dao.orm.Property;
+import com.liferay.portal.kernel.dao.orm.PropertyFactoryUtil;
+import com.liferay.portal.kernel.exception.PortalException;
+import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
+import com.liferay.portal.kernel.service.ServiceContext;
+import com.liferay.portal.kernel.util.PortalClassLoaderUtil;
 import com.liferay.portal.kernel.util.PortalUtil;
+import com.liferay.portal.kernel.util.StringPool;
+import com.liferay.portal.kernel.util.Validator;
+
+import priv.barrow.oes.portlet.addquestion.constants.Constants;
+import priv.barrow.oes.portlet.addquestion.exception.NoQuestionStructureException;
 
 @Component(
     immediate = true,
@@ -31,13 +50,41 @@ import com.liferay.portal.kernel.util.PortalUtil;
 
 public class AddQuestionPortlet extends MVCPortlet {
 
+    private static final Log LOG = LogFactoryUtil.getLog(AddQuestionPortlet.class);
+
     @Override
     public void doView(RenderRequest renderRequest, RenderResponse renderResponse)
             throws IOException, PortletException {
 
         long classNameId = PortalUtil.getClassNameId(DDMStructure.class);
-        System.out.println("----------------" + classNameId);
-        renderRequest.setAttribute("classNameId", classNameId);
+
+        DynamicQuery structrueQuery =
+                DynamicQueryFactoryUtil.forClass(DDMStructure.class, PortalClassLoaderUtil.getClassLoader());
+        Property property = PropertyFactoryUtil.forName("name");
+        Criterion criterion =
+                property.like(StringPool.PERCENT+ Constants.QUESTION + Constants.NAME_END_TAG + StringPool.PERCENT);
+        structrueQuery.add(criterion);
+        List<DDMStructure> ddmStructures = DDMStructureLocalServiceUtil.dynamicQuery(structrueQuery);
+
+        if (Validator.isNull(ddmStructures) || ddmStructures.isEmpty()) {
+            String errorMessage = String.format("No ddmStructure found with name [%s]", Constants.QUESTION);
+            LOG.error(errorMessage, new NoQuestionStructureException(errorMessage));
+            return;
+        }
+        DDMStructure ddmStructure = ddmStructures.get(0);
+
+        long classPK = ddmStructure.getStructureId();
+        ServiceContext serviceContext = new ServiceContext();
+        Fields fields = null;
+        try {
+            fields = DDMUtil.getFields(classPK, serviceContext);
+        } catch (PortalException e) {
+            LOG.error(String.format("Get fields from ddmStructure which id is [%s] failed.", classPK), e);
+        }
+
+        renderRequest.setAttribute(Constants.CLASS_NAME_ID, classNameId);
+        renderRequest.setAttribute(Constants.CLASS_PK, classPK);
+        renderRequest.setAttribute(Constants.FIELDS, fields);
 
         super.doView(renderRequest, renderResponse);
     }

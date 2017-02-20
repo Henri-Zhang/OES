@@ -10,7 +10,11 @@
 
 <portlet:defineObjects />
 
-<liferay-ddm:html
-	classPK="50945"
-	classNameId="${classNameId }"
-/>
+<aui:form>
+    <liferay-ddm:html
+        classNameId="${classNameId }"
+        classPK="${classPK }"
+        fields="${fields }"
+        checkRequired="true"
+    />
+</aui:form>

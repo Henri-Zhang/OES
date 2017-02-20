@@ -1,0 +1,80 @@
+package priv.barrow.oes.portlet.addquestion.controller;
+
+import java.io.IOException;
+
+import javax.portlet.Portlet;
+import javax.portlet.PortletException;
+import javax.portlet.RenderRequest;
+import javax.portlet.RenderResponse;
+
+import org.osgi.service.component.annotations.Component;
+
+import com.liferay.dynamic.data.mapping.model.DDMStructure;
+import com.liferay.dynamic.data.mapping.service.DDMStructureLocalServiceUtil;
+import com.liferay.dynamic.data.mapping.storage.Fields;
+import com.liferay.dynamic.data.mapping.util.DDMUtil;
+import com.liferay.portal.kernel.dao.orm.Criterion;
+import com.liferay.portal.kernel.dao.orm.DynamicQuery;
+import com.liferay.portal.kernel.dao.orm.DynamicQueryFactoryUtil;
+import com.liferay.portal.kernel.dao.orm.PropertyFactoryUtil;
+import com.liferay.portal.kernel.exception.PortalException;
+import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
+import com.liferay.portal.kernel.service.ServiceContext;
+import com.liferay.portal.kernel.util.PortalClassLoaderUtil;
+import com.liferay.portal.kernel.util.PortalUtil;
+
+@Component(
+    immediate = true,
+    property = {
+        "com.liferay.portlet.display-category=Content Admin",
+        "com.liferay.portlet.instanceable=true",
+        "javax.portlet.display-name=Add Question",
+        "javax.portlet.init-param.template-path=/",
+        "com.liferay.portlet.header-portlet-css=/css/addquestion/add_question.css",
+        "com.liferay.portlet.header-portlet-javascript=/js/addquestion/add_question.js",
+        "javax.portlet.init-param.view-template=/html/addquestion/add_question.jsp",
+        "javax.portlet.resource-bundle=content.Language",
+        "javax.portlet.security-role-ref=power-user,user"
+    },
+    service = Portlet.class
+)
+
+public class AddQuestionPortlet extends MVCPortlet {
+
+    @Override
+    public void doView(RenderRequest renderRequest, RenderResponse renderResponse)
+            throws IOException, PortletException {
+
+        long classNameId = PortalUtil.getClassNameId(DDMStructure.class);
+
+        DynamicQuery structrueQuery = DynamicQueryFactoryUtil.forClass(DDMStructure.class, PortalClassLoaderUtil.getClassLoader());
+        Property property = PropertyFactoryUtil.forName("name");
+        Criterion criterion = property.like("%>Question</Name>%");
+        structrueQuery.add(criterion);
+        List<DDMStructure> ddmStructures = DDMStructureLocalServiceUtil.dynamicQuery(structrueQuery);
+        DDMStructure ddmStructure = null;
+        try {
+            ddmStructure = DDMStructureLocalServiceUtil.getDDMStructure(50946);
+        } catch (PortalException e1) {
+            // TODO Auto-generated catch block
+            e1.printStackTrace();
+        }
+//        DDMStructure ddmStructure = ddmStructures.get(0);
+
+        long classPK = ddmStructure.getStructureId();
+        ServiceContext serviceContext = new ServiceContext();
+        Fields fields = null;
+        try {
+            fields = DDMUtil.getFields(classPK, serviceContext);
+        } catch (PortalException e) {
+            e.printStackTrace();
+        }
+
+        renderRequest.setAttribute("classNameId", classNameId);
+        renderRequest.setAttribute("classPK", classPK);
+        renderRequest.setAttribute("fields", fields);
+
+        super.doView(renderRequest, renderResponse);
+    }
+
+}

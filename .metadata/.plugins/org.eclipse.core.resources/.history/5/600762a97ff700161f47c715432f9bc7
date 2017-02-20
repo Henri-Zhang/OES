@@ -1,0 +1,5 @@
+package priv.barrow.oes.portlet.addquestion.exception;
+
+public class NoQuestionStructureException extends Exception {
+
+}

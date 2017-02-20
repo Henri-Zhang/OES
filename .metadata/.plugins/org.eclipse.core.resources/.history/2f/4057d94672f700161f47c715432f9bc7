@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+
+<entity local-service="true" name="QuestionRecordLink" remote-service="false" >
+    <column name="questionOrder" primary="true" type="long" />
+    <column name="ddlRecordId" type="long" />
+</entity>
