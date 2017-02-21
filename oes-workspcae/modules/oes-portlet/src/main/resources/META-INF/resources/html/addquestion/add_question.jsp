@@ -10,11 +10,14 @@
 
 <portlet:defineObjects />
 
-<aui:form>
+<<portlet:actionURL name="addQuestion" var="addQuestionURL" />
+
+<aui:form action="${addQuestionURL }" method="POST">
     <liferay-ddm:html
         classNameId="${classNameId }"
         classPK="${classPK }"
         fields="${fields }"
         checkRequired="true"
     />
+    <aui:button type="submit" value="add" />
 </aui:form>
