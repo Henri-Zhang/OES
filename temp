@@ -30,25 +30,65 @@ compileOnly group: "com.liferay", name: "com.liferay.portal.dao.orm.custom.sql",
 
 <?xml version='1.0' encoding='UTF-8'?><root available-locales="en_US" default-locale="en_US"><Name language-id="en_US">Question</Name></root>
 
-13:23:13,599 INFO  [fileinstall-/home/barrow/Tools/liferay-ce-portal-7.0-ga3/osgi/modules][BundleStartStopLogger:38] STOPPED oes.portlet_1.0.0 [489]
-13:23:13,681 INFO  [Refresh Thread: Equinox Container: 00dc5985-36f8-0016-144a-fe4b81ce5afd][BundleStartStopLogger:35] STARTED oes.portlet_1.0.0 [489]
-13:23:15,511 WARN  [fileinstall-/home/barrow/Tools/liferay-ce-portal-7.0-ga3/osgi/modules][org_apache_felix_fileinstall:103] Error while starting bundle: file:/home/barrow/Tools/liferay-ce-portal-7.0-ga3/osgi/modules/priv.barrow.service.jar 
-org.osgi.framework.BundleException: Could not resolve module: priv.barrow.service [488]_  Unresolved requirement: Import-Package: com.liferay.util.dao.orm; version="[6.2.0,7.0.0)"_ [Sanitized]
-	at org.eclipse.osgi.container.Module.start(Module.java:429)
-	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:402)
-	at org.apache.felix.fileinstall.internal.DirectoryWatcher.startBundle(DirectoryWatcher.java:1252)
+13:18:54,961 ERROR [http-nio-8080-exec-9][PortletBeanLocatorUtil:42] BeanLocator is null for servlet context oes-service-service
+13:18:54,966 ERROR [http-nio-8080-exec-9][render_portlet_jsp:131] null
+com.liferay.portal.kernel.bean.BeanLocatorException: BeanLocator is not set for servlet context oes-service-service
+	at com.liferay.portal.kernel.bean.PortletBeanLocatorUtil.locate(PortletBeanLocatorUtil.java:46)
+	at priv.barrow.service.QuestionRecordLinkLocalServiceUtil.getService(QuestionRecordLinkLocalServiceUtil.java:271)
+	at priv.barrow.service.QuestionRecordLinkLocalServiceUtil.finderRecentUpdateQuestionRecordLinks(QuestionRecordLinkLocalServiceUtil.java:147)
+	at priv.barrow.oes.portlet.contentdashboard.controller.ContentDashboardPortlet.doView(ContentDashboardPortlet.java:37)
+	at com.liferay.portal.kernel.portlet.LiferayPortlet.doDispatch(LiferayPortlet.java:302)
+	at com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet.doDispatch(MVCPortlet.java:471)
+	at javax.portlet.GenericPortlet.render(GenericPortlet.java:262)
+	at com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet.render(MVCPortlet.java:291)
+	at com.liferay.portlet.FilterChainImpl.doFilter(FilterChainImpl.java:103)
+	at com.liferay.portlet.ScriptDataPortletFilter.doFilter(ScriptDataPortletFilter.java:57)
+	at com.liferay.portlet.FilterChainImpl.doFilter(FilterChainImpl.java:100)
+	at com.liferay.portal.kernel.portlet.PortletFilterUtil.doFilter(PortletFilterUtil.java:64)
+	at com.liferay.portal.kernel.servlet.PortletServlet.service(PortletServlet.java:105)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at com.liferay.portal.osgi.web.servlet.context.helper.internal.ServletContextHelperRegistrationImpl$PortletServletWrapper.service(ServletContextHelperRegistrationImpl.java:427)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.eclipse.equinox.http.servlet.internal.registration.EndpointRegistration.service(EndpointRegistration.java:153)
+	at org.eclipse.equinox.http.servlet.internal.servlet.FilterChainImpl.doFilter(FilterChainImpl.java:50)
+	at com.liferay.portal.osgi.web.servlet.context.helper.internal.ServletContextHelperRegistrationImpl$RestrictPortletServletRequestFilter.doFilter(ServletContextHelperRegistrationImpl.java:447)
+	at org.eclipse.equinox.http.servlet.internal.registration.FilterRegistration.doFilter(FilterRegistration.java:121)
 	at org.apache.felix.fileinstall.internal.DirectoryWatcher.startBundles(DirectoryWatcher.java:1224)
 	at org.apache.felix.fileinstall.internal.DirectoryWatcher.doProcess(DirectoryWatcher.java:512)
 	at org.apache.felix.fileinstall.internal.DirectoryWatcher.process(DirectoryWatcher.java:361)
 	at org.apache.felix.fileinstall.internal.DirectoryWatcher.run(DirectoryWatcher.java:313)
 
+Working Directory: /home/barrow/workspace/oes-workspcae/modules/oes-service
+Gradle User Home: /home/barrow/.gradle
+Gradle Distribution: Gradle wrapper from target build
+Gradle Version: 3.0
+Java Home: /usr/java/jdk1.8.0_121
+JVM Arguments: None
+Program Arguments: None
+Gradle Tasks: deploy
 
-15:19:12,672 WARN  [fileinstall-/home/barrow/Tools/liferay-ce-portal-7.0-ga3/osgi/modules][org_apache_felix_fileinstall:103] Error while starting bundle: file:/home/barrow/Tools/liferay-ce-portal-7.0-ga3/osgi/modules/priv.barrow.service.jar 
-org.osgi.framework.BundleException: Could not resolve module: priv.barrow.service [488]_  Unresolved requirement: Import-Package: com.liferay.util.dao.orm; version="[7.0.0,8.0.0)"_ [Sanitized]
-	at org.eclipse.osgi.container.Module.start(Module.java:429)
-	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:402)
-	at org.apache.felix.fileinstall.internal.DirectoryWatcher.startBundle(DirectoryWatcher.java:1252)
-	at org.apache.felix.fileinstall.internal.DirectoryWatcher.startBundles(DirectoryWatcher.java:1224)
-	at org.apache.felix.fileinstall.internal.DirectoryWatcher.doProcess(DirectoryWatcher.java:512)
-	at org.apache.felix.fileinstall.internal.DirectoryWatcher.process(DirectoryWatcher.java:361)
-	at org.apache.felix.fileinstall.internal.DirectoryWatcher.run(DirectoryWatcher.java:313)
+15:13:03,418 ERROR [http-nio-8080-exec-6][PortletBeanLocatorUtil:42] BeanLocator is null for servlet context oes-service-service
+15:13:03,421 ERROR [http-nio-8080-exec-6][render_portlet_jsp:131] null
+com.liferay.portal.kernel.bean.BeanLocatorException: BeanLocator is not set for servlet context oes-service-service
+	at com.liferay.portal.kernel.bean.PortletBeanLocatorUtil.locate(PortletBeanLocatorUtil.java:46)
+	at priv.barrow.service.QuestionRecordLinkLocalServiceUtil.getService(QuestionRecordLinkLocalServiceUtil.java:271)
+	at priv.barrow.service.QuestionRecordLinkLocalServiceUtil.getQuestionRecordLinksCount(QuestionRecordLinkLocalServiceUtil.java:77)
+	at priv.barrow.oes.portlet.contentdashboard.controller.ContentDashboardPortlet.doView(ContentDashboardPortlet.java:38)
+	at com.liferay.portal.kernel.portlet.LiferayPortlet.doDispatch(LiferayPortlet.java:302)
+	at com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet.doDispatch(MVCPortlet.java:471)
+	at javax.portlet.GenericPortlet.render(GenericPortlet.java:262)
+	at com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet.render(MVCPortlet.java:291)
+	at com.liferay.portlet.FilterChainImpl.doFilter(FilterChainImpl.java:103)
+	at com.liferay.portlet.ScriptDataPortletFilter.doFilter(ScriptDataPortletFilter.java:57)
+	at com.liferay.portlet.FilterChainImpl.doFilter(FilterChainImpl.java:100)
+	at com.liferay.portal.kernel.portlet.PortletFilterUtil.doFilter(PortletFilterUtil.java:64)
+	at com.liferay.portal.kernel.servlet.PortletServlet.service(PortletServlet.java:105)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at com.liferay.portal.osgi.web.servlet.context.helper.internal.ServletContextHelperRegistrationImpl$PortletServletWrapper.service(ServletContextHelperRegistrationImpl.java:427)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.eclipse.equinox.http.servlet.internal.registration.EndpointRegistration.service(EndpointRegistration.java:153)
+	at org.eclipse.equinox.http.servlet.internal.servlet.FilterChainImpl.doFilter(FilterChainImpl.java:50)
+	at com.liferay.portal.osgi.web.servlet.context.helper.internal.ServletContextHelperRegistrationImpl$RestrictPortletServletRequestFilter.doFilter(ServletContextHelperRegistrationImpl.java:447)
+	at org.eclipse.equinox.http.servlet.internal.registration.FilterRegistration.doFilter(FilterRegistration.java:121)
+
+

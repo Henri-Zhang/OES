@@ -149,9 +149,9 @@ public class QuestionRecordLinkLocalServiceWrapper
 	}
 
 	@Override
-	public java.util.List<priv.barrow.model.QuestionRecordLink> finderRecentUpdateQuestionRecordLinks(
+	public java.util.List<priv.barrow.model.QuestionRecordLink> findRecentUpdateQuestionRecordLinks(
 		int count) {
-		return _questionRecordLinkLocalService.finderRecentUpdateQuestionRecordLinks(count);
+		return _questionRecordLinkLocalService.findRecentUpdateQuestionRecordLinks(count);
 	}
 
 	/**

@@ -142,9 +142,9 @@ public class QuestionRecordLinkLocalServiceUtil {
 				   .dynamicQuery(dynamicQuery, start, end, orderByComparator);
 	}
 
-	public static java.util.List<priv.barrow.model.QuestionRecordLink> finderRecentUpdateQuestionRecordLinks(
+	public static java.util.List<priv.barrow.model.QuestionRecordLink> findRecentUpdateQuestionRecordLinks(
 		int count) {
-		return getService().finderRecentUpdateQuestionRecordLinks(count);
+		return getService().findRecentUpdateQuestionRecordLinks(count);
 	}
 
 	/**

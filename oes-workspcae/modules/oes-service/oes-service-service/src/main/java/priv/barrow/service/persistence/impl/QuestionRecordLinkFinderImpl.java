@@ -2,8 +2,6 @@ package priv.barrow.service.persistence.impl;
 
 import java.util.List;
 
-import com.liferay.util.dao.orm.CustomSQLUtil;
-
 import priv.barrow.model.QuestionRecordLink;
 import priv.barrow.service.persistence.QuestionRecordLinkFinder;
 
@@ -11,9 +9,7 @@ public class QuestionRecordLinkFinderImpl
     extends QuestionRecordLinkFinderBaseImpl implements QuestionRecordLinkFinder {
 
     @Override
-    public List<QuestionRecordLink> finderRecentUpdateQuestionRecordLinks(int count) {
-        System.out.println("###################################");
-        String sql = CustomSQLUtil.get("");
+    public List<QuestionRecordLink> findRecentUpdateQuestionRecordLinks(int count) {
         return null;
     }
 

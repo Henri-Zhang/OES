@@ -127,7 +127,7 @@ public class QuestionRecordLinkLocalServiceClpInvoker {
 
 		_methodParameterTypes40 = new String[] {  };
 
-		_methodName45 = "finderRecentUpdateQuestionRecordLinks";
+		_methodName45 = "findRecentUpdateQuestionRecordLinks";
 
 		_methodParameterTypes45 = new String[] { "int" };
 	}
@@ -243,7 +243,7 @@ public class QuestionRecordLinkLocalServiceClpInvoker {
 
 		if (_methodName45.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes45, parameterTypes)) {
-			return QuestionRecordLinkLocalServiceUtil.finderRecentUpdateQuestionRecordLinks(((Integer)arguments[0]).intValue());
+			return QuestionRecordLinkLocalServiceUtil.findRecentUpdateQuestionRecordLinks(((Integer)arguments[0]).intValue());
 		}
 
 		throw new UnsupportedOperationException();

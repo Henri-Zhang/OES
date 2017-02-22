@@ -34,7 +34,8 @@ public class ContentDashboardPortlet extends MVCPortlet {
     @Override
     public void doView(RenderRequest renderRequest, RenderResponse renderResponse)
             throws IOException, PortletException {
-        QuestionRecordLinkLocalServiceUtil.finderRecentUpdateQuestionRecordLinks(5);
+//        QuestionRecordLinkLocalServiceUtil.findRecentUpdateQuestionRecordLinks(5);
+        QuestionRecordLinkLocalServiceUtil.getQuestionRecordLinksCount();
         super.doView(renderRequest, renderResponse);
     }
 

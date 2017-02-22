@@ -78,7 +78,7 @@ public class QuestionRecordLinkLocalServiceClp
 				"com.liferay.portal.kernel.util.OrderByComparator"
 			};
 
-		_methodName11 = "finderRecentUpdateQuestionRecordLinks";
+		_methodName11 = "findRecentUpdateQuestionRecordLinks";
 
 		_methodParameterTypes11 = new String[] { "int" };
 
@@ -409,7 +409,7 @@ public class QuestionRecordLinkLocalServiceClp
 	}
 
 	@Override
-	public java.util.List<priv.barrow.model.QuestionRecordLink> finderRecentUpdateQuestionRecordLinks(
+	public java.util.List<priv.barrow.model.QuestionRecordLink> findRecentUpdateQuestionRecordLinks(
 		int count) {
 		Object returnObj = null;
 

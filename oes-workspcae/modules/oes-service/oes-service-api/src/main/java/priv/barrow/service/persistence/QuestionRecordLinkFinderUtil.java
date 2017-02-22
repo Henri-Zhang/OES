@@ -25,9 +25,9 @@ import com.liferay.portal.kernel.util.ReferenceRegistry;
  */
 @ProviderType
 public class QuestionRecordLinkFinderUtil {
-	public static java.util.List<priv.barrow.model.QuestionRecordLink> finderRecentUpdateQuestionRecordLinks(
+	public static java.util.List<priv.barrow.model.QuestionRecordLink> findRecentUpdateQuestionRecordLinks(
 		int count) {
-		return getFinder().finderRecentUpdateQuestionRecordLinks(count);
+		return getFinder().findRecentUpdateQuestionRecordLinks(count);
 	}
 
 	public static QuestionRecordLinkFinder getFinder() {
