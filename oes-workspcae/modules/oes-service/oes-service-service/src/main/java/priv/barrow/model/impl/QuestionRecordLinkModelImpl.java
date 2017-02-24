@@ -77,14 +77,14 @@ public class QuestionRecordLinkModelImpl extends BaseModelImpl<QuestionRecordLin
 	public static final String DATA_SOURCE = "liferayDataSource";
 	public static final String SESSION_FACTORY = "liferaySessionFactory";
 	public static final String TX_MANAGER = "liferayTransactionManager";
-	public static final boolean ENTITY_CACHE_ENABLED = GetterUtil.getBoolean(org.javasavvy.product.service.util.PropsUtil.get(
+	public static final boolean ENTITY_CACHE_ENABLED = GetterUtil.getBoolean(priv.barrow.service.util.ServiceProps.get(
 				"value.object.entity.cache.enabled.priv.barrow.model.QuestionRecordLink"),
 			true);
-	public static final boolean FINDER_CACHE_ENABLED = GetterUtil.getBoolean(org.javasavvy.product.service.util.PropsUtil.get(
+	public static final boolean FINDER_CACHE_ENABLED = GetterUtil.getBoolean(priv.barrow.service.util.ServiceProps.get(
 				"value.object.finder.cache.enabled.priv.barrow.model.QuestionRecordLink"),
 			true);
 	public static final boolean COLUMN_BITMASK_ENABLED = false;
-	public static final long LOCK_EXPIRATION_TIME = GetterUtil.getLong(org.javasavvy.product.service.util.PropsUtil.get(
+	public static final long LOCK_EXPIRATION_TIME = GetterUtil.getLong(priv.barrow.service.util.ServiceProps.get(
 				"lock.expiration.time.priv.barrow.model.QuestionRecordLink"));
 
 	public QuestionRecordLinkModelImpl() {

@@ -38,9 +38,8 @@ import priv.barrow.service.base.QuestionRecordLinkLocalServiceBaseImpl;
 public class QuestionRecordLinkLocalServiceImpl extends QuestionRecordLinkLocalServiceBaseImpl {
 
     @Override
-    public List<QuestionRecordLink> findRecentUpdateQuestionRecordLinks(int count) {
-        System.out.println("##############");
-        return null;
+    public List<QuestionRecordLink> findRecentUpdateQuestionReocrdLinks(int count) {
+        return getQuestionRecordLinkFinder().findRecentUpdateQuestionReocrdLinks(count);
     }
 
 }

@@ -17,9 +17,7 @@ package priv.barrow.service.persistence.impl;
 import aQute.bnd.annotation.ProviderType;
 
 import com.liferay.portal.kernel.dao.orm.EntityCache;
-import com.liferay.portal.kernel.dao.orm.EntityCacheUtil;
 import com.liferay.portal.kernel.dao.orm.FinderCache;
-import com.liferay.portal.kernel.dao.orm.FinderCacheUtil;
 import com.liferay.portal.kernel.dao.orm.FinderPath;
 import com.liferay.portal.kernel.dao.orm.Query;
 import com.liferay.portal.kernel.dao.orm.QueryUtil;
@@ -30,6 +28,7 @@ import com.liferay.portal.kernel.service.persistence.impl.BasePersistenceImpl;
 import com.liferay.portal.kernel.util.OrderByComparator;
 import com.liferay.portal.kernel.util.StringBundler;
 import com.liferay.portal.kernel.util.StringPool;
+import com.liferay.portal.spring.extender.service.ServiceReference;
 
 import priv.barrow.exception.NoSuchQuestionRecordLinkException;
 
@@ -728,8 +727,10 @@ public class QuestionRecordLinkPersistenceImpl extends BasePersistenceImpl<Quest
 		finderCache.removeCache(FINDER_CLASS_NAME_LIST_WITHOUT_PAGINATION);
 	}
 
-	protected EntityCache entityCache = EntityCacheUtil.getEntityCache();
-	protected FinderCache finderCache = FinderCacheUtil.getFinderCache();
+	@ServiceReference(type = EntityCache.class)
+	protected EntityCache entityCache;
+	@ServiceReference(type = FinderCache.class)
+	protected FinderCache finderCache;
 	private static final String _SQL_SELECT_QUESTIONRECORDLINK = "SELECT questionRecordLink FROM QuestionRecordLink questionRecordLink";
 	private static final String _SQL_SELECT_QUESTIONRECORDLINK_WHERE_PKS_IN = "SELECT questionRecordLink FROM QuestionRecordLink questionRecordLink WHERE questionOrder IN (";
 	private static final String _SQL_COUNT_QUESTIONRECORDLINK = "SELECT COUNT(questionRecordLink) FROM QuestionRecordLink questionRecordLink";

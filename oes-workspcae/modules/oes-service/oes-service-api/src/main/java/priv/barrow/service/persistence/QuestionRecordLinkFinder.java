@@ -22,6 +22,6 @@ import aQute.bnd.annotation.ProviderType;
  */
 @ProviderType
 public interface QuestionRecordLinkFinder {
-	public java.util.List<priv.barrow.model.QuestionRecordLink> findRecentUpdateQuestionRecordLinks(
+	public java.util.List<priv.barrow.model.QuestionRecordLink> findRecentUpdateQuestionReocrdLinks(
 		int count);
 }

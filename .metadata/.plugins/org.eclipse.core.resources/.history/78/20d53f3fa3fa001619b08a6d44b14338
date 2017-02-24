@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<custom-sql>
+    <sql id="priv.barrow.service.persistence.QuestionRecordLinkFinder.findRecentUpdateQuestionReocrdLinks">
+        <![CDATA[
+            SELECT
+                *
+            FROM
+                oes_questionrecordlink
+            INNER JOIN
+                ddlrecord
+            LIMIT
+                ?
+        ]]>
+    </sql>
+</custom-sql>

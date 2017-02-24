@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<custom-sql>
+    <sql id="priv.barrow.service.persistence.QuestionRecordLinkFinder.findRecentUpdateQuestionReocrdLinks">
+        <![CDATA[
+            SELECT
+                *
+            FROM
+                CUSTOMQUERY_BOOK_PORTLET
+            WHERE
+                price = ?
+        ]]>
+    </sql>
+    <sql file="question_record_link.xml" />
+</custom-sql>

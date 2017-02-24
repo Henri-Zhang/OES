@@ -1,0 +1,22 @@
+package priv.barrow.service.persistence.impl;
+
+import java.util.List;
+
+
+import priv.barrow.model.QuestionRecordLink;
+import priv.barrow.service.persistence.QuestionRecordLinkFinder;
+
+public class QuestionRecordLinkFinderImpl extends QuestionRecordLinkFinderBaseImpl implements QuestionRecordLinkFinder {
+
+    @Override
+    public List<QuestionRecordLink> findRecentUpdateQuestionReocrdLinks(int count) {
+        System.out.println("----------------------");
+        String id = "priv.barrow.service.impl.QuestionRecordLinkLocalServiceImpl.findRecentUpdateQuestionReocrdLinks";
+        String sql = CustomSQLUtil.get(id);
+//        String sql = CustomSQLUtil.get(getClass(), id);
+        System.out.println("sql = " + sql);
+
+        return null;
+    }
+
+}

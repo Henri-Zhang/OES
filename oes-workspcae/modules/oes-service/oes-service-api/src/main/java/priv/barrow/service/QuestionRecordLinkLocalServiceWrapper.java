@@ -76,14 +76,6 @@ public class QuestionRecordLinkLocalServiceWrapper
 		return _questionRecordLinkLocalService.getQuestionRecordLinksCount();
 	}
 
-	@Override
-	public java.lang.Object invokeMethod(java.lang.String name,
-		java.lang.String[] parameterTypes, java.lang.Object[] arguments)
-		throws java.lang.Throwable {
-		return _questionRecordLinkLocalService.invokeMethod(name,
-			parameterTypes, arguments);
-	}
-
 	/**
 	* Returns the OSGi service identifier.
 	*
@@ -149,9 +141,9 @@ public class QuestionRecordLinkLocalServiceWrapper
 	}
 
 	@Override
-	public java.util.List<priv.barrow.model.QuestionRecordLink> findRecentUpdateQuestionRecordLinks(
+	public java.util.List<priv.barrow.model.QuestionRecordLink> findRecentUpdateQuestionReocrdLinks(
 		int count) {
-		return _questionRecordLinkLocalService.findRecentUpdateQuestionRecordLinks(count);
+		return _questionRecordLinkLocalService.findRecentUpdateQuestionReocrdLinks(count);
 	}
 
 	/**

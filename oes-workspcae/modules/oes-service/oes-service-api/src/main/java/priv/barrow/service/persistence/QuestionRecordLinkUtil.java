@@ -16,11 +16,13 @@ package priv.barrow.service.persistence;
 
 import aQute.bnd.annotation.ProviderType;
 
-import com.liferay.portal.kernel.bean.PortletBeanLocatorUtil;
+import com.liferay.osgi.util.ServiceTrackerFactory;
+
 import com.liferay.portal.kernel.dao.orm.DynamicQuery;
 import com.liferay.portal.kernel.service.ServiceContext;
 import com.liferay.portal.kernel.util.OrderByComparator;
-import com.liferay.portal.kernel.util.ReferenceRegistry;
+
+import org.osgi.util.tracker.ServiceTracker;
 
 import priv.barrow.model.QuestionRecordLink;
 
@@ -260,16 +262,9 @@ public class QuestionRecordLinkUtil {
 	}
 
 	public static QuestionRecordLinkPersistence getPersistence() {
-		if (_persistence == null) {
-			_persistence = (QuestionRecordLinkPersistence)PortletBeanLocatorUtil.locate(priv.barrow.service.ClpSerializer.getServletContextName(),
-					QuestionRecordLinkPersistence.class.getName());
-
-			ReferenceRegistry.registerReference(QuestionRecordLinkUtil.class,
-				"_persistence");
-		}
-
-		return _persistence;
+		return _serviceTracker.getService();
 	}
 
-	private static QuestionRecordLinkPersistence _persistence;
+	private static ServiceTracker<QuestionRecordLinkPersistence, QuestionRecordLinkPersistence> _serviceTracker =
+		ServiceTrackerFactory.open(QuestionRecordLinkPersistence.class);
 }

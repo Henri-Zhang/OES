@@ -16,9 +16,9 @@ package priv.barrow.service;
 
 import aQute.bnd.annotation.ProviderType;
 
-import com.liferay.portal.kernel.bean.PortletBeanLocatorUtil;
-import com.liferay.portal.kernel.service.InvokableLocalService;
-import com.liferay.portal.kernel.util.ReferenceRegistry;
+import com.liferay.osgi.util.ServiceTrackerFactory;
+
+import org.osgi.util.tracker.ServiceTracker;
 
 /**
  * Provides the local service utility for QuestionRecordLink. This utility wraps
@@ -75,12 +75,6 @@ public class QuestionRecordLinkLocalServiceUtil {
 	*/
 	public static int getQuestionRecordLinksCount() {
 		return getService().getQuestionRecordLinksCount();
-	}
-
-	public static java.lang.Object invokeMethod(java.lang.String name,
-		java.lang.String[] parameterTypes, java.lang.Object[] arguments)
-		throws java.lang.Throwable {
-		return getService().invokeMethod(name, parameterTypes, arguments);
 	}
 
 	/**
@@ -142,9 +136,9 @@ public class QuestionRecordLinkLocalServiceUtil {
 				   .dynamicQuery(dynamicQuery, start, end, orderByComparator);
 	}
 
-	public static java.util.List<priv.barrow.model.QuestionRecordLink> findRecentUpdateQuestionRecordLinks(
+	public static java.util.List<priv.barrow.model.QuestionRecordLink> findRecentUpdateQuestionReocrdLinks(
 		int count) {
-		return getService().findRecentUpdateQuestionRecordLinks(count);
+		return getService().findRecentUpdateQuestionReocrdLinks(count);
 	}
 
 	/**
@@ -262,28 +256,10 @@ public class QuestionRecordLinkLocalServiceUtil {
 		return getService().updateQuestionRecordLink(questionRecordLink);
 	}
 
-	public static void clearService() {
-		_service = null;
-	}
-
 	public static QuestionRecordLinkLocalService getService() {
-		if (_service == null) {
-			InvokableLocalService invokableLocalService = (InvokableLocalService)PortletBeanLocatorUtil.locate(ClpSerializer.getServletContextName(),
-					QuestionRecordLinkLocalService.class.getName());
-
-			if (invokableLocalService instanceof QuestionRecordLinkLocalService) {
-				_service = (QuestionRecordLinkLocalService)invokableLocalService;
-			}
-			else {
-				_service = new QuestionRecordLinkLocalServiceClp(invokableLocalService);
-			}
-
-			ReferenceRegistry.registerReference(QuestionRecordLinkLocalServiceUtil.class,
-				"_service");
-		}
-
-		return _service;
+		return _serviceTracker.getService();
 	}
 
-	private static QuestionRecordLinkLocalService _service;
+	private static ServiceTracker<QuestionRecordLinkLocalService, QuestionRecordLinkLocalService> _serviceTracker =
+		ServiceTrackerFactory.open(QuestionRecordLinkLocalService.class);
 }
