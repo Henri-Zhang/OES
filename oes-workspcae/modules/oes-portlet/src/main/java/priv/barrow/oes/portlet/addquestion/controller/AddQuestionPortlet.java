@@ -1,7 +1,6 @@
 package priv.barrow.oes.portlet.addquestion.controller;
 
 import java.io.IOException;
-import java.util.List;
 
 import javax.portlet.ActionRequest;
 import javax.portlet.ActionResponse;
@@ -13,17 +12,11 @@ import javax.portlet.RenderResponse;
 
 import org.osgi.service.component.annotations.Component;
 
+import com.liferay.dynamic.data.lists.model.DDLRecord;
 import com.liferay.dynamic.data.lists.model.DDLRecordSet;
 import com.liferay.dynamic.data.lists.service.DDLRecordLocalServiceUtil;
-import com.liferay.dynamic.data.lists.service.DDLRecordSetLocalServiceUtil;
 import com.liferay.dynamic.data.mapping.model.DDMStructure;
-import com.liferay.dynamic.data.mapping.service.DDMStructureLocalServiceUtil;
 import com.liferay.dynamic.data.mapping.storage.Fields;
-import com.liferay.dynamic.data.mapping.util.DDMUtil;
-import com.liferay.portal.kernel.dao.orm.Criterion;
-import com.liferay.portal.kernel.dao.orm.DynamicQuery;
-import com.liferay.portal.kernel.dao.orm.Property;
-import com.liferay.portal.kernel.dao.orm.PropertyFactoryUtil;
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
@@ -31,14 +24,15 @@ import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
 import com.liferay.portal.kernel.service.ServiceContext;
 import com.liferay.portal.kernel.service.ServiceContextFactory;
 import com.liferay.portal.kernel.theme.ThemeDisplay;
+import com.liferay.portal.kernel.transaction.Transactional;
 import com.liferay.portal.kernel.upload.UploadPortletRequest;
 import com.liferay.portal.kernel.util.PortalUtil;
-import com.liferay.portal.kernel.util.StringPool;
 import com.liferay.portal.kernel.util.Validator;
 import com.liferay.portal.kernel.util.WebKeys;
 
 import priv.barrow.oes.portlet.addquestion.constants.Constants;
-import priv.barrow.oes.portlet.addquestion.exception.NoQuestionStructureException;
+import priv.barrow.oes.portlet.util.QuestionUtil;
+import priv.barrow.service.QuestionRecordLinkLocalServiceUtil;
 
 @Component(
     immediate = true,
@@ -66,13 +60,13 @@ public class AddQuestionPortlet extends MVCPortlet {
 
         long classNameId = PortalUtil.getClassNameId(DDMStructure.class);
 
-        DDMStructure questionStructure = getQuestionDDMStructure();
+        DDMStructure questionStructure = QuestionUtil.getQuestionDDMStructure();
         if (Validator.isNull(questionStructure)) {
             return;
         }
 
         long classPK = questionStructure.getStructureId();
-        Fields fields = getQuestionStructureFields(classPK, null);
+        Fields fields = QuestionUtil.getQuestionStructureFields(classPK, null);
         if (Validator.isNull(fields)) {
             return;
         }
@@ -84,6 +78,7 @@ public class AddQuestionPortlet extends MVCPortlet {
         super.doView(renderRequest, renderResponse);
     }
 
+    @Transactional
     @ProcessAction(name = "addQuestion")
     public void addQuestion(ActionRequest actionRequest, ActionResponse actionResponse) {
         UploadPortletRequest uploadPortletRequest = PortalUtil.getUploadPortletRequest(actionRequest);
@@ -98,76 +93,36 @@ public class AddQuestionPortlet extends MVCPortlet {
         }
 
         long userId = themeDisplay.getUserId();
-        DDMStructure questionStructure = getQuestionDDMStructure();
+        DDMStructure questionStructure = QuestionUtil.getQuestionDDMStructure();
         if (Validator.isNull(questionStructure)) {
             return;
         }
         long questionStructureId = questionStructure.getStructureId();
 
-        Fields fields = getQuestionStructureFields(questionStructureId, serviceContext);
+        Fields fields = QuestionUtil.getQuestionStructureFields(questionStructureId, serviceContext);
         if (Validator.isNull(fields)) {
             return;
         }
 
-        DDLRecordSet questionRecordSet = getQuestionRecordSet(questionStructureId);
+        DDLRecordSet questionRecordSet = QuestionUtil.getQuestionRecordSet(questionStructureId);
         if (Validator.isNull(questionRecordSet)) {
             return;
         }
         long recordSetId = questionRecordSet.getRecordSetId();
         long groupId = questionRecordSet.getGroupId();
 
+        // Adds a question record to Question_DDL.
+        DDLRecord newRecord = null;
         try {
-            DDLRecordLocalServiceUtil.addRecord(userId, groupId, recordSetId, 0, fields, serviceContext);
+            newRecord = DDLRecordLocalServiceUtil.addRecord(userId, groupId, recordSetId, 0, fields, serviceContext);
         } catch (PortalException e) {
             LOG.error(String.format("Add question failed. userId: [%d], groupId: [%d], recordSetId: [%d]",
                     userId, groupId, recordSetId), e);
+            return;
         }
 
-    }
-
-    private DDMStructure getQuestionDDMStructure() {
-        DynamicQuery structrueQuery = DDMStructureLocalServiceUtil.dynamicQuery();
-        Property property = PropertyFactoryUtil.forName("name");
-        Criterion criterion =
-                property.like(StringPool.PERCENT+ Constants.QUESTION + Constants.NAME_END_TAG + StringPool.PERCENT);
-        structrueQuery.add(criterion);
-        List<DDMStructure> ddmStructures = DDMStructureLocalServiceUtil.dynamicQuery(structrueQuery);
-
-        if (Validator.isNull(ddmStructures) || ddmStructures.isEmpty()) {
-            String errorMessage = String.format("No ddmStructure found with name [%s]", Constants.QUESTION);
-            LOG.error(errorMessage, new NoQuestionStructureException(errorMessage));
-            return null;
-        }
-
-        return ddmStructures.get(0);
-    }
-
-    private Fields getQuestionStructureFields(long structureId, ServiceContext serviceContext) {
-        if (Validator.isNull(serviceContext)) {
-            serviceContext = new ServiceContext();
-        }
-
-        Fields fields = null;
-        try {
-            fields = DDMUtil.getFields(structureId, serviceContext);
-        } catch (PortalException e) {
-            LOG.error(String.format("Get fields from ddmStructure which id is [%s] failed.", structureId), e);
-        }
-
-        return fields;
-    }
-
-    private DDLRecordSet getQuestionRecordSet(long questionStructureId) {
-        DynamicQuery dynamicQuery = DDLRecordSetLocalServiceUtil.dynamicQuery();
-        Property property = PropertyFactoryUtil.forName("DDMStructureId");
-        Criterion criterion = property.eq(questionStructureId);
-        dynamicQuery.add(criterion);
-        List<DDLRecordSet> list = DDLRecordSetLocalServiceUtil.dynamicQuery(dynamicQuery);
-        if (Validator.isNull(list) || list.isEmpty()) {
-            return null;
-        }
-
-        return list.get(0);
+        // Adds a QuestionRecordLink to oes_questionrecordlink.
+        QuestionRecordLinkLocalServiceUtil.addQuestionRecordLink(newRecord.getRecordId());
     }
 
 }

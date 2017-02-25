@@ -2,7 +2,7 @@ package priv.barrow.oes.portlet.model;
 
 public class Question {
 
-    private long id;
+    private long order;
     private String description;
     private String optionA;
     private String optionB;
@@ -10,7 +10,11 @@ public class Question {
     private String optionD;
     private String answer;
 
-    public Question(String description, String optionA, String optionB, String optionC, String optionD, String answer) {
+    public Question() {}
+
+    public Question(Long order, String description,
+            String optionA, String optionB, String optionC, String optionD, String answer) {
+        this.order = order;
         this.description = description;
         this.optionA = optionA;
         this.optionB = optionB;
@@ -19,12 +23,12 @@ public class Question {
         this.answer = answer;
     }
 
-    public long getId() {
-        return id;
+    public long getOrder() {
+        return order;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setOrder(long order) {
+        this.order = order;
     }
 
     public String getDescription() {

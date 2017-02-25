@@ -1,0 +1,11 @@
+package priv.barrow.oes.portlet.model;
+
+public class Constants {
+    public static final String DESCRIPTION = "Description";
+    public static final String DESCRIPTION = "Description";
+    public static final String DESCRIPTION = "Description";
+    public static final String DESCRIPTION = "Description";
+    public static final String DESCRIPTION = "Description";
+    public static final String DESCRIPTION = "Description";
+
+}

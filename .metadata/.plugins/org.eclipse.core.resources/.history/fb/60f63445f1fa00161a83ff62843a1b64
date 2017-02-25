@@ -1,0 +1,5 @@
+package priv.barrow.oes.portlet.model;
+
+public class Constants {
+
+}

@@ -10,7 +10,7 @@
 
 <portlet:defineObjects />
 
-<<portlet:actionURL name="addQuestion" var="addQuestionURL" />
+<portlet:actionURL name="addQuestion" var="addQuestionURL" />
 
 <aui:form action="${addQuestionURL }" method="POST">
     <liferay-ddm:html

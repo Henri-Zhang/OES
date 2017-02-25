@@ -18,6 +18,8 @@ import java.util.List;
 
 import aQute.bnd.annotation.ProviderType;
 import priv.barrow.model.QuestionRecordLink;
+import priv.barrow.model.impl.QuestionRecordLinkImpl;
+import priv.barrow.service.QuestionRecordLinkLocalServiceUtil;
 import priv.barrow.service.base.QuestionRecordLinkLocalServiceBaseImpl;
 
 /**
@@ -40,6 +42,15 @@ public class QuestionRecordLinkLocalServiceImpl extends QuestionRecordLinkLocalS
     @Override
     public List<QuestionRecordLink> findRecentUpdateQuestionReocrdLinks(int count) {
         return getQuestionRecordLinkFinder().findRecentUpdateQuestionReocrdLinks(count);
+    }
+
+    @Override
+    public void addQuestionRecordLink(long recordId) {
+        long count = QuestionRecordLinkLocalServiceUtil.getQuestionRecordLinksCount();
+        QuestionRecordLink questionRecordLink = new QuestionRecordLinkImpl();
+        questionRecordLink.setQuestionOrder(count + 1);
+        questionRecordLink.setDdlRecordId(recordId);
+        addQuestionRecordLink(questionRecordLink);
     }
 
 }

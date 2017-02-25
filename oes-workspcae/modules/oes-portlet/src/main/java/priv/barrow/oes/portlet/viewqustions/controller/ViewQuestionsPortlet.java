@@ -2,14 +2,18 @@ package priv.barrow.oes.portlet.viewqustions.controller;
 
 import java.io.IOException;
 
+import javax.portlet.ActionRequest;
+import javax.portlet.ActionResponse;
 import javax.portlet.Portlet;
 import javax.portlet.PortletException;
+import javax.portlet.ProcessAction;
 import javax.portlet.RenderRequest;
 import javax.portlet.RenderResponse;
 
 import org.osgi.service.component.annotations.Component;
 
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
+import com.liferay.portal.kernel.util.ParamUtil;
 
 @Component(
     immediate = true,
@@ -33,8 +37,15 @@ public class ViewQuestionsPortlet extends MVCPortlet {
     public void doView(RenderRequest renderRequest, RenderResponse renderResponse)
             throws IOException, PortletException {
 
-
         super.doView(renderRequest, renderResponse);
+    }
+
+    @ProcessAction(name = "searchQuestions")
+    public void searchQuestions(ActionRequest actionRequest, ActionResponse actionResponse) {
+        String questionNo = ParamUtil.get(actionRequest, "questionNo", "Question No.");
+        String keyword = ParamUtil.get(actionRequest, "keyword", "Question No.");
+        String perPage = ParamUtil.get(actionRequest, "perPage", "Question No.");
+
     }
 
 }

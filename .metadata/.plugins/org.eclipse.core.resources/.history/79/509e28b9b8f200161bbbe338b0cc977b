@@ -1,3 +1,0 @@
-<%@ include file="/html/init.jsp" %>
-
-<portlet:actionURL name="signUp" var="signUpURL" />

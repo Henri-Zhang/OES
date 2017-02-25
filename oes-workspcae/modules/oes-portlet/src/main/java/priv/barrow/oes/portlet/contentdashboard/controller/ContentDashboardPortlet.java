@@ -13,6 +13,9 @@ import org.osgi.service.component.annotations.Component;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
 
 import priv.barrow.model.QuestionRecordLink;
+import priv.barrow.oes.portlet.contentdashboard.constans.Constans;
+import priv.barrow.oes.portlet.model.Question;
+import priv.barrow.oes.portlet.util.QuestionUtil;
 import priv.barrow.service.QuestionRecordLinkLocalServiceUtil;
 
 @Component(
@@ -33,14 +36,16 @@ import priv.barrow.service.QuestionRecordLinkLocalServiceUtil;
 
 public class ContentDashboardPortlet extends MVCPortlet {
 
+    private final int RECENT_QUESTION_COUNT = 5;
+
     @Override
     public void doView(RenderRequest renderRequest, RenderResponse renderResponse)
             throws IOException, PortletException {
-        List<QuestionRecordLink> list = QuestionRecordLinkLocalServiceUtil.findRecentUpdateQuestionReocrdLinks(5);
-        for (QuestionRecordLink questionRecordLink : list) {
-            System.out.println("----" + questionRecordLink.getDdlRecordId());
-            System.out.println("----" + questionRecordLink.getQuestionOrder());
-        }
+        List<QuestionRecordLink> questionRecordLinks =
+                QuestionRecordLinkLocalServiceUtil.findRecentUpdateQuestionReocrdLinks(RECENT_QUESTION_COUNT);
+        List<Question> recentUpdateQuestions = QuestionUtil.getQuestions(questionRecordLinks);
+
+        renderRequest.setAttribute(Constans.RECENT_UPDATE_QUESTIONS, recentUpdateQuestions);
         super.doView(renderRequest, renderResponse);
     }
 

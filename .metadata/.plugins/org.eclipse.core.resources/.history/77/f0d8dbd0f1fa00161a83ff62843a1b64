@@ -1,0 +1,6 @@
+package priv.barrow.oes.portlet.contentdashboard.constans;
+
+public class Constans {
+    public static final String recent_update_Questions = "recentUpdateQuestions";
+
+}

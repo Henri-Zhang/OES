@@ -231,4 +231,6 @@ public interface QuestionRecordLinkLocalService extends BaseLocalService,
 	@Indexable(type = IndexableType.REINDEX)
 	public QuestionRecordLink updateQuestionRecordLink(
 		QuestionRecordLink questionRecordLink);
+
+	public void addQuestionRecordLink(long recordId);
 }

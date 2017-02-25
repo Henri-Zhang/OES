@@ -1,5 +1,0 @@
-<%@ include file="/init.jsp" %>
-
-<span>
-  <liferay-ui:message key="barrow" />
-</span>

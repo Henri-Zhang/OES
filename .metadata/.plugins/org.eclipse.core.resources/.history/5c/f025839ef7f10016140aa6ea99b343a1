@@ -1,5 +1,0 @@
-<%@ include file="/html/init.jsp" %>
-
-<span>
-  This is sign up portlet.
-</span>

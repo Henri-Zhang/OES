@@ -35,4 +35,5 @@
 <fullyQualifiedTypeName name="com.liferay.portal.dao.orm.custom.sql.CustomSQLUtil"/>
 <fullyQualifiedTypeName name="com.liferay.util.dao.orm.CustomSQLUtil"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.util.ParamUtil"/>
 </qualifiedTypeNameHistroy>

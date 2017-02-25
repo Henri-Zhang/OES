@@ -1,7 +1,0 @@
-package priv.barrow.service.persistence.impl;
-
-import priv.barrow.service.persistence.QuestionRecordLinkFinder;
-
-public class QuestionRecordLinkFinderImpl extends QuestionRecordLinkFinderBaseImpl implements QuestionRecordLinkFinder {
-
-}

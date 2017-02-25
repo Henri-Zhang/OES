@@ -273,6 +273,11 @@ public class QuestionRecordLinkLocalServiceWrapper
 	}
 
 	@Override
+	public void addQuestionRecordLink(long recordId) {
+		_questionRecordLinkLocalService.addQuestionRecordLink(recordId);
+	}
+
+	@Override
 	public QuestionRecordLinkLocalService getWrappedService() {
 		return _questionRecordLinkLocalService;
 	}

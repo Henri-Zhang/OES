@@ -256,6 +256,10 @@ public class QuestionRecordLinkLocalServiceUtil {
 		return getService().updateQuestionRecordLink(questionRecordLink);
 	}
 
+	public static void addQuestionRecordLink(long recordId) {
+		getService().addQuestionRecordLink(recordId);
+	}
+
 	public static QuestionRecordLinkLocalService getService() {
 		return _serviceTracker.getService();
 	}

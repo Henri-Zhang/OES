@@ -1,7 +1,0 @@
-package com.barrow.portlet.signin.controller;
-
-import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
-
-public class SignInPortlet extends MVCPortlet {
-
-}

@@ -9,3 +9,25 @@
 
 <portlet:defineObjects />
 
+<portlet:actionURL name="searchQuestions" var="searchQuestionsURL" />
+
+<aui:form action="${searchQuestionsURL }" method="POST">
+    <span>
+        <liferay-ui:message key="question-no" />
+    </span>
+    <aui:input name="questionNo" type="text" />
+    <span>
+        <liferay-ui:message key="keyword" />
+    </span>
+    <aui:input name="keyword" type="text" />
+    <span>
+        <liferay-ui:message key="per-page" />
+    </span>
+    <aui:select name="perPage">
+        <aui:option value="5">5</aui:option>
+        <aui:option value="10">10</aui:option>
+        <aui:option value="20">20</aui:option>
+    </aui:select>
+    <aui:button name="search" type="submit" value="search" />
+</aui:form>
+

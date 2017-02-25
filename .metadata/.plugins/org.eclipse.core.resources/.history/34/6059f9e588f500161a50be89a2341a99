@@ -1,7 +1,0 @@
-package priv.barrow.oes.portlet.contentdashboard.controller;
-
-import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
-
-public class ContentDashboardPortlet extends MVCPortlet {
-
-}

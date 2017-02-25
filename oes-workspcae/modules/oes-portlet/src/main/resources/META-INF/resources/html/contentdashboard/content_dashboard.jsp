@@ -9,6 +9,13 @@
 
 <portlet:defineObjects />
 
+<c:set var="questions" value="${recentUpdateQuestions }" scope="request" />
+
 <h4>Recent Update Questions:</h4>
+<c:forEach items="${questions }" var="question">
+    <span>${question.order }</span>
+    <a href="#">${question.description }</a><br />
+</c:forEach>
+<br />
 <aui:a calss="btn btn-lg btn-primary btn-default" href="/view-questions">View Questions</aui:a>
 <aui:a calss="btn btn-lg btn-primary btn-default" href="/add-question">Add Question</aui:a>
