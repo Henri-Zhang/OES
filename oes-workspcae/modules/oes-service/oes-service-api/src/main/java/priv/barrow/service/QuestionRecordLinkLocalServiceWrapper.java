@@ -141,6 +141,12 @@ public class QuestionRecordLinkLocalServiceWrapper
 	}
 
 	@Override
+	public java.util.List<priv.barrow.model.QuestionRecordLink> findRandomQuestionReocrdLinks(
+		int count) {
+		return _questionRecordLinkLocalService.findRandomQuestionReocrdLinks(count);
+	}
+
+	@Override
 	public java.util.List<priv.barrow.model.QuestionRecordLink> findRecentUpdateQuestionReocrdLinks(
 		int count) {
 		return _questionRecordLinkLocalService.findRecentUpdateQuestionReocrdLinks(count);

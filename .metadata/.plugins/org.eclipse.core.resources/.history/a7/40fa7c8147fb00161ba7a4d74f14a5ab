@@ -1,0 +1,15 @@
+package priv.barrow.oes.portlet.util;
+
+import java.util.Map;
+
+import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
+
+public class ExamUtil {
+
+    private static final Log LOG = LogFactoryUtil.getLog(ExamUtil.class);
+
+    public static Map<String, Object> getExamValue() {
+
+    }
+}

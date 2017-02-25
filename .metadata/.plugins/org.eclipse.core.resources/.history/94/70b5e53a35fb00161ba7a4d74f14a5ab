@@ -1,0 +1,14 @@
+AUI().use(
+    'aui-datepicker',
+    function(A) {
+        new A.DatePicker(
+            {
+                trigger: 'input[name*=beginDate]',
+                mask: '%m/%d/%y',
+                popover: {
+                    zIndex: 1
+                }
+            }
+        );
+    }
+);

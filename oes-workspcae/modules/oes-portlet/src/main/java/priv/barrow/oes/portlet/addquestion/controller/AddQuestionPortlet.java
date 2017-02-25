@@ -31,7 +31,7 @@ import com.liferay.portal.kernel.util.Validator;
 import com.liferay.portal.kernel.util.WebKeys;
 
 import priv.barrow.oes.portlet.addquestion.constants.Constants;
-import priv.barrow.oes.portlet.util.QuestionUtil;
+import priv.barrow.oes.portlet.util.AddRecordUtil;
 import priv.barrow.service.QuestionRecordLinkLocalServiceUtil;
 
 @Component(
@@ -60,13 +60,14 @@ public class AddQuestionPortlet extends MVCPortlet {
 
         long classNameId = PortalUtil.getClassNameId(DDMStructure.class);
 
-        DDMStructure questionStructure = QuestionUtil.getQuestionDDMStructure();
+        DDMStructure questionStructure =
+                AddRecordUtil.getDDMStructureByName(priv.barrow.oes.portlet.model.Constants.QUESTION);
         if (Validator.isNull(questionStructure)) {
             return;
         }
 
         long classPK = questionStructure.getStructureId();
-        Fields fields = QuestionUtil.getQuestionStructureFields(classPK, null);
+        Fields fields = AddRecordUtil.getStructureFields(classPK, null);
         if (Validator.isNull(fields)) {
             return;
         }
@@ -93,18 +94,19 @@ public class AddQuestionPortlet extends MVCPortlet {
         }
 
         long userId = themeDisplay.getUserId();
-        DDMStructure questionStructure = QuestionUtil.getQuestionDDMStructure();
+        DDMStructure questionStructure =
+                AddRecordUtil.getDDMStructureByName(priv.barrow.oes.portlet.model.Constants.QUESTION);
         if (Validator.isNull(questionStructure)) {
             return;
         }
         long questionStructureId = questionStructure.getStructureId();
 
-        Fields fields = QuestionUtil.getQuestionStructureFields(questionStructureId, serviceContext);
+        Fields fields = AddRecordUtil.getStructureFields(questionStructureId, serviceContext);
         if (Validator.isNull(fields)) {
             return;
         }
 
-        DDLRecordSet questionRecordSet = QuestionUtil.getQuestionRecordSet(questionStructureId);
+        DDLRecordSet questionRecordSet = AddRecordUtil.getDDLRecordSet(questionStructureId);
         if (Validator.isNull(questionRecordSet)) {
             return;
         }

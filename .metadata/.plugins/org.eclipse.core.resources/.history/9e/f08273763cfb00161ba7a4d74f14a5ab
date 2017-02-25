@@ -1,0 +1,16 @@
+package priv.barrow.oes.portlet.util;
+
+import com.liferay.dynamic.data.mapping.model.DDMStructure;
+import com.liferay.dynamic.data.mapping.storage.Fields;
+
+public class ExamUtil {
+
+    public static DDMStructure getexamDDMStructure() {
+        return null;
+    }
+
+    public static Fields getexamStructureFields(long classPK, Object object) {
+        return null;
+    }
+
+}

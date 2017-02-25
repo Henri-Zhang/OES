@@ -23,7 +23,7 @@ import com.liferay.portal.kernel.util.ParamUtil;
         "javax.portlet.display-name=View Questions",
         "javax.portlet.init-param.template-path=/",
         "com.liferay.portlet.header-portlet-css=/css/viewquestions/view_questions.css",
-        "com.liferay.portlet.header-portlet-javascript=/js/viewquestions/view_questions.js",
+        "com.liferay.portlet.footer-portlet-javascript=/js/viewquestions/view_questions.js",
         "javax.portlet.init-param.view-template=/html/viewquestions/view_questions.jsp",
         "javax.portlet.resource-bundle=content.Language",
         "javax.portlet.security-role-ref=power-user,user"
@@ -45,6 +45,7 @@ public class ViewQuestionsPortlet extends MVCPortlet {
         String questionNo = ParamUtil.get(actionRequest, "questionNo", "Question No.");
         String keyword = ParamUtil.get(actionRequest, "keyword", "Question No.");
         String perPage = ParamUtil.get(actionRequest, "perPage", "Question No.");
+
 
     }
 

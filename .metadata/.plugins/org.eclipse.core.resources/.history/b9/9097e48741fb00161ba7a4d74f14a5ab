@@ -1,0 +1,42 @@
+package priv.barrow.oes.portlet.util;
+
+import java.util.List;
+
+import com.liferay.dynamic.data.mapping.model.DDMStructure;
+import com.liferay.dynamic.data.mapping.service.DDMStructureLocalServiceUtil;
+import com.liferay.dynamic.data.mapping.storage.Fields;
+import com.liferay.dynamic.data.mapping.util.DDMUtil;
+import com.liferay.portal.kernel.dao.orm.Criterion;
+import com.liferay.portal.kernel.dao.orm.DynamicQuery;
+import com.liferay.portal.kernel.dao.orm.Property;
+import com.liferay.portal.kernel.dao.orm.PropertyFactoryUtil;
+import com.liferay.portal.kernel.exception.PortalException;
+import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
+import com.liferay.portal.kernel.service.ServiceContext;
+import com.liferay.portal.kernel.util.StringPool;
+import com.liferay.portal.kernel.util.Validator;
+
+import priv.barrow.oes.portlet.exception.NoExamStructureException;
+import priv.barrow.oes.portlet.model.Constants;
+
+public class ExamUtil {
+
+    private static final Log LOG = LogFactoryUtil.getLog(ExamUtil.class);
+
+    public static Fields getExamStructureFields(long structureId, ServiceContext serviceContext) {
+        if (Validator.isNull(serviceContext)) {
+            serviceContext = new ServiceContext();
+        }
+
+        Fields fields = null;
+        try {
+            fields = DDMUtil.getFields(structureId, serviceContext);
+        } catch (PortalException e) {
+            LOG.error(String.format("Get fields from ddmStructure which id is [%s] failed.", structureId), e);
+        }
+
+        return fields;
+    }
+
+}

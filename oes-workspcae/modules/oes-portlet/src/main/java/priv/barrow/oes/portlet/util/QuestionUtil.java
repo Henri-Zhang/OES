@@ -6,30 +6,17 @@ import java.util.Locale;
 import java.util.Map;
 
 import com.liferay.dynamic.data.lists.model.DDLRecord;
-import com.liferay.dynamic.data.lists.model.DDLRecordSet;
 import com.liferay.dynamic.data.lists.service.DDLRecordLocalServiceUtil;
-import com.liferay.dynamic.data.lists.service.DDLRecordSetLocalServiceUtil;
-import com.liferay.dynamic.data.mapping.model.DDMStructure;
 import com.liferay.dynamic.data.mapping.model.Value;
-import com.liferay.dynamic.data.mapping.service.DDMStructureLocalServiceUtil;
 import com.liferay.dynamic.data.mapping.storage.DDMFormFieldValue;
 import com.liferay.dynamic.data.mapping.storage.DDMFormValues;
-import com.liferay.dynamic.data.mapping.storage.Fields;
-import com.liferay.dynamic.data.mapping.util.DDMUtil;
-import com.liferay.portal.kernel.dao.orm.Criterion;
-import com.liferay.portal.kernel.dao.orm.DynamicQuery;
-import com.liferay.portal.kernel.dao.orm.Property;
-import com.liferay.portal.kernel.dao.orm.PropertyFactoryUtil;
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
-import com.liferay.portal.kernel.service.ServiceContext;
 import com.liferay.portal.kernel.util.LocaleUtil;
-import com.liferay.portal.kernel.util.StringPool;
 import com.liferay.portal.kernel.util.Validator;
 
 import priv.barrow.model.QuestionRecordLink;
-import priv.barrow.oes.portlet.addquestion.exception.NoQuestionStructureException;
 import priv.barrow.oes.portlet.model.Constants;
 import priv.barrow.oes.portlet.model.Question;
 
@@ -117,51 +104,6 @@ public class QuestionUtil {
                         answer);
 
         return question;
-    }
-
-    public static DDMStructure getQuestionDDMStructure() {
-        DynamicQuery structrueQuery = DDMStructureLocalServiceUtil.dynamicQuery();
-        Property property = PropertyFactoryUtil.forName("name");
-        Criterion criterion =
-                property.like(StringPool.PERCENT+ Constants.QUESTION + Constants.NAME_END_TAG + StringPool.PERCENT);
-        structrueQuery.add(criterion);
-        List<DDMStructure> ddmStructures = DDMStructureLocalServiceUtil.dynamicQuery(structrueQuery);
-
-        if (Validator.isNull(ddmStructures) || ddmStructures.isEmpty()) {
-            String errorMessage = String.format("No ddmStructure found with name [%s]", Constants.QUESTION);
-            LOG.error(errorMessage, new NoQuestionStructureException(errorMessage));
-            return null;
-        }
-
-        return ddmStructures.get(0);
-    }
-
-    public static Fields getQuestionStructureFields(long structureId, ServiceContext serviceContext) {
-        if (Validator.isNull(serviceContext)) {
-            serviceContext = new ServiceContext();
-        }
-
-        Fields fields = null;
-        try {
-            fields = DDMUtil.getFields(structureId, serviceContext);
-        } catch (PortalException e) {
-            LOG.error(String.format("Get fields from ddmStructure which id is [%s] failed.", structureId), e);
-        }
-
-        return fields;
-    }
-
-    public static DDLRecordSet getQuestionRecordSet(long questionStructureId) {
-        DynamicQuery dynamicQuery = DDLRecordSetLocalServiceUtil.dynamicQuery();
-        Property property = PropertyFactoryUtil.forName("DDMStructureId");
-        Criterion criterion = property.eq(questionStructureId);
-        dynamicQuery.add(criterion);
-        List<DDLRecordSet> list = DDLRecordSetLocalServiceUtil.dynamicQuery(dynamicQuery);
-        if (Validator.isNull(list) || list.isEmpty()) {
-            return null;
-        }
-
-        return list.get(0);
     }
 
 }

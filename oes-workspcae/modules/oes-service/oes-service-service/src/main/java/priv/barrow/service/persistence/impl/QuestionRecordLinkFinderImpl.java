@@ -18,12 +18,33 @@ public class QuestionRecordLinkFinderImpl extends QuestionRecordLinkFinderBaseIm
     private final String ENTITY_NAME = "QuestionRecordLink";
     private final String FIND_RECENT_UPDATE_QUESTION_REOCRD_LINKS = QuestionRecordLinkFinder.class.getName()
             + ".findRecentUpdateQuestionReocrdLinks";
+    private final String FIND_RANDOM_QUESTION_REOCRD_LINKS = QuestionRecordLinkFinder.class.getName()
+            + ".findRandomQuestionReocrdLinks";
 
     @SuppressWarnings("unchecked")
     @Override
     public List<QuestionRecordLink> findRecentUpdateQuestionReocrdLinks(int count) {
 
         String sql = CustomSQLUtil.get(getClass(), FIND_RECENT_UPDATE_QUESTION_REOCRD_LINKS);
+        Session session = openSession();
+        List<QuestionRecordLink> questionRecordLinks = null;
+
+        try {
+            SQLQuery query = session.createSQLQuery(sql);
+            query.addEntity(ENTITY_NAME, QuestionRecordLinkImpl.class);
+            query.setInteger(0, count);
+            questionRecordLinks = query.list();
+        } catch (Exception e) {
+            LOG.error(String.format("Excute sql meet an error. SQL: %s", sql), e);
+        } finally {
+            closeSession(session);
+        }
+
+        return questionRecordLinks;
+    }
+
+    public List<QuestionRecordLink> findRandomQuestionReocrdLinks(int count) {
+        String sql = CustomSQLUtil.get(getClass(), FIND_RANDOM_QUESTION_REOCRD_LINKS);
         Session session = openSession();
         List<QuestionRecordLink> questionRecordLinks = null;
 

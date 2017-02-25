@@ -136,6 +136,11 @@ public class QuestionRecordLinkLocalServiceUtil {
 				   .dynamicQuery(dynamicQuery, start, end, orderByComparator);
 	}
 
+	public static java.util.List<priv.barrow.model.QuestionRecordLink> findRandomQuestionReocrdLinks(
+		int count) {
+		return getService().findRandomQuestionReocrdLinks(count);
+	}
+
 	public static java.util.List<priv.barrow.model.QuestionRecordLink> findRecentUpdateQuestionReocrdLinks(
 		int count) {
 		return getService().findRecentUpdateQuestionReocrdLinks(count);
