@@ -18,7 +18,7 @@
         <aui:option value="5">5</aui:option>
         <aui:option value="10">10</aui:option>
         <aui:option value="20">20</aui:option>
-    </aui:select>
+    </aui:select>per-page
     <aui:button name="search" type="submit" value="search" />
 </aui:form>
 

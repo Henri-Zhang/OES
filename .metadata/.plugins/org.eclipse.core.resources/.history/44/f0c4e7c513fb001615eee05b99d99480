@@ -12,9 +12,18 @@
 <portlet:actionURL name="searchQuestions" var="searchQuestionsURL" />
 
 <aui:form action="${searchQuestionsURL }" method="POST">
-    <aui:input name="questionNo" type="text" label="question-no" />
-    <aui:input name="keyword" type="text" label="keyword" />
-    <aui:select name="perPage" label="per-page">
+    <span>
+        <liferay-ui:message key="question-no" />
+    </span>
+    <aui:input name="questionNo" type="text" />
+    <span>
+        <liferay-ui:message key="keyword" />
+    </span>
+    <aui:input name="keyword" type="text" />
+    <span>
+        <liferay-ui:message key="per-page" />
+    </span>
+    <aui:select name="perPage">
         <aui:option value="5">5</aui:option>
         <aui:option value="10">10</aui:option>
         <aui:option value="20">20</aui:option>
