@@ -13,7 +13,9 @@ import javax.portlet.RenderResponse;
 
 import org.osgi.service.component.annotations.Component;
 
+import com.liferay.dynamic.data.lists.model.DDLRecord;
 import com.liferay.dynamic.data.lists.model.DDLRecordSet;
+import com.liferay.dynamic.data.lists.service.DDLRecordLocalServiceUtil;
 import com.liferay.dynamic.data.mapping.model.DDMStructure;
 import com.liferay.dynamic.data.mapping.storage.Fields;
 import com.liferay.portal.kernel.exception.PortalException;
@@ -28,10 +30,12 @@ import com.liferay.portal.kernel.util.PortalUtil;
 import com.liferay.portal.kernel.util.Validator;
 import com.liferay.portal.kernel.util.WebKeys;
 
+import priv.barrow.model.ExamQuestionLink;
 import priv.barrow.model.QuestionRecordLink;
 import priv.barrow.oes.portlet.addquestion.constants.Constants;
 import priv.barrow.oes.portlet.util.AddRecordUtil;
 import priv.barrow.oes.portlet.util.ExamUtil;
+import priv.barrow.service.ExamQuestionLinkLocalServiceUtil;
 import priv.barrow.service.QuestionRecordLinkLocalServiceUtil;
 
 @Component(
@@ -113,19 +117,39 @@ public class CreateExamPortlet extends MVCPortlet {
         long groupId = examRecordSet.getGroupId();
 
         // Adds a exam record to Question_DDL.
-//        DDLRecord newRecord = null;
-//        try {
-//            newRecord = DDLRecordLocalServiceUtil.addRecord(userId, groupId, recordSetId, 0, fields, serviceContext);
-//        } catch (PortalException e) {
-//            LOG.error(String.format("Add question failed. userId: [%d], groupId: [%d], recordSetId: [%d]",
-//                    userId, groupId, recordSetId), e);
-//            return;
-//        }
-
-        List<QuestionRecordLink> randomQuestionRecordLinks =
-                QuestionRecordLinkLocalServiceUtil.findRandomQuestionReocrdLinks(5);
+        DDLRecord newRecord = null;
+        try {
+            newRecord = DDLRecordLocalServiceUtil.addRecord(userId, groupId, recordSetId, 0, fields, serviceContext);
+        } catch (PortalException e) {
+            LOG.error(String.format("Add question failed. userId: [%d], groupId: [%d], recordSetId: [%d]",
+                    userId, groupId, recordSetId), e);
+            return;
+        }
 
         ExamUtil.getExamValueMap(fields);
+
+        List<QuestionRecordLink> randomQuestionRecordLinks =
+                QuestionRecordLinkLocalServiceUtil.findRandomQuestionReocrdLinks(20);
+
+        for (QuestionRecordLink questionRecordLink : randomQuestionRecordLinks) {
+            ExamQuestionLink examQuestionLink =
+                    ExamQuestionLinkLocalServiceUtil.createExamQuestionLink(newRecord.getRecordId());
+            long questionRecordId = questionRecordLink.getDdlRecordId();
+            examQuestionLink.setQuestionRecordId(questionRecordId);
+
+            DDLRecord questionRecord = null;
+            try {
+                questionRecord = DDLRecordLocalServiceUtil.getDDLRecord(questionRecordId);
+            } catch (PortalException e) {
+                LOG.error(String.format("Get DDLRecord by id [%d] failed.", questionRecordId), e);
+                continue;
+            }
+
+            String currentVersion = questionRecord.getVersion();
+            examQuestionLink.setQuestionRecordVersion(currentVersion);
+
+            ExamQuestionLinkLocalServiceUtil.addExamQuestionLink(examQuestionLink);
+        }
 
     }
 

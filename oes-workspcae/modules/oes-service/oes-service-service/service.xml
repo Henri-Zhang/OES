@@ -4,4 +4,5 @@
 <service-builder package-path="priv.barrow">
     <namespace>OES</namespace>
     <service-builder-import file="services/service_questionrecordlink.xml" />
+    <service-builder-import file="services/service_examquestionlink.xml" />
 </service-builder>

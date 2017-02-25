@@ -44,6 +44,7 @@ import com.liferay.portal.spring.extender.service.ServiceReference;
 import priv.barrow.model.QuestionRecordLink;
 
 import priv.barrow.service.QuestionRecordLinkLocalService;
+import priv.barrow.service.persistence.ExamQuestionLinkPersistence;
 import priv.barrow.service.persistence.QuestionRecordLinkFinder;
 import priv.barrow.service.persistence.QuestionRecordLinkPersistence;
 
@@ -320,6 +321,44 @@ public abstract class QuestionRecordLinkLocalServiceBaseImpl
 	}
 
 	/**
+	 * Returns the exam question link local service.
+	 *
+	 * @return the exam question link local service
+	 */
+	public priv.barrow.service.ExamQuestionLinkLocalService getExamQuestionLinkLocalService() {
+		return examQuestionLinkLocalService;
+	}
+
+	/**
+	 * Sets the exam question link local service.
+	 *
+	 * @param examQuestionLinkLocalService the exam question link local service
+	 */
+	public void setExamQuestionLinkLocalService(
+		priv.barrow.service.ExamQuestionLinkLocalService examQuestionLinkLocalService) {
+		this.examQuestionLinkLocalService = examQuestionLinkLocalService;
+	}
+
+	/**
+	 * Returns the exam question link persistence.
+	 *
+	 * @return the exam question link persistence
+	 */
+	public ExamQuestionLinkPersistence getExamQuestionLinkPersistence() {
+		return examQuestionLinkPersistence;
+	}
+
+	/**
+	 * Sets the exam question link persistence.
+	 *
+	 * @param examQuestionLinkPersistence the exam question link persistence
+	 */
+	public void setExamQuestionLinkPersistence(
+		ExamQuestionLinkPersistence examQuestionLinkPersistence) {
+		this.examQuestionLinkPersistence = examQuestionLinkPersistence;
+	}
+
+	/**
 	 * Returns the question record link local service.
 	 *
 	 * @return the question record link local service
@@ -541,6 +580,10 @@ public abstract class QuestionRecordLinkLocalServiceBaseImpl
 		}
 	}
 
+	@BeanReference(type = priv.barrow.service.ExamQuestionLinkLocalService.class)
+	protected priv.barrow.service.ExamQuestionLinkLocalService examQuestionLinkLocalService;
+	@BeanReference(type = ExamQuestionLinkPersistence.class)
+	protected ExamQuestionLinkPersistence examQuestionLinkPersistence;
 	@BeanReference(type = QuestionRecordLinkLocalService.class)
 	protected QuestionRecordLinkLocalService questionRecordLinkLocalService;
 	@BeanReference(type = QuestionRecordLinkPersistence.class)

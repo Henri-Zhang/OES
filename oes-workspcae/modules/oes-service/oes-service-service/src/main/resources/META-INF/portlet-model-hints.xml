@@ -1,6 +1,11 @@
 <?xml version="1.0"?>
 
 <model-hints>
+	<model name="priv.barrow.model.ExamQuestionLink">
+		<field name="examRecordId" type="long" />
+		<field name="questionRecordId" type="long" />
+		<field name="questionRecordVersion" type="String" />
+	</model>
 	<model name="priv.barrow.model.QuestionRecordLink">
 		<field name="questionOrder" type="long" />
 		<field name="ddlRecordId" type="long" />

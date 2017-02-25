@@ -2,7 +2,15 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping auto-import="false" default-lazy="false">
+	<import class="priv.barrow.model.ExamQuestionLink" />
 	<import class="priv.barrow.model.QuestionRecordLink" />
+	<class name="priv.barrow.model.impl.ExamQuestionLinkImpl" table="OES_ExamQuestionLink">
+		<id name="examRecordId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="questionRecordId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="questionRecordVersion" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
 	<class name="priv.barrow.model.impl.QuestionRecordLinkImpl" table="OES_QuestionRecordLink">
 		<id name="questionOrder" type="long">
 			<generator class="assigned" />
