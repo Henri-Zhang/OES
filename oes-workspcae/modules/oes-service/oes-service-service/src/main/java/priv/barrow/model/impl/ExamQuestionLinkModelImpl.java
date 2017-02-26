@@ -16,13 +16,9 @@ package priv.barrow.model.impl;
 
 import aQute.bnd.annotation.ProviderType;
 
-import com.liferay.expando.kernel.model.ExpandoBridge;
-import com.liferay.expando.kernel.util.ExpandoBridgeFactoryUtil;
-
 import com.liferay.portal.kernel.bean.AutoEscapeBeanHandler;
 import com.liferay.portal.kernel.model.CacheModel;
 import com.liferay.portal.kernel.model.impl.BaseModelImpl;
-import com.liferay.portal.kernel.service.ServiceContext;
 import com.liferay.portal.kernel.util.GetterUtil;
 import com.liferay.portal.kernel.util.ProxyUtil;
 import com.liferay.portal.kernel.util.StringBundler;
@@ -30,6 +26,8 @@ import com.liferay.portal.kernel.util.StringPool;
 
 import priv.barrow.model.ExamQuestionLink;
 import priv.barrow.model.ExamQuestionLinkModel;
+
+import priv.barrow.service.persistence.ExamQuestionLinkPK;
 
 import java.io.Serializable;
 
@@ -73,10 +71,10 @@ public class ExamQuestionLinkModelImpl extends BaseModelImpl<ExamQuestionLink>
 		TABLE_COLUMNS_MAP.put("questionRecordVersion", Types.VARCHAR);
 	}
 
-	public static final String TABLE_SQL_CREATE = "create table OES_ExamQuestionLink (examRecordId LONG not null primary key,questionRecordId LONG,questionRecordVersion VARCHAR(75) null)";
+	public static final String TABLE_SQL_CREATE = "create table OES_ExamQuestionLink (examRecordId LONG not null,questionRecordId LONG not null,questionRecordVersion VARCHAR(75) null,primary key (examRecordId, questionRecordId))";
 	public static final String TABLE_SQL_DROP = "drop table OES_ExamQuestionLink";
-	public static final String ORDER_BY_JPQL = " ORDER BY examQuestionLink.examRecordId ASC";
-	public static final String ORDER_BY_SQL = " ORDER BY OES_ExamQuestionLink.examRecordId ASC";
+	public static final String ORDER_BY_JPQL = " ORDER BY examQuestionLink.id.examRecordId ASC, examQuestionLink.id.questionRecordId ASC";
+	public static final String ORDER_BY_SQL = " ORDER BY OES_ExamQuestionLink.examRecordId ASC, OES_ExamQuestionLink.questionRecordId ASC";
 	public static final String DATA_SOURCE = "liferayDataSource";
 	public static final String SESSION_FACTORY = "liferaySessionFactory";
 	public static final String TX_MANAGER = "liferayTransactionManager";
@@ -94,23 +92,24 @@ public class ExamQuestionLinkModelImpl extends BaseModelImpl<ExamQuestionLink>
 	}
 
 	@Override
-	public long getPrimaryKey() {
-		return _examRecordId;
+	public ExamQuestionLinkPK getPrimaryKey() {
+		return new ExamQuestionLinkPK(_examRecordId, _questionRecordId);
 	}
 
 	@Override
-	public void setPrimaryKey(long primaryKey) {
-		setExamRecordId(primaryKey);
+	public void setPrimaryKey(ExamQuestionLinkPK primaryKey) {
+		setExamRecordId(primaryKey.examRecordId);
+		setQuestionRecordId(primaryKey.questionRecordId);
 	}
 
 	@Override
 	public Serializable getPrimaryKeyObj() {
-		return _examRecordId;
+		return new ExamQuestionLinkPK(_examRecordId, _questionRecordId);
 	}
 
 	@Override
 	public void setPrimaryKeyObj(Serializable primaryKeyObj) {
-		setPrimaryKey(((Long)primaryKeyObj).longValue());
+		setPrimaryKey((ExamQuestionLinkPK)primaryKeyObj);
 	}
 
 	@Override
@@ -195,19 +194,6 @@ public class ExamQuestionLinkModelImpl extends BaseModelImpl<ExamQuestionLink>
 	}
 
 	@Override
-	public ExpandoBridge getExpandoBridge() {
-		return ExpandoBridgeFactoryUtil.getExpandoBridge(0,
-			ExamQuestionLink.class.getName(), getPrimaryKey());
-	}
-
-	@Override
-	public void setExpandoBridgeAttributes(ServiceContext serviceContext) {
-		ExpandoBridge expandoBridge = getExpandoBridge();
-
-		expandoBridge.setAttributes(serviceContext);
-	}
-
-	@Override
 	public ExamQuestionLink toEscapedModel() {
 		if (_escapedModel == null) {
 			_escapedModel = (ExamQuestionLink)ProxyUtil.newProxyInstance(_classLoader,
@@ -232,17 +218,9 @@ public class ExamQuestionLinkModelImpl extends BaseModelImpl<ExamQuestionLink>
 
 	@Override
 	public int compareTo(ExamQuestionLink examQuestionLink) {
-		long primaryKey = examQuestionLink.getPrimaryKey();
+		ExamQuestionLinkPK primaryKey = examQuestionLink.getPrimaryKey();
 
-		if (getPrimaryKey() < primaryKey) {
-			return -1;
-		}
-		else if (getPrimaryKey() > primaryKey) {
-			return 1;
-		}
-		else {
-			return 0;
-		}
+		return getPrimaryKey().compareTo(primaryKey);
 	}
 
 	@Override
@@ -257,9 +235,9 @@ public class ExamQuestionLinkModelImpl extends BaseModelImpl<ExamQuestionLink>
 
 		ExamQuestionLink examQuestionLink = (ExamQuestionLink)obj;
 
-		long primaryKey = examQuestionLink.getPrimaryKey();
+		ExamQuestionLinkPK primaryKey = examQuestionLink.getPrimaryKey();
 
-		if (getPrimaryKey() == primaryKey) {
+		if (getPrimaryKey().equals(primaryKey)) {
 			return true;
 		}
 		else {
@@ -269,7 +247,7 @@ public class ExamQuestionLinkModelImpl extends BaseModelImpl<ExamQuestionLink>
 
 	@Override
 	public int hashCode() {
-		return (int)getPrimaryKey();
+		return getPrimaryKey().hashCode();
 	}
 
 	@Override
@@ -289,6 +267,8 @@ public class ExamQuestionLinkModelImpl extends BaseModelImpl<ExamQuestionLink>
 	@Override
 	public CacheModel<ExamQuestionLink> toCacheModel() {
 		ExamQuestionLinkCacheModel examQuestionLinkCacheModel = new ExamQuestionLinkCacheModel();
+
+		examQuestionLinkCacheModel.examQuestionLinkPK = getPrimaryKey();
 
 		examQuestionLinkCacheModel.examRecordId = getExamRecordId();
 

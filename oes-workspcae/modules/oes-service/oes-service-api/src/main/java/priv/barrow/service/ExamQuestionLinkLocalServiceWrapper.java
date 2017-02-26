@@ -199,27 +199,13 @@ public class ExamQuestionLinkLocalServiceWrapper
 	/**
 	* Creates a new exam question link with the primary key. Does not add the exam question link to the database.
 	*
-	* @param examRecordId the primary key for the new exam question link
+	* @param examQuestionLinkPK the primary key for the new exam question link
 	* @return the new exam question link
 	*/
 	@Override
 	public priv.barrow.model.ExamQuestionLink createExamQuestionLink(
-		long examRecordId) {
-		return _examQuestionLinkLocalService.createExamQuestionLink(examRecordId);
-	}
-
-	/**
-	* Deletes the exam question link with the primary key from the database. Also notifies the appropriate model listeners.
-	*
-	* @param examRecordId the primary key of the exam question link
-	* @return the exam question link that was removed
-	* @throws PortalException if a exam question link with the primary key could not be found
-	*/
-	@Override
-	public priv.barrow.model.ExamQuestionLink deleteExamQuestionLink(
-		long examRecordId)
-		throws com.liferay.portal.kernel.exception.PortalException {
-		return _examQuestionLinkLocalService.deleteExamQuestionLink(examRecordId);
+		priv.barrow.service.persistence.ExamQuestionLinkPK examQuestionLinkPK) {
+		return _examQuestionLinkLocalService.createExamQuestionLink(examQuestionLinkPK);
 	}
 
 	/**
@@ -234,24 +220,38 @@ public class ExamQuestionLinkLocalServiceWrapper
 		return _examQuestionLinkLocalService.deleteExamQuestionLink(examQuestionLink);
 	}
 
+	/**
+	* Deletes the exam question link with the primary key from the database. Also notifies the appropriate model listeners.
+	*
+	* @param examQuestionLinkPK the primary key of the exam question link
+	* @return the exam question link that was removed
+	* @throws PortalException if a exam question link with the primary key could not be found
+	*/
+	@Override
+	public priv.barrow.model.ExamQuestionLink deleteExamQuestionLink(
+		priv.barrow.service.persistence.ExamQuestionLinkPK examQuestionLinkPK)
+		throws com.liferay.portal.kernel.exception.PortalException {
+		return _examQuestionLinkLocalService.deleteExamQuestionLink(examQuestionLinkPK);
+	}
+
 	@Override
 	public priv.barrow.model.ExamQuestionLink fetchExamQuestionLink(
-		long examRecordId) {
-		return _examQuestionLinkLocalService.fetchExamQuestionLink(examRecordId);
+		priv.barrow.service.persistence.ExamQuestionLinkPK examQuestionLinkPK) {
+		return _examQuestionLinkLocalService.fetchExamQuestionLink(examQuestionLinkPK);
 	}
 
 	/**
 	* Returns the exam question link with the primary key.
 	*
-	* @param examRecordId the primary key of the exam question link
+	* @param examQuestionLinkPK the primary key of the exam question link
 	* @return the exam question link
 	* @throws PortalException if a exam question link with the primary key could not be found
 	*/
 	@Override
 	public priv.barrow.model.ExamQuestionLink getExamQuestionLink(
-		long examRecordId)
+		priv.barrow.service.persistence.ExamQuestionLinkPK examQuestionLinkPK)
 		throws com.liferay.portal.kernel.exception.PortalException {
-		return _examQuestionLinkLocalService.getExamQuestionLink(examRecordId);
+		return _examQuestionLinkLocalService.getExamQuestionLink(examQuestionLinkPK);
 	}
 
 	/**

@@ -47,6 +47,7 @@ import priv.barrow.service.QuestionRecordLinkLocalService;
 import priv.barrow.service.persistence.ExamQuestionLinkPersistence;
 import priv.barrow.service.persistence.QuestionRecordLinkFinder;
 import priv.barrow.service.persistence.QuestionRecordLinkPersistence;
+import priv.barrow.service.persistence.StudentTeacherLinkPersistence;
 
 import java.io.Serializable;
 
@@ -416,6 +417,44 @@ public abstract class QuestionRecordLinkLocalServiceBaseImpl
 	}
 
 	/**
+	 * Returns the student teacher link local service.
+	 *
+	 * @return the student teacher link local service
+	 */
+	public priv.barrow.service.StudentTeacherLinkLocalService getStudentTeacherLinkLocalService() {
+		return studentTeacherLinkLocalService;
+	}
+
+	/**
+	 * Sets the student teacher link local service.
+	 *
+	 * @param studentTeacherLinkLocalService the student teacher link local service
+	 */
+	public void setStudentTeacherLinkLocalService(
+		priv.barrow.service.StudentTeacherLinkLocalService studentTeacherLinkLocalService) {
+		this.studentTeacherLinkLocalService = studentTeacherLinkLocalService;
+	}
+
+	/**
+	 * Returns the student teacher link persistence.
+	 *
+	 * @return the student teacher link persistence
+	 */
+	public StudentTeacherLinkPersistence getStudentTeacherLinkPersistence() {
+		return studentTeacherLinkPersistence;
+	}
+
+	/**
+	 * Sets the student teacher link persistence.
+	 *
+	 * @param studentTeacherLinkPersistence the student teacher link persistence
+	 */
+	public void setStudentTeacherLinkPersistence(
+		StudentTeacherLinkPersistence studentTeacherLinkPersistence) {
+		this.studentTeacherLinkPersistence = studentTeacherLinkPersistence;
+	}
+
+	/**
 	 * Returns the counter local service.
 	 *
 	 * @return the counter local service
@@ -590,6 +629,10 @@ public abstract class QuestionRecordLinkLocalServiceBaseImpl
 	protected QuestionRecordLinkPersistence questionRecordLinkPersistence;
 	@BeanReference(type = QuestionRecordLinkFinder.class)
 	protected QuestionRecordLinkFinder questionRecordLinkFinder;
+	@BeanReference(type = priv.barrow.service.StudentTeacherLinkLocalService.class)
+	protected priv.barrow.service.StudentTeacherLinkLocalService studentTeacherLinkLocalService;
+	@BeanReference(type = StudentTeacherLinkPersistence.class)
+	protected StudentTeacherLinkPersistence studentTeacherLinkPersistence;
 	@ServiceReference(type = com.liferay.counter.kernel.service.CounterLocalService.class)
 	protected com.liferay.counter.kernel.service.CounterLocalService counterLocalService;
 	@ServiceReference(type = com.liferay.portal.kernel.service.ClassNameLocalService.class)

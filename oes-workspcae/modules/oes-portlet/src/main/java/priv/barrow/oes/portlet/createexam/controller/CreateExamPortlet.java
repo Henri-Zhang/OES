@@ -37,6 +37,7 @@ import priv.barrow.oes.portlet.util.AddRecordUtil;
 import priv.barrow.oes.portlet.util.ExamUtil;
 import priv.barrow.service.ExamQuestionLinkLocalServiceUtil;
 import priv.barrow.service.QuestionRecordLinkLocalServiceUtil;
+import priv.barrow.service.persistence.ExamQuestionLinkPK;
 
 @Component(
     immediate = true,
@@ -131,11 +132,12 @@ public class CreateExamPortlet extends MVCPortlet {
         List<QuestionRecordLink> randomQuestionRecordLinks =
                 QuestionRecordLinkLocalServiceUtil.findRandomQuestionReocrdLinks(20);
 
+        long examRecordId = newRecord.getRecordId();
         for (QuestionRecordLink questionRecordLink : randomQuestionRecordLinks) {
-            ExamQuestionLink examQuestionLink =
-                    ExamQuestionLinkLocalServiceUtil.createExamQuestionLink(newRecord.getRecordId());
             long questionRecordId = questionRecordLink.getDdlRecordId();
-            examQuestionLink.setQuestionRecordId(questionRecordId);
+            ExamQuestionLinkPK examQuestionLinkPK = new ExamQuestionLinkPK(examRecordId, questionRecordId);
+            ExamQuestionLink examQuestionLink =
+                    ExamQuestionLinkLocalServiceUtil.createExamQuestionLink(examQuestionLinkPK);
 
             DDLRecord questionRecord = null;
             try {

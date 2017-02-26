@@ -44,9 +44,11 @@ import com.liferay.portal.spring.extender.service.ServiceReference;
 import priv.barrow.model.ExamQuestionLink;
 
 import priv.barrow.service.ExamQuestionLinkLocalService;
+import priv.barrow.service.persistence.ExamQuestionLinkPK;
 import priv.barrow.service.persistence.ExamQuestionLinkPersistence;
 import priv.barrow.service.persistence.QuestionRecordLinkFinder;
 import priv.barrow.service.persistence.QuestionRecordLinkPersistence;
+import priv.barrow.service.persistence.StudentTeacherLinkPersistence;
 
 import java.io.Serializable;
 
@@ -94,26 +96,27 @@ public abstract class ExamQuestionLinkLocalServiceBaseImpl
 	/**
 	 * Creates a new exam question link with the primary key. Does not add the exam question link to the database.
 	 *
-	 * @param examRecordId the primary key for the new exam question link
+	 * @param examQuestionLinkPK the primary key for the new exam question link
 	 * @return the new exam question link
 	 */
 	@Override
-	public ExamQuestionLink createExamQuestionLink(long examRecordId) {
-		return examQuestionLinkPersistence.create(examRecordId);
+	public ExamQuestionLink createExamQuestionLink(
+		ExamQuestionLinkPK examQuestionLinkPK) {
+		return examQuestionLinkPersistence.create(examQuestionLinkPK);
 	}
 
 	/**
 	 * Deletes the exam question link with the primary key from the database. Also notifies the appropriate model listeners.
 	 *
-	 * @param examRecordId the primary key of the exam question link
+	 * @param examQuestionLinkPK the primary key of the exam question link
 	 * @return the exam question link that was removed
 	 * @throws PortalException if a exam question link with the primary key could not be found
 	 */
 	@Indexable(type = IndexableType.DELETE)
 	@Override
-	public ExamQuestionLink deleteExamQuestionLink(long examRecordId)
-		throws PortalException {
-		return examQuestionLinkPersistence.remove(examRecordId);
+	public ExamQuestionLink deleteExamQuestionLink(
+		ExamQuestionLinkPK examQuestionLinkPK) throws PortalException {
+		return examQuestionLinkPersistence.remove(examQuestionLinkPK);
 	}
 
 	/**
@@ -213,21 +216,22 @@ public abstract class ExamQuestionLinkLocalServiceBaseImpl
 	}
 
 	@Override
-	public ExamQuestionLink fetchExamQuestionLink(long examRecordId) {
-		return examQuestionLinkPersistence.fetchByPrimaryKey(examRecordId);
+	public ExamQuestionLink fetchExamQuestionLink(
+		ExamQuestionLinkPK examQuestionLinkPK) {
+		return examQuestionLinkPersistence.fetchByPrimaryKey(examQuestionLinkPK);
 	}
 
 	/**
 	 * Returns the exam question link with the primary key.
 	 *
-	 * @param examRecordId the primary key of the exam question link
+	 * @param examQuestionLinkPK the primary key of the exam question link
 	 * @return the exam question link
 	 * @throws PortalException if a exam question link with the primary key could not be found
 	 */
 	@Override
-	public ExamQuestionLink getExamQuestionLink(long examRecordId)
-		throws PortalException {
-		return examQuestionLinkPersistence.findByPrimaryKey(examRecordId);
+	public ExamQuestionLink getExamQuestionLink(
+		ExamQuestionLinkPK examQuestionLinkPK) throws PortalException {
+		return examQuestionLinkPersistence.findByPrimaryKey(examQuestionLinkPK);
 	}
 
 	@Override
@@ -238,7 +242,8 @@ public abstract class ExamQuestionLinkLocalServiceBaseImpl
 		actionableDynamicQuery.setClassLoader(getClassLoader());
 		actionableDynamicQuery.setModelClass(ExamQuestionLink.class);
 
-		actionableDynamicQuery.setPrimaryKeyPropertyName("examRecordId");
+		actionableDynamicQuery.setPrimaryKeyPropertyName(
+			"primaryKey.examRecordId");
 
 		return actionableDynamicQuery;
 	}
@@ -252,7 +257,7 @@ public abstract class ExamQuestionLinkLocalServiceBaseImpl
 		indexableActionableDynamicQuery.setModelClass(ExamQuestionLink.class);
 
 		indexableActionableDynamicQuery.setPrimaryKeyPropertyName(
-			"examRecordId");
+			"primaryKey.examRecordId");
 
 		return indexableActionableDynamicQuery;
 	}
@@ -263,7 +268,8 @@ public abstract class ExamQuestionLinkLocalServiceBaseImpl
 		actionableDynamicQuery.setClassLoader(getClassLoader());
 		actionableDynamicQuery.setModelClass(ExamQuestionLink.class);
 
-		actionableDynamicQuery.setPrimaryKeyPropertyName("examRecordId");
+		actionableDynamicQuery.setPrimaryKeyPropertyName(
+			"primaryKey.examRecordId");
 	}
 
 	/**
@@ -413,6 +419,44 @@ public abstract class ExamQuestionLinkLocalServiceBaseImpl
 	public void setQuestionRecordLinkFinder(
 		QuestionRecordLinkFinder questionRecordLinkFinder) {
 		this.questionRecordLinkFinder = questionRecordLinkFinder;
+	}
+
+	/**
+	 * Returns the student teacher link local service.
+	 *
+	 * @return the student teacher link local service
+	 */
+	public priv.barrow.service.StudentTeacherLinkLocalService getStudentTeacherLinkLocalService() {
+		return studentTeacherLinkLocalService;
+	}
+
+	/**
+	 * Sets the student teacher link local service.
+	 *
+	 * @param studentTeacherLinkLocalService the student teacher link local service
+	 */
+	public void setStudentTeacherLinkLocalService(
+		priv.barrow.service.StudentTeacherLinkLocalService studentTeacherLinkLocalService) {
+		this.studentTeacherLinkLocalService = studentTeacherLinkLocalService;
+	}
+
+	/**
+	 * Returns the student teacher link persistence.
+	 *
+	 * @return the student teacher link persistence
+	 */
+	public StudentTeacherLinkPersistence getStudentTeacherLinkPersistence() {
+		return studentTeacherLinkPersistence;
+	}
+
+	/**
+	 * Sets the student teacher link persistence.
+	 *
+	 * @param studentTeacherLinkPersistence the student teacher link persistence
+	 */
+	public void setStudentTeacherLinkPersistence(
+		StudentTeacherLinkPersistence studentTeacherLinkPersistence) {
+		this.studentTeacherLinkPersistence = studentTeacherLinkPersistence;
 	}
 
 	/**
@@ -590,6 +634,10 @@ public abstract class ExamQuestionLinkLocalServiceBaseImpl
 	protected QuestionRecordLinkPersistence questionRecordLinkPersistence;
 	@BeanReference(type = QuestionRecordLinkFinder.class)
 	protected QuestionRecordLinkFinder questionRecordLinkFinder;
+	@BeanReference(type = priv.barrow.service.StudentTeacherLinkLocalService.class)
+	protected priv.barrow.service.StudentTeacherLinkLocalService studentTeacherLinkLocalService;
+	@BeanReference(type = StudentTeacherLinkPersistence.class)
+	protected StudentTeacherLinkPersistence studentTeacherLinkPersistence;
 	@ServiceReference(type = com.liferay.counter.kernel.service.CounterLocalService.class)
 	protected com.liferay.counter.kernel.service.CounterLocalService counterLocalService;
 	@ServiceReference(type = com.liferay.portal.kernel.service.ClassNameLocalService.class)

@@ -23,6 +23,8 @@ import com.liferay.portal.kernel.util.StringPool;
 
 import priv.barrow.model.ExamQuestionLink;
 
+import priv.barrow.service.persistence.ExamQuestionLinkPK;
+
 import java.io.Externalizable;
 import java.io.IOException;
 import java.io.ObjectInput;
@@ -50,7 +52,8 @@ public class ExamQuestionLinkCacheModel implements CacheModel<ExamQuestionLink>,
 
 		ExamQuestionLinkCacheModel examQuestionLinkCacheModel = (ExamQuestionLinkCacheModel)obj;
 
-		if (examRecordId == examQuestionLinkCacheModel.examRecordId) {
+		if (examQuestionLinkPK.equals(
+					examQuestionLinkCacheModel.examQuestionLinkPK)) {
 			return true;
 		}
 
@@ -59,7 +62,7 @@ public class ExamQuestionLinkCacheModel implements CacheModel<ExamQuestionLink>,
 
 	@Override
 	public int hashCode() {
-		return HashUtil.hash(0, examRecordId);
+		return HashUtil.hash(0, examQuestionLinkPK);
 	}
 
 	@Override
@@ -102,6 +105,9 @@ public class ExamQuestionLinkCacheModel implements CacheModel<ExamQuestionLink>,
 
 		questionRecordId = objectInput.readLong();
 		questionRecordVersion = objectInput.readUTF();
+
+		examQuestionLinkPK = new ExamQuestionLinkPK(examRecordId,
+				questionRecordId);
 	}
 
 	@Override
@@ -122,4 +128,5 @@ public class ExamQuestionLinkCacheModel implements CacheModel<ExamQuestionLink>,
 	public long examRecordId;
 	public long questionRecordId;
 	public String questionRecordVersion;
+	public transient ExamQuestionLinkPK examQuestionLinkPK;
 }

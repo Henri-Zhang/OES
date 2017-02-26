@@ -10,4 +10,8 @@
 		<field name="questionOrder" type="long" />
 		<field name="ddlRecordId" type="long" />
 	</model>
+	<model name="priv.barrow.model.StudentTeacherLink">
+		<field name="studentId" type="long" />
+		<field name="teacherId" type="long" />
+	</model>
 </model-hints>

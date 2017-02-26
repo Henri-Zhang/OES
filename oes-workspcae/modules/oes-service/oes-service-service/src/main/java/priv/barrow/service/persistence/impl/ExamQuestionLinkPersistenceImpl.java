@@ -27,7 +27,6 @@ import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.service.persistence.impl.BasePersistenceImpl;
 import com.liferay.portal.kernel.util.OrderByComparator;
 import com.liferay.portal.kernel.util.StringBundler;
-import com.liferay.portal.kernel.util.StringPool;
 import com.liferay.portal.spring.extender.service.ServiceReference;
 
 import priv.barrow.exception.NoSuchExamQuestionLinkException;
@@ -36,14 +35,13 @@ import priv.barrow.model.ExamQuestionLink;
 import priv.barrow.model.impl.ExamQuestionLinkImpl;
 import priv.barrow.model.impl.ExamQuestionLinkModelImpl;
 
+import priv.barrow.service.persistence.ExamQuestionLinkPK;
 import priv.barrow.service.persistence.ExamQuestionLinkPersistence;
 
 import java.io.Serializable;
 
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -169,15 +167,15 @@ public class ExamQuestionLinkPersistenceImpl extends BasePersistenceImpl<ExamQue
 	/**
 	 * Creates a new exam question link with the primary key. Does not add the exam question link to the database.
 	 *
-	 * @param examRecordId the primary key for the new exam question link
+	 * @param examQuestionLinkPK the primary key for the new exam question link
 	 * @return the new exam question link
 	 */
 	@Override
-	public ExamQuestionLink create(long examRecordId) {
+	public ExamQuestionLink create(ExamQuestionLinkPK examQuestionLinkPK) {
 		ExamQuestionLink examQuestionLink = new ExamQuestionLinkImpl();
 
 		examQuestionLink.setNew(true);
-		examQuestionLink.setPrimaryKey(examRecordId);
+		examQuestionLink.setPrimaryKey(examQuestionLinkPK);
 
 		return examQuestionLink;
 	}
@@ -185,14 +183,14 @@ public class ExamQuestionLinkPersistenceImpl extends BasePersistenceImpl<ExamQue
 	/**
 	 * Removes the exam question link with the primary key from the database. Also notifies the appropriate model listeners.
 	 *
-	 * @param examRecordId the primary key of the exam question link
+	 * @param examQuestionLinkPK the primary key of the exam question link
 	 * @return the exam question link that was removed
 	 * @throws NoSuchExamQuestionLinkException if a exam question link with the primary key could not be found
 	 */
 	@Override
-	public ExamQuestionLink remove(long examRecordId)
+	public ExamQuestionLink remove(ExamQuestionLinkPK examQuestionLinkPK)
 		throws NoSuchExamQuestionLinkException {
-		return remove((Serializable)examRecordId);
+		return remove((Serializable)examQuestionLinkPK);
 	}
 
 	/**
@@ -354,14 +352,15 @@ public class ExamQuestionLinkPersistenceImpl extends BasePersistenceImpl<ExamQue
 	/**
 	 * Returns the exam question link with the primary key or throws a {@link NoSuchExamQuestionLinkException} if it could not be found.
 	 *
-	 * @param examRecordId the primary key of the exam question link
+	 * @param examQuestionLinkPK the primary key of the exam question link
 	 * @return the exam question link
 	 * @throws NoSuchExamQuestionLinkException if a exam question link with the primary key could not be found
 	 */
 	@Override
-	public ExamQuestionLink findByPrimaryKey(long examRecordId)
+	public ExamQuestionLink findByPrimaryKey(
+		ExamQuestionLinkPK examQuestionLinkPK)
 		throws NoSuchExamQuestionLinkException {
-		return findByPrimaryKey((Serializable)examRecordId);
+		return findByPrimaryKey((Serializable)examQuestionLinkPK);
 	}
 
 	/**
@@ -415,12 +414,13 @@ public class ExamQuestionLinkPersistenceImpl extends BasePersistenceImpl<ExamQue
 	/**
 	 * Returns the exam question link with the primary key or returns <code>null</code> if it could not be found.
 	 *
-	 * @param examRecordId the primary key of the exam question link
+	 * @param examQuestionLinkPK the primary key of the exam question link
 	 * @return the exam question link, or <code>null</code> if a exam question link with the primary key could not be found
 	 */
 	@Override
-	public ExamQuestionLink fetchByPrimaryKey(long examRecordId) {
-		return fetchByPrimaryKey((Serializable)examRecordId);
+	public ExamQuestionLink fetchByPrimaryKey(
+		ExamQuestionLinkPK examQuestionLinkPK) {
+		return fetchByPrimaryKey((Serializable)examQuestionLinkPK);
 	}
 
 	@Override
@@ -432,86 +432,12 @@ public class ExamQuestionLinkPersistenceImpl extends BasePersistenceImpl<ExamQue
 
 		Map<Serializable, ExamQuestionLink> map = new HashMap<Serializable, ExamQuestionLink>();
 
-		if (primaryKeys.size() == 1) {
-			Iterator<Serializable> iterator = primaryKeys.iterator();
-
-			Serializable primaryKey = iterator.next();
-
+		for (Serializable primaryKey : primaryKeys) {
 			ExamQuestionLink examQuestionLink = fetchByPrimaryKey(primaryKey);
 
 			if (examQuestionLink != null) {
 				map.put(primaryKey, examQuestionLink);
 			}
-
-			return map;
-		}
-
-		Set<Serializable> uncachedPrimaryKeys = null;
-
-		for (Serializable primaryKey : primaryKeys) {
-			Serializable serializable = entityCache.getResult(ExamQuestionLinkModelImpl.ENTITY_CACHE_ENABLED,
-					ExamQuestionLinkImpl.class, primaryKey);
-
-			if (serializable != nullModel) {
-				if (serializable == null) {
-					if (uncachedPrimaryKeys == null) {
-						uncachedPrimaryKeys = new HashSet<Serializable>();
-					}
-
-					uncachedPrimaryKeys.add(primaryKey);
-				}
-				else {
-					map.put(primaryKey, (ExamQuestionLink)serializable);
-				}
-			}
-		}
-
-		if (uncachedPrimaryKeys == null) {
-			return map;
-		}
-
-		StringBundler query = new StringBundler((uncachedPrimaryKeys.size() * 2) +
-				1);
-
-		query.append(_SQL_SELECT_EXAMQUESTIONLINK_WHERE_PKS_IN);
-
-		for (Serializable primaryKey : uncachedPrimaryKeys) {
-			query.append(String.valueOf(primaryKey));
-
-			query.append(StringPool.COMMA);
-		}
-
-		query.setIndex(query.index() - 1);
-
-		query.append(StringPool.CLOSE_PARENTHESIS);
-
-		String sql = query.toString();
-
-		Session session = null;
-
-		try {
-			session = openSession();
-
-			Query q = session.createQuery(sql);
-
-			for (ExamQuestionLink examQuestionLink : (List<ExamQuestionLink>)q.list()) {
-				map.put(examQuestionLink.getPrimaryKeyObj(), examQuestionLink);
-
-				cacheResult(examQuestionLink);
-
-				uncachedPrimaryKeys.remove(examQuestionLink.getPrimaryKeyObj());
-			}
-
-			for (Serializable primaryKey : uncachedPrimaryKeys) {
-				entityCache.putResult(ExamQuestionLinkModelImpl.ENTITY_CACHE_ENABLED,
-					ExamQuestionLinkImpl.class, primaryKey, nullModel);
-			}
-		}
-		catch (Exception e) {
-			throw processException(e);
-		}
-		finally {
-			closeSession(session);
 		}
 
 		return map;
@@ -731,7 +657,6 @@ public class ExamQuestionLinkPersistenceImpl extends BasePersistenceImpl<ExamQue
 	@ServiceReference(type = FinderCache.class)
 	protected FinderCache finderCache;
 	private static final String _SQL_SELECT_EXAMQUESTIONLINK = "SELECT examQuestionLink FROM ExamQuestionLink examQuestionLink";
-	private static final String _SQL_SELECT_EXAMQUESTIONLINK_WHERE_PKS_IN = "SELECT examQuestionLink FROM ExamQuestionLink examQuestionLink WHERE examRecordId IN (";
 	private static final String _SQL_COUNT_EXAMQUESTIONLINK = "SELECT COUNT(examQuestionLink) FROM ExamQuestionLink examQuestionLink";
 	private static final String _ORDER_BY_ENTITY_ALIAS = "examQuestionLink.";
 	private static final String _NO_SUCH_ENTITY_WITH_PRIMARY_KEY = "No ExamQuestionLink exists with the primary key ";

@@ -59,19 +59,21 @@ public interface ExamQuestionLinkPersistence extends BasePersistence<ExamQuestio
 	/**
 	* Creates a new exam question link with the primary key. Does not add the exam question link to the database.
 	*
-	* @param examRecordId the primary key for the new exam question link
+	* @param examQuestionLinkPK the primary key for the new exam question link
 	* @return the new exam question link
 	*/
-	public ExamQuestionLink create(long examRecordId);
+	public ExamQuestionLink create(
+		priv.barrow.service.persistence.ExamQuestionLinkPK examQuestionLinkPK);
 
 	/**
 	* Removes the exam question link with the primary key from the database. Also notifies the appropriate model listeners.
 	*
-	* @param examRecordId the primary key of the exam question link
+	* @param examQuestionLinkPK the primary key of the exam question link
 	* @return the exam question link that was removed
 	* @throws NoSuchExamQuestionLinkException if a exam question link with the primary key could not be found
 	*/
-	public ExamQuestionLink remove(long examRecordId)
+	public ExamQuestionLink remove(
+		priv.barrow.service.persistence.ExamQuestionLinkPK examQuestionLinkPK)
 		throws NoSuchExamQuestionLinkException;
 
 	public ExamQuestionLink updateImpl(ExamQuestionLink examQuestionLink);
@@ -79,20 +81,22 @@ public interface ExamQuestionLinkPersistence extends BasePersistence<ExamQuestio
 	/**
 	* Returns the exam question link with the primary key or throws a {@link NoSuchExamQuestionLinkException} if it could not be found.
 	*
-	* @param examRecordId the primary key of the exam question link
+	* @param examQuestionLinkPK the primary key of the exam question link
 	* @return the exam question link
 	* @throws NoSuchExamQuestionLinkException if a exam question link with the primary key could not be found
 	*/
-	public ExamQuestionLink findByPrimaryKey(long examRecordId)
+	public ExamQuestionLink findByPrimaryKey(
+		priv.barrow.service.persistence.ExamQuestionLinkPK examQuestionLinkPK)
 		throws NoSuchExamQuestionLinkException;
 
 	/**
 	* Returns the exam question link with the primary key or returns <code>null</code> if it could not be found.
 	*
-	* @param examRecordId the primary key of the exam question link
+	* @param examQuestionLinkPK the primary key of the exam question link
 	* @return the exam question link, or <code>null</code> if a exam question link with the primary key could not be found
 	*/
-	public ExamQuestionLink fetchByPrimaryKey(long examRecordId);
+	public ExamQuestionLink fetchByPrimaryKey(
+		priv.barrow.service.persistence.ExamQuestionLinkPK examQuestionLinkPK);
 
 	@Override
 	public java.util.Map<java.io.Serializable, ExamQuestionLink> fetchByPrimaryKeys(

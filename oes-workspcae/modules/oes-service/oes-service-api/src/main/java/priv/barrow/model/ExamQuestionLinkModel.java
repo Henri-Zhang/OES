@@ -23,6 +23,8 @@ import com.liferay.portal.kernel.model.BaseModel;
 import com.liferay.portal.kernel.model.CacheModel;
 import com.liferay.portal.kernel.service.ServiceContext;
 
+import priv.barrow.service.persistence.ExamQuestionLinkPK;
+
 import java.io.Serializable;
 
 /**
@@ -51,14 +53,14 @@ public interface ExamQuestionLinkModel extends BaseModel<ExamQuestionLink> {
 	 *
 	 * @return the primary key of this exam question link
 	 */
-	public long getPrimaryKey();
+	public ExamQuestionLinkPK getPrimaryKey();
 
 	/**
 	 * Sets the primary key of this exam question link.
 	 *
 	 * @param primaryKey the primary key of this exam question link
 	 */
-	public void setPrimaryKey(long primaryKey);
+	public void setPrimaryKey(ExamQuestionLinkPK primaryKey);
 
 	/**
 	 * Returns the exam record ID of this exam question link.

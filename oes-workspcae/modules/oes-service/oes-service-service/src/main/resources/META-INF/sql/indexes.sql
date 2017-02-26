@@ -1,0 +1,1 @@
+create index IX_84F2581D on OES_StudentTeacherLink (studentId);

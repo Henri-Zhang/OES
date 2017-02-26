@@ -54,4 +54,22 @@ public interface ExamQuestionLink extends ExamQuestionLinkModel, PersistedModel 
 				return ExamQuestionLink.class;
 			}
 		};
+
+	public static final Accessor<ExamQuestionLink, Long> QUESTION_RECORD_ID_ACCESSOR =
+		new Accessor<ExamQuestionLink, Long>() {
+			@Override
+			public Long get(ExamQuestionLink examQuestionLink) {
+				return examQuestionLink.getQuestionRecordId();
+			}
+
+			@Override
+			public Class<Long> getAttributeClass() {
+				return Long.class;
+			}
+
+			@Override
+			public Class<ExamQuestionLink> getTypeClass() {
+				return ExamQuestionLink.class;
+			}
+		};
 }

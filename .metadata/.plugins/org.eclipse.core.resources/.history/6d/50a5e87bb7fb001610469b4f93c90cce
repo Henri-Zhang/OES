@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.0.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_0_0.dtd">
+
+<service-builder>
+    <entity local-service="true" name="StudentTeacherLink" remote-service="false">
+        <column name="teacherId" primary="true" type="long" />
+        <column name="studentId" primary="true" type="long" />
+        <finder name="" return-type="">
+            <finder-column name="studentId" />
+        </finder>
+    </entity>
+</service-builder>

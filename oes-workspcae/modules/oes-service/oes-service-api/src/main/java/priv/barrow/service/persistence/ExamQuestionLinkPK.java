@@ -31,16 +31,13 @@ public class ExamQuestionLinkPK implements Comparable<ExamQuestionLinkPK>,
 	Serializable {
 	public long examRecordId;
 	public long questionRecordId;
-	public String questionRecordVersion;
 
 	public ExamQuestionLinkPK() {
 	}
 
-	public ExamQuestionLinkPK(long examRecordId, long questionRecordId,
-		String questionRecordVersion) {
+	public ExamQuestionLinkPK(long examRecordId, long questionRecordId) {
 		this.examRecordId = examRecordId;
 		this.questionRecordId = questionRecordId;
-		this.questionRecordVersion = questionRecordVersion;
 	}
 
 	public long getExamRecordId() {
@@ -57,14 +54,6 @@ public class ExamQuestionLinkPK implements Comparable<ExamQuestionLinkPK>,
 
 	public void setQuestionRecordId(long questionRecordId) {
 		this.questionRecordId = questionRecordId;
-	}
-
-	public String getQuestionRecordVersion() {
-		return questionRecordVersion;
-	}
-
-	public void setQuestionRecordVersion(String questionRecordVersion) {
-		this.questionRecordVersion = questionRecordVersion;
 	}
 
 	@Override
@@ -103,12 +92,6 @@ public class ExamQuestionLinkPK implements Comparable<ExamQuestionLinkPK>,
 			return value;
 		}
 
-		value = questionRecordVersion.compareTo(pk.questionRecordVersion);
-
-		if (value != 0) {
-			return value;
-		}
-
 		return 0;
 	}
 
@@ -125,8 +108,7 @@ public class ExamQuestionLinkPK implements Comparable<ExamQuestionLinkPK>,
 		ExamQuestionLinkPK pk = (ExamQuestionLinkPK)obj;
 
 		if ((examRecordId == pk.examRecordId) &&
-				(questionRecordId == pk.questionRecordId) &&
-				(questionRecordVersion.equals(pk.questionRecordVersion))) {
+				(questionRecordId == pk.questionRecordId)) {
 			return true;
 		}
 		else {
@@ -140,14 +122,13 @@ public class ExamQuestionLinkPK implements Comparable<ExamQuestionLinkPK>,
 
 		hashCode = HashUtil.hash(hashCode, examRecordId);
 		hashCode = HashUtil.hash(hashCode, questionRecordId);
-		hashCode = HashUtil.hash(hashCode, questionRecordVersion);
 
 		return hashCode;
 	}
 
 	@Override
 	public String toString() {
-		StringBundler sb = new StringBundler(15);
+		StringBundler sb = new StringBundler(10);
 
 		sb.append(StringPool.OPEN_CURLY_BRACE);
 
@@ -160,12 +141,6 @@ public class ExamQuestionLinkPK implements Comparable<ExamQuestionLinkPK>,
 		sb.append("questionRecordId");
 		sb.append(StringPool.EQUAL);
 		sb.append(questionRecordId);
-
-		sb.append(StringPool.COMMA);
-		sb.append(StringPool.SPACE);
-		sb.append("questionRecordVersion");
-		sb.append(StringPool.EQUAL);
-		sb.append(questionRecordVersion);
 
 		sb.append(StringPool.CLOSE_CURLY_BRACE);
 

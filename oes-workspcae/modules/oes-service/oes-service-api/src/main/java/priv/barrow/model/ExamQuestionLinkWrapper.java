@@ -162,16 +162,6 @@ public class ExamQuestionLinkWrapper implements ExamQuestionLink,
 	}
 
 	/**
-	* Returns the primary key of this exam question link.
-	*
-	* @return the primary key of this exam question link
-	*/
-	@Override
-	public long getPrimaryKey() {
-		return _examQuestionLink.getPrimaryKey();
-	}
-
-	/**
 	* Returns the question record ID of this exam question link.
 	*
 	* @return the question record ID of this exam question link
@@ -189,6 +179,16 @@ public class ExamQuestionLinkWrapper implements ExamQuestionLink,
 	@Override
 	public priv.barrow.model.ExamQuestionLink toUnescapedModel() {
 		return new ExamQuestionLinkWrapper(_examQuestionLink.toUnescapedModel());
+	}
+
+	/**
+	* Returns the primary key of this exam question link.
+	*
+	* @return the primary key of this exam question link
+	*/
+	@Override
+	public priv.barrow.service.persistence.ExamQuestionLinkPK getPrimaryKey() {
+		return _examQuestionLink.getPrimaryKey();
 	}
 
 	@Override
@@ -238,7 +238,8 @@ public class ExamQuestionLinkWrapper implements ExamQuestionLink,
 	* @param primaryKey the primary key of this exam question link
 	*/
 	@Override
-	public void setPrimaryKey(long primaryKey) {
+	public void setPrimaryKey(
+		priv.barrow.service.persistence.ExamQuestionLinkPK primaryKey) {
 		_examQuestionLink.setPrimaryKey(primaryKey);
 	}
 

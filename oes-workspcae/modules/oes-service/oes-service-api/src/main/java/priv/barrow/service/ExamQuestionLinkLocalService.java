@@ -34,6 +34,8 @@ import com.liferay.portal.kernel.util.OrderByComparator;
 
 import priv.barrow.model.ExamQuestionLink;
 
+import priv.barrow.service.persistence.ExamQuestionLinkPK;
+
 import java.io.Serializable;
 
 import java.util.List;
@@ -179,21 +181,11 @@ public interface ExamQuestionLinkLocalService extends BaseLocalService,
 	/**
 	* Creates a new exam question link with the primary key. Does not add the exam question link to the database.
 	*
-	* @param examRecordId the primary key for the new exam question link
+	* @param examQuestionLinkPK the primary key for the new exam question link
 	* @return the new exam question link
 	*/
-	public ExamQuestionLink createExamQuestionLink(long examRecordId);
-
-	/**
-	* Deletes the exam question link with the primary key from the database. Also notifies the appropriate model listeners.
-	*
-	* @param examRecordId the primary key of the exam question link
-	* @return the exam question link that was removed
-	* @throws PortalException if a exam question link with the primary key could not be found
-	*/
-	@Indexable(type = IndexableType.DELETE)
-	public ExamQuestionLink deleteExamQuestionLink(long examRecordId)
-		throws PortalException;
+	public ExamQuestionLink createExamQuestionLink(
+		ExamQuestionLinkPK examQuestionLinkPK);
 
 	/**
 	* Deletes the exam question link from the database. Also notifies the appropriate model listeners.
@@ -205,19 +197,31 @@ public interface ExamQuestionLinkLocalService extends BaseLocalService,
 	public ExamQuestionLink deleteExamQuestionLink(
 		ExamQuestionLink examQuestionLink);
 
+	/**
+	* Deletes the exam question link with the primary key from the database. Also notifies the appropriate model listeners.
+	*
+	* @param examQuestionLinkPK the primary key of the exam question link
+	* @return the exam question link that was removed
+	* @throws PortalException if a exam question link with the primary key could not be found
+	*/
+	@Indexable(type = IndexableType.DELETE)
+	public ExamQuestionLink deleteExamQuestionLink(
+		ExamQuestionLinkPK examQuestionLinkPK) throws PortalException;
+
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
-	public ExamQuestionLink fetchExamQuestionLink(long examRecordId);
+	public ExamQuestionLink fetchExamQuestionLink(
+		ExamQuestionLinkPK examQuestionLinkPK);
 
 	/**
 	* Returns the exam question link with the primary key.
 	*
-	* @param examRecordId the primary key of the exam question link
+	* @param examQuestionLinkPK the primary key of the exam question link
 	* @return the exam question link
 	* @throws PortalException if a exam question link with the primary key could not be found
 	*/
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
-	public ExamQuestionLink getExamQuestionLink(long examRecordId)
-		throws PortalException;
+	public ExamQuestionLink getExamQuestionLink(
+		ExamQuestionLinkPK examQuestionLinkPK) throws PortalException;
 
 	/**
 	* Updates the exam question link in the database or adds it if it does not yet exist. Also notifies the appropriate model listeners.

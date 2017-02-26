@@ -4,11 +4,12 @@
 <hibernate-mapping auto-import="false" default-lazy="false">
 	<import class="priv.barrow.model.ExamQuestionLink" />
 	<import class="priv.barrow.model.QuestionRecordLink" />
+	<import class="priv.barrow.model.StudentTeacherLink" />
 	<class name="priv.barrow.model.impl.ExamQuestionLinkImpl" table="OES_ExamQuestionLink">
-		<id name="examRecordId" type="long">
-			<generator class="assigned" />
-		</id>
-		<property name="questionRecordId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<composite-id class="priv.barrow.service.persistence.ExamQuestionLinkPK" name="primaryKey">
+			<key-property name="examRecordId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+			<key-property name="questionRecordId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		</composite-id>
 		<property name="questionRecordVersion" type="com.liferay.portal.dao.orm.hibernate.StringType" />
 	</class>
 	<class name="priv.barrow.model.impl.QuestionRecordLinkImpl" table="OES_QuestionRecordLink">
@@ -16,5 +17,11 @@
 			<generator class="assigned" />
 		</id>
 		<property name="ddlRecordId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="priv.barrow.model.impl.StudentTeacherLinkImpl" table="OES_StudentTeacherLink">
+		<id name="studentId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="teacherId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
 	</class>
 </hibernate-mapping>

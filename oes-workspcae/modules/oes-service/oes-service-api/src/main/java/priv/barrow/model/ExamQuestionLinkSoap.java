@@ -16,6 +16,8 @@ package priv.barrow.model;
 
 import aQute.bnd.annotation.ProviderType;
 
+import priv.barrow.service.persistence.ExamQuestionLinkPK;
+
 import java.io.Serializable;
 
 import java.util.ArrayList;
@@ -81,12 +83,13 @@ public class ExamQuestionLinkSoap implements Serializable {
 	public ExamQuestionLinkSoap() {
 	}
 
-	public long getPrimaryKey() {
-		return _examRecordId;
+	public ExamQuestionLinkPK getPrimaryKey() {
+		return new ExamQuestionLinkPK(_examRecordId, _questionRecordId);
 	}
 
-	public void setPrimaryKey(long pk) {
-		setExamRecordId(pk);
+	public void setPrimaryKey(ExamQuestionLinkPK pk) {
+		setExamRecordId(pk.examRecordId);
+		setQuestionRecordId(pk.questionRecordId);
 	}
 
 	public long getExamRecordId() {
