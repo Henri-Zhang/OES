@@ -5,6 +5,7 @@
 	<import class="priv.barrow.model.ExamQuestionLink" />
 	<import class="priv.barrow.model.QuestionRecordLink" />
 	<import class="priv.barrow.model.StudentTeacherLink" />
+	<import class="priv.barrow.model.TeacherUserLink" />
 	<class name="priv.barrow.model.impl.ExamQuestionLinkImpl" table="OES_ExamQuestionLink">
 		<composite-id class="priv.barrow.service.persistence.ExamQuestionLinkPK" name="primaryKey">
 			<key-property name="examRecordId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
@@ -23,5 +24,11 @@
 			<generator class="assigned" />
 		</id>
 		<property name="teacherId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="priv.barrow.model.impl.TeacherUserLinkImpl" table="OES_TeacherUserLink">
+		<id name="teacherNumber" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
 	</class>
 </hibernate-mapping>

@@ -48,6 +48,8 @@ import priv.barrow.service.persistence.ExamQuestionLinkPersistence;
 import priv.barrow.service.persistence.QuestionRecordLinkFinder;
 import priv.barrow.service.persistence.QuestionRecordLinkPersistence;
 import priv.barrow.service.persistence.StudentTeacherLinkPersistence;
+import priv.barrow.service.persistence.TeacherUserLinkFinder;
+import priv.barrow.service.persistence.TeacherUserLinkPersistence;
 
 import java.io.Serializable;
 
@@ -455,6 +457,63 @@ public abstract class QuestionRecordLinkLocalServiceBaseImpl
 	}
 
 	/**
+	 * Returns the teacher user link local service.
+	 *
+	 * @return the teacher user link local service
+	 */
+	public priv.barrow.service.TeacherUserLinkLocalService getTeacherUserLinkLocalService() {
+		return teacherUserLinkLocalService;
+	}
+
+	/**
+	 * Sets the teacher user link local service.
+	 *
+	 * @param teacherUserLinkLocalService the teacher user link local service
+	 */
+	public void setTeacherUserLinkLocalService(
+		priv.barrow.service.TeacherUserLinkLocalService teacherUserLinkLocalService) {
+		this.teacherUserLinkLocalService = teacherUserLinkLocalService;
+	}
+
+	/**
+	 * Returns the teacher user link persistence.
+	 *
+	 * @return the teacher user link persistence
+	 */
+	public TeacherUserLinkPersistence getTeacherUserLinkPersistence() {
+		return teacherUserLinkPersistence;
+	}
+
+	/**
+	 * Sets the teacher user link persistence.
+	 *
+	 * @param teacherUserLinkPersistence the teacher user link persistence
+	 */
+	public void setTeacherUserLinkPersistence(
+		TeacherUserLinkPersistence teacherUserLinkPersistence) {
+		this.teacherUserLinkPersistence = teacherUserLinkPersistence;
+	}
+
+	/**
+	 * Returns the teacher user link finder.
+	 *
+	 * @return the teacher user link finder
+	 */
+	public TeacherUserLinkFinder getTeacherUserLinkFinder() {
+		return teacherUserLinkFinder;
+	}
+
+	/**
+	 * Sets the teacher user link finder.
+	 *
+	 * @param teacherUserLinkFinder the teacher user link finder
+	 */
+	public void setTeacherUserLinkFinder(
+		TeacherUserLinkFinder teacherUserLinkFinder) {
+		this.teacherUserLinkFinder = teacherUserLinkFinder;
+	}
+
+	/**
 	 * Returns the counter local service.
 	 *
 	 * @return the counter local service
@@ -633,6 +692,12 @@ public abstract class QuestionRecordLinkLocalServiceBaseImpl
 	protected priv.barrow.service.StudentTeacherLinkLocalService studentTeacherLinkLocalService;
 	@BeanReference(type = StudentTeacherLinkPersistence.class)
 	protected StudentTeacherLinkPersistence studentTeacherLinkPersistence;
+	@BeanReference(type = priv.barrow.service.TeacherUserLinkLocalService.class)
+	protected priv.barrow.service.TeacherUserLinkLocalService teacherUserLinkLocalService;
+	@BeanReference(type = TeacherUserLinkPersistence.class)
+	protected TeacherUserLinkPersistence teacherUserLinkPersistence;
+	@BeanReference(type = TeacherUserLinkFinder.class)
+	protected TeacherUserLinkFinder teacherUserLinkFinder;
 	@ServiceReference(type = com.liferay.counter.kernel.service.CounterLocalService.class)
 	protected com.liferay.counter.kernel.service.CounterLocalService counterLocalService;
 	@ServiceReference(type = com.liferay.portal.kernel.service.ClassNameLocalService.class)

@@ -14,4 +14,8 @@
 		<field name="studentId" type="long" />
 		<field name="teacherId" type="long" />
 	</model>
+	<model name="priv.barrow.model.TeacherUserLink">
+		<field name="teacherNumber" type="long" />
+		<field name="userId" type="long" />
+	</model>
 </model-hints>

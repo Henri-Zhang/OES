@@ -8,4 +8,7 @@
 	<bean class="priv.barrow.service.persistence.impl.QuestionRecordLinkFinderImpl" id="priv.barrow.service.persistence.QuestionRecordLinkFinder" parent="basePersistence" />
 	<bean class="priv.barrow.service.impl.StudentTeacherLinkLocalServiceImpl" id="priv.barrow.service.StudentTeacherLinkLocalService" />
 	<bean class="priv.barrow.service.persistence.impl.StudentTeacherLinkPersistenceImpl" id="priv.barrow.service.persistence.StudentTeacherLinkPersistence" parent="basePersistence" />
+	<bean class="priv.barrow.service.impl.TeacherUserLinkLocalServiceImpl" id="priv.barrow.service.TeacherUserLinkLocalService" />
+	<bean class="priv.barrow.service.persistence.impl.TeacherUserLinkPersistenceImpl" id="priv.barrow.service.persistence.TeacherUserLinkPersistence" parent="basePersistence" />
+	<bean class="priv.barrow.service.persistence.impl.TeacherUserLinkFinderImpl" id="priv.barrow.service.persistence.TeacherUserLinkFinder" parent="basePersistence" />
 </beans>

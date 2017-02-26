@@ -14,3 +14,13 @@ create table OES_StudentTeacherLink (
 	studentId LONG not null primary key,
 	teacherId LONG
 );
+
+create table OES_Teacher (
+	teacherNumber LONG not null primary key,
+	userId LONG
+);
+
+create table OES_TeacherUserLink (
+	teacherNumber LONG not null primary key,
+	userId LONG
+);

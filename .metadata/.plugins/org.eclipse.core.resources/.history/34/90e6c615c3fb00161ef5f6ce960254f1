@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.0.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_0_0.dtd">
+
+<service-builder package-path="priv.barrow">
+    <namespace>OES</namespace>
+    <service-builder-import file="services/service_questionrecordlink.xml" />
+    <service-builder-import file="services/service_examquestionlink.xml" />
+    <service-builder-import file="services/service_studentteacherlink.xml" />
+</service-builder>

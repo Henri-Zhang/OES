@@ -1,0 +1,15 @@
+package priv.barrow.service.persistence.impl;
+
+import java.util.List;
+
+import priv.barrow.model.TeacherUserLink;
+import priv.barrow.service.persistence.TeacherUserLinkFinder;
+
+public class TeacherUserLinkFinderImpl
+    extends TeacherUserLinkFinderBaseImpl implements TeacherUserLinkFinder {
+
+    public List<TeacherUserLink> searchTeacherUsers() {
+        return null;
+    }
+    
+}

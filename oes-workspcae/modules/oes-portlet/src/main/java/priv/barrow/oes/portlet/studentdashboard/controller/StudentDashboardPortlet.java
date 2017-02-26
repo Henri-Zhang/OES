@@ -1,6 +1,7 @@
 package priv.barrow.oes.portlet.studentdashboard.controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.portlet.Portlet;
 import javax.portlet.PortletException;
@@ -18,7 +19,9 @@ import com.liferay.portal.kernel.util.Validator;
 import com.liferay.portal.kernel.util.WebKeys;
 
 import priv.barrow.model.StudentTeacherLink;
+import priv.barrow.model.TeacherUserLink;
 import priv.barrow.service.StudentTeacherLinkLocalServiceUtil;
+import priv.barrow.service.TeacherUserLinkLocalServiceUtil;
 
 @Component(
     immediate = true,
@@ -54,18 +57,23 @@ public class StudentDashboardPortlet extends MVCPortlet {
             LOG.error(String.format("Get StudentTeacherLink by studentId [%d] faield.", userId), e);
         }
 
-        boolean haveTeacher = false;
+        boolean hasTeacher = false;
         long teacherId = 0L;
         if (Validator.isNotNull(studentTeacherLink)) {
             teacherId = studentTeacherLink.getTeacherId();
             if (teacherId > 0) {
-                haveTeacher = true;
+                hasTeacher = true;
             }
         }
 
-        renderRequest.setAttribute("haveTeacher", haveTeacher);
+        renderRequest.setAttribute("hasTeacher", hasTeacher);
+        List<TeacherUserLink> teacherUserLinks = TeacherUserLinkLocalServiceUtil.searchTeacherUsers("z");
+        for (TeacherUserLink teacherUserLink : teacherUserLinks) {
+            System.out.println("-------" + teacherUserLink.getUserId());
+        }
 
         super.doView(renderRequest, renderResponse);
     }
+
 
 }

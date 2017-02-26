@@ -6,4 +6,5 @@
     <service-builder-import file="services/service_questionrecordlink.xml" />
     <service-builder-import file="services/service_examquestionlink.xml" />
     <service-builder-import file="services/service_studentteacherlink.xml" />
+    <service-builder-import file="services/service_teacheruserlink.xml" />
 </service-builder>

@@ -1,0 +1,301 @@
+/**
+ * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ */
+
+package priv.barrow.model;
+
+import aQute.bnd.annotation.ProviderType;
+
+import com.liferay.expando.kernel.model.ExpandoBridge;
+
+import com.liferay.portal.kernel.model.ModelWrapper;
+import com.liferay.portal.kernel.service.ServiceContext;
+
+import java.io.Serializable;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+
+/**
+ * <p>
+ * This class is a wrapper for {@link Teacher}.
+ * </p>
+ *
+ * @author Brian Wing Shun Chan
+ * @see Teacher
+ * @generated
+ */
+@ProviderType
+public class TeacherWrapper implements Teacher, ModelWrapper<Teacher> {
+	public TeacherWrapper(Teacher teacher) {
+		_teacher = teacher;
+	}
+
+	@Override
+	public Class<?> getModelClass() {
+		return Teacher.class;
+	}
+
+	@Override
+	public String getModelClassName() {
+		return Teacher.class.getName();
+	}
+
+	@Override
+	public Map<String, Object> getModelAttributes() {
+		Map<String, Object> attributes = new HashMap<String, Object>();
+
+		attributes.put("teacherNumber", getTeacherNumber());
+		attributes.put("userId", getUserId());
+
+		return attributes;
+	}
+
+	@Override
+	public void setModelAttributes(Map<String, Object> attributes) {
+		Long teacherNumber = (Long)attributes.get("teacherNumber");
+
+		if (teacherNumber != null) {
+			setTeacherNumber(teacherNumber);
+		}
+
+		Long userId = (Long)attributes.get("userId");
+
+		if (userId != null) {
+			setUserId(userId);
+		}
+	}
+
+	@Override
+	public boolean isCachedModel() {
+		return _teacher.isCachedModel();
+	}
+
+	@Override
+	public boolean isEscapedModel() {
+		return _teacher.isEscapedModel();
+	}
+
+	@Override
+	public boolean isNew() {
+		return _teacher.isNew();
+	}
+
+	@Override
+	public ExpandoBridge getExpandoBridge() {
+		return _teacher.getExpandoBridge();
+	}
+
+	@Override
+	public com.liferay.portal.kernel.model.CacheModel<priv.barrow.model.Teacher> toCacheModel() {
+		return _teacher.toCacheModel();
+	}
+
+	@Override
+	public int compareTo(priv.barrow.model.Teacher teacher) {
+		return _teacher.compareTo(teacher);
+	}
+
+	@Override
+	public int hashCode() {
+		return _teacher.hashCode();
+	}
+
+	@Override
+	public Serializable getPrimaryKeyObj() {
+		return _teacher.getPrimaryKeyObj();
+	}
+
+	@Override
+	public java.lang.Object clone() {
+		return new TeacherWrapper((Teacher)_teacher.clone());
+	}
+
+	/**
+	* Returns the user uuid of this teacher.
+	*
+	* @return the user uuid of this teacher
+	*/
+	@Override
+	public java.lang.String getUserUuid() {
+		return _teacher.getUserUuid();
+	}
+
+	@Override
+	public java.lang.String toString() {
+		return _teacher.toString();
+	}
+
+	@Override
+	public java.lang.String toXmlString() {
+		return _teacher.toXmlString();
+	}
+
+	/**
+	* Returns the primary key of this teacher.
+	*
+	* @return the primary key of this teacher
+	*/
+	@Override
+	public long getPrimaryKey() {
+		return _teacher.getPrimaryKey();
+	}
+
+	/**
+	* Returns the teacher number of this teacher.
+	*
+	* @return the teacher number of this teacher
+	*/
+	@Override
+	public long getTeacherNumber() {
+		return _teacher.getTeacherNumber();
+	}
+
+	/**
+	* Returns the user ID of this teacher.
+	*
+	* @return the user ID of this teacher
+	*/
+	@Override
+	public long getUserId() {
+		return _teacher.getUserId();
+	}
+
+	@Override
+	public priv.barrow.model.Teacher toEscapedModel() {
+		return new TeacherWrapper(_teacher.toEscapedModel());
+	}
+
+	@Override
+	public priv.barrow.model.Teacher toUnescapedModel() {
+		return new TeacherWrapper(_teacher.toUnescapedModel());
+	}
+
+	@Override
+	public void persist() {
+		_teacher.persist();
+	}
+
+	@Override
+	public void setCachedModel(boolean cachedModel) {
+		_teacher.setCachedModel(cachedModel);
+	}
+
+	@Override
+	public void setExpandoBridgeAttributes(ExpandoBridge expandoBridge) {
+		_teacher.setExpandoBridgeAttributes(expandoBridge);
+	}
+
+	@Override
+	public void setExpandoBridgeAttributes(
+		com.liferay.portal.kernel.model.BaseModel<?> baseModel) {
+		_teacher.setExpandoBridgeAttributes(baseModel);
+	}
+
+	@Override
+	public void setExpandoBridgeAttributes(ServiceContext serviceContext) {
+		_teacher.setExpandoBridgeAttributes(serviceContext);
+	}
+
+	@Override
+	public void setNew(boolean n) {
+		_teacher.setNew(n);
+	}
+
+	/**
+	* Sets the primary key of this teacher.
+	*
+	* @param primaryKey the primary key of this teacher
+	*/
+	@Override
+	public void setPrimaryKey(long primaryKey) {
+		_teacher.setPrimaryKey(primaryKey);
+	}
+
+	@Override
+	public void setPrimaryKeyObj(Serializable primaryKeyObj) {
+		_teacher.setPrimaryKeyObj(primaryKeyObj);
+	}
+
+	/**
+	* Sets the teacher number of this teacher.
+	*
+	* @param teacherNumber the teacher number of this teacher
+	*/
+	@Override
+	public void setTeacherNumber(long teacherNumber) {
+		_teacher.setTeacherNumber(teacherNumber);
+	}
+
+	/**
+	* Sets the user ID of this teacher.
+	*
+	* @param userId the user ID of this teacher
+	*/
+	@Override
+	public void setUserId(long userId) {
+		_teacher.setUserId(userId);
+	}
+
+	/**
+	* Sets the user uuid of this teacher.
+	*
+	* @param userUuid the user uuid of this teacher
+	*/
+	@Override
+	public void setUserUuid(java.lang.String userUuid) {
+		_teacher.setUserUuid(userUuid);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+
+		if (!(obj instanceof TeacherWrapper)) {
+			return false;
+		}
+
+		TeacherWrapper teacherWrapper = (TeacherWrapper)obj;
+
+		if (Objects.equals(_teacher, teacherWrapper._teacher)) {
+			return true;
+		}
+
+		return false;
+	}
+
+	@Override
+	public Teacher getWrappedModel() {
+		return _teacher;
+	}
+
+	@Override
+	public boolean isEntityCacheEnabled() {
+		return _teacher.isEntityCacheEnabled();
+	}
+
+	@Override
+	public boolean isFinderCacheEnabled() {
+		return _teacher.isFinderCacheEnabled();
+	}
+
+	@Override
+	public void resetOriginalValues() {
+		_teacher.resetOriginalValues();
+	}
+
+	private final Teacher _teacher;
+}

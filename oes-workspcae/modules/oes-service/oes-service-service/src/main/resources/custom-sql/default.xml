@@ -2,4 +2,5 @@
 
 <custom-sql>
     <sql file="custom-sql/question_record_link.xml" />
+    <sql file="custom-sql/teacher_user_link.xml" />
 </custom-sql>
