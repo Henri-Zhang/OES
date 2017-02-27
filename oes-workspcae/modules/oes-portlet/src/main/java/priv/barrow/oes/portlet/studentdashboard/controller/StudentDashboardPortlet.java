@@ -57,16 +57,14 @@ public class StudentDashboardPortlet extends MVCPortlet {
             LOG.error(String.format("Get StudentTeacherLink by studentId [%d] faield.", userId), e);
         }
 
-        boolean hasTeacher = false;
         long teacherId = 0L;
-        if (Validator.isNotNull(studentTeacherLink)) {
+        if (Validator.isNull(studentTeacherLink)) {
             teacherId = studentTeacherLink.getTeacherId();
-            if (teacherId > 0) {
-                hasTeacher = true;
-            }
+            renderRequest.setAttribute("hasTeacher", false);
+            super.doView(renderRequest, renderResponse);
+            return;
         }
 
-        renderRequest.setAttribute("hasTeacher", hasTeacher);
         List<TeacherUserLink> teacherUserLinks = TeacherUserLinkLocalServiceUtil.searchTeacherUsers("z");
         for (TeacherUserLink teacherUserLink : teacherUserLinks) {
             System.out.println("-------" + teacherUserLink.getUserId());

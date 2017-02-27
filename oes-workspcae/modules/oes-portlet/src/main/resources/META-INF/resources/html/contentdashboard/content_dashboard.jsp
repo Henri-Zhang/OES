@@ -14,7 +14,9 @@
 <h4>Recent Update Questions:</h4>
 <c:forEach items="${questions }" var="question">
     <span>${question.order }</span>
-    <a href="#">${question.description }</a><br />
+    <aui:a href="/question-detail?questionOrder=${question.order }">${question.description }</aui:a>
+    <aui:a href="/edit-question?questionOrder=${question.order }">Edit</aui:a>
+    <br />
 </c:forEach>
 <br />
 <aui:a calss="btn btn-lg btn-primary btn-default" href="/view-questions">View Questions</aui:a>

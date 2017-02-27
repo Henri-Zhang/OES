@@ -16,6 +16,8 @@ package priv.barrow.service.impl;
 
 import java.util.List;
 
+import com.liferay.counter.kernel.service.CounterLocalServiceUtil;
+
 import aQute.bnd.annotation.ProviderType;
 import priv.barrow.model.QuestionRecordLink;
 import priv.barrow.service.QuestionRecordLinkLocalServiceUtil;
@@ -45,9 +47,8 @@ public class QuestionRecordLinkLocalServiceImpl extends QuestionRecordLinkLocalS
 
     @Override
     public void addQuestionRecordLink(long recordId) {
-        long count = QuestionRecordLinkLocalServiceUtil.getQuestionRecordLinksCount();
         QuestionRecordLink questionRecordLink =
-                QuestionRecordLinkLocalServiceUtil.createQuestionRecordLink(count + 1);
+                QuestionRecordLinkLocalServiceUtil.createQuestionRecordLink(CounterLocalServiceUtil.increment());
         questionRecordLink.setDdlRecordId(recordId);
         addQuestionRecordLink(questionRecordLink);
     }

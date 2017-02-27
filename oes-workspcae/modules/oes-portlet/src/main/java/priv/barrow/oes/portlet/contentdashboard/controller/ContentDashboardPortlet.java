@@ -26,7 +26,7 @@ import priv.barrow.service.QuestionRecordLinkLocalServiceUtil;
         "javax.portlet.display-name=Content Dashboard",
         "javax.portlet.init-param.template-path=/",
         "com.liferay.portlet.header-portlet-css=/css/contentdashboard/content_dashboard.css",
-        "com.liferay.portlet.header-portlet-javascript=/js/contentdashboard/content_dashboard.js",
+        "com.liferay.portlet.footer-portlet-javascript=/js/contentdashboard/content_dashboard.js",
         "javax.portlet.init-param.view-template=/html/contentdashboard/content_dashboard.jsp",
         "javax.portlet.resource-bundle=content.Language",
         "javax.portlet.security-role-ref=power-user,user"
