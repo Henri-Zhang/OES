@@ -61,16 +61,18 @@ public class QuestionRecordLinkModelImpl extends BaseModelImpl<QuestionRecordLin
 	public static final String TABLE_NAME = "OES_QuestionRecordLink";
 	public static final Object[][] TABLE_COLUMNS = {
 			{ "questionOrder", Types.BIGINT },
-			{ "ddlRecordId", Types.BIGINT }
+			{ "ddlRecordId", Types.BIGINT },
+			{ "active_", Types.BOOLEAN }
 		};
 	public static final Map<String, Integer> TABLE_COLUMNS_MAP = new HashMap<String, Integer>();
 
 	static {
 		TABLE_COLUMNS_MAP.put("questionOrder", Types.BIGINT);
 		TABLE_COLUMNS_MAP.put("ddlRecordId", Types.BIGINT);
+		TABLE_COLUMNS_MAP.put("active_", Types.BOOLEAN);
 	}
 
-	public static final String TABLE_SQL_CREATE = "create table OES_QuestionRecordLink (questionOrder LONG not null primary key,ddlRecordId LONG)";
+	public static final String TABLE_SQL_CREATE = "create table OES_QuestionRecordLink (questionOrder LONG not null primary key,ddlRecordId LONG,active_ BOOLEAN)";
 	public static final String TABLE_SQL_DROP = "drop table OES_QuestionRecordLink";
 	public static final String ORDER_BY_JPQL = " ORDER BY questionRecordLink.questionOrder ASC";
 	public static final String ORDER_BY_SQL = " ORDER BY OES_QuestionRecordLink.questionOrder ASC";
@@ -126,6 +128,7 @@ public class QuestionRecordLinkModelImpl extends BaseModelImpl<QuestionRecordLin
 
 		attributes.put("questionOrder", getQuestionOrder());
 		attributes.put("ddlRecordId", getDdlRecordId());
+		attributes.put("active", getActive());
 
 		attributes.put("entityCacheEnabled", isEntityCacheEnabled());
 		attributes.put("finderCacheEnabled", isFinderCacheEnabled());
@@ -145,6 +148,12 @@ public class QuestionRecordLinkModelImpl extends BaseModelImpl<QuestionRecordLin
 
 		if (ddlRecordId != null) {
 			setDdlRecordId(ddlRecordId);
+		}
+
+		Boolean active = (Boolean)attributes.get("active");
+
+		if (active != null) {
+			setActive(active);
 		}
 	}
 
@@ -166,6 +175,21 @@ public class QuestionRecordLinkModelImpl extends BaseModelImpl<QuestionRecordLin
 	@Override
 	public void setDdlRecordId(long ddlRecordId) {
 		_ddlRecordId = ddlRecordId;
+	}
+
+	@Override
+	public boolean getActive() {
+		return _active;
+	}
+
+	@Override
+	public boolean isActive() {
+		return _active;
+	}
+
+	@Override
+	public void setActive(boolean active) {
+		_active = active;
 	}
 
 	@Override
@@ -197,6 +221,7 @@ public class QuestionRecordLinkModelImpl extends BaseModelImpl<QuestionRecordLin
 
 		questionRecordLinkImpl.setQuestionOrder(getQuestionOrder());
 		questionRecordLinkImpl.setDdlRecordId(getDdlRecordId());
+		questionRecordLinkImpl.setActive(getActive());
 
 		questionRecordLinkImpl.resetOriginalValues();
 
@@ -267,17 +292,21 @@ public class QuestionRecordLinkModelImpl extends BaseModelImpl<QuestionRecordLin
 
 		questionRecordLinkCacheModel.ddlRecordId = getDdlRecordId();
 
+		questionRecordLinkCacheModel.active = getActive();
+
 		return questionRecordLinkCacheModel;
 	}
 
 	@Override
 	public String toString() {
-		StringBundler sb = new StringBundler(5);
+		StringBundler sb = new StringBundler(7);
 
 		sb.append("{questionOrder=");
 		sb.append(getQuestionOrder());
 		sb.append(", ddlRecordId=");
 		sb.append(getDdlRecordId());
+		sb.append(", active=");
+		sb.append(getActive());
 		sb.append("}");
 
 		return sb.toString();
@@ -285,7 +314,7 @@ public class QuestionRecordLinkModelImpl extends BaseModelImpl<QuestionRecordLin
 
 	@Override
 	public String toXmlString() {
-		StringBundler sb = new StringBundler(10);
+		StringBundler sb = new StringBundler(13);
 
 		sb.append("<model><model-name>");
 		sb.append("priv.barrow.model.QuestionRecordLink");
@@ -299,6 +328,10 @@ public class QuestionRecordLinkModelImpl extends BaseModelImpl<QuestionRecordLin
 			"<column><column-name>ddlRecordId</column-name><column-value><![CDATA[");
 		sb.append(getDdlRecordId());
 		sb.append("]]></column-value></column>");
+		sb.append(
+			"<column><column-name>active</column-name><column-value><![CDATA[");
+		sb.append(getActive());
+		sb.append("]]></column-value></column>");
 
 		sb.append("</model>");
 
@@ -311,5 +344,6 @@ public class QuestionRecordLinkModelImpl extends BaseModelImpl<QuestionRecordLin
 		};
 	private long _questionOrder;
 	private long _ddlRecordId;
+	private boolean _active;
 	private QuestionRecordLink _escapedModel;
 }

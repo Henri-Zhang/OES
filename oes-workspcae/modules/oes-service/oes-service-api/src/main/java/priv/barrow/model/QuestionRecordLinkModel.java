@@ -87,6 +87,27 @@ public interface QuestionRecordLinkModel extends BaseModel<QuestionRecordLink> {
 	 */
 	public void setDdlRecordId(long ddlRecordId);
 
+	/**
+	 * Returns the active of this question record link.
+	 *
+	 * @return the active of this question record link
+	 */
+	public boolean getActive();
+
+	/**
+	 * Returns <code>true</code> if this question record link is active.
+	 *
+	 * @return <code>true</code> if this question record link is active; <code>false</code> otherwise
+	 */
+	public boolean isActive();
+
+	/**
+	 * Sets whether this question record link is active.
+	 *
+	 * @param active the active of this question record link
+	 */
+	public void setActive(boolean active);
+
 	@Override
 	public boolean isNew();
 

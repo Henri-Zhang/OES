@@ -162,4 +162,7 @@ public interface QuestionRecordLinkPersistence extends BasePersistence<QuestionR
 	* @return the number of question record links
 	*/
 	public int countAll();
+
+	@Override
+	public java.util.Set<java.lang.String> getBadColumnNames();
 }

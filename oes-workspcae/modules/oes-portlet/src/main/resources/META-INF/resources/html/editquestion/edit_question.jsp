@@ -20,7 +20,7 @@
         fields="${fields }"
         ddmFormValues="${questionFormValues }"
         checkRequired="true"
-        fieldsNamespace="attStrFrm"
+        fieldsNamespace="editQuestionForm"
     />
     <aui:button type="submit" value="save" />
 </aui:form>

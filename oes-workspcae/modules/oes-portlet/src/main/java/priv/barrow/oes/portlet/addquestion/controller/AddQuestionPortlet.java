@@ -84,6 +84,7 @@ public class AddQuestionPortlet extends MVCPortlet {
     public void addQuestion(ActionRequest actionRequest, ActionResponse actionResponse) {
         UploadPortletRequest uploadPortletRequest = PortalUtil.getUploadPortletRequest(actionRequest);
         ThemeDisplay themeDisplay = (ThemeDisplay) actionRequest.getAttribute(WebKeys.THEME_DISPLAY);
+        long userId = themeDisplay.getUserId();
 
         ServiceContext serviceContext = null;
         try {
@@ -93,13 +94,8 @@ public class AddQuestionPortlet extends MVCPortlet {
             return;
         }
 
-        long userId = themeDisplay.getUserId();
-        DDMStructure questionStructure =
-                AddRecordUtil.getDDMStructureByName(priv.barrow.oes.portlet.model.Constants.QUESTION);
-        if (Validator.isNull(questionStructure)) {
-            return;
-        }
-        long questionStructureId = questionStructure.getStructureId();
+        long questionStructureId =
+                AddRecordUtil.getDDMStructureIdByName(priv.barrow.oes.portlet.model.Constants.QUESTION);
 
         Fields fields = AddRecordUtil.getStructureFields(questionStructureId, serviceContext);
         if (Validator.isNull(fields)) {

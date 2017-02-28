@@ -4,16 +4,18 @@
     <sql id="priv.barrow.service.persistence.QuestionRecordLinkFinder.findRecentUpdateQuestionReocrdLinks">
         <![CDATA[
             SELECT
-                questionorder, ddlrecordid
+                questionorder, ddlrecordid, active_
             FROM
                 oes_questionrecordlink, ddlrecord
             WHERE
                 oes_questionrecordlink.ddlrecordid = ddlrecord.recordid
+            AND
+                oes_questionrecordlink.active_ = true
             ORDER BY
                 ddlrecord.modifieddate
             DESC
             LIMIT
-                ? 
+                ?
         ]]>
     </sql>
     <sql id="priv.barrow.service.persistence.QuestionRecordLinkFinder.findRandomQuestionReocrdLinks">

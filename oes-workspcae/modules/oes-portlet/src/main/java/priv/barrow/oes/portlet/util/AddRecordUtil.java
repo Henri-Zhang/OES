@@ -26,6 +26,15 @@ public class AddRecordUtil {
 
     private static final Log LOG = LogFactoryUtil.getLog(AddRecordUtil.class);
 
+    public static long getDDMStructureIdByName(String structureName) {
+        DDMStructure ddmStructure = getDDMStructureByName(structureName);
+        if (Validator.isNotNull(ddmStructure)) {
+            return ddmStructure.getStructureId();
+        }
+
+        return 0L;
+    }
+
     public static DDMStructure getDDMStructureByName(String structureName) {
         DynamicQuery structrueQuery = DDMStructureLocalServiceUtil.dynamicQuery();
         Property property = PropertyFactoryUtil.forName(Constants.NAME);

@@ -10,10 +10,11 @@
 
 <portlet:defineObjects />
 
-<portlet:actionURL name="updateQuestion" var="updateQuestionURL" />
+<portlet:actionURL name="deleteQuestion" var="deleteQuestionURL">
+    <portlet:param name="questionOrder" value="${questionOrder }"/>
+</portlet:actionURL>
 
-<aui:form action="${updateQuestionURL }" method="POST">
-<aui:fieldset>
+<aui:form>
     <liferay-ddm:html
         classNameId="${classNameId }"
         classPK="${classPK }"
@@ -21,11 +22,13 @@
         ddmFormValues="${questionFormValues }"
         readOnly="true"
     />
-</aui:fieldset>
-    <aui:a href="#">
-        <liferay-ui:message key="return" />
-    </aui:a>
-    <aui:a href="/edit-question?questionOrder=${questionOrder }">
-        <liferay-ui:message key="edit" />
-    </aui:a>
 </aui:form>
+<aui:a href="#">
+    <liferay-ui:message key="return" />
+</aui:a>
+<aui:a href="/edit-question?questionOrder=${questionOrder }">
+    <liferay-ui:message key="edit" />
+</aui:a>
+<aui:a href="${deleteQuestionURL }">
+    <liferay-ui:message key="delete" />
+</aui:a>

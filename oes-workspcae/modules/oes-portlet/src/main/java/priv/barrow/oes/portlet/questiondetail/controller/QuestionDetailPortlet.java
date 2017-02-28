@@ -2,8 +2,11 @@ package priv.barrow.oes.portlet.questiondetail.controller;
 
 import java.io.IOException;
 
+import javax.portlet.ActionRequest;
+import javax.portlet.ActionResponse;
 import javax.portlet.Portlet;
 import javax.portlet.PortletException;
+import javax.portlet.ProcessAction;
 import javax.portlet.RenderRequest;
 import javax.portlet.RenderResponse;
 import javax.servlet.http.HttpServletRequest;
@@ -106,6 +109,23 @@ public class QuestionDetailPortlet extends MVCPortlet {
         renderRequest.setAttribute(Constants.FIELDS, fields);
 
         super.doView(renderRequest, renderResponse);
+    }
+
+    @ProcessAction(name = "deleteQuestion")
+    public void deleteQuestion(ActionRequest actionRequest, ActionResponse actionResponse) {
+        // TODO Parameter questionOrder
+        long questionOrder = ParamUtil.get(actionRequest, Constants.QUESTION_ORDER, 1L);
+        QuestionRecordLink questionRecordLink = null;
+        try {
+            questionRecordLink = QuestionRecordLinkLocalServiceUtil.getQuestionRecordLink(questionOrder);
+        } catch (PortalException e) {
+            LOG.error(String.format("Get QuestionRecordLink failed. questionOrder: [%d]", questionOrder), e);
+            return;
+        }
+
+        questionRecordLink.setActive(false);
+        QuestionRecordLinkLocalServiceUtil.updateQuestionRecordLink(questionRecordLink);
+
     }
 
 }

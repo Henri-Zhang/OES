@@ -18,6 +18,7 @@
 			<generator class="assigned" />
 		</id>
 		<property name="ddlRecordId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property column="active_" name="active" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
 	</class>
 	<class name="priv.barrow.model.impl.StudentTeacherLinkImpl" table="OES_StudentTeacherLink">
 		<id name="studentId" type="long">

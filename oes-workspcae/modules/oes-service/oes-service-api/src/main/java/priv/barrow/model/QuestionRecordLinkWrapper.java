@@ -59,6 +59,7 @@ public class QuestionRecordLinkWrapper implements QuestionRecordLink,
 
 		attributes.put("questionOrder", getQuestionOrder());
 		attributes.put("ddlRecordId", getDdlRecordId());
+		attributes.put("active", getActive());
 
 		return attributes;
 	}
@@ -76,6 +77,32 @@ public class QuestionRecordLinkWrapper implements QuestionRecordLink,
 		if (ddlRecordId != null) {
 			setDdlRecordId(ddlRecordId);
 		}
+
+		Boolean active = (Boolean)attributes.get("active");
+
+		if (active != null) {
+			setActive(active);
+		}
+	}
+
+	/**
+	* Returns the active of this question record link.
+	*
+	* @return the active of this question record link
+	*/
+	@Override
+	public boolean getActive() {
+		return _questionRecordLink.getActive();
+	}
+
+	/**
+	* Returns <code>true</code> if this question record link is active.
+	*
+	* @return <code>true</code> if this question record link is active; <code>false</code> otherwise
+	*/
+	@Override
+	public boolean isActive() {
+		return _questionRecordLink.isActive();
 	}
 
 	@Override
@@ -177,6 +204,16 @@ public class QuestionRecordLinkWrapper implements QuestionRecordLink,
 	@Override
 	public void persist() {
 		_questionRecordLink.persist();
+	}
+
+	/**
+	* Sets whether this question record link is active.
+	*
+	* @param active the active of this question record link
+	*/
+	@Override
+	public void setActive(boolean active) {
+		_questionRecordLink.setActive(active);
 	}
 
 	@Override

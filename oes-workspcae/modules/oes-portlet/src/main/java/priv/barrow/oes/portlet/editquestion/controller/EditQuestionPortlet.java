@@ -144,17 +144,27 @@ public class EditQuestionPortlet extends MVCPortlet {
             return;
         }
 
-        DDMFormValues ddmFormValues = null;
+        long questionStructureId =
+                AddRecordUtil.getDDMStructureIdByName(priv.barrow.oes.portlet.model.Constants.QUESTION);
+
+        Fields fields = null;
         try {
-            ddmFormValues = DDMUtil.getDDMFormValues(50946, (String) uploadPortletRequest.getAttribute("fieldsNamespace"), serviceContext);
+            fields = DDMUtil.getFields(questionStructureId, Constants.EDIT_QUESTION_FIELDS_NAMESPACE, serviceContext);
         } catch (PortalException e) {
-            e.printStackTrace();
+            LOG.error(String.format("Get Fields failed. structureId: [%d], fieldsNamespcae: [%s]",
+                    questionRecordId), e);
         }
 
         try {
-            DDLRecordLocalServiceUtil.updateRecord(userId, questionRecordId, false, 0, ddmFormValues, serviceContext);
+            DDLRecordLocalServiceUtil.updateRecord(userId, questionRecordId, false, 0, fields, false, serviceContext);
         } catch (PortalException e) {
             LOG.error(String.format("Update DDLRecord failed. recordId: [%d]", questionRecordId), e);
+        }
+
+        try {
+            actionResponse.sendRedirect(String.format(Constants.QUESTION_DETAIL_URL, questionOrder));
+        } catch (IOException e) {
+            LOG.error(String.format("Redirect to question detail page failed. questionOrder: [%d]", questionOrder), e);
         }
 
     }

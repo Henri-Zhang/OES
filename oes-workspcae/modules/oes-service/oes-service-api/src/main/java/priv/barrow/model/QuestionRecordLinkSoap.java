@@ -34,6 +34,7 @@ public class QuestionRecordLinkSoap implements Serializable {
 
 		soapModel.setQuestionOrder(model.getQuestionOrder());
 		soapModel.setDdlRecordId(model.getDdlRecordId());
+		soapModel.setActive(model.getActive());
 
 		return soapModel;
 	}
@@ -105,6 +106,19 @@ public class QuestionRecordLinkSoap implements Serializable {
 		_ddlRecordId = ddlRecordId;
 	}
 
+	public boolean getActive() {
+		return _active;
+	}
+
+	public boolean isActive() {
+		return _active;
+	}
+
+	public void setActive(boolean active) {
+		_active = active;
+	}
+
 	private long _questionOrder;
 	private long _ddlRecordId;
+	private boolean _active;
 }

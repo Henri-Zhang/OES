@@ -26,6 +26,7 @@ import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.service.persistence.impl.BasePersistenceImpl;
 import com.liferay.portal.kernel.util.OrderByComparator;
+import com.liferay.portal.kernel.util.SetUtil;
 import com.liferay.portal.kernel.util.StringBundler;
 import com.liferay.portal.kernel.util.StringPool;
 import com.liferay.portal.spring.extender.service.ServiceReference;
@@ -323,6 +324,7 @@ public class QuestionRecordLinkPersistenceImpl extends BasePersistenceImpl<Quest
 
 		questionRecordLinkImpl.setQuestionOrder(questionRecordLink.getQuestionOrder());
 		questionRecordLinkImpl.setDdlRecordId(questionRecordLink.getDdlRecordId());
+		questionRecordLinkImpl.setActive(questionRecordLink.isActive());
 
 		return questionRecordLinkImpl;
 	}
@@ -710,6 +712,11 @@ public class QuestionRecordLinkPersistenceImpl extends BasePersistenceImpl<Quest
 	}
 
 	@Override
+	public Set<String> getBadColumnNames() {
+		return _badColumnNames;
+	}
+
+	@Override
 	protected Map<String, Integer> getTableColumnsMap() {
 		return QuestionRecordLinkModelImpl.TABLE_COLUMNS_MAP;
 	}
@@ -737,4 +744,7 @@ public class QuestionRecordLinkPersistenceImpl extends BasePersistenceImpl<Quest
 	private static final String _ORDER_BY_ENTITY_ALIAS = "questionRecordLink.";
 	private static final String _NO_SUCH_ENTITY_WITH_PRIMARY_KEY = "No QuestionRecordLink exists with the primary key ";
 	private static final Log _log = LogFactoryUtil.getLog(QuestionRecordLinkPersistenceImpl.class);
+	private static final Set<String> _badColumnNames = SetUtil.fromArray(new String[] {
+				"active"
+			});
 }

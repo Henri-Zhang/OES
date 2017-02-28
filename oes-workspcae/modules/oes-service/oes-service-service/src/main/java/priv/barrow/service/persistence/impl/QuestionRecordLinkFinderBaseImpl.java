@@ -21,11 +21,18 @@ import priv.barrow.model.QuestionRecordLink;
 
 import priv.barrow.service.persistence.QuestionRecordLinkPersistence;
 
+import java.util.Set;
+
 /**
  * @author Brian Wing Shun Chan
  * @generated
  */
 public class QuestionRecordLinkFinderBaseImpl extends BasePersistenceImpl<QuestionRecordLink> {
+	@Override
+	public Set<String> getBadColumnNames() {
+		return getQuestionRecordLinkPersistence().getBadColumnNames();
+	}
+
 	/**
 	 * Returns the question record link persistence.
 	 *

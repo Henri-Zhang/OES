@@ -63,12 +63,14 @@ public class QuestionRecordLinkCacheModel implements CacheModel<QuestionRecordLi
 
 	@Override
 	public String toString() {
-		StringBundler sb = new StringBundler(5);
+		StringBundler sb = new StringBundler(7);
 
 		sb.append("{questionOrder=");
 		sb.append(questionOrder);
 		sb.append(", ddlRecordId=");
 		sb.append(ddlRecordId);
+		sb.append(", active=");
+		sb.append(active);
 		sb.append("}");
 
 		return sb.toString();
@@ -80,6 +82,7 @@ public class QuestionRecordLinkCacheModel implements CacheModel<QuestionRecordLi
 
 		questionRecordLinkImpl.setQuestionOrder(questionOrder);
 		questionRecordLinkImpl.setDdlRecordId(ddlRecordId);
+		questionRecordLinkImpl.setActive(active);
 
 		questionRecordLinkImpl.resetOriginalValues();
 
@@ -91,6 +94,8 @@ public class QuestionRecordLinkCacheModel implements CacheModel<QuestionRecordLi
 		questionOrder = objectInput.readLong();
 
 		ddlRecordId = objectInput.readLong();
+
+		active = objectInput.readBoolean();
 	}
 
 	@Override
@@ -99,8 +104,11 @@ public class QuestionRecordLinkCacheModel implements CacheModel<QuestionRecordLi
 		objectOutput.writeLong(questionOrder);
 
 		objectOutput.writeLong(ddlRecordId);
+
+		objectOutput.writeBoolean(active);
 	}
 
 	public long questionOrder;
 	public long ddlRecordId;
+	public boolean active;
 }
