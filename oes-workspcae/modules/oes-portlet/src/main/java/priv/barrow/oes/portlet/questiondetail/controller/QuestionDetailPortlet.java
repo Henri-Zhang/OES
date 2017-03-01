@@ -112,7 +112,7 @@ public class QuestionDetailPortlet extends MVCPortlet {
     }
 
     @ProcessAction(name = "deleteQuestion")
-    public void deleteQuestion(ActionRequest actionRequest, ActionResponse actionResponse) {
+    public void deleteQuestion(ActionRequest actionRequest, ActionResponse actionResponse) throws IOException {
         // TODO Parameter questionOrder
         long questionOrder = ParamUtil.get(actionRequest, Constants.QUESTION_ORDER, 1L);
         QuestionRecordLink questionRecordLink = null;
@@ -125,6 +125,8 @@ public class QuestionDetailPortlet extends MVCPortlet {
 
         questionRecordLink.setActive(false);
         QuestionRecordLinkLocalServiceUtil.updateQuestionRecordLink(questionRecordLink);
+
+        actionResponse.sendRedirect("/content-dashboard");
 
     }
 

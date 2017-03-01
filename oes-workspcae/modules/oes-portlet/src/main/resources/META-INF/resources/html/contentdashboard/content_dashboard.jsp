@@ -9,6 +9,8 @@
 
 <portlet:defineObjects />
 
+<portlet:actionURL name="importQuestion" var="importQuestionURL"/>
+
 <c:set var="questions" value="${recentUpdateQuestions }" scope="request" />
 
 <h4>Recent Update Questions:</h4>
@@ -21,3 +23,4 @@
 <br />
 <aui:a calss="btn btn-lg btn-primary btn-default" href="/view-questions">View Questions</aui:a>
 <aui:a calss="btn btn-lg btn-primary btn-default" href="/add-question">Add Question</aui:a>
+<aui:a calss="btn btn-lg btn-primary btn-default" href="${importQuestionURL }">Import Questions</aui:a>

@@ -1,0 +1,16 @@
+package priv.barrow.oes.portlet.util;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+
+public class DataUtil {
+
+    public static void main(String[] args) {
+        questionImport("/home/barrow/Desktop/question.json");
+    }
+
+    public static void questionImport(String path) throws FileNotFoundException {
+        FileReader fileReader = new FileReader(path);
+    }
+
+}

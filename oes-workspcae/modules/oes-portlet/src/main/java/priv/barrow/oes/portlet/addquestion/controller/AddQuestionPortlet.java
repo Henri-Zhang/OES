@@ -24,6 +24,7 @@ import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
 import com.liferay.portal.kernel.service.ServiceContext;
 import com.liferay.portal.kernel.service.ServiceContextFactory;
 import com.liferay.portal.kernel.theme.ThemeDisplay;
+import com.liferay.portal.kernel.transaction.Isolation;
 import com.liferay.portal.kernel.transaction.Transactional;
 import com.liferay.portal.kernel.upload.UploadPortletRequest;
 import com.liferay.portal.kernel.util.PortalUtil;
@@ -49,7 +50,6 @@ import priv.barrow.service.QuestionRecordLinkLocalServiceUtil;
     },
     service = Portlet.class
 )
-
 public class AddQuestionPortlet extends MVCPortlet {
 
     private static final Log LOG = LogFactoryUtil.getLog(AddQuestionPortlet.class);
@@ -79,9 +79,11 @@ public class AddQuestionPortlet extends MVCPortlet {
         super.doView(renderRequest, renderResponse);
     }
 
-    @Transactional
+    @Transactional(isolation = Isolation.PORTAL, rollbackFor = {
+            PortalException.class
+    })
     @ProcessAction(name = "addQuestion")
-    public void addQuestion(ActionRequest actionRequest, ActionResponse actionResponse) {
+    public void addQuestion(ActionRequest actionRequest, ActionResponse actionResponse) throws PortalException {
         UploadPortletRequest uploadPortletRequest = PortalUtil.getUploadPortletRequest(actionRequest);
         ThemeDisplay themeDisplay = (ThemeDisplay) actionRequest.getAttribute(WebKeys.THEME_DISPLAY);
         long userId = themeDisplay.getUserId();
@@ -116,7 +118,7 @@ public class AddQuestionPortlet extends MVCPortlet {
         } catch (PortalException e) {
             LOG.error(String.format("Add question failed. userId: [%d], groupId: [%d], recordSetId: [%d]",
                     userId, groupId, recordSetId), e);
-            return;
+            throw e;
         }
 
         // Adds a QuestionRecordLink to oes_questionrecordlink.

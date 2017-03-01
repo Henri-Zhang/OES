@@ -1,0 +1,27 @@
+package priv.barrow.oes.portlet.util;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+
+import com.liferay.alloy.util.JSONUtil;
+import com.liferay.portal.kernel.json.JSONFactoryUtil;
+import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
+
+public class DataUtil {
+    private static Log LOG = LogFactoryUtil.getLog(DataUtil.class);
+
+    public static void questionImport(String path) {
+        FileReader fileReader = null;
+        try {
+            fileReader = new FileReader(path);
+        } catch (FileNotFoundException e) {
+            LOG.error("This file no found.", e);
+            return;
+        }
+        
+
+        System.out.println("-----------------");
+    }
+
+}

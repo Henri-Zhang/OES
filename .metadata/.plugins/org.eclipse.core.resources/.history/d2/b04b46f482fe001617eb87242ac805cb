@@ -1,0 +1,7 @@
+package priv.barrow.oes.portlet.util;
+
+import com.liferay.portal.kernel.json.JSONFactoryUtil;
+
+public class DataUtil {
+    JSONFactoryUtil sFactoryUtil;
+}

@@ -3,18 +3,29 @@ package priv.barrow.oes.portlet.contentdashboard.controller;
 import java.io.IOException;
 import java.util.List;
 
+import javax.portlet.ActionRequest;
+import javax.portlet.ActionResponse;
 import javax.portlet.Portlet;
 import javax.portlet.PortletException;
+import javax.portlet.ProcessAction;
 import javax.portlet.RenderRequest;
 import javax.portlet.RenderResponse;
 
 import org.osgi.service.component.annotations.Component;
 
+import com.liferay.portal.kernel.exception.PortalException;
+import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
+import com.liferay.portal.kernel.service.ServiceContext;
+import com.liferay.portal.kernel.service.ServiceContextFactory;
+import com.liferay.portal.kernel.upload.UploadPortletRequest;
+import com.liferay.portal.kernel.util.PortalUtil;
 
 import priv.barrow.model.QuestionRecordLink;
 import priv.barrow.oes.portlet.contentdashboard.constans.Constans;
 import priv.barrow.oes.portlet.model.Question;
+import priv.barrow.oes.portlet.util.DataUtil;
 import priv.barrow.oes.portlet.util.QuestionUtil;
 import priv.barrow.service.QuestionRecordLinkLocalServiceUtil;
 
@@ -37,6 +48,7 @@ import priv.barrow.service.QuestionRecordLinkLocalServiceUtil;
 public class ContentDashboardPortlet extends MVCPortlet {
 
     private final int RECENT_QUESTION_COUNT = 5;
+    private final Log LOG = LogFactoryUtil.getLog(ContentDashboardPortlet.class);
 
     @Override
     public void doView(RenderRequest renderRequest, RenderResponse renderResponse)
@@ -47,6 +59,19 @@ public class ContentDashboardPortlet extends MVCPortlet {
 
         renderRequest.setAttribute(Constans.RECENT_UPDATE_QUESTIONS, recentUpdateQuestions);
         super.doView(renderRequest, renderResponse);
+    }
+
+    @ProcessAction(name = "importQuestion")
+    public void importQuestion(ActionRequest actionRequest, ActionResponse actionResponse) {
+        UploadPortletRequest uploadPortletRequest = PortalUtil.getUploadPortletRequest(actionRequest);
+        ServiceContext serviceContext = null;
+        try {
+            serviceContext = ServiceContextFactory.getInstance(uploadPortletRequest);
+        } catch (PortalException e) {
+            LOG.error("Get ServiceContext from UploadPortletRequest failed.", e);
+            return;
+        }
+        DataUtil.questionImport("/home/barrow/Desktop/questions.json", serviceContext);
     }
 
 }

@@ -50,6 +50,7 @@ public class QuestionRecordLinkLocalServiceImpl extends QuestionRecordLinkLocalS
         QuestionRecordLink questionRecordLink =
                 QuestionRecordLinkLocalServiceUtil.createQuestionRecordLink(CounterLocalServiceUtil.increment());
         questionRecordLink.setDdlRecordId(recordId);
+        questionRecordLink.setActive(true);
         addQuestionRecordLink(questionRecordLink);
     }
 
