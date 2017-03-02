@@ -1,0 +1,34 @@
+package priv.barrow.oes.portlet.util;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.liferay.portal.kernel.util.Validator;
+
+import priv.barrow.model.TeacherUserLink;
+import priv.barrow.oes.portlet.model.Teacher;
+
+public class TeacherUtil {
+
+    public static List<Teacher> getTeachers(List<TeacherUserLink> teacherUserLinks) {
+        if (Validator.isNull(teacherUserLinks)) {
+            return null;
+        }
+
+        List<Teacher> teachers = new ArrayList<>();
+        for (TeacherUserLink teacherUserLink : teacherUserLinks) {
+            teachers.add(getTeacher(teacherUserLink));
+        }
+
+        return teachers;
+    }
+
+    public static Teacher getTeacher(TeacherUserLink teacherUserLink) {
+        if (Validator.isNull(teacherUserLink)) {
+            return null;
+        }
+
+
+    }
+
+}

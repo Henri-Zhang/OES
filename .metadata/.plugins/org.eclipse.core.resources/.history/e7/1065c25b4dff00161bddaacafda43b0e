@@ -1,0 +1,21 @@
+
+<aui:form cssClass="mod-user-management-container" action="<%= portletURL.toString() %>" method="post" name="fm">
+<liferay-ui:search-container searchContainer="<%= new UserManagementSearch(renderRequest, portletURL) %>">
+<%
+UserManagementSearchTerms searchTerms = (UserManagementSearchTerms) searchContainer.getSearchTerms();
+%>
+<liferay-ui:search-container-results>
+<%
+total = ProfileUserDataLocalServiceUtil.countUserListBySearchTypeAndSearchValue(company.getCompanyId(), siteAlias, searchTerms.getType(), searchTerms.getValue());
+searchContainer.setTotal(total);
+results = ProfileUserDataLocalServiceUtil.findUserListBySearchTypeAndSearchValue(company.getCompanyId(), siteAlias, searchTerms.getType(), searchTerms.getValue(), searchContainer.getStart(), searchContainer.getEnd());
+searchContainer.setResults(results);
+%>
+</liferay-ui:search-container-results>
+<liferay-ui:search-container-row className="com.liferay.portal.model.User" escapedModel="<%= true %>" modelVar="userModel">
+<liferay-ui:search-container-column-text name="user-id" orderable="false" orderableProperty="userId" value="<%= String.format(formatUserId, siteAlias, String.valueOf(userModel.getUserId())) %>" />
+<liferay-ui:search-container-column-text name="first-name" orderable="false" value="<%= userModel.getFirstName() %>" />
+<liferay-ui:search-container-column-text name="last-name" orderable="false" value="<%= userModel.getLastName() %>" />
+<liferay-ui:search-container-column-text name="screen-name" orderable="false" value="<%= userModel.getScreenName() %>" />
+<liferay-ui:search-container-column-text name="email-address" orderable="false" value="<%= userModel.getEmailAddress
+</liferay-ui:search-container-results>

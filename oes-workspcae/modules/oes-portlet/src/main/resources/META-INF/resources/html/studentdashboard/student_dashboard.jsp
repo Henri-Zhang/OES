@@ -16,6 +16,6 @@
     </c:when>
     <c:otherwise>
         <h4>Please choose your teacher firstly.</h4>
-        <aui:button name="choose" value="choose"/>
+        <%@ include file="../search/teacher_search.jsp" %>
     </c:otherwise>
 </c:choose>

@@ -1,0 +1,10 @@
+package priv.barrow.oes.portlet.model;
+
+public class Teacher {
+    private long userId;
+    private long number;
+    private String firstName;
+    private String lastName;
+    private String email;
+
+}

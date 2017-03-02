@@ -13,6 +13,7 @@ import javax.portlet.RenderResponse;
 
 import org.osgi.service.component.annotations.Component;
 
+import com.liferay.dynamic.data.lists.model.DDLRecord;
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
@@ -66,7 +67,8 @@ public class ContentDashboardPortlet extends MVCPortlet {
         UploadPortletRequest uploadPortletRequest = PortalUtil.getUploadPortletRequest(actionRequest);
         ServiceContext serviceContext = null;
         try {
-            serviceContext = ServiceContextFactory.getInstance(uploadPortletRequest);
+//            serviceContext = ServiceContextFactory.getInstance(uploadPortletRequest);
+            serviceContext = ServiceContextFactory.getInstance(DDLRecord.class.getName(), actionRequest);
         } catch (PortalException e) {
             LOG.error("Get ServiceContext from UploadPortletRequest failed.", e);
             return;

@@ -1,0 +1,31 @@
+<%@page import="priv.barrow.service.TeacherUserLinkLocalServiceUtil"%>
+<%@page import="priv.barrow.oes.portlet.util.TeacherUtil"%>
+<%@page import="priv.barrow.oes.portlet.search.TeacherSearchTerms"%>
+<%@page import="priv.barrow.oes.portlet.search.TeacherSearch"%>
+
+<%
+PortletURL portletURL = renderResponse.createRenderURL();
+%>
+
+<aui:form action="<%= portletURL.toString() %>" method="post" name="fm">
+<liferay-ui:search-container searchContainer="<%= new TeacherSearch(renderRequest, portletURL) %>"
+emptyResultsMessage="xxxxxx"
+>
+	<%
+	    TeacherSearchTerms searchTerms = (TeacherSearchTerms) searchContainer.getSearchTerms();
+	%>
+    <liferay-ui:search-container-results>
+    <%
+        results = TeacherUtil.getTeachers(TeacherUserLinkLocalServiceUtil.searchTeacherUsers(keyword));
+        total = ProfileUserDataLocalServiceUtil.countUserListBySearchTypeAndSearchValue(company.getCompanyId(), siteAlias, searchTerms.getType(), searchTerms.getValue());
+        searchContainer.setTotal(total);
+        searchContainer.setResults(results);
+    %>
+    </liferay-ui:search-container-results>
+    <liferay-ui:search-container-row className="priv.barrow.oes.portlet.model.Teacher" escapedModel="<%= true %>" modelVar="teacherModel">
+        <liferay-ui:search-container-column-text name="teacher-number" orderable="false" orderableProperty="userId" value="<%= teacherModel.getNumber() %>" />
+        <liferay-ui:search-container-column-text name="first-name" orderable="false" value="<%= teacherModel.getFirstName() %>" />
+        <liferay-ui:search-container-column-text name="last-name" orderable="false" value="<%= teacherModel.getLastName() %>" />
+        <liferay-ui:search-container-column-text name="email" orderable="false" value="<%= teacherModel.getEmail() %>" />
+    </liferay-ui:search-container-row>
+</liferay-ui:search-container>

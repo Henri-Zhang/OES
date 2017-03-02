@@ -1,0 +1,11 @@
+package priv.barrow.oes.portlet.search;
+
+import java.io.Serializable;
+
+import com.liferay.portal.kernel.dao.search.SearchContainer;
+
+import priv.barrow.model.TeacherUserLink;
+
+public class TeacherSearch extends SearchContainer<TeacherUserLink> implements Serializable {
+
+}

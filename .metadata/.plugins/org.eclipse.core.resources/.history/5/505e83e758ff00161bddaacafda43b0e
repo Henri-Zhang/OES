@@ -1,0 +1,29 @@
+package priv.barrow.oes.portlet.search;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+
+import javax.portlet.PortletRequest;
+import javax.portlet.PortletURL;
+
+import com.liferay.portal.kernel.dao.search.SearchContainer;
+
+import priv.barrow.model.TeacherUserLink;
+
+public class TeacherSearch extends SearchContainer<TeacherUserLink> implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    static List<String> headerNames = new ArrayList<String>();
+    static {
+    headerNames.add(UserManagementConstants.USER_ID);
+    headerNames.add(UserManagementConstants.FIRST_NAME);
+    headerNames.add(UserManagementConstants.LAST_NAME);
+    headerNames.add(UserManagementConstants.SCREEN_NAME);
+    headerNames.add(UserManagementConstants.EMAIL_ADDRESS);
+    }
+
+    public TeacherSearch(PortletRequest portletRequest, PortletURL portletURL) {
+    }
+
+}

@@ -18,6 +18,7 @@ import com.liferay.portal.kernel.theme.ThemeDisplay;
 import com.liferay.portal.kernel.util.Validator;
 import com.liferay.portal.kernel.util.WebKeys;
 
+import priv.barrow.exception.NoSuchStudentTeacherLinkException;
 import priv.barrow.model.StudentTeacherLink;
 import priv.barrow.model.TeacherUserLink;
 import priv.barrow.service.StudentTeacherLinkLocalServiceUtil;
@@ -53,12 +54,14 @@ public class StudentDashboardPortlet extends MVCPortlet {
         StudentTeacherLink studentTeacherLink = null;
         try {
             studentTeacherLink = StudentTeacherLinkLocalServiceUtil.getStudentTeacherLink(userId);
+        } catch (NoSuchStudentTeacherLinkException e) {
+            LOG.trace(String.format("This user haven't select a teacher. userId: [%d]", userId), e);
         } catch (PortalException e) {
             LOG.error(String.format("Get StudentTeacherLink by studentId [%d] faield.", userId), e);
         }
 
         long teacherId = 0L;
-        if (Validator.isNull(studentTeacherLink)) {
+        if (Validator.isNotNull(studentTeacherLink)) {
             teacherId = studentTeacherLink.getTeacherId();
             renderRequest.setAttribute("hasTeacher", false);
             super.doView(renderRequest, renderResponse);
