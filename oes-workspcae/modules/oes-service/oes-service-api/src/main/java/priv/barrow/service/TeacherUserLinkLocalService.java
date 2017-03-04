@@ -80,6 +80,8 @@ public interface TeacherUserLinkLocalService extends BaseLocalService,
 	public PersistedModel getPersistedModel(Serializable primaryKeyObj)
 		throws PortalException;
 
+	public int countSearchTeacherUsers(java.lang.String keyword);
+
 	/**
 	* Returns the number of teacher user links.
 	*
@@ -149,7 +151,8 @@ public interface TeacherUserLinkLocalService extends BaseLocalService,
 	public List<TeacherUserLink> getTeacherUserLinks(int start, int end);
 
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
-	public List<TeacherUserLink> searchTeacherUsers(java.lang.String keyword);
+	public List<TeacherUserLink> searchTeacherUsers(java.lang.String keyword,
+		long start, long end);
 
 	/**
 	* Returns the number of rows matching the dynamic query.

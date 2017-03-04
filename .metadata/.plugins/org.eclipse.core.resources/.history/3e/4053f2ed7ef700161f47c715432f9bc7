@@ -1,7 +1,0 @@
-package priv.barrow.oes.portlet.addquestion;
-
-public class Constants {
-    public static final String CLASS_NAME_ID = "classNameId";
-    public static final String CLASS_PK = "classPK";
-    public static final String CLASS_NAME_ID = "classNameId";
-}

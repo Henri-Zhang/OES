@@ -66,6 +66,11 @@ public class TeacherUserLinkLocalServiceWrapper
 		return _teacherUserLinkLocalService.getPersistedModel(primaryKeyObj);
 	}
 
+	@Override
+	public int countSearchTeacherUsers(java.lang.String keyword) {
+		return _teacherUserLinkLocalService.countSearchTeacherUsers(keyword);
+	}
+
 	/**
 	* Returns the number of teacher user links.
 	*
@@ -159,8 +164,9 @@ public class TeacherUserLinkLocalServiceWrapper
 
 	@Override
 	public java.util.List<priv.barrow.model.TeacherUserLink> searchTeacherUsers(
-		java.lang.String keyword) {
-		return _teacherUserLinkLocalService.searchTeacherUsers(keyword);
+		java.lang.String keyword, long start, long end) {
+		return _teacherUserLinkLocalService.searchTeacherUsers(keyword, start,
+			end);
 	}
 
 	/**

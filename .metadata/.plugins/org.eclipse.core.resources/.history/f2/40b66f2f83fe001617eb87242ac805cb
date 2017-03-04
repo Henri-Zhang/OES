@@ -1,8 +1,0 @@
-package priv.barrow.oes.portlet.util;
-
-public class DataUtil {
-
-    public static void questionImport() {
-
-    }
-}

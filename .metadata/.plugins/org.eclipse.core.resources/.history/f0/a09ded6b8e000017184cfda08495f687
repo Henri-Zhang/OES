@@ -1,0 +1,8 @@
+package priv.barrow.oes.portlet.studentdashboard.constants;
+
+public class Constants {
+    public static final String TEACHER_NUMBER = "teacherNumber";
+    public static final String TEACHER_NUMBER = "teacherNumber";
+
+
+}

@@ -23,6 +23,36 @@
                             oes_teacheruserlink.teachernumber
                         )
                     ) > 0
+            ORDER BY
+                oes_teacheruserlink.teachernumber
+            LIMIT
+                ?
+            OFFSET
+                ?
+        ]]>
+    </sql>
+    <sql id="priv.barrow.service.persistence.TeacherUserLinkFinder.countSearchTeacherUsers">
+        <![CDATA[
+            SELECT
+                COUNT(oes_teacheruserlink.teachernumber)
+            FROM
+                oes_teacheruserlink, user_
+            WHERE 
+                oes_teacheruserlink.userid = user_.userid
+            AND
+                POSITION(
+                        ?
+                    IN
+                        LOWER(
+                            COALESCE(user_.firstname, '')
+                            ||
+                            COALESCE(user_.lastname, '')
+                            ||
+                            COALESCE(user_.emailaddress, '')
+                            ||
+                            oes_teacheruserlink.teachernumber
+                        )
+                    ) > 0
         ]]>
     </sql>
 </custom-sql>

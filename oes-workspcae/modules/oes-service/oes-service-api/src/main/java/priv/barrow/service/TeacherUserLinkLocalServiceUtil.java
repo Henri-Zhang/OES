@@ -68,6 +68,10 @@ public class TeacherUserLinkLocalServiceUtil {
 		return getService().getPersistedModel(primaryKeyObj);
 	}
 
+	public static int countSearchTeacherUsers(java.lang.String keyword) {
+		return getService().countSearchTeacherUsers(keyword);
+	}
+
 	/**
 	* Returns the number of teacher user links.
 	*
@@ -153,8 +157,8 @@ public class TeacherUserLinkLocalServiceUtil {
 	}
 
 	public static java.util.List<priv.barrow.model.TeacherUserLink> searchTeacherUsers(
-		java.lang.String keyword) {
-		return getService().searchTeacherUsers(keyword);
+		java.lang.String keyword, long start, long end) {
+		return getService().searchTeacherUsers(keyword, start, end);
 	}
 
 	/**

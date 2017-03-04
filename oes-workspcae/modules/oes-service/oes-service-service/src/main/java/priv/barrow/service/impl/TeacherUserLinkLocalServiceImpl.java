@@ -38,8 +38,13 @@ import priv.barrow.service.base.TeacherUserLinkLocalServiceBaseImpl;
 public class TeacherUserLinkLocalServiceImpl extends TeacherUserLinkLocalServiceBaseImpl {
 
     @Override
-    public List<TeacherUserLink> searchTeacherUsers(String keyword) {
-        return getTeacherUserLinkFinder().searchTeacherUsers(keyword);
+    public List<TeacherUserLink> searchTeacherUsers(String keyword, long start, long end) {
+        return getTeacherUserLinkFinder().searchTeacherUsers(keyword, start, end);
+    }
+
+    @Override
+    public int countSearchTeacherUsers(String keyword) {
+        return getTeacherUserLinkFinder().countSearchTeacherUsers(keyword);
     }
 
 }

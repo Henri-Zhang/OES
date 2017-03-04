@@ -23,5 +23,7 @@ import aQute.bnd.annotation.ProviderType;
 @ProviderType
 public interface TeacherUserLinkFinder {
 	public java.util.List<priv.barrow.model.TeacherUserLink> searchTeacherUsers(
-		java.lang.String keyword);
+		java.lang.String keyword, long start, long end);
+
+	public int countSearchTeacherUsers(java.lang.String keyword);
 }

@@ -1,7 +1,0 @@
-package priv.barrow.oes.portlet.editquestion;
-
-import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
-
-public class EditQuestionPortlet extends MVCPortlet {
-
-}
