@@ -1,0 +1,27 @@
+package priv.barrow.oes.portlet.search;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.liferay.portal.kernel.dao.search.SearchContainer;
+
+import priv.barrow.model.QuestionRecordLink;
+
+public class QuestionSearch extends SearchContainer<QuestionRecordLink> implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+    
+    private static final String EMPTY_RESULT_MESSAGE = "no-teachers-found";
+
+    static List<String> headerNames = new ArrayList<String>();
+
+    static {
+        headerNames.add("Teacher Number");
+        headerNames.add("First Name");
+        headerNames.add("Last Name");
+        headerNames.add("Email");
+        headerNames.add("Action");
+    }
+
+}

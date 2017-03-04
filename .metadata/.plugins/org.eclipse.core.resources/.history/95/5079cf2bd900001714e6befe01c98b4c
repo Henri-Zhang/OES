@@ -1,0 +1,10 @@
+AUI().use(
+	'node',
+	function(A) {
+		A.one('div.taglib-input-search > input').on(
+			'change', function(event) {
+				var keyword A.one(div.form-group > input.field.form-control)
+			}
+		);
+	}
+);

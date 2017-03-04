@@ -1,0 +1,11 @@
+AUI().use(
+	'node',
+	function(A) {
+		A.one('.input-group-btn > button')
+		A.one('.input-group-btn > button').on(
+			'click', function(event) {
+				var hiddenKeyword = A.one(div.form-group > input.field.form-control);
+			}
+		);
+	}
+);

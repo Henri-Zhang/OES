@@ -1,6 +1,8 @@
 package priv.barrow.oes.portlet.viewqustions.controller;
 
 import java.io.IOException;
+import java.sql.Timestamp;
+import java.util.List;
 
 import javax.portlet.ActionRequest;
 import javax.portlet.ActionResponse;
@@ -14,6 +16,9 @@ import org.osgi.service.component.annotations.Component;
 
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
 import com.liferay.portal.kernel.util.ParamUtil;
+
+import priv.barrow.model.QuestionRecordLink;
+import priv.barrow.service.QuestionRecordLinkLocalServiceUtil;
 
 @Component(
     immediate = true,
@@ -37,6 +42,9 @@ public class ViewQuestionsPortlet extends MVCPortlet {
     public void doView(RenderRequest renderRequest, RenderResponse renderResponse)
             throws IOException, PortletException {
 
+        Timestamp updateDateStart = new Timestamp(0);
+        Timestamp updateDateEnd = new Timestamp(System.currentTimeMillis());
+        List<QuestionRecordLink> questionRecordLinks = QuestionRecordLinkLocalServiceUtil.searchQuestionReocrdLinks(1, 5, updateDateStart, updateDateEnd, "o", "Ba");
         super.doView(renderRequest, renderResponse);
     }
 
@@ -45,7 +53,6 @@ public class ViewQuestionsPortlet extends MVCPortlet {
         String questionNo = ParamUtil.get(actionRequest, "questionNo", "Question No.");
         String keyword = ParamUtil.get(actionRequest, "keyword", "Question No.");
         String perPage = ParamUtil.get(actionRequest, "perPage", "Question No.");
-
 
     }
 

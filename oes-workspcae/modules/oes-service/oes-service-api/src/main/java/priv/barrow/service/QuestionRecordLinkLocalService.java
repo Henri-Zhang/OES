@@ -36,6 +36,8 @@ import priv.barrow.model.QuestionRecordLink;
 
 import java.io.Serializable;
 
+import java.sql.Timestamp;
+
 import java.util.List;
 
 /**
@@ -79,6 +81,11 @@ public interface QuestionRecordLinkLocalService extends BaseLocalService,
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public PersistedModel getPersistedModel(Serializable primaryKeyObj)
 		throws PortalException;
+
+	public int countSearchQuestionReocrdLinks(long questionOrderStart,
+		long questionOrderEnd, Timestamp updateDateStart,
+		Timestamp updateDateEnd, java.lang.String questionKeyword,
+		java.lang.String userNameKeyword);
 
 	/**
 	* Returns the number of question record links.
@@ -152,6 +159,12 @@ public interface QuestionRecordLinkLocalService extends BaseLocalService,
 	*/
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public List<QuestionRecordLink> getQuestionRecordLinks(int start, int end);
+
+	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
+	public List<QuestionRecordLink> searchQuestionReocrdLinks(
+		long questionOrderStart, long questionOrderEnd,
+		Timestamp updateDateStart, Timestamp updateDateEnd,
+		java.lang.String questionKeyword, java.lang.String userNameKeyword);
 
 	/**
 	* Returns the number of rows matching the dynamic query.

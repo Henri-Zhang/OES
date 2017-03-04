@@ -27,4 +27,14 @@ public interface QuestionRecordLinkFinder {
 
 	public java.util.List<priv.barrow.model.QuestionRecordLink> findRandomQuestionReocrdLinks(
 		int count);
+
+	public java.util.List<priv.barrow.model.QuestionRecordLink> searchQuestionReocrdLinks(
+		long questionOrderStart, long questionOrderEnd,
+		java.sql.Timestamp updateDateStart, java.sql.Timestamp updateDateEnd,
+		java.lang.String questionKeyword, java.lang.String userNameKeyword);
+
+	public int countSearchQuestionReocrdLinks(long questionOrderStart,
+		long questionOrderEnd, java.sql.Timestamp updateDateStart,
+		java.sql.Timestamp updateDateEnd, java.lang.String questionKeyword,
+		java.lang.String userNameKeyword);
 }

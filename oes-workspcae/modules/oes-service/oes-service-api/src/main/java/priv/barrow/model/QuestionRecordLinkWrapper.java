@@ -60,6 +60,7 @@ public class QuestionRecordLinkWrapper implements QuestionRecordLink,
 		attributes.put("questionOrder", getQuestionOrder());
 		attributes.put("ddlRecordId", getDdlRecordId());
 		attributes.put("active", getActive());
+		attributes.put("questionDescription", getQuestionDescription());
 
 		return attributes;
 	}
@@ -82,6 +83,13 @@ public class QuestionRecordLinkWrapper implements QuestionRecordLink,
 
 		if (active != null) {
 			setActive(active);
+		}
+
+		String questionDescription = (String)attributes.get(
+				"questionDescription");
+
+		if (questionDescription != null) {
+			setQuestionDescription(questionDescription);
 		}
 	}
 
@@ -149,6 +157,16 @@ public class QuestionRecordLinkWrapper implements QuestionRecordLink,
 	@Override
 	public java.lang.Object clone() {
 		return new QuestionRecordLinkWrapper((QuestionRecordLink)_questionRecordLink.clone());
+	}
+
+	/**
+	* Returns the question description of this question record link.
+	*
+	* @return the question description of this question record link
+	*/
+	@Override
+	public java.lang.String getQuestionDescription() {
+		return _questionRecordLink.getQuestionDescription();
 	}
 
 	@Override
@@ -265,6 +283,16 @@ public class QuestionRecordLinkWrapper implements QuestionRecordLink,
 	@Override
 	public void setPrimaryKeyObj(Serializable primaryKeyObj) {
 		_questionRecordLink.setPrimaryKeyObj(primaryKeyObj);
+	}
+
+	/**
+	* Sets the question description of this question record link.
+	*
+	* @param questionDescription the question description of this question record link
+	*/
+	@Override
+	public void setQuestionDescription(java.lang.String questionDescription) {
+		_questionRecordLink.setQuestionDescription(questionDescription);
 	}
 
 	/**

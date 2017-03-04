@@ -1,0 +1,11 @@
+AUI().use(
+	'node',
+	function(A) {
+		A.one('.input-group-btn > button').on(
+			'click', function(event) {
+				var keyword = event.target.text();
+				event.preventDefault();
+			}
+		);
+	}
+);

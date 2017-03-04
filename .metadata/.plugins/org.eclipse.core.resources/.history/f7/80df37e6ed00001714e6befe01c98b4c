@@ -1,0 +1,5 @@
+package priv.barrow.oes.portlet.search;
+
+public class QuestionSearchTerms extends QuestionDisplayTerms {
+
+}

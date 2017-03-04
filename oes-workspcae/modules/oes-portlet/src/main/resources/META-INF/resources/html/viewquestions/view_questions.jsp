@@ -1,3 +1,7 @@
+<%@page import="priv.barrow.service.QuestionRecordLinkLocalServiceUtil"%>
+<%@page import="priv.barrow.oes.portlet.search.QuestionDisplayTerms"%>
+<%@page import="priv.barrow.oes.portlet.search.QuestionSearchTerms"%>
+<%@page import="priv.barrow.oes.portlet.search.QuestionSearch"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
 <%@ taglib uri="http://liferay.com/tld/aui" prefix="aui" %>
@@ -11,16 +15,42 @@
 
 <portlet:actionURL name="searchQuestions" var="searchQuestionsURL" />
 
-<aui:form action="${searchQuestionsURL }" method="POST">
-    <aui:input name="questionNo" type="text" label="question-no" />
-    <aui:input name="keyword" type="text" label="keyword" />
-    <aui:input name="beginDate" type="text" />
-    <aui:input name="endDate" type="text" />
-    <aui:select name="perPage" label="per-page">
-        <aui:option value="5">5</aui:option>
-        <aui:option value="10">10</aui:option>
-        <aui:option value="20">20</aui:option>
-    </aui:select>
-    <aui:button name="search" type="submit" value="search" />
+<%
+    PortletURL portletURL = renderResponse.createRenderURL();
+%>
+
+<aui:form action="<%= portletURL.toString() %>" method="post" name="fm">
+    <aui:input name="keyword" type="text" />
+    <liferay-ui:search-container searchContainer="<%= new QuestionSearch(renderRequest, portletURL) %>">
+        <%
+            QuestionSearchTerms searchTerms = (QuestionSearchTerms) searchContainer.getSearchTerms();
+            QuestionDisplayTerms displayTerms = (QuestionDisplayTerms) searchContainer.getDisplayTerms();
+        %>
+
+        <aui:button value="search" type="submit" />
+
+        <liferay-ui:search-container-results>
+        <%
+            results = TeacherUtil.getTeachers(TeacherUserLinkLocalServiceUtil.searchTeacherUsers(searchTerms.getKeyword(), searchContainer.getStart(), searchContainer.getEnd()));
+            total = QuestionRecordLinkLocalServiceUtil.countSearchQuestionReocrdLinks(questionOrderStart, questionOrderEnd, updateDateStart, updateDateEnd, questionKeyword, userNameKeyword);
+            searchContainer.setTotal(total);
+            searchContainer.setResults(results);
+        %>
+        </liferay-ui:search-container-results>
+        <liferay-ui:search-container-row className="priv.barrow.oes.portlet.model.Teacher" escapedModel="<%= true %>" modelVar="teacher">
+            <liferay-ui:search-container-column-text name="teacher-number" orderableProperty="number" property="number" />
+            <liferay-ui:search-container-column-text name="first-name" property="firstName" />
+            <liferay-ui:search-container-column-text name="last-name" property="lastName" />
+            <liferay-ui:search-container-column-text name="email" property="email" />
+            <portlet:actionURL name="chooseTeacher" var="chooseTeacherURL">
+                <portlet:param name="teacherId" value="${teacher.userId }" />
+            </portlet:actionURL>
+            <%
+                final String href = "location.href='" + chooseTeacherURL.toString()+"'";
+            %>
+            <liferay-ui:search-container-column-button href="<%= href %>" name="choose"  />
+        </liferay-ui:search-container-row>
+        <liferay-ui:search-iterator />
+    </liferay-ui:search-container>
 </aui:form>
 

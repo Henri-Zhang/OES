@@ -14,6 +14,7 @@
 
 package priv.barrow.service.impl;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 import com.liferay.counter.kernel.service.CounterLocalServiceUtil;
@@ -57,6 +58,42 @@ public class QuestionRecordLinkLocalServiceImpl extends QuestionRecordLinkLocalS
     @Override
     public List<QuestionRecordLink> findRandomQuestionReocrdLinks(int count) {
         return getQuestionRecordLinkFinder().findRandomQuestionReocrdLinks(count);
+    }
+
+    @Override
+    public List<QuestionRecordLink> searchQuestionReocrdLinks(
+            long questionOrderStart,
+            long questionOrderEnd,
+            Timestamp updateDateStart,
+            Timestamp updateDateEnd,
+            String questionKeyword,
+            String userNameKeyword) {
+
+        return getQuestionRecordLinkFinder().searchQuestionReocrdLinks(
+                questionOrderStart,
+                questionOrderEnd,
+                updateDateStart,
+                updateDateEnd,
+                questionKeyword,
+                userNameKeyword);
+    }
+
+    @Override
+    public int countSearchQuestionReocrdLinks(
+            long questionOrderStart,
+            long questionOrderEnd,
+            Timestamp updateDateStart,
+            Timestamp updateDateEnd,
+            String questionKeyword,
+            String userNameKeyword) {
+
+        return getQuestionRecordLinkFinder().countSearchQuestionReocrdLinks(
+                questionOrderStart,
+                questionOrderEnd,
+                updateDateStart,
+                updateDateEnd,
+                questionKeyword,
+                userNameKeyword);
     }
 
 }

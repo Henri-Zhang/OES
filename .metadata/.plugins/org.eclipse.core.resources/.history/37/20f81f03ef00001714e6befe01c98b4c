@@ -1,0 +1,37 @@
+package priv.barrow.oes.portlet.search;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.portlet.PortletRequest;
+import javax.portlet.PortletURL;
+
+import com.liferay.portal.kernel.dao.search.SearchContainer;
+
+import priv.barrow.model.QuestionRecordLink;
+
+public class QuestionSearch extends SearchContainer<QuestionRecordLink> implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    private static final String EMPTY_RESULT_MESSAGE = "no-questions-found";
+
+    static List<String> headerNames = new ArrayList<String>();
+
+    static {
+        headerNames.add("Question Order");
+        headerNames.add("Description");
+        headerNames.add("Update Date");
+        headerNames.add("Update user");
+    }
+
+    public QuestionSearch(PortletRequest portletRequest, PortletURL portletURL) {
+        super(portletRequest, new QuestionDisplayTerms(portletRequest), new QuestionDisplayTerms(portletRequest),
+                DEFAULT_CUR_PARAM, DEFAULT_DELTA, portletURL, headerNames, EMPTY_RESULT_MESSAGE);
+
+        TeacherDisplayTerms displayTerms = (TeacherDisplayTerms) getDisplayTerms();
+        portletURL.setParameter(TeacherDisplayTerms.SEARCH_KEYWORD, displayTerms.getKeyword());
+    }
+
+}

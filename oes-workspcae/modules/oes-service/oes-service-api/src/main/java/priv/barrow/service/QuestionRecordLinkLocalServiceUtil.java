@@ -68,6 +68,16 @@ public class QuestionRecordLinkLocalServiceUtil {
 		return getService().getPersistedModel(primaryKeyObj);
 	}
 
+	public static int countSearchQuestionReocrdLinks(long questionOrderStart,
+		long questionOrderEnd, java.sql.Timestamp updateDateStart,
+		java.sql.Timestamp updateDateEnd, java.lang.String questionKeyword,
+		java.lang.String userNameKeyword) {
+		return getService()
+				   .countSearchQuestionReocrdLinks(questionOrderStart,
+			questionOrderEnd, updateDateStart, updateDateEnd, questionKeyword,
+			userNameKeyword);
+	}
+
 	/**
 	* Returns the number of question record links.
 	*
@@ -160,6 +170,16 @@ public class QuestionRecordLinkLocalServiceUtil {
 	public static java.util.List<priv.barrow.model.QuestionRecordLink> getQuestionRecordLinks(
 		int start, int end) {
 		return getService().getQuestionRecordLinks(start, end);
+	}
+
+	public static java.util.List<priv.barrow.model.QuestionRecordLink> searchQuestionReocrdLinks(
+		long questionOrderStart, long questionOrderEnd,
+		java.sql.Timestamp updateDateStart, java.sql.Timestamp updateDateEnd,
+		java.lang.String questionKeyword, java.lang.String userNameKeyword) {
+		return getService()
+				   .searchQuestionReocrdLinks(questionOrderStart,
+			questionOrderEnd, updateDateStart, updateDateEnd, questionKeyword,
+			userNameKeyword);
 	}
 
 	/**

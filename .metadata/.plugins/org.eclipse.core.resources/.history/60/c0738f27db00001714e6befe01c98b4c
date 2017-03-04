@@ -1,0 +1,13 @@
+console.log("sssss");
+AUI().use(
+	'node',
+	function(A) {
+		A.one('.input-group-btn > button')
+		A.one('.input-group-btn > button').on(
+			'change', function(event) {
+				console.log("xxxxx");
+				var hiddenKeyword = A.one(div.form-group > input.field.form-control);
+			}
+		);
+	}
+);

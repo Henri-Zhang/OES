@@ -8,5 +8,6 @@ public class Constants {
     public static final String QUESTION_FORM_VALUES = "questionFormValues";
     public static final String EDIT_QUESTION_FIELDS_NAMESPACE = "editQuestionForm";
     public static final String QUESTION_DETAIL_URL = "/question-detail?questionOrder=%d";
+    public static final String DESCRIPTION = "Description";
 
 }

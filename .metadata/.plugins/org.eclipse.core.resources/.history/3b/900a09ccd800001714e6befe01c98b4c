@@ -1,0 +1,10 @@
+AUI().use(
+	'node',
+	function(A) {
+		A.one('div..form-group > input.field.form-control').on(
+			'change', function() {
+				
+			}
+		);
+	}
+);

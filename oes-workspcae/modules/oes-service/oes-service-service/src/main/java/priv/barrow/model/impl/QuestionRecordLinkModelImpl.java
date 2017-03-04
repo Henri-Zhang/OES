@@ -26,6 +26,7 @@ import com.liferay.portal.kernel.service.ServiceContext;
 import com.liferay.portal.kernel.util.GetterUtil;
 import com.liferay.portal.kernel.util.ProxyUtil;
 import com.liferay.portal.kernel.util.StringBundler;
+import com.liferay.portal.kernel.util.StringPool;
 
 import priv.barrow.model.QuestionRecordLink;
 import priv.barrow.model.QuestionRecordLinkModel;
@@ -62,7 +63,8 @@ public class QuestionRecordLinkModelImpl extends BaseModelImpl<QuestionRecordLin
 	public static final Object[][] TABLE_COLUMNS = {
 			{ "questionOrder", Types.BIGINT },
 			{ "ddlRecordId", Types.BIGINT },
-			{ "active_", Types.BOOLEAN }
+			{ "active_", Types.BOOLEAN },
+			{ "questionDescription", Types.VARCHAR }
 		};
 	public static final Map<String, Integer> TABLE_COLUMNS_MAP = new HashMap<String, Integer>();
 
@@ -70,9 +72,10 @@ public class QuestionRecordLinkModelImpl extends BaseModelImpl<QuestionRecordLin
 		TABLE_COLUMNS_MAP.put("questionOrder", Types.BIGINT);
 		TABLE_COLUMNS_MAP.put("ddlRecordId", Types.BIGINT);
 		TABLE_COLUMNS_MAP.put("active_", Types.BOOLEAN);
+		TABLE_COLUMNS_MAP.put("questionDescription", Types.VARCHAR);
 	}
 
-	public static final String TABLE_SQL_CREATE = "create table OES_QuestionRecordLink (questionOrder LONG not null primary key,ddlRecordId LONG,active_ BOOLEAN)";
+	public static final String TABLE_SQL_CREATE = "create table OES_QuestionRecordLink (questionOrder LONG not null primary key,ddlRecordId LONG,active_ BOOLEAN,questionDescription VARCHAR(75) null)";
 	public static final String TABLE_SQL_DROP = "drop table OES_QuestionRecordLink";
 	public static final String ORDER_BY_JPQL = " ORDER BY questionRecordLink.questionOrder ASC";
 	public static final String ORDER_BY_SQL = " ORDER BY OES_QuestionRecordLink.questionOrder ASC";
@@ -129,6 +132,7 @@ public class QuestionRecordLinkModelImpl extends BaseModelImpl<QuestionRecordLin
 		attributes.put("questionOrder", getQuestionOrder());
 		attributes.put("ddlRecordId", getDdlRecordId());
 		attributes.put("active", getActive());
+		attributes.put("questionDescription", getQuestionDescription());
 
 		attributes.put("entityCacheEnabled", isEntityCacheEnabled());
 		attributes.put("finderCacheEnabled", isFinderCacheEnabled());
@@ -154,6 +158,13 @@ public class QuestionRecordLinkModelImpl extends BaseModelImpl<QuestionRecordLin
 
 		if (active != null) {
 			setActive(active);
+		}
+
+		String questionDescription = (String)attributes.get(
+				"questionDescription");
+
+		if (questionDescription != null) {
+			setQuestionDescription(questionDescription);
 		}
 	}
 
@@ -193,6 +204,21 @@ public class QuestionRecordLinkModelImpl extends BaseModelImpl<QuestionRecordLin
 	}
 
 	@Override
+	public String getQuestionDescription() {
+		if (_questionDescription == null) {
+			return StringPool.BLANK;
+		}
+		else {
+			return _questionDescription;
+		}
+	}
+
+	@Override
+	public void setQuestionDescription(String questionDescription) {
+		_questionDescription = questionDescription;
+	}
+
+	@Override
 	public ExpandoBridge getExpandoBridge() {
 		return ExpandoBridgeFactoryUtil.getExpandoBridge(0,
 			QuestionRecordLink.class.getName(), getPrimaryKey());
@@ -222,6 +248,7 @@ public class QuestionRecordLinkModelImpl extends BaseModelImpl<QuestionRecordLin
 		questionRecordLinkImpl.setQuestionOrder(getQuestionOrder());
 		questionRecordLinkImpl.setDdlRecordId(getDdlRecordId());
 		questionRecordLinkImpl.setActive(getActive());
+		questionRecordLinkImpl.setQuestionDescription(getQuestionDescription());
 
 		questionRecordLinkImpl.resetOriginalValues();
 
@@ -294,12 +321,21 @@ public class QuestionRecordLinkModelImpl extends BaseModelImpl<QuestionRecordLin
 
 		questionRecordLinkCacheModel.active = getActive();
 
+		questionRecordLinkCacheModel.questionDescription = getQuestionDescription();
+
+		String questionDescription = questionRecordLinkCacheModel.questionDescription;
+
+		if ((questionDescription != null) &&
+				(questionDescription.length() == 0)) {
+			questionRecordLinkCacheModel.questionDescription = null;
+		}
+
 		return questionRecordLinkCacheModel;
 	}
 
 	@Override
 	public String toString() {
-		StringBundler sb = new StringBundler(7);
+		StringBundler sb = new StringBundler(9);
 
 		sb.append("{questionOrder=");
 		sb.append(getQuestionOrder());
@@ -307,6 +343,8 @@ public class QuestionRecordLinkModelImpl extends BaseModelImpl<QuestionRecordLin
 		sb.append(getDdlRecordId());
 		sb.append(", active=");
 		sb.append(getActive());
+		sb.append(", questionDescription=");
+		sb.append(getQuestionDescription());
 		sb.append("}");
 
 		return sb.toString();
@@ -314,7 +352,7 @@ public class QuestionRecordLinkModelImpl extends BaseModelImpl<QuestionRecordLin
 
 	@Override
 	public String toXmlString() {
-		StringBundler sb = new StringBundler(13);
+		StringBundler sb = new StringBundler(16);
 
 		sb.append("<model><model-name>");
 		sb.append("priv.barrow.model.QuestionRecordLink");
@@ -332,6 +370,10 @@ public class QuestionRecordLinkModelImpl extends BaseModelImpl<QuestionRecordLin
 			"<column><column-name>active</column-name><column-value><![CDATA[");
 		sb.append(getActive());
 		sb.append("]]></column-value></column>");
+		sb.append(
+			"<column><column-name>questionDescription</column-name><column-value><![CDATA[");
+		sb.append(getQuestionDescription());
+		sb.append("]]></column-value></column>");
 
 		sb.append("</model>");
 
@@ -345,5 +387,6 @@ public class QuestionRecordLinkModelImpl extends BaseModelImpl<QuestionRecordLin
 	private long _questionOrder;
 	private long _ddlRecordId;
 	private boolean _active;
+	private String _questionDescription;
 	private QuestionRecordLink _escapedModel;
 }

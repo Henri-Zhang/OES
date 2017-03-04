@@ -19,6 +19,7 @@ import aQute.bnd.annotation.ProviderType;
 import com.liferay.portal.kernel.model.CacheModel;
 import com.liferay.portal.kernel.util.HashUtil;
 import com.liferay.portal.kernel.util.StringBundler;
+import com.liferay.portal.kernel.util.StringPool;
 
 import priv.barrow.model.QuestionRecordLink;
 
@@ -63,7 +64,7 @@ public class QuestionRecordLinkCacheModel implements CacheModel<QuestionRecordLi
 
 	@Override
 	public String toString() {
-		StringBundler sb = new StringBundler(7);
+		StringBundler sb = new StringBundler(9);
 
 		sb.append("{questionOrder=");
 		sb.append(questionOrder);
@@ -71,6 +72,8 @@ public class QuestionRecordLinkCacheModel implements CacheModel<QuestionRecordLi
 		sb.append(ddlRecordId);
 		sb.append(", active=");
 		sb.append(active);
+		sb.append(", questionDescription=");
+		sb.append(questionDescription);
 		sb.append("}");
 
 		return sb.toString();
@@ -84,6 +87,13 @@ public class QuestionRecordLinkCacheModel implements CacheModel<QuestionRecordLi
 		questionRecordLinkImpl.setDdlRecordId(ddlRecordId);
 		questionRecordLinkImpl.setActive(active);
 
+		if (questionDescription == null) {
+			questionRecordLinkImpl.setQuestionDescription(StringPool.BLANK);
+		}
+		else {
+			questionRecordLinkImpl.setQuestionDescription(questionDescription);
+		}
+
 		questionRecordLinkImpl.resetOriginalValues();
 
 		return questionRecordLinkImpl;
@@ -96,6 +106,7 @@ public class QuestionRecordLinkCacheModel implements CacheModel<QuestionRecordLi
 		ddlRecordId = objectInput.readLong();
 
 		active = objectInput.readBoolean();
+		questionDescription = objectInput.readUTF();
 	}
 
 	@Override
@@ -106,9 +117,17 @@ public class QuestionRecordLinkCacheModel implements CacheModel<QuestionRecordLi
 		objectOutput.writeLong(ddlRecordId);
 
 		objectOutput.writeBoolean(active);
+
+		if (questionDescription == null) {
+			objectOutput.writeUTF(StringPool.BLANK);
+		}
+		else {
+			objectOutput.writeUTF(questionDescription);
+		}
 	}
 
 	public long questionOrder;
 	public long ddlRecordId;
 	public boolean active;
+	public String questionDescription;
 }

@@ -10,6 +10,7 @@
 		<field name="questionOrder" type="long" />
 		<field name="ddlRecordId" type="long" />
 		<field name="active" type="boolean" />
+		<field name="questionDescription" type="String" />
 	</model>
 	<model name="priv.barrow.model.StudentTeacherLink">
 		<field name="studentId" type="long" />

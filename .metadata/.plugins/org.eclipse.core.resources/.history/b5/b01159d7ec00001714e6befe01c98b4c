@@ -1,0 +1,43 @@
+package priv.barrow.oes.portlet.search;
+
+import java.sql.Timestamp;
+
+import javax.portlet.PortletRequest;
+
+import com.liferay.portal.kernel.dao.search.DisplayTerms;
+
+public class QuestionDisplayTerms extends DisplayTerms {
+
+    public static final String SEARCH_QUESTION_ORDER_START = "questionOrderStart";
+    public static final String SEARCH_QUESTION_ORDER_END = "questionOrderEnd";
+    public static final String SEARCH_UPDATE_DATE_START = "updateDateStart";
+    public static final String SEARCH_UPDATE_DATE_END = "updateDateEnd";
+    public static final String SEARCH_QUESTION_KEYWORD = "questionKeyword";
+    public static final String SEARCH_USER_NAME_KEYWORD = "userNameKeyword";
+
+    long questionOrderStart,
+    ,
+    ,
+    ,
+    ,
+
+    protected long questionOrderStart;
+    protected long questionOrderEnd;
+    protected Timestamp updateDateStart;
+    protected Timestamp updateDateEnd;
+    protected String questionKeyword;
+    protected String userNameKeyword;
+
+    public QuestionDisplayTerms(PortletRequest portletRequest) {
+        super(portletRequest);
+    }
+
+    public String getKeyword() {
+        return keyword;
+    }
+
+    public void setKeyword(String keyword) {
+        this.keyword = keyword;
+    }
+
+}

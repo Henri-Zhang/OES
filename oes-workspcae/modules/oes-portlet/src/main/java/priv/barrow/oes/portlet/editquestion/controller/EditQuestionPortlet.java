@@ -17,6 +17,7 @@ import com.liferay.dynamic.data.lists.model.DDLRecord;
 import com.liferay.dynamic.data.lists.service.DDLRecordLocalServiceUtil;
 import com.liferay.dynamic.data.mapping.model.DDMStructure;
 import com.liferay.dynamic.data.mapping.storage.DDMFormValues;
+import com.liferay.dynamic.data.mapping.storage.Field;
 import com.liferay.dynamic.data.mapping.storage.Fields;
 import com.liferay.dynamic.data.mapping.util.DDMUtil;
 import com.liferay.portal.kernel.exception.PortalException;
@@ -155,11 +156,18 @@ public class EditQuestionPortlet extends MVCPortlet {
                     questionRecordId), e);
         }
 
+        // Updates record.
         try {
             DDLRecordLocalServiceUtil.updateRecord(userId, questionRecordId, false, 0, fields, false, serviceContext);
         } catch (PortalException e) {
             LOG.error(String.format("Update DDLRecord failed. recordId: [%d]", questionRecordId), e);
         }
+
+        // Updates questionRecordLink.
+        Field field = fields.get(Constants.DESCRIPTION);
+        String questionDescription = field.getValue().toString();
+        questionRecordLink.setQuestionDescription(questionDescription);
+        QuestionRecordLinkLocalServiceUtil.updateQuestionRecordLink(questionRecordLink);
 
         try {
             actionResponse.sendRedirect(String.format(Constants.QUESTION_DETAIL_URL, questionOrder));

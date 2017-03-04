@@ -325,6 +325,7 @@ public class QuestionRecordLinkPersistenceImpl extends BasePersistenceImpl<Quest
 		questionRecordLinkImpl.setQuestionOrder(questionRecordLink.getQuestionOrder());
 		questionRecordLinkImpl.setDdlRecordId(questionRecordLink.getDdlRecordId());
 		questionRecordLinkImpl.setActive(questionRecordLink.isActive());
+		questionRecordLinkImpl.setQuestionDescription(questionRecordLink.getQuestionDescription());
 
 		return questionRecordLinkImpl;
 	}

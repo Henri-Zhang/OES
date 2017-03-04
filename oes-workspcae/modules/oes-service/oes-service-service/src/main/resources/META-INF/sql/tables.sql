@@ -8,7 +8,8 @@ create table OES_ExamQuestionLink (
 create table OES_QuestionRecordLink (
 	questionOrder LONG not null primary key,
 	ddlRecordId LONG,
-	active_ BOOLEAN
+	active_ BOOLEAN,
+	questionDescription VARCHAR(75) null
 );
 
 create table OES_StudentTeacherLink (

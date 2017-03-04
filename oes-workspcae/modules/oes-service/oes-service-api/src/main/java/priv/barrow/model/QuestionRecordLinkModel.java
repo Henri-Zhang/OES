@@ -18,6 +18,7 @@ import aQute.bnd.annotation.ProviderType;
 
 import com.liferay.expando.kernel.model.ExpandoBridge;
 
+import com.liferay.portal.kernel.bean.AutoEscape;
 import com.liferay.portal.kernel.model.BaseModel;
 import com.liferay.portal.kernel.model.CacheModel;
 import com.liferay.portal.kernel.service.ServiceContext;
@@ -107,6 +108,21 @@ public interface QuestionRecordLinkModel extends BaseModel<QuestionRecordLink> {
 	 * @param active the active of this question record link
 	 */
 	public void setActive(boolean active);
+
+	/**
+	 * Returns the question description of this question record link.
+	 *
+	 * @return the question description of this question record link
+	 */
+	@AutoEscape
+	public String getQuestionDescription();
+
+	/**
+	 * Sets the question description of this question record link.
+	 *
+	 * @param questionDescription the question description of this question record link
+	 */
+	public void setQuestionDescription(String questionDescription);
 
 	@Override
 	public boolean isNew();
