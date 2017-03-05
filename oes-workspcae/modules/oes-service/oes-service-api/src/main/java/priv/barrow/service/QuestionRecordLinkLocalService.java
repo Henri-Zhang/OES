@@ -164,7 +164,8 @@ public interface QuestionRecordLinkLocalService extends BaseLocalService,
 	public List<QuestionRecordLink> searchQuestionReocrdLinks(
 		long questionOrderStart, long questionOrderEnd,
 		Timestamp updateDateStart, Timestamp updateDateEnd,
-		java.lang.String questionKeyword, java.lang.String userNameKeyword);
+		java.lang.String questionKeyword, java.lang.String userNameKeyword,
+		long start, long end);
 
 	/**
 	* Returns the number of rows matching the dynamic query.
@@ -247,5 +248,6 @@ public interface QuestionRecordLinkLocalService extends BaseLocalService,
 	public QuestionRecordLink updateQuestionRecordLink(
 		QuestionRecordLink questionRecordLink);
 
-	public void addQuestionRecordLink(long recordId);
+	public void addQuestionRecordLink(long recordId,
+		java.lang.String questionDescription);
 }

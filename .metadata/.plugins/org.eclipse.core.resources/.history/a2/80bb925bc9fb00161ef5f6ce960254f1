@@ -1,7 +1,0 @@
-package priv.barrow.service.persistence.impl;
-
-import priv.barrow.model.TeacherUserLink;
-
-public class TeacherUserLinkFinerImpl extends TeacherUserLinkFinderBaseImpl implements TeacherUserLinkFinder {
-
-}

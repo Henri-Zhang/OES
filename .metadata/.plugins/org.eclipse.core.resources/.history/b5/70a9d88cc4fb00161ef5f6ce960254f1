@@ -1,7 +1,0 @@
-package priv.barrow.service.persistence.impl;
-
-import com.liferay.portal.kernel.service.persistence.impl.BasePersistenceImpl;
-
-public class TeacherFinerImpl extends BasePersistenceImpl<T> implements TacherFiner {
-
-}

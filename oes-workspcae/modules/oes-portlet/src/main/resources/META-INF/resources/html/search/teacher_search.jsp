@@ -38,7 +38,7 @@
                 <portlet:param name="teacherId" value="${teacher.userId }" />
             </portlet:actionURL>
             <%
-                final String href = "location.href='" + chooseTeacherURL.toString()+"'";
+                final String href = String.format("location.href='%s'", chooseTeacherURL.toString());;
             %>
             <liferay-ui:search-container-column-button href="<%= href %>" name="choose"  />
         </liferay-ui:search-container-row>

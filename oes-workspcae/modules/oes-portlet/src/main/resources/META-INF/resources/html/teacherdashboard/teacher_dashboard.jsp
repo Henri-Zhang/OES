@@ -9,7 +9,9 @@
 
 <portlet:defineObjects />
 
-<h2>Under Way:</h2>
-<h2>Concluding:</h2>
+<h2>Published Exams:</h2>
+<c:forEach items="${exams }" var="exam">
+    <aui:a href="#">${exam.name }</aui:a>
+</c:forEach>
 
 <aui:a calss="btn btn-lg btn-primary btn-default" href="/create-exam">New Exam</aui:a>

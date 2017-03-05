@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<custom-sql>
+    <sql id="priv.barrow.service.persistence.QuestionRecordLinkFinder.findRecentUpdateQuestionReocrdLinks">
+        <![CDATA[
+            SELECT
+                questionorder, ddlrecordid, active_, questiondescription
+            FROM
+                oes_questionrecordlink, ddlrecord
+            WHERE
+                oes_questionrecordlink.ddlrecordid = ddlrecord.recordid
+            AND
+                oes_questionrecordlink.active_ = true
+            ORDER BY
+                ddlrecord.modifieddate
+            DESC
+            LIMIT
+                ?
+        ]]>
+    </sql>
+    <sql id="priv.barrow.service.persistence.QuestionRecordLinkFinder.findRandomQuestionReocrdLinks">
+        <![CDATA[
+            SELECT
+                questionorder, ddlrecordid
+            FROM
+                oes_questionrecordlink
+            ORDER BY
+                random()
+            LIMIT
+                ?
+        ]]>
+    </sql>
+    <sql id="priv.barrow.service.persistence.QuestionRecordLinkFinder.searchQuestionReocrdLinks">
+        <![CDATA[
+            SELECT
+                questionorder, ddlrecordid, active_, questiondescription
+            FROM
+                oes_questionrecordlink, ddlrecord
+            WHERE
+                oes_questionrecordlink.ddlrecordid = ddlrecord.recordid
+            AND
+                oes_questionrecordlink.active_ = true
+            AND
+                questionorder >= ?
+            AND
+                questionorder <= ?
+            AND
+                ddlrecord.modifieddate >= ?
+            AND
+                ddlrecord.modifieddate <= ?
+            AND
+                questiondescription
+                LIKE
+                    ?
+            AND
+                ddlrecord.versionusername
+                LIKE
+                    ?
+            ORDER BY
+                questionorder
+            LIMIT
+                ?
+            OFFSET
+                ?
+        ]]>
+    </sql>
+    <sql id="priv.barrow.service.persistence.QuestionRecordLinkFinder.countSearchQuestionReocrdLinks">
+        <![CDATA[
+            SELECT
+                COUNT(questionorder)
+            FROM
+                oes_questionrecordlink, ddlrecord
+            WHERE
+                oes_questionrecordlink.ddlrecordid = ddlrecord.recordid
+            AND
+                oes_questionrecordlink.active_ = true
+            AND
+                questionorder >= ?
+            AND
+                questionorder <= ?
+            AND
+                ddlrecord.modifieddate >= ?
+            AND
+                ddlrecord.modifieddate <= ?
+            AND
+                questiondescription
+                LIKE
+                    ?
+            AND
+                ddlrecord.versionusername
+                LIKE
+                    ?
+            ORDER BY
+                questionorder
+        ]]>
+    </sql>
+</custom-sql>

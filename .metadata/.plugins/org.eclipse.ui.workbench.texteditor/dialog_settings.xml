@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="search-container-column-button" key="selection"/>
+		<item value="_value" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="_value"/>
+			<item value="["/>
+			<item value="keyword"/>
 			<item value="search-container-column-button"/>
 			<item value="&gt;icon&lt;"/>
 			<item value="&gt;icon"/>
 			<item value="search-container-column"/>
 			<item value="icon"/>
-			<item value="input-search"/>
-			<item value="com.liferay.util"/>
-			<item value="findRecentUpdateQuestionContentLinks"/>
 		</list>
 		<list key="replacehistory">
 			<item value="    "/>

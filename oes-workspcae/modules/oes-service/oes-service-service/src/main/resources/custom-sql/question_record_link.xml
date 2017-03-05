@@ -21,7 +21,7 @@
     <sql id="priv.barrow.service.persistence.QuestionRecordLinkFinder.findRandomQuestionReocrdLinks">
         <![CDATA[
             SELECT
-                questionorder, ddlrecordid
+                questionorder, ddlrecordid, active_, questiondescription
             FROM
                 oes_questionrecordlink
             ORDER BY
@@ -90,8 +90,6 @@
                 ddlrecord.versionusername
                 LIKE
                     ?
-            ORDER BY
-                questionorder
         ]]>
     </sql>
 </custom-sql>

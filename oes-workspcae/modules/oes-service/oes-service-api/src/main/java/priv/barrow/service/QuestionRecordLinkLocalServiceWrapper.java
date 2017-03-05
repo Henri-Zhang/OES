@@ -183,10 +183,11 @@ public class QuestionRecordLinkLocalServiceWrapper
 	public java.util.List<priv.barrow.model.QuestionRecordLink> searchQuestionReocrdLinks(
 		long questionOrderStart, long questionOrderEnd,
 		java.sql.Timestamp updateDateStart, java.sql.Timestamp updateDateEnd,
-		java.lang.String questionKeyword, java.lang.String userNameKeyword) {
+		java.lang.String questionKeyword, java.lang.String userNameKeyword,
+		long start, long end) {
 		return _questionRecordLinkLocalService.searchQuestionReocrdLinks(questionOrderStart,
 			questionOrderEnd, updateDateStart, updateDateEnd, questionKeyword,
-			userNameKeyword);
+			userNameKeyword, start, end);
 	}
 
 	/**
@@ -299,8 +300,10 @@ public class QuestionRecordLinkLocalServiceWrapper
 	}
 
 	@Override
-	public void addQuestionRecordLink(long recordId) {
-		_questionRecordLinkLocalService.addQuestionRecordLink(recordId);
+	public void addQuestionRecordLink(long recordId,
+		java.lang.String questionDescription) {
+		_questionRecordLinkLocalService.addQuestionRecordLink(recordId,
+			questionDescription);
 	}
 
 	@Override

@@ -17,8 +17,6 @@ package priv.barrow.service.impl;
 import java.sql.Timestamp;
 import java.util.List;
 
-import com.liferay.counter.kernel.service.CounterLocalServiceUtil;
-
 import aQute.bnd.annotation.ProviderType;
 import priv.barrow.model.QuestionRecordLink;
 import priv.barrow.service.QuestionRecordLinkLocalServiceUtil;
@@ -47,11 +45,12 @@ public class QuestionRecordLinkLocalServiceImpl extends QuestionRecordLinkLocalS
     }
 
     @Override
-    public void addQuestionRecordLink(long recordId) {
-        QuestionRecordLink questionRecordLink =
-                QuestionRecordLinkLocalServiceUtil.createQuestionRecordLink(CounterLocalServiceUtil.increment());
+    public void addQuestionRecordLink(long recordId, String questionDescription) {
+        int count = QuestionRecordLinkLocalServiceUtil.getQuestionRecordLinksCount();
+        QuestionRecordLink questionRecordLink = QuestionRecordLinkLocalServiceUtil.createQuestionRecordLink(count + 1);
         questionRecordLink.setDdlRecordId(recordId);
         questionRecordLink.setActive(true);
+        questionRecordLink.setQuestionDescription(questionDescription);
         addQuestionRecordLink(questionRecordLink);
     }
 
@@ -67,7 +66,9 @@ public class QuestionRecordLinkLocalServiceImpl extends QuestionRecordLinkLocalS
             Timestamp updateDateStart,
             Timestamp updateDateEnd,
             String questionKeyword,
-            String userNameKeyword) {
+            String userNameKeyword,
+            long start,
+            long end) {
 
         return getQuestionRecordLinkFinder().searchQuestionReocrdLinks(
                 questionOrderStart,
@@ -75,7 +76,9 @@ public class QuestionRecordLinkLocalServiceImpl extends QuestionRecordLinkLocalS
                 updateDateStart,
                 updateDateEnd,
                 questionKeyword,
-                userNameKeyword);
+                userNameKeyword,
+                start,
+                end);
     }
 
     @Override

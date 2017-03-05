@@ -2,7 +2,9 @@ package priv.barrow.oes.portlet.util;
 
 import java.util.List;
 
+import com.liferay.dynamic.data.lists.model.DDLRecord;
 import com.liferay.dynamic.data.lists.model.DDLRecordSet;
+import com.liferay.dynamic.data.lists.service.DDLRecordLocalServiceUtil;
 import com.liferay.dynamic.data.lists.service.DDLRecordSetLocalServiceUtil;
 import com.liferay.dynamic.data.mapping.model.DDMStructure;
 import com.liferay.dynamic.data.mapping.service.DDMStructureLocalServiceUtil;
@@ -78,6 +80,18 @@ public class AddRecordUtil {
         }
 
         return list.get(0);
+    }
+
+    public static List<DDLRecord> getExamDDLRecords(long recordSetId, long userId) {
+        DynamicQuery dynamicQuery = DDLRecordLocalServiceUtil.dynamicQuery();
+        Property recordSetIdProperty = PropertyFactoryUtil.forName("recordSetId");
+        Criterion recordSetIdCriterion = recordSetIdProperty.eq(recordSetId);
+        dynamicQuery.add(recordSetIdCriterion);
+        Property userIdProperty = PropertyFactoryUtil.forName("userId");
+        Criterion userIdCriterion = userIdProperty.eq(userId);
+        dynamicQuery.add(userIdCriterion);
+
+        return DDLRecordLocalServiceUtil.dynamicQuery(dynamicQuery);
     }
 
 }

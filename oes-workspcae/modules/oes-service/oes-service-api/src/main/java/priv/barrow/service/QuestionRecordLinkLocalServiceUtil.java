@@ -175,11 +175,12 @@ public class QuestionRecordLinkLocalServiceUtil {
 	public static java.util.List<priv.barrow.model.QuestionRecordLink> searchQuestionReocrdLinks(
 		long questionOrderStart, long questionOrderEnd,
 		java.sql.Timestamp updateDateStart, java.sql.Timestamp updateDateEnd,
-		java.lang.String questionKeyword, java.lang.String userNameKeyword) {
+		java.lang.String questionKeyword, java.lang.String userNameKeyword,
+		long start, long end) {
 		return getService()
 				   .searchQuestionReocrdLinks(questionOrderStart,
 			questionOrderEnd, updateDateStart, updateDateEnd, questionKeyword,
-			userNameKeyword);
+			userNameKeyword, start, end);
 	}
 
 	/**
@@ -281,8 +282,9 @@ public class QuestionRecordLinkLocalServiceUtil {
 		return getService().updateQuestionRecordLink(questionRecordLink);
 	}
 
-	public static void addQuestionRecordLink(long recordId) {
-		getService().addQuestionRecordLink(recordId);
+	public static void addQuestionRecordLink(long recordId,
+		java.lang.String questionDescription) {
+		getService().addQuestionRecordLink(recordId, questionDescription);
 	}
 
 	public static QuestionRecordLinkLocalService getService() {

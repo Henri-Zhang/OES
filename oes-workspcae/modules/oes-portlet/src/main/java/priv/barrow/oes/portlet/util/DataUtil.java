@@ -4,11 +4,18 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
 
 import com.liferay.dynamic.data.lists.model.DDLRecord;
 import com.liferay.dynamic.data.lists.service.DDLRecordLocalServiceUtil;
 import com.liferay.dynamic.data.mapping.model.DDMForm;
 import com.liferay.dynamic.data.mapping.model.DDMFormField;
+import com.liferay.dynamic.data.mapping.model.LocalizedValue;
+import com.liferay.dynamic.data.mapping.model.Value;
+import com.liferay.dynamic.data.mapping.storage.DDMFormFieldValue;
 import com.liferay.dynamic.data.mapping.storage.DDMFormValues;
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.json.JSONArray;
@@ -18,7 +25,9 @@ import com.liferay.portal.kernel.json.JSONObject;
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.service.ServiceContext;
+import com.liferay.portal.kernel.util.LocaleUtil;
 
+import priv.barrow.oes.portlet.model.Constants;
 import priv.barrow.service.QuestionRecordLinkLocalServiceUtil;
 
 public class DataUtil {
@@ -50,6 +59,7 @@ public class DataUtil {
             e.printStackTrace();
         }
 
+        Locale locale = LocaleUtil.getDefault();
         for (int i = 0; i < questionArray.length(); i++) {
             JSONObject questionObject = questionArray.getJSONObject(i);
             String description = (String) questionObject.get("Description");
@@ -82,6 +92,23 @@ public class DataUtil {
             ddmForm.addDDMFormField(answerFormField);
 
             DDMFormValues ddmFormValues = new DDMFormValues(ddmForm);
+            List<DDMFormFieldValue> ddmFormFieldValues = new ArrayList<>();
+            DDMFormFieldValue descriptionDDMFormFieldValue = new DDMFormFieldValue();
+            descriptionDDMFormFieldValue.setName("Description");
+            Value value = new LocalizedValue(locale);
+            value.addString(locale, description);
+//            descriptionDDMFormFieldValue.setValue(value);
+            ddmFormFieldValues.add(descriptionDDMFormFieldValue);
+            ddmFormValues.setDDMFormFieldValues(ddmFormFieldValues);
+
+            Map<String, List<DDMFormFieldValue>> fieldValues = ddmFormValues.getDDMFormFieldValuesMap();
+
+            DDMFormFieldValue descriptionFormFieldValue = fieldValues.get(Constants.DESCRIPTION).get(0);
+//            DDMFormFieldValue optionAFormFieldValue = fieldValues.get(Constants.OPTION_A).get(0);
+//            DDMFormFieldValue optionBFormFieldValue = fieldValues.get(Constants.OPTION_B).get(0);
+//            DDMFormFieldValue optionCFormFieldValue = fieldValues.get(Constants.OPTION_C).get(0);
+//            DDMFormFieldValue optionDFormFieldValue = fieldValues.get(Constants.OPTION_D).get(0);
+//            DDMFormFieldValue answerFormFieldValue = fieldValues.get(Constants.ANSWER).get(0);
 
             DDLRecord newRecord = null;
             try {
@@ -95,7 +122,7 @@ public class DataUtil {
                 continue;
             }
 
-            QuestionRecordLinkLocalServiceUtil.addQuestionRecordLink(newRecord.getRecordId());
+            QuestionRecordLinkLocalServiceUtil.addQuestionRecordLink(newRecord.getRecordId(), description);
 
         }
 

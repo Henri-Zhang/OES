@@ -1,0 +1,25 @@
+package priv.barrow.oes.portlet.model;
+
+import java.util.Date;
+import java.util.List;
+
+public class Exam {
+    private String name;
+    private int questionCount;
+    private List<Question> questions;
+    private long creatorId;
+    private String creatorName;
+    private Date createdTime;
+
+    public Exam(String name, int questionCount, List<Question> questions, long creatorId, String creatorName,
+            Date createdTime) {
+        this.name = name;
+        this.questionCount = questionCount;
+        this.questions = questions;
+        this.creatorId = creatorId;
+        this.creatorName = creatorName;
+        this.createdTime = createdTime;
+    }
+
+
+}

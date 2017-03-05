@@ -1,10 +1,24 @@
 package priv.barrow.oes.portlet.teacherdashboard.controller;
 
+import java.io.IOException;
+import java.util.List;
+
 import javax.portlet.Portlet;
+import javax.portlet.PortletException;
+import javax.portlet.RenderRequest;
+import javax.portlet.RenderResponse;
 
 import org.osgi.service.component.annotations.Component;
 
+import com.liferay.dynamic.data.lists.model.DDLRecord;
+import com.liferay.dynamic.data.lists.model.DDLRecordSet;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
+import com.liferay.portal.kernel.theme.ThemeDisplay;
+import com.liferay.portal.kernel.util.WebKeys;
+
+import priv.barrow.oes.portlet.model.Exam;
+import priv.barrow.oes.portlet.util.AddRecordUtil;
+import priv.barrow.oes.portlet.util.ExamUtil;
 
 @Component(
     immediate = true,
@@ -24,4 +38,19 @@ import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
 
 public class TeacherDashboardPortlet extends MVCPortlet {
 
+    @Override
+    public void doView(RenderRequest renderRequest, RenderResponse renderResponse)
+            throws IOException, PortletException {
+        ThemeDisplay themeDisplay = (ThemeDisplay) renderRequest.getAttribute(WebKeys.THEME_DISPLAY);
+        long userId = themeDisplay.getUserId();
+
+        long examStructureId = AddRecordUtil.getDDMStructureIdByName("Exam");
+        DDLRecordSet examRecordSet = AddRecordUtil.getDDLRecordSet(examStructureId);
+        List<DDLRecord> examRecords = AddRecordUtil.getExamDDLRecords(examRecordSet.getRecordSetId(), userId);
+        List<Exam> exams = ExamUtil.getExams(examRecords);
+
+        renderRequest.setAttribute("exams", exams);
+
+        super.doView(renderRequest, renderResponse);
+    }
 }

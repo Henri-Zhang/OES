@@ -6,5 +6,8 @@
         <column name="examRecordId" primary="true" type="long" />
         <column name="questionRecordId" primary="true" type="long" />
         <column name="questionRecordVersion" type="String" />
+        <finder name="examRecordId" return-type="Collection">
+            <finder-column name="examRecordId" />
+        </finder>
     </entity>
 </service-builder>

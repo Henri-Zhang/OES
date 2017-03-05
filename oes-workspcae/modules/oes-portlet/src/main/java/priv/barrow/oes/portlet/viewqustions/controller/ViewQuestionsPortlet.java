@@ -4,20 +4,17 @@ import java.io.IOException;
 import java.sql.Timestamp;
 import java.util.List;
 
-import javax.portlet.ActionRequest;
-import javax.portlet.ActionResponse;
 import javax.portlet.Portlet;
 import javax.portlet.PortletException;
-import javax.portlet.ProcessAction;
 import javax.portlet.RenderRequest;
 import javax.portlet.RenderResponse;
 
 import org.osgi.service.component.annotations.Component;
 
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
-import com.liferay.portal.kernel.util.ParamUtil;
 
-import priv.barrow.model.QuestionRecordLink;
+import priv.barrow.oes.portlet.model.Question;
+import priv.barrow.oes.portlet.util.QuestionUtil;
 import priv.barrow.service.QuestionRecordLinkLocalServiceUtil;
 
 @Component(
@@ -44,16 +41,8 @@ public class ViewQuestionsPortlet extends MVCPortlet {
 
         Timestamp updateDateStart = new Timestamp(0);
         Timestamp updateDateEnd = new Timestamp(System.currentTimeMillis());
-        List<QuestionRecordLink> questionRecordLinks = QuestionRecordLinkLocalServiceUtil.searchQuestionReocrdLinks(1, 5, updateDateStart, updateDateEnd, "o", "Ba");
+        List<Question> questions = QuestionUtil.getQuestions(QuestionRecordLinkLocalServiceUtil.searchQuestionReocrdLinks(0, 15, updateDateStart, updateDateEnd, "h", "Ba", 100, 0));
         super.doView(renderRequest, renderResponse);
-    }
-
-    @ProcessAction(name = "searchQuestions")
-    public void searchQuestions(ActionRequest actionRequest, ActionResponse actionResponse) {
-        String questionNo = ParamUtil.get(actionRequest, "questionNo", "Question No.");
-        String keyword = ParamUtil.get(actionRequest, "keyword", "Question No.");
-        String perPage = ParamUtil.get(actionRequest, "perPage", "Question No.");
-
     }
 
 }

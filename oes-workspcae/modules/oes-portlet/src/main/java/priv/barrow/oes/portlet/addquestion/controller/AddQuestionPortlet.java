@@ -16,6 +16,7 @@ import com.liferay.dynamic.data.lists.model.DDLRecord;
 import com.liferay.dynamic.data.lists.model.DDLRecordSet;
 import com.liferay.dynamic.data.lists.service.DDLRecordLocalServiceUtil;
 import com.liferay.dynamic.data.mapping.model.DDMStructure;
+import com.liferay.dynamic.data.mapping.storage.Field;
 import com.liferay.dynamic.data.mapping.storage.Fields;
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.log.Log;
@@ -122,7 +123,9 @@ public class AddQuestionPortlet extends MVCPortlet {
         }
 
         // Adds a QuestionRecordLink to oes_questionrecordlink.
-        QuestionRecordLinkLocalServiceUtil.addQuestionRecordLink(newRecord.getRecordId());
+        Field field = fields.get(Constants.DESCRIPTION);
+        String questionDescription = field.getValue().toString();
+        QuestionRecordLinkLocalServiceUtil.addQuestionRecordLink(newRecord.getRecordId(), questionDescription);
     }
 
 }

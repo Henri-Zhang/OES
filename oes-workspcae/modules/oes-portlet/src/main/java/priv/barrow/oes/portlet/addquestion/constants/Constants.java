@@ -6,5 +6,6 @@ public class Constants {
     public static final String FIELDS = "fields";
     public static final String NAME_END_TAG = "</Name>";
     public static final String QUESTION = "Question";
+    public static final String DESCRIPTION = "Description";
 
 }

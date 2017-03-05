@@ -1,0 +1,83 @@
+package priv.barrow.oes.portlet.util;
+
+import java.util.List;
+
+import com.liferay.dynamic.data.lists.model.DDLRecordSet;
+import com.liferay.dynamic.data.lists.service.DDLRecordSetLocalServiceUtil;
+import com.liferay.dynamic.data.mapping.model.DDMStructure;
+import com.liferay.dynamic.data.mapping.service.DDMStructureLocalServiceUtil;
+import com.liferay.dynamic.data.mapping.storage.Fields;
+import com.liferay.dynamic.data.mapping.util.DDMUtil;
+import com.liferay.portal.kernel.dao.orm.Criterion;
+import com.liferay.portal.kernel.dao.orm.DynamicQuery;
+import com.liferay.portal.kernel.dao.orm.Property;
+import com.liferay.portal.kernel.dao.orm.PropertyFactoryUtil;
+import com.liferay.portal.kernel.exception.PortalException;
+import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
+import com.liferay.portal.kernel.service.ServiceContext;
+import com.liferay.portal.kernel.util.StringPool;
+import com.liferay.portal.kernel.util.Validator;
+
+import priv.barrow.oes.portlet.exception.NoExamStructureException;
+import priv.barrow.oes.portlet.model.Constants;
+
+public class AddRecordUtil {
+
+    private static final Log LOG = LogFactoryUtil.getLog(AddRecordUtil.class);
+
+    public static long getDDMStructureIdByName(String structureName) {
+        DDMStructure ddmStructure = getDDMStructureByName(structureName);
+        if (Validator.isNotNull(ddmStructure)) {
+            return ddmStructure.getStructureId();
+        }
+
+        return 0L;
+    }
+
+    public static DDMStructure getDDMStructureByName(String structureName) {
+        DynamicQuery structrueQuery = DDMStructureLocalServiceUtil.dynamicQuery();
+        Property property = PropertyFactoryUtil.forName(Constants.NAME);
+        Criterion criterion =
+                property.like(StringPool.PERCENT+ structureName + Constants.NAME_END_TAG + StringPool.PERCENT);
+        structrueQuery.add(criterion);
+        List<DDMStructure> ddmStructures = DDMStructureLocalServiceUtil.dynamicQuery(structrueQuery);
+
+        if (Validator.isNull(ddmStructures) || ddmStructures.isEmpty()) {
+            String errorMessage = String.format("No ddmStructure found with name [%s]", structureName);
+            LOG.error(errorMessage, new NoExamStructureException(errorMessage));
+            return null;
+        }
+
+        return ddmStructures.get(0);
+    }
+
+    public static Fields getStructureFields(long structureId, ServiceContext serviceContext) {
+        if (Validator.isNull(serviceContext)) {
+            serviceContext = new ServiceContext();
+        }
+
+        Fields fields = null;
+        try {
+            fields = DDMUtil.getFields(structureId, serviceContext);
+        } catch (PortalException e) {
+            LOG.error(String.format("Get fields from ddmStructure which id is [%s] failed.", structureId), e);
+        }
+
+        return fields;
+    }
+
+    public static DDLRecordSet getDDLRecordSet(long structureId) {
+        DynamicQuery dynamicQuery = DDLRecordSetLocalServiceUtil.dynamicQuery();
+        Property property = PropertyFactoryUtil.forName("DDMStructureId");
+        Criterion criterion = property.eq(structureId);
+        dynamicQuery.add(criterion);
+        List<DDLRecordSet> list = DDLRecordSetLocalServiceUtil.dynamicQuery(dynamicQuery);
+        if (Validator.isNull(list) || list.isEmpty()) {
+            return null;
+        }
+
+        return list.get(0);
+    }
+
+}

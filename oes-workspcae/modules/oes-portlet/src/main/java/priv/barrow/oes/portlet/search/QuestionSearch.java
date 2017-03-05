@@ -17,7 +17,7 @@ public class QuestionSearch extends SearchContainer<QuestionRecordLink> implemen
 
     private static final String EMPTY_RESULT_MESSAGE = "no-questions-found";
 
-    static List<String> headerNames = new ArrayList<String>();
+    static List<String> headerNames = new ArrayList<>();
 
     static {
         headerNames.add("Question Order");
@@ -27,22 +27,22 @@ public class QuestionSearch extends SearchContainer<QuestionRecordLink> implemen
     }
 
     public QuestionSearch(PortletRequest portletRequest, PortletURL portletURL) {
-        super(portletRequest, new QuestionDisplayTerms(portletRequest), new QuestionDisplayTerms(portletRequest),
+        super(portletRequest, new QuestionDisplayTerms(portletRequest), new QuestionSearchTerms(portletRequest),
                 DEFAULT_CUR_PARAM, DEFAULT_DELTA, portletURL, headerNames, EMPTY_RESULT_MESSAGE);
 
-        QuestionDisplayTerms displayTerms = (QuestionDisplayTerms) getDisplayTerms();
-        portletURL.setParameter(QuestionDisplayTerms.SEARCH_QUESTION_ORDER_START,
-                String.valueOf(displayTerms.getQuestionOrderStart()));
-        portletURL.setParameter(QuestionDisplayTerms.SEARCH_QUESTION_ORDER_END,
-                String.valueOf(displayTerms.getQuestionOrderEnd()));
-        portletURL.setParameter(QuestionDisplayTerms.SEARCH_UPDATE_DATE_START,
-                displayTerms.getUpdateDateStart().toString());
-        portletURL.setParameter(QuestionDisplayTerms.SEARCH_UPDATE_DATE_END,
-                displayTerms.getUpdateDateEnd().toString());
-        portletURL.setParameter(QuestionDisplayTerms.SEARCH_QUESTION_KEYWORD,
-                displayTerms.getQuestionKeyword());
-        portletURL.setParameter(QuestionDisplayTerms.SEARCH_QUESTION_ORDER_START,
-                displayTerms.getUserNameKeyword());
+//        QuestionDisplayTerms displayTerms = (QuestionDisplayTerms) getDisplayTerms();
+//        portletURL.setParameter(QuestionDisplayTerms.SEARCH_QUESTION_ORDER_START,
+//                String.valueOf(displayTerms.getQuestionOrderStart()));
+//        portletURL.setParameter(QuestionDisplayTerms.SEARCH_QUESTION_ORDER_END,
+//                String.valueOf(displayTerms.getQuestionOrderEnd()));
+//        portletURL.setParameter(QuestionDisplayTerms.SEARCH_UPDATE_DATE_START,
+//                "sss");
+//        portletURL.setParameter(QuestionDisplayTerms.SEARCH_UPDATE_DATE_END,
+//                "sssss");
+//        portletURL.setParameter(QuestionDisplayTerms.SEARCH_QUESTION_KEYWORD,
+//                displayTerms.getQuestionKeyword());
+//        portletURL.setParameter(QuestionDisplayTerms.SEARCH_QUESTION_ORDER_START,
+//                displayTerms.getUserNameKeyword());
 
     }
 

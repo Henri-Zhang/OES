@@ -24,8 +24,8 @@ public class QuestionUtil {
 
     private static Log LOG = LogFactoryUtil.getLog(QuestionUtil.class);
 
-    public static List<Question> getQuestions (List<QuestionRecordLink> questionRecordLinks) {
-        if (Validator.isNull(questionRecordLinks) || questionRecordLinks.isEmpty()) {
+    public static List<Question> getQuestions(List<QuestionRecordLink> questionRecordLinks) {
+        if (Validator.isNull(questionRecordLinks)) {
             return null;
         }
 
@@ -93,6 +93,7 @@ public class QuestionUtil {
         String optionC = optionCValue.getString(locale);
         String optionD = optionDValue.getString(locale);
         String answer = answerValue.getString(locale);
+        answer = answer.substring(2, 3);
 
         Question question =
                 new Question(questionRecordLink.getQuestionOrder(),
@@ -105,5 +106,26 @@ public class QuestionUtil {
 
         return question;
     }
+
+//    public static List<Question> getQuestions (List<ExamQuestionLink> examQuestionLinks) {
+//        if (Validator.isNull(examQuestionLinks)) {
+//            return null;
+//        }
+//
+//        List<Question> questions = new ArrayList<>();
+//        for (ExamQuestionLink link : examQuestionLinks) {
+//
+//            Question question = getQuestion(link);
+//            if (Validator.isNotNull(question)) {
+//                questions.add(question);
+//            }
+//        }
+//
+//        return questions;
+//    }
+//
+//    private static Question getQuestion(ExamQuestionLink examQuestionLink) {
+//        return null;
+//    }
 
 }

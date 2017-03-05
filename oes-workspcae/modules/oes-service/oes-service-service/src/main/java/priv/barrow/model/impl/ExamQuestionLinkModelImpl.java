@@ -84,7 +84,11 @@ public class ExamQuestionLinkModelImpl extends BaseModelImpl<ExamQuestionLink>
 	public static final boolean FINDER_CACHE_ENABLED = GetterUtil.getBoolean(priv.barrow.service.util.ServiceProps.get(
 				"value.object.finder.cache.enabled.priv.barrow.model.ExamQuestionLink"),
 			true);
-	public static final boolean COLUMN_BITMASK_ENABLED = false;
+	public static final boolean COLUMN_BITMASK_ENABLED = GetterUtil.getBoolean(priv.barrow.service.util.ServiceProps.get(
+				"value.object.column.bitmask.enabled.priv.barrow.model.ExamQuestionLink"),
+			true);
+	public static final long EXAMRECORDID_COLUMN_BITMASK = 1L;
+	public static final long QUESTIONRECORDID_COLUMN_BITMASK = 2L;
 	public static final long LOCK_EXPIRATION_TIME = GetterUtil.getLong(priv.barrow.service.util.ServiceProps.get(
 				"lock.expiration.time.priv.barrow.model.ExamQuestionLink"));
 
@@ -165,7 +169,19 @@ public class ExamQuestionLinkModelImpl extends BaseModelImpl<ExamQuestionLink>
 
 	@Override
 	public void setExamRecordId(long examRecordId) {
+		_columnBitmask |= EXAMRECORDID_COLUMN_BITMASK;
+
+		if (!_setOriginalExamRecordId) {
+			_setOriginalExamRecordId = true;
+
+			_originalExamRecordId = _examRecordId;
+		}
+
 		_examRecordId = examRecordId;
+	}
+
+	public long getOriginalExamRecordId() {
+		return _originalExamRecordId;
 	}
 
 	@Override
@@ -191,6 +207,10 @@ public class ExamQuestionLinkModelImpl extends BaseModelImpl<ExamQuestionLink>
 	@Override
 	public void setQuestionRecordVersion(String questionRecordVersion) {
 		_questionRecordVersion = questionRecordVersion;
+	}
+
+	public long getColumnBitmask() {
+		return _columnBitmask;
 	}
 
 	@Override
@@ -262,6 +282,13 @@ public class ExamQuestionLinkModelImpl extends BaseModelImpl<ExamQuestionLink>
 
 	@Override
 	public void resetOriginalValues() {
+		ExamQuestionLinkModelImpl examQuestionLinkModelImpl = this;
+
+		examQuestionLinkModelImpl._originalExamRecordId = examQuestionLinkModelImpl._examRecordId;
+
+		examQuestionLinkModelImpl._setOriginalExamRecordId = false;
+
+		examQuestionLinkModelImpl._columnBitmask = 0;
 	}
 
 	@Override
@@ -332,7 +359,10 @@ public class ExamQuestionLinkModelImpl extends BaseModelImpl<ExamQuestionLink>
 			ExamQuestionLink.class
 		};
 	private long _examRecordId;
+	private long _originalExamRecordId;
+	private boolean _setOriginalExamRecordId;
 	private long _questionRecordId;
 	private String _questionRecordVersion;
+	private long _columnBitmask;
 	private ExamQuestionLink _escapedModel;
 }

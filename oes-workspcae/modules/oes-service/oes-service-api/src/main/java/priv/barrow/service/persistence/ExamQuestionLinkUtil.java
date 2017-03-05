@@ -112,6 +112,170 @@ public class ExamQuestionLinkUtil {
 	}
 
 	/**
+	* Returns all the exam question links where examRecordId = &#63;.
+	*
+	* @param examRecordId the exam record ID
+	* @return the matching exam question links
+	*/
+	public static List<ExamQuestionLink> findByexamRecordId(long examRecordId) {
+		return getPersistence().findByexamRecordId(examRecordId);
+	}
+
+	/**
+	* Returns a range of all the exam question links where examRecordId = &#63;.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link ExamQuestionLinkModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param examRecordId the exam record ID
+	* @param start the lower bound of the range of exam question links
+	* @param end the upper bound of the range of exam question links (not inclusive)
+	* @return the range of matching exam question links
+	*/
+	public static List<ExamQuestionLink> findByexamRecordId(long examRecordId,
+		int start, int end) {
+		return getPersistence().findByexamRecordId(examRecordId, start, end);
+	}
+
+	/**
+	* Returns an ordered range of all the exam question links where examRecordId = &#63;.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link ExamQuestionLinkModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param examRecordId the exam record ID
+	* @param start the lower bound of the range of exam question links
+	* @param end the upper bound of the range of exam question links (not inclusive)
+	* @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
+	* @return the ordered range of matching exam question links
+	*/
+	public static List<ExamQuestionLink> findByexamRecordId(long examRecordId,
+		int start, int end,
+		OrderByComparator<ExamQuestionLink> orderByComparator) {
+		return getPersistence()
+				   .findByexamRecordId(examRecordId, start, end,
+			orderByComparator);
+	}
+
+	/**
+	* Returns an ordered range of all the exam question links where examRecordId = &#63;.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link ExamQuestionLinkModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param examRecordId the exam record ID
+	* @param start the lower bound of the range of exam question links
+	* @param end the upper bound of the range of exam question links (not inclusive)
+	* @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
+	* @param retrieveFromCache whether to retrieve from the finder cache
+	* @return the ordered range of matching exam question links
+	*/
+	public static List<ExamQuestionLink> findByexamRecordId(long examRecordId,
+		int start, int end,
+		OrderByComparator<ExamQuestionLink> orderByComparator,
+		boolean retrieveFromCache) {
+		return getPersistence()
+				   .findByexamRecordId(examRecordId, start, end,
+			orderByComparator, retrieveFromCache);
+	}
+
+	/**
+	* Returns the first exam question link in the ordered set where examRecordId = &#63;.
+	*
+	* @param examRecordId the exam record ID
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the first matching exam question link
+	* @throws NoSuchExamQuestionLinkException if a matching exam question link could not be found
+	*/
+	public static ExamQuestionLink findByexamRecordId_First(long examRecordId,
+		OrderByComparator<ExamQuestionLink> orderByComparator)
+		throws priv.barrow.exception.NoSuchExamQuestionLinkException {
+		return getPersistence()
+				   .findByexamRecordId_First(examRecordId, orderByComparator);
+	}
+
+	/**
+	* Returns the first exam question link in the ordered set where examRecordId = &#63;.
+	*
+	* @param examRecordId the exam record ID
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the first matching exam question link, or <code>null</code> if a matching exam question link could not be found
+	*/
+	public static ExamQuestionLink fetchByexamRecordId_First(
+		long examRecordId, OrderByComparator<ExamQuestionLink> orderByComparator) {
+		return getPersistence()
+				   .fetchByexamRecordId_First(examRecordId, orderByComparator);
+	}
+
+	/**
+	* Returns the last exam question link in the ordered set where examRecordId = &#63;.
+	*
+	* @param examRecordId the exam record ID
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the last matching exam question link
+	* @throws NoSuchExamQuestionLinkException if a matching exam question link could not be found
+	*/
+	public static ExamQuestionLink findByexamRecordId_Last(long examRecordId,
+		OrderByComparator<ExamQuestionLink> orderByComparator)
+		throws priv.barrow.exception.NoSuchExamQuestionLinkException {
+		return getPersistence()
+				   .findByexamRecordId_Last(examRecordId, orderByComparator);
+	}
+
+	/**
+	* Returns the last exam question link in the ordered set where examRecordId = &#63;.
+	*
+	* @param examRecordId the exam record ID
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the last matching exam question link, or <code>null</code> if a matching exam question link could not be found
+	*/
+	public static ExamQuestionLink fetchByexamRecordId_Last(long examRecordId,
+		OrderByComparator<ExamQuestionLink> orderByComparator) {
+		return getPersistence()
+				   .fetchByexamRecordId_Last(examRecordId, orderByComparator);
+	}
+
+	/**
+	* Returns the exam question links before and after the current exam question link in the ordered set where examRecordId = &#63;.
+	*
+	* @param examQuestionLinkPK the primary key of the current exam question link
+	* @param examRecordId the exam record ID
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the previous, current, and next exam question link
+	* @throws NoSuchExamQuestionLinkException if a exam question link with the primary key could not be found
+	*/
+	public static ExamQuestionLink[] findByexamRecordId_PrevAndNext(
+		priv.barrow.service.persistence.ExamQuestionLinkPK examQuestionLinkPK,
+		long examRecordId, OrderByComparator<ExamQuestionLink> orderByComparator)
+		throws priv.barrow.exception.NoSuchExamQuestionLinkException {
+		return getPersistence()
+				   .findByexamRecordId_PrevAndNext(examQuestionLinkPK,
+			examRecordId, orderByComparator);
+	}
+
+	/**
+	* Removes all the exam question links where examRecordId = &#63; from the database.
+	*
+	* @param examRecordId the exam record ID
+	*/
+	public static void removeByexamRecordId(long examRecordId) {
+		getPersistence().removeByexamRecordId(examRecordId);
+	}
+
+	/**
+	* Returns the number of exam question links where examRecordId = &#63;.
+	*
+	* @param examRecordId the exam record ID
+	* @return the number of matching exam question links
+	*/
+	public static int countByexamRecordId(long examRecordId) {
+		return getPersistence().countByexamRecordId(examRecordId);
+	}
+
+	/**
 	* Caches the exam question link in the entity cache if it is enabled.
 	*
 	* @param examQuestionLink the exam question link
