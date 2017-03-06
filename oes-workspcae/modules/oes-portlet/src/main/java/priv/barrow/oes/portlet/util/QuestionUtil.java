@@ -16,6 +16,7 @@ import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.util.LocaleUtil;
 import com.liferay.portal.kernel.util.Validator;
 
+import priv.barrow.model.ExamQuestionLink;
 import priv.barrow.model.QuestionRecordLink;
 import priv.barrow.oes.portlet.model.Constants;
 import priv.barrow.oes.portlet.model.Question;
@@ -107,25 +108,9 @@ public class QuestionUtil {
         return question;
     }
 
-//    public static List<Question> getQuestions (List<ExamQuestionLink> examQuestionLinks) {
-//        if (Validator.isNull(examQuestionLinks)) {
-//            return null;
-//        }
-//
-//        List<Question> questions = new ArrayList<>();
-//        for (ExamQuestionLink link : examQuestionLinks) {
-//
-//            Question question = getQuestion(link);
-//            if (Validator.isNotNull(question)) {
-//                questions.add(question);
-//            }
-//        }
-//
-//        return questions;
-//    }
-//
-//    private static Question getQuestion(ExamQuestionLink examQuestionLink) {
-//        return null;
-//    }
+    public static Question getQuestion(ExamQuestionLink examQuestionLink) {
+
+        return null;
+    }
 
 }

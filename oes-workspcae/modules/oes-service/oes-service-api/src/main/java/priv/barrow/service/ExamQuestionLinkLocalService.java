@@ -136,6 +136,8 @@ public interface ExamQuestionLinkLocalService extends BaseLocalService,
 	public <T> List<T> dynamicQuery(DynamicQuery dynamicQuery, int start,
 		int end, OrderByComparator<T> orderByComparator);
 
+	public List<ExamQuestionLink> findByexamRecordId(long examRecordId);
+
 	/**
 	* Returns a range of all the exam question links.
 	*

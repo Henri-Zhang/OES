@@ -16,6 +16,7 @@ import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
 import com.liferay.portal.kernel.theme.ThemeDisplay;
 import com.liferay.portal.kernel.util.WebKeys;
 
+import priv.barrow.oes.portlet.constants.ExamConstants;
 import priv.barrow.oes.portlet.model.Exam;
 import priv.barrow.oes.portlet.util.AddRecordUtil;
 import priv.barrow.oes.portlet.util.ExamUtil;
@@ -48,8 +49,10 @@ public class TeacherDashboardPortlet extends MVCPortlet {
         DDLRecordSet examRecordSet = AddRecordUtil.getDDLRecordSet(examStructureId);
         List<DDLRecord> examRecords = AddRecordUtil.getExamDDLRecords(examRecordSet.getRecordSetId(), userId);
         List<Exam> exams = ExamUtil.getExams(examRecords);
+        System.out.println("-------------" + exams.size());
+        System.out.println("=====" + exams.get(0).getName());
 
-        renderRequest.setAttribute("exams", exams);
+        renderRequest.setAttribute(ExamConstants.EXMAS, exams);
 
         super.doView(renderRequest, renderResponse);
     }

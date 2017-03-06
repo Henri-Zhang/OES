@@ -140,6 +140,12 @@ public class ExamQuestionLinkLocalServiceWrapper
 			end, orderByComparator);
 	}
 
+	@Override
+	public java.util.List<priv.barrow.model.ExamQuestionLink> findByexamRecordId(
+		long examRecordId) {
+		return _examQuestionLinkLocalService.findByexamRecordId(examRecordId);
+	}
+
 	/**
 	* Returns a range of all the exam question links.
 	*

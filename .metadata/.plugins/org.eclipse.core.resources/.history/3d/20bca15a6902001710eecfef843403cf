@@ -1,0 +1,17 @@
+<body>
+    <liferay-ui:icon-menu>
+        <c:if test="<%= userModel != null  %>">
+            <portlet:actionURL name="editQuestion" var="editUserModelURL">
+                <portlet:param name="userId" value="<%= String.valueOf(userModel.getUserId()) %>" />
+            </portlet:actionURL>
+
+            <liferay-ui:icon image="edit" url="<%= editUserModelURL %>" target="_blank"/>
+        </c:if>
+
+        <c:if test="<%= (userId != user.getUserId()) && !themeDisplay.isImpersonated() && UserPermissionUtil.contains(permissionChecker, userId, ActionKeys.IMPERSONATE) %>">
+            <liferay-security:doAsURL doAsUserId="<%= userId %>" var="impersonateUserURL" />
+
+            <liferay-ui:icon image="impersonate_user" url="<%= impersonateUserURL %>" target="_blank" />
+        </c:if>
+    </liferay-ui:icon-menu>
+</body>

@@ -14,7 +14,10 @@
 
 package priv.barrow.service.impl;
 
+import java.util.List;
+
 import aQute.bnd.annotation.ProviderType;
+import priv.barrow.model.ExamQuestionLink;
 import priv.barrow.service.base.ExamQuestionLinkLocalServiceBaseImpl;
 
 /**
@@ -34,4 +37,8 @@ import priv.barrow.service.base.ExamQuestionLinkLocalServiceBaseImpl;
 @ProviderType
 public class ExamQuestionLinkLocalServiceImpl extends ExamQuestionLinkLocalServiceBaseImpl {
 
+    @Override
+    public List<ExamQuestionLink> findByexamRecordId(long examRecordId) {
+        return getExamQuestionLinkPersistence().findByexamRecordId(examRecordId);
+    }
 }

@@ -1,22 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.liferay.portal.kernel.service.UserLocalServiceUtil"/>
-<fullyQualifiedTypeName name="priv.barrow.oes.portlet.signup.model.SignUpModel"/>
-<fullyQualifiedTypeName name="java.util.Locale"/>
-<fullyQualifiedTypeName name="priv.barrow.oes.portlet.signup.constant.Constants"/>
-<fullyQualifiedTypeName name="com.liferay.portal.kernel.util.PortalUtil"/>
-<fullyQualifiedTypeName name="com.liferay.dynamic.data.mapping.kernel.DDMStructure"/>
-<fullyQualifiedTypeName name="com.liferay.portal.kernel.dao.orm.CustomSQLParam"/>
-<fullyQualifiedTypeName name="oes.service.service.QuestionContentLinkLocalServiceUtil"/>
-<fullyQualifiedTypeName name="oes.service.service.persistence.QuestionContentLinkFinder"/>
-<fullyQualifiedTypeName name="oes.service.service.persistence.impl.QuestionContentLinkFinderImpl"/>
-<fullyQualifiedTypeName name="oes.service.service.persistence.QuestionContentLinkFinderUtil"/>
-<fullyQualifiedTypeName name="oes.service.service.persistence.impl.QuestionContentLinkFinderBaseImpl"/>
-<fullyQualifiedTypeName name="oes.service.model.QuestionContentLink"/>
-<fullyQualifiedTypeName name="com.liferay.portal.kernel.search.suggest.SuggesterResult.Entry"/>
-<fullyQualifiedTypeName name="priv.barrow.model.questionRecordLink"/>
-<fullyQualifiedTypeName name="com.liferay.portal.kernel.service.persistence.impl.BasePersistenceImpl"/>
-<fullyQualifiedTypeName name="java.awt.List"/>
 <fullyQualifiedTypeName name="priv.barrow.model.QuestionRecordLink"/>
 <fullyQualifiedTypeName name="priv.barrow.service.persistence.QuestionRecordLinkFinder"/>
 <fullyQualifiedTypeName name="priv.barrow.service.persistence.QuestionRecordLinkFinderUtil"/>
@@ -30,7 +13,6 @@
 <fullyQualifiedTypeName name="javax.portlet.ProcessAction"/>
 <fullyQualifiedTypeName name="javax.portlet.ActionRequest"/>
 <fullyQualifiedTypeName name="javax.portlet.ActionResponse"/>
-<fullyQualifiedTypeName name="java.lang.Override"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="java.math.BigInteger"/>
 <fullyQualifiedTypeName name="priv.barrow.oes.portlet.studentdashboard.constants.Constants"/>
@@ -43,7 +25,6 @@
 <fullyQualifiedTypeName name="com.liferay.portal.kernel.model.Role"/>
 <fullyQualifiedTypeName name="com.liferay.portal.kernel.service.RoleLocalServiceUtil"/>
 <fullyQualifiedTypeName name="com.liferay.portal.kernel.util.Validator"/>
-<fullyQualifiedTypeName name="java.lang.Long"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.liferay.portal.kernel.util.ParamUtil"/>
 <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
@@ -53,11 +34,30 @@
 <fullyQualifiedTypeName name="priv.barrow.oes.portlet.search.QuestionDisplayTerms"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="java.sql.Timestamp"/>
-<fullyQualifiedTypeName name="com.liferay.portal.kernel.util.StringPool"/>
 <fullyQualifiedTypeName name="priv.barrow.service.QuestionRecordLinkLocalServiceUtil"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="com.liferay.dynamic.data.mapping.storage.DDMFormFieldValue"/>
 <fullyQualifiedTypeName name="com.liferay.dynamic.data.mapping.model.Value"/>
 <fullyQualifiedTypeName name="com.liferay.dynamic.data.mapping.model.LocalizedValue"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="com.liferay.dynamic.data.mapping.model.DDMContent"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.json.JSONObject"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.json.JSONFactoryUtil"/>
+<fullyQualifiedTypeName name="com.liferay.dynamic.data.mapping.storage.DDMFormFieldValue"/>
+<fullyQualifiedTypeName name="com.liferay.dynamic.data.mapping.storage.DDMFormValues"/>
+<fullyQualifiedTypeName name="java.util.Locale"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.util.StringPool"/>
+<fullyQualifiedTypeName name="java.lang.NullPointerException"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.transaction.Transactional"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="priv.barrow.service.ExamQuestionLinkLocalServiceUtil"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="priv.barrow.oes.portlet.model.Question"/>
+<fullyQualifiedTypeName name="priv.barrow.oes.portlet.util.QuestionUtil"/>
+<fullyQualifiedTypeName name="java.lang.Long"/>
+<fullyQualifiedTypeName name="com.liferay.dynamic.data.lists.model.DDLRecord"/>
+<fullyQualifiedTypeName name="priv.barrow.model.ExamQuestionLink"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="priv.barrow.oes.portlet.constants.ExamConstants"/>
 </qualifiedTypeNameHistroy>

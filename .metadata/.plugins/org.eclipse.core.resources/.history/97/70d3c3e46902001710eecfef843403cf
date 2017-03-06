@@ -1,0 +1,11 @@
+<body>
+    <liferay-ui:icon-menu>
+        <portlet:actionURL name="editQuestion" var="editQuestionURL">
+            <portlet:param name="userId" value="<%= String.valueOf(userModel.getUserId()) %>" />
+        </portlet:actionURL>
+
+        <liferay-ui:icon image="edit" url="${editQuestionURL }" target="_blank"/>
+
+        <liferay-ui:icon image="impersonate_user" url="/question-detail?questionOrder=${question.order }" target="_blank" />
+    </liferay-ui:icon-menu>
+</body>

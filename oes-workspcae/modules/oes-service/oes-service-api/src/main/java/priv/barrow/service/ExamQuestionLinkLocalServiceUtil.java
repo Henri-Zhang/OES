@@ -136,6 +136,11 @@ public class ExamQuestionLinkLocalServiceUtil {
 				   .dynamicQuery(dynamicQuery, start, end, orderByComparator);
 	}
 
+	public static java.util.List<priv.barrow.model.ExamQuestionLink> findByexamRecordId(
+		long examRecordId) {
+		return getService().findByexamRecordId(examRecordId);
+	}
+
 	/**
 	* Returns a range of all the exam question links.
 	*

@@ -9,9 +9,12 @@
 
 <portlet:defineObjects />
 
+<c:set var="exams" value="${exams }" scope="request" />
+
 <h2>Published Exams:</h2>
 <c:forEach items="${exams }" var="exam">
+    <span>sharon</span>
     <aui:a href="#">${exam.name }</aui:a>
 </c:forEach>
-
+<hr />
 <aui:a calss="btn btn-lg btn-primary btn-default" href="/create-exam">New Exam</aui:a>
