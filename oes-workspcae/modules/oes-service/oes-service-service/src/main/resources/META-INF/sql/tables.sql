@@ -12,6 +12,14 @@ create table OES_QuestionRecordLink (
 	questionDescription VARCHAR(75) null
 );
 
+create table OES_StudentExamLink (
+	examRecordId LONG not null,
+	studentId LONG not null,
+	inProgress BOOLEAN,
+	done BOOLEAN,
+	primary key (examRecordId, studentId)
+);
+
 create table OES_StudentTeacherLink (
 	studentId LONG not null primary key,
 	teacherId LONG

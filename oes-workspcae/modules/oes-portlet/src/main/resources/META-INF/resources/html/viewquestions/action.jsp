@@ -13,13 +13,14 @@
 <%@ taglib uri="http://liferay.com/tld/theme" prefix="liferay-theme" %>
 <%@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
 
-<%
+<%-- <%
     ResultRow row = (ResultRow) request.getAttribute(WebKeys.SEARCH_CONTAINER_RESULT_ROW);
     Question question = (Question) row.getObject();
     long questionOrder = question.getOrder();
-%>
+%> --%>
 
 <liferay-ui:icon-menu>
-    <liferay-ui:icon image="edit" url="/edit-quesiton?questionOrder=<%= questionOrder %>" target="_blank"/>
-    <liferay-ui:icon image="view" url="/question-detail?questionOrder=<%= questionOrder %>" target="_blank" />
+    <liferay-ui:icon image="view" url="/question-detail?questionOrder=${question.order }" target="_blank" />
+    <liferay-ui:icon image="edit" url="/edit-quesiton?questionOrder=${question.order }" target="_blank"/>
+    <liferay-ui:icon image="delete" url="/question-detail?questionOrder=${question.order }" target="_blank" />
 </liferay-ui:icon-menu>

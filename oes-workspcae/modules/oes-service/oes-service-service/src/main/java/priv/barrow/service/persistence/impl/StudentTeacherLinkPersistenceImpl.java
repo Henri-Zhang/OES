@@ -85,27 +85,27 @@ public class StudentTeacherLinkPersistenceImpl extends BasePersistenceImpl<Stude
 	public static final FinderPath FINDER_PATH_COUNT_ALL = new FinderPath(StudentTeacherLinkModelImpl.ENTITY_CACHE_ENABLED,
 			StudentTeacherLinkModelImpl.FINDER_CACHE_ENABLED, Long.class,
 			FINDER_CLASS_NAME_LIST_WITHOUT_PAGINATION, "countAll", new String[0]);
-	public static final FinderPath FINDER_PATH_WITH_PAGINATION_FIND_BY_TEACHERID =
+	public static final FinderPath FINDER_PATH_WITH_PAGINATION_FIND_BY_STUDENTID =
 		new FinderPath(StudentTeacherLinkModelImpl.ENTITY_CACHE_ENABLED,
 			StudentTeacherLinkModelImpl.FINDER_CACHE_ENABLED,
 			StudentTeacherLinkImpl.class,
-			FINDER_CLASS_NAME_LIST_WITH_PAGINATION, "findByteacherId",
+			FINDER_CLASS_NAME_LIST_WITH_PAGINATION, "findByStudentId",
 			new String[] {
 				Long.class.getName(),
 				
 			Integer.class.getName(), Integer.class.getName(),
 				OrderByComparator.class.getName()
 			});
-	public static final FinderPath FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_TEACHERID =
+	public static final FinderPath FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_STUDENTID =
 		new FinderPath(StudentTeacherLinkModelImpl.ENTITY_CACHE_ENABLED,
 			StudentTeacherLinkModelImpl.FINDER_CACHE_ENABLED,
 			StudentTeacherLinkImpl.class,
-			FINDER_CLASS_NAME_LIST_WITHOUT_PAGINATION, "findByteacherId",
+			FINDER_CLASS_NAME_LIST_WITHOUT_PAGINATION, "findByStudentId",
 			new String[] { Long.class.getName() },
 			StudentTeacherLinkModelImpl.STUDENTID_COLUMN_BITMASK);
-	public static final FinderPath FINDER_PATH_COUNT_BY_TEACHERID = new FinderPath(StudentTeacherLinkModelImpl.ENTITY_CACHE_ENABLED,
+	public static final FinderPath FINDER_PATH_COUNT_BY_STUDENTID = new FinderPath(StudentTeacherLinkModelImpl.ENTITY_CACHE_ENABLED,
 			StudentTeacherLinkModelImpl.FINDER_CACHE_ENABLED, Long.class,
-			FINDER_CLASS_NAME_LIST_WITHOUT_PAGINATION, "countByteacherId",
+			FINDER_CLASS_NAME_LIST_WITHOUT_PAGINATION, "countByStudentId",
 			new String[] { Long.class.getName() });
 
 	/**
@@ -115,8 +115,8 @@ public class StudentTeacherLinkPersistenceImpl extends BasePersistenceImpl<Stude
 	 * @return the matching student teacher links
 	 */
 	@Override
-	public List<StudentTeacherLink> findByteacherId(long studentId) {
-		return findByteacherId(studentId, QueryUtil.ALL_POS, QueryUtil.ALL_POS,
+	public List<StudentTeacherLink> findByStudentId(long studentId) {
+		return findByStudentId(studentId, QueryUtil.ALL_POS, QueryUtil.ALL_POS,
 			null);
 	}
 
@@ -133,9 +133,9 @@ public class StudentTeacherLinkPersistenceImpl extends BasePersistenceImpl<Stude
 	 * @return the range of matching student teacher links
 	 */
 	@Override
-	public List<StudentTeacherLink> findByteacherId(long studentId, int start,
+	public List<StudentTeacherLink> findByStudentId(long studentId, int start,
 		int end) {
-		return findByteacherId(studentId, start, end, null);
+		return findByStudentId(studentId, start, end, null);
 	}
 
 	/**
@@ -152,9 +152,9 @@ public class StudentTeacherLinkPersistenceImpl extends BasePersistenceImpl<Stude
 	 * @return the ordered range of matching student teacher links
 	 */
 	@Override
-	public List<StudentTeacherLink> findByteacherId(long studentId, int start,
+	public List<StudentTeacherLink> findByStudentId(long studentId, int start,
 		int end, OrderByComparator<StudentTeacherLink> orderByComparator) {
-		return findByteacherId(studentId, start, end, orderByComparator, true);
+		return findByStudentId(studentId, start, end, orderByComparator, true);
 	}
 
 	/**
@@ -172,7 +172,7 @@ public class StudentTeacherLinkPersistenceImpl extends BasePersistenceImpl<Stude
 	 * @return the ordered range of matching student teacher links
 	 */
 	@Override
-	public List<StudentTeacherLink> findByteacherId(long studentId, int start,
+	public List<StudentTeacherLink> findByStudentId(long studentId, int start,
 		int end, OrderByComparator<StudentTeacherLink> orderByComparator,
 		boolean retrieveFromCache) {
 		boolean pagination = true;
@@ -182,11 +182,11 @@ public class StudentTeacherLinkPersistenceImpl extends BasePersistenceImpl<Stude
 		if ((start == QueryUtil.ALL_POS) && (end == QueryUtil.ALL_POS) &&
 				(orderByComparator == null)) {
 			pagination = false;
-			finderPath = FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_TEACHERID;
+			finderPath = FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_STUDENTID;
 			finderArgs = new Object[] { studentId };
 		}
 		else {
-			finderPath = FINDER_PATH_WITH_PAGINATION_FIND_BY_TEACHERID;
+			finderPath = FINDER_PATH_WITH_PAGINATION_FIND_BY_STUDENTID;
 			finderArgs = new Object[] { studentId, start, end, orderByComparator };
 		}
 
@@ -220,7 +220,7 @@ public class StudentTeacherLinkPersistenceImpl extends BasePersistenceImpl<Stude
 
 			query.append(_SQL_SELECT_STUDENTTEACHERLINK_WHERE);
 
-			query.append(_FINDER_COLUMN_TEACHERID_STUDENTID_2);
+			query.append(_FINDER_COLUMN_STUDENTID_STUDENTID_2);
 
 			if (orderByComparator != null) {
 				appendOrderByComparator(query, _ORDER_BY_ENTITY_ALIAS,
@@ -283,10 +283,10 @@ public class StudentTeacherLinkPersistenceImpl extends BasePersistenceImpl<Stude
 	 * @throws NoSuchStudentTeacherLinkException if a matching student teacher link could not be found
 	 */
 	@Override
-	public StudentTeacherLink findByteacherId_First(long studentId,
+	public StudentTeacherLink findByStudentId_First(long studentId,
 		OrderByComparator<StudentTeacherLink> orderByComparator)
 		throws NoSuchStudentTeacherLinkException {
-		StudentTeacherLink studentTeacherLink = fetchByteacherId_First(studentId,
+		StudentTeacherLink studentTeacherLink = fetchByStudentId_First(studentId,
 				orderByComparator);
 
 		if (studentTeacherLink != null) {
@@ -313,9 +313,9 @@ public class StudentTeacherLinkPersistenceImpl extends BasePersistenceImpl<Stude
 	 * @return the first matching student teacher link, or <code>null</code> if a matching student teacher link could not be found
 	 */
 	@Override
-	public StudentTeacherLink fetchByteacherId_First(long studentId,
+	public StudentTeacherLink fetchByStudentId_First(long studentId,
 		OrderByComparator<StudentTeacherLink> orderByComparator) {
-		List<StudentTeacherLink> list = findByteacherId(studentId, 0, 1,
+		List<StudentTeacherLink> list = findByStudentId(studentId, 0, 1,
 				orderByComparator);
 
 		if (!list.isEmpty()) {
@@ -334,10 +334,10 @@ public class StudentTeacherLinkPersistenceImpl extends BasePersistenceImpl<Stude
 	 * @throws NoSuchStudentTeacherLinkException if a matching student teacher link could not be found
 	 */
 	@Override
-	public StudentTeacherLink findByteacherId_Last(long studentId,
+	public StudentTeacherLink findByStudentId_Last(long studentId,
 		OrderByComparator<StudentTeacherLink> orderByComparator)
 		throws NoSuchStudentTeacherLinkException {
-		StudentTeacherLink studentTeacherLink = fetchByteacherId_Last(studentId,
+		StudentTeacherLink studentTeacherLink = fetchByStudentId_Last(studentId,
 				orderByComparator);
 
 		if (studentTeacherLink != null) {
@@ -364,15 +364,15 @@ public class StudentTeacherLinkPersistenceImpl extends BasePersistenceImpl<Stude
 	 * @return the last matching student teacher link, or <code>null</code> if a matching student teacher link could not be found
 	 */
 	@Override
-	public StudentTeacherLink fetchByteacherId_Last(long studentId,
+	public StudentTeacherLink fetchByStudentId_Last(long studentId,
 		OrderByComparator<StudentTeacherLink> orderByComparator) {
-		int count = countByteacherId(studentId);
+		int count = countByStudentId(studentId);
 
 		if (count == 0) {
 			return null;
 		}
 
-		List<StudentTeacherLink> list = findByteacherId(studentId, count - 1,
+		List<StudentTeacherLink> list = findByStudentId(studentId, count - 1,
 				count, orderByComparator);
 
 		if (!list.isEmpty()) {
@@ -388,8 +388,8 @@ public class StudentTeacherLinkPersistenceImpl extends BasePersistenceImpl<Stude
 	 * @param studentId the student ID
 	 */
 	@Override
-	public void removeByteacherId(long studentId) {
-		for (StudentTeacherLink studentTeacherLink : findByteacherId(
+	public void removeByStudentId(long studentId) {
+		for (StudentTeacherLink studentTeacherLink : findByStudentId(
 				studentId, QueryUtil.ALL_POS, QueryUtil.ALL_POS, null)) {
 			remove(studentTeacherLink);
 		}
@@ -402,8 +402,8 @@ public class StudentTeacherLinkPersistenceImpl extends BasePersistenceImpl<Stude
 	 * @return the number of matching student teacher links
 	 */
 	@Override
-	public int countByteacherId(long studentId) {
-		FinderPath finderPath = FINDER_PATH_COUNT_BY_TEACHERID;
+	public int countByStudentId(long studentId) {
+		FinderPath finderPath = FINDER_PATH_COUNT_BY_STUDENTID;
 
 		Object[] finderArgs = new Object[] { studentId };
 
@@ -414,7 +414,7 @@ public class StudentTeacherLinkPersistenceImpl extends BasePersistenceImpl<Stude
 
 			query.append(_SQL_COUNT_STUDENTTEACHERLINK_WHERE);
 
-			query.append(_FINDER_COLUMN_TEACHERID_STUDENTID_2);
+			query.append(_FINDER_COLUMN_STUDENTID_STUDENTID_2);
 
 			String sql = query.toString();
 
@@ -446,7 +446,7 @@ public class StudentTeacherLinkPersistenceImpl extends BasePersistenceImpl<Stude
 		return count.intValue();
 	}
 
-	private static final String _FINDER_COLUMN_TEACHERID_STUDENTID_2 = "studentTeacherLink.studentId = ?";
+	private static final String _FINDER_COLUMN_STUDENTID_STUDENTID_2 = "studentTeacherLink.studentId = ?";
 
 	public StudentTeacherLinkPersistenceImpl() {
 		setModelClass(StudentTeacherLink.class);
@@ -668,19 +668,19 @@ public class StudentTeacherLinkPersistenceImpl extends BasePersistenceImpl<Stude
 
 		else {
 			if ((studentTeacherLinkModelImpl.getColumnBitmask() &
-					FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_TEACHERID.getColumnBitmask()) != 0) {
+					FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_STUDENTID.getColumnBitmask()) != 0) {
 				Object[] args = new Object[] {
 						studentTeacherLinkModelImpl.getOriginalStudentId()
 					};
 
-				finderCache.removeResult(FINDER_PATH_COUNT_BY_TEACHERID, args);
-				finderCache.removeResult(FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_TEACHERID,
+				finderCache.removeResult(FINDER_PATH_COUNT_BY_STUDENTID, args);
+				finderCache.removeResult(FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_STUDENTID,
 					args);
 
 				args = new Object[] { studentTeacherLinkModelImpl.getStudentId() };
 
-				finderCache.removeResult(FINDER_PATH_COUNT_BY_TEACHERID, args);
-				finderCache.removeResult(FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_TEACHERID,
+				finderCache.removeResult(FINDER_PATH_COUNT_BY_STUDENTID, args);
+				finderCache.removeResult(FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_STUDENTID,
 					args);
 			}
 		}

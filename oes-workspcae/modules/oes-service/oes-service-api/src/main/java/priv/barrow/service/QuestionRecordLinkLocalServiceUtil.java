@@ -146,6 +146,11 @@ public class QuestionRecordLinkLocalServiceUtil {
 				   .dynamicQuery(dynamicQuery, start, end, orderByComparator);
 	}
 
+	public static java.util.List<priv.barrow.model.QuestionRecordLink> findByDdlRecordId(
+		long ddlRecordId) {
+		return getService().findByDdlRecordId(ddlRecordId);
+	}
+
 	public static java.util.List<priv.barrow.model.QuestionRecordLink> findRandomQuestionReocrdLinks(
 		int count) {
 		return getService().findRandomQuestionReocrdLinks(count);

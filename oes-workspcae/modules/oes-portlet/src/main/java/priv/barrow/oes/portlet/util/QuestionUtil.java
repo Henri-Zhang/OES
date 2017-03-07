@@ -6,7 +6,10 @@ import java.util.Locale;
 import java.util.Map;
 
 import com.liferay.dynamic.data.lists.model.DDLRecord;
+import com.liferay.dynamic.data.lists.model.DDLRecordVersion;
 import com.liferay.dynamic.data.lists.service.DDLRecordLocalServiceUtil;
+import com.liferay.dynamic.data.lists.service.DDLRecordVersionLocalServiceUtil;
+import com.liferay.dynamic.data.mapping.exception.StorageException;
 import com.liferay.dynamic.data.mapping.model.Value;
 import com.liferay.dynamic.data.mapping.storage.DDMFormFieldValue;
 import com.liferay.dynamic.data.mapping.storage.DDMFormValues;
@@ -20,6 +23,7 @@ import priv.barrow.model.ExamQuestionLink;
 import priv.barrow.model.QuestionRecordLink;
 import priv.barrow.oes.portlet.model.Constants;
 import priv.barrow.oes.portlet.model.Question;
+import priv.barrow.service.QuestionRecordLinkLocalServiceUtil;
 
 public class QuestionUtil {
 
@@ -96,8 +100,8 @@ public class QuestionUtil {
         String answer = answerValue.getString(locale);
         answer = answer.substring(2, 3);
 
-        Question question =
-                new Question(questionRecordLink.getQuestionOrder(),
+        Question question = new Question(
+                        questionRecordLink.getQuestionOrder(),
                         description,
                         optionA,
                         optionB,
@@ -109,8 +113,65 @@ public class QuestionUtil {
     }
 
     public static Question getQuestion(ExamQuestionLink examQuestionLink) {
+        long questionRecordId = examQuestionLink.getQuestionRecordId();
+        String version = examQuestionLink.getQuestionRecordVersion();
 
-        return null;
+        DDLRecordVersion ddlRecordVersion = null;
+        try {
+            ddlRecordVersion = DDLRecordVersionLocalServiceUtil.getRecordVersion(questionRecordId, version);
+        } catch (PortalException e) {
+            LOG.error(String.format(
+                    "Get DDLRecordVersion by ddlRecordId and ddlRecordVersion failed. record: [%d], version: [%s]",
+                    questionRecordId, version), e);
+            return null;
+        }
+
+        DDMFormValues ddmFormValues = null;
+        try {
+            ddmFormValues = ddlRecordVersion.getDDMFormValues();
+        } catch (StorageException e) {
+            LOG.error(String.format("Get DDMFormValues from DDLRecordVersion failed. recordVersionId: [%d]",
+                    ddlRecordVersion.getRecordVersionId()), e);
+        }
+
+        Locale locale = LocaleUtil.getDefault();
+        Map<String, List<DDMFormFieldValue>> fieldValues = ddmFormValues.getDDMFormFieldValuesMap();
+
+        DDMFormFieldValue descriptionFormFieldValue = fieldValues.get(Constants.DESCRIPTION).get(0);
+        DDMFormFieldValue optionAFormFieldValue = fieldValues.get(Constants.OPTION_A).get(0);
+        DDMFormFieldValue optionBFormFieldValue = fieldValues.get(Constants.OPTION_B).get(0);
+        DDMFormFieldValue optionCFormFieldValue = fieldValues.get(Constants.OPTION_C).get(0);
+        DDMFormFieldValue optionDFormFieldValue = fieldValues.get(Constants.OPTION_D).get(0);
+        DDMFormFieldValue answerFormFieldValue = fieldValues.get(Constants.ANSWER).get(0);
+
+        Value descriptionValue = descriptionFormFieldValue.getValue();
+        Value optionAValue = optionAFormFieldValue.getValue();
+        Value optionBValue = optionBFormFieldValue.getValue();
+        Value optionCValue = optionCFormFieldValue.getValue();
+        Value optionDValue = optionDFormFieldValue.getValue();
+        Value answerValue = answerFormFieldValue.getValue();
+
+        String description = descriptionValue.getString(locale);
+        String optionA = optionAValue.getString(locale);
+        String optionB = optionBValue.getString(locale);
+        String optionC = optionCValue.getString(locale);
+        String optionD = optionDValue.getString(locale);
+        String answer = answerValue.getString(locale);
+        answer = answer.substring(2, 3);
+
+        QuestionRecordLink questionRecordLink =
+                QuestionRecordLinkLocalServiceUtil.findByDdlRecordId(questionRecordId).get(0);
+
+        Question question = new Question(
+                        questionRecordLink.getQuestionOrder(),
+                        description,
+                        optionA,
+                        optionB,
+                        optionC,
+                        optionD,
+                        answer);
+
+        return question;
     }
 
 }

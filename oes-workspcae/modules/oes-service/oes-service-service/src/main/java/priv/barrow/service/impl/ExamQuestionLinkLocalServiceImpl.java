@@ -38,7 +38,7 @@ import priv.barrow.service.base.ExamQuestionLinkLocalServiceBaseImpl;
 public class ExamQuestionLinkLocalServiceImpl extends ExamQuestionLinkLocalServiceBaseImpl {
 
     @Override
-    public List<ExamQuestionLink> findByexamRecordId(long examRecordId) {
-        return getExamQuestionLinkPersistence().findByexamRecordId(examRecordId);
+    public List<ExamQuestionLink> findByExamRecordId(long examRecordId) {
+        return getExamQuestionLinkPersistence().findByExamRecordId(examRecordId);
     }
 }

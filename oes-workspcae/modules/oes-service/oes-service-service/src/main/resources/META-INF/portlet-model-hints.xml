@@ -12,6 +12,12 @@
 		<field name="active" type="boolean" />
 		<field name="questionDescription" type="String" />
 	</model>
+	<model name="priv.barrow.model.StudentExamLink">
+		<field name="examRecordId" type="long" />
+		<field name="studentId" type="long" />
+		<field name="inProgress" type="boolean" />
+		<field name="done" type="boolean" />
+	</model>
 	<model name="priv.barrow.model.StudentTeacherLink">
 		<field name="studentId" type="long" />
 		<field name="teacherId" type="long" />

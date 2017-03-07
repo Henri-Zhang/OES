@@ -5,7 +5,7 @@
     <entity local-service="true" name="StudentTeacherLink" remote-service="false">
         <column name="studentId" primary="true" type="long" />
         <column name="teacherId" type="long" />
-        <finder name="teacherId" return-type="Collection">
+        <finder name="StudentId" return-type="Collection">
             <finder-column name="studentId" />
         </finder>
     </entity>

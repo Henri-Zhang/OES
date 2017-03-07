@@ -56,7 +56,7 @@
         <liferay-ui:search-container-row className="priv.barrow.oes.portlet.model.Question" modelVar="question">
             <liferay-ui:search-container-column-text name="order" orderableProperty="order" property="order" />
             <liferay-ui:search-container-column-text name="description" property="description" href="/question-detail?questionOrder=${question.order }" />
-            <%-- <liferay-ui:search-container-column-jsp name="action" path="action.jsp" /> --%>
+            <liferay-ui:search-container-column-jsp name="action" path="/META-INF/resources/html/viewquestions/action.jsp" />
         </liferay-ui:search-container-row>
         <liferay-ui:search-iterator />
     </liferay-ui:search-container>

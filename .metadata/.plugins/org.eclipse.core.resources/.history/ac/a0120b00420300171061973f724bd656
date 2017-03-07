@@ -1,0 +1,279 @@
+/**
+ * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ */
+
+package priv.barrow.service;
+
+import aQute.bnd.annotation.ProviderType;
+
+import com.liferay.portal.kernel.service.ServiceWrapper;
+
+/**
+ * Provides a wrapper for {@link StudentExamLocalService}.
+ *
+ * @author Brian Wing Shun Chan
+ * @see StudentExamLocalService
+ * @generated
+ */
+@ProviderType
+public class StudentExamLocalServiceWrapper implements StudentExamLocalService,
+	ServiceWrapper<StudentExamLocalService> {
+	public StudentExamLocalServiceWrapper(
+		StudentExamLocalService studentExamLocalService) {
+		_studentExamLocalService = studentExamLocalService;
+	}
+
+	@Override
+	public com.liferay.portal.kernel.dao.orm.ActionableDynamicQuery getActionableDynamicQuery() {
+		return _studentExamLocalService.getActionableDynamicQuery();
+	}
+
+	@Override
+	public com.liferay.portal.kernel.dao.orm.DynamicQuery dynamicQuery() {
+		return _studentExamLocalService.dynamicQuery();
+	}
+
+	@Override
+	public com.liferay.portal.kernel.dao.orm.IndexableActionableDynamicQuery getIndexableActionableDynamicQuery() {
+		return _studentExamLocalService.getIndexableActionableDynamicQuery();
+	}
+
+	/**
+	* @throws PortalException
+	*/
+	@Override
+	public com.liferay.portal.kernel.model.PersistedModel deletePersistedModel(
+		com.liferay.portal.kernel.model.PersistedModel persistedModel)
+		throws com.liferay.portal.kernel.exception.PortalException {
+		return _studentExamLocalService.deletePersistedModel(persistedModel);
+	}
+
+	@Override
+	public com.liferay.portal.kernel.model.PersistedModel getPersistedModel(
+		java.io.Serializable primaryKeyObj)
+		throws com.liferay.portal.kernel.exception.PortalException {
+		return _studentExamLocalService.getPersistedModel(primaryKeyObj);
+	}
+
+	/**
+	* Returns the number of student exams.
+	*
+	* @return the number of student exams
+	*/
+	@Override
+	public int getStudentExamsCount() {
+		return _studentExamLocalService.getStudentExamsCount();
+	}
+
+	/**
+	* Returns the OSGi service identifier.
+	*
+	* @return the OSGi service identifier
+	*/
+	@Override
+	public java.lang.String getOSGiServiceIdentifier() {
+		return _studentExamLocalService.getOSGiServiceIdentifier();
+	}
+
+	/**
+	* Performs a dynamic query on the database and returns the matching rows.
+	*
+	* @param dynamicQuery the dynamic query
+	* @return the matching rows
+	*/
+	@Override
+	public <T> java.util.List<T> dynamicQuery(
+		com.liferay.portal.kernel.dao.orm.DynamicQuery dynamicQuery) {
+		return _studentExamLocalService.dynamicQuery(dynamicQuery);
+	}
+
+	/**
+	* Performs a dynamic query on the database and returns a range of the matching rows.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link priv.barrow.model.impl.StudentExamModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param dynamicQuery the dynamic query
+	* @param start the lower bound of the range of model instances
+	* @param end the upper bound of the range of model instances (not inclusive)
+	* @return the range of matching rows
+	*/
+	@Override
+	public <T> java.util.List<T> dynamicQuery(
+		com.liferay.portal.kernel.dao.orm.DynamicQuery dynamicQuery, int start,
+		int end) {
+		return _studentExamLocalService.dynamicQuery(dynamicQuery, start, end);
+	}
+
+	/**
+	* Performs a dynamic query on the database and returns an ordered range of the matching rows.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link priv.barrow.model.impl.StudentExamModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param dynamicQuery the dynamic query
+	* @param start the lower bound of the range of model instances
+	* @param end the upper bound of the range of model instances (not inclusive)
+	* @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
+	* @return the ordered range of matching rows
+	*/
+	@Override
+	public <T> java.util.List<T> dynamicQuery(
+		com.liferay.portal.kernel.dao.orm.DynamicQuery dynamicQuery, int start,
+		int end,
+		com.liferay.portal.kernel.util.OrderByComparator<T> orderByComparator) {
+		return _studentExamLocalService.dynamicQuery(dynamicQuery, start, end,
+			orderByComparator);
+	}
+
+	/**
+	* Returns a range of all the student exams.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link priv.barrow.model.impl.StudentExamModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param start the lower bound of the range of student exams
+	* @param end the upper bound of the range of student exams (not inclusive)
+	* @return the range of student exams
+	*/
+	@Override
+	public java.util.List<priv.barrow.model.StudentExam> getStudentExams(
+		int start, int end) {
+		return _studentExamLocalService.getStudentExams(start, end);
+	}
+
+	/**
+	* Returns the number of rows matching the dynamic query.
+	*
+	* @param dynamicQuery the dynamic query
+	* @return the number of rows matching the dynamic query
+	*/
+	@Override
+	public long dynamicQueryCount(
+		com.liferay.portal.kernel.dao.orm.DynamicQuery dynamicQuery) {
+		return _studentExamLocalService.dynamicQueryCount(dynamicQuery);
+	}
+
+	/**
+	* Returns the number of rows matching the dynamic query.
+	*
+	* @param dynamicQuery the dynamic query
+	* @param projection the projection to apply to the query
+	* @return the number of rows matching the dynamic query
+	*/
+	@Override
+	public long dynamicQueryCount(
+		com.liferay.portal.kernel.dao.orm.DynamicQuery dynamicQuery,
+		com.liferay.portal.kernel.dao.orm.Projection projection) {
+		return _studentExamLocalService.dynamicQueryCount(dynamicQuery,
+			projection);
+	}
+
+	/**
+	* Adds the student exam to the database. Also notifies the appropriate model listeners.
+	*
+	* @param studentExam the student exam
+	* @return the student exam that was added
+	*/
+	@Override
+	public priv.barrow.model.StudentExam addStudentExam(
+		priv.barrow.model.StudentExam studentExam) {
+		return _studentExamLocalService.addStudentExam(studentExam);
+	}
+
+	/**
+	* Creates a new student exam with the primary key. Does not add the student exam to the database.
+	*
+	* @param studentExamPK the primary key for the new student exam
+	* @return the new student exam
+	*/
+	@Override
+	public priv.barrow.model.StudentExam createStudentExam(
+		priv.barrow.service.persistence.StudentExamPK studentExamPK) {
+		return _studentExamLocalService.createStudentExam(studentExamPK);
+	}
+
+	/**
+	* Deletes the student exam from the database. Also notifies the appropriate model listeners.
+	*
+	* @param studentExam the student exam
+	* @return the student exam that was removed
+	*/
+	@Override
+	public priv.barrow.model.StudentExam deleteStudentExam(
+		priv.barrow.model.StudentExam studentExam) {
+		return _studentExamLocalService.deleteStudentExam(studentExam);
+	}
+
+	/**
+	* Deletes the student exam with the primary key from the database. Also notifies the appropriate model listeners.
+	*
+	* @param studentExamPK the primary key of the student exam
+	* @return the student exam that was removed
+	* @throws PortalException if a student exam with the primary key could not be found
+	*/
+	@Override
+	public priv.barrow.model.StudentExam deleteStudentExam(
+		priv.barrow.service.persistence.StudentExamPK studentExamPK)
+		throws com.liferay.portal.kernel.exception.PortalException {
+		return _studentExamLocalService.deleteStudentExam(studentExamPK);
+	}
+
+	@Override
+	public priv.barrow.model.StudentExam fetchStudentExam(
+		priv.barrow.service.persistence.StudentExamPK studentExamPK) {
+		return _studentExamLocalService.fetchStudentExam(studentExamPK);
+	}
+
+	/**
+	* Returns the student exam with the primary key.
+	*
+	* @param studentExamPK the primary key of the student exam
+	* @return the student exam
+	* @throws PortalException if a student exam with the primary key could not be found
+	*/
+	@Override
+	public priv.barrow.model.StudentExam getStudentExam(
+		priv.barrow.service.persistence.StudentExamPK studentExamPK)
+		throws com.liferay.portal.kernel.exception.PortalException {
+		return _studentExamLocalService.getStudentExam(studentExamPK);
+	}
+
+	/**
+	* Updates the student exam in the database or adds it if it does not yet exist. Also notifies the appropriate model listeners.
+	*
+	* @param studentExam the student exam
+	* @return the student exam that was updated
+	*/
+	@Override
+	public priv.barrow.model.StudentExam updateStudentExam(
+		priv.barrow.model.StudentExam studentExam) {
+		return _studentExamLocalService.updateStudentExam(studentExam);
+	}
+
+	@Override
+	public StudentExamLocalService getWrappedService() {
+		return _studentExamLocalService;
+	}
+
+	@Override
+	public void setWrappedService(
+		StudentExamLocalService studentExamLocalService) {
+		_studentExamLocalService = studentExamLocalService;
+	}
+
+	private StudentExamLocalService _studentExamLocalService;
+}

@@ -141,9 +141,9 @@ public class ExamQuestionLinkLocalServiceWrapper
 	}
 
 	@Override
-	public java.util.List<priv.barrow.model.ExamQuestionLink> findByexamRecordId(
+	public java.util.List<priv.barrow.model.ExamQuestionLink> findByExamRecordId(
 		long examRecordId) {
-		return _examQuestionLinkLocalService.findByexamRecordId(examRecordId);
+		return _examQuestionLinkLocalService.findByExamRecordId(examRecordId);
 	}
 
 	/**

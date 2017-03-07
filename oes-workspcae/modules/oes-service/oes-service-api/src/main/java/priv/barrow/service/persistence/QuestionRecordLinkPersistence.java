@@ -43,6 +43,139 @@ public interface QuestionRecordLinkPersistence extends BasePersistence<QuestionR
 	 */
 
 	/**
+	* Returns all the question record links where ddlRecordId = &#63;.
+	*
+	* @param ddlRecordId the ddl record ID
+	* @return the matching question record links
+	*/
+	public java.util.List<QuestionRecordLink> findByDdlRecordId(
+		long ddlRecordId);
+
+	/**
+	* Returns a range of all the question record links where ddlRecordId = &#63;.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link QuestionRecordLinkModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param ddlRecordId the ddl record ID
+	* @param start the lower bound of the range of question record links
+	* @param end the upper bound of the range of question record links (not inclusive)
+	* @return the range of matching question record links
+	*/
+	public java.util.List<QuestionRecordLink> findByDdlRecordId(
+		long ddlRecordId, int start, int end);
+
+	/**
+	* Returns an ordered range of all the question record links where ddlRecordId = &#63;.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link QuestionRecordLinkModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param ddlRecordId the ddl record ID
+	* @param start the lower bound of the range of question record links
+	* @param end the upper bound of the range of question record links (not inclusive)
+	* @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
+	* @return the ordered range of matching question record links
+	*/
+	public java.util.List<QuestionRecordLink> findByDdlRecordId(
+		long ddlRecordId, int start, int end,
+		com.liferay.portal.kernel.util.OrderByComparator<QuestionRecordLink> orderByComparator);
+
+	/**
+	* Returns an ordered range of all the question record links where ddlRecordId = &#63;.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link QuestionRecordLinkModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param ddlRecordId the ddl record ID
+	* @param start the lower bound of the range of question record links
+	* @param end the upper bound of the range of question record links (not inclusive)
+	* @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
+	* @param retrieveFromCache whether to retrieve from the finder cache
+	* @return the ordered range of matching question record links
+	*/
+	public java.util.List<QuestionRecordLink> findByDdlRecordId(
+		long ddlRecordId, int start, int end,
+		com.liferay.portal.kernel.util.OrderByComparator<QuestionRecordLink> orderByComparator,
+		boolean retrieveFromCache);
+
+	/**
+	* Returns the first question record link in the ordered set where ddlRecordId = &#63;.
+	*
+	* @param ddlRecordId the ddl record ID
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the first matching question record link
+	* @throws NoSuchQuestionRecordLinkException if a matching question record link could not be found
+	*/
+	public QuestionRecordLink findByDdlRecordId_First(long ddlRecordId,
+		com.liferay.portal.kernel.util.OrderByComparator<QuestionRecordLink> orderByComparator)
+		throws NoSuchQuestionRecordLinkException;
+
+	/**
+	* Returns the first question record link in the ordered set where ddlRecordId = &#63;.
+	*
+	* @param ddlRecordId the ddl record ID
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the first matching question record link, or <code>null</code> if a matching question record link could not be found
+	*/
+	public QuestionRecordLink fetchByDdlRecordId_First(long ddlRecordId,
+		com.liferay.portal.kernel.util.OrderByComparator<QuestionRecordLink> orderByComparator);
+
+	/**
+	* Returns the last question record link in the ordered set where ddlRecordId = &#63;.
+	*
+	* @param ddlRecordId the ddl record ID
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the last matching question record link
+	* @throws NoSuchQuestionRecordLinkException if a matching question record link could not be found
+	*/
+	public QuestionRecordLink findByDdlRecordId_Last(long ddlRecordId,
+		com.liferay.portal.kernel.util.OrderByComparator<QuestionRecordLink> orderByComparator)
+		throws NoSuchQuestionRecordLinkException;
+
+	/**
+	* Returns the last question record link in the ordered set where ddlRecordId = &#63;.
+	*
+	* @param ddlRecordId the ddl record ID
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the last matching question record link, or <code>null</code> if a matching question record link could not be found
+	*/
+	public QuestionRecordLink fetchByDdlRecordId_Last(long ddlRecordId,
+		com.liferay.portal.kernel.util.OrderByComparator<QuestionRecordLink> orderByComparator);
+
+	/**
+	* Returns the question record links before and after the current question record link in the ordered set where ddlRecordId = &#63;.
+	*
+	* @param questionOrder the primary key of the current question record link
+	* @param ddlRecordId the ddl record ID
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the previous, current, and next question record link
+	* @throws NoSuchQuestionRecordLinkException if a question record link with the primary key could not be found
+	*/
+	public QuestionRecordLink[] findByDdlRecordId_PrevAndNext(
+		long questionOrder, long ddlRecordId,
+		com.liferay.portal.kernel.util.OrderByComparator<QuestionRecordLink> orderByComparator)
+		throws NoSuchQuestionRecordLinkException;
+
+	/**
+	* Removes all the question record links where ddlRecordId = &#63; from the database.
+	*
+	* @param ddlRecordId the ddl record ID
+	*/
+	public void removeByDdlRecordId(long ddlRecordId);
+
+	/**
+	* Returns the number of question record links where ddlRecordId = &#63;.
+	*
+	* @param ddlRecordId the ddl record ID
+	* @return the number of matching question record links
+	*/
+	public int countByDdlRecordId(long ddlRecordId);
+
+	/**
 	* Caches the question record link in the entity cache if it is enabled.
 	*
 	* @param questionRecordLink the question record link

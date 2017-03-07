@@ -20,6 +20,7 @@ import com.liferay.portal.kernel.dao.orm.EntityCache;
 import com.liferay.portal.kernel.dao.orm.FinderCache;
 import com.liferay.portal.kernel.dao.orm.FinderPath;
 import com.liferay.portal.kernel.dao.orm.Query;
+import com.liferay.portal.kernel.dao.orm.QueryPos;
 import com.liferay.portal.kernel.dao.orm.QueryUtil;
 import com.liferay.portal.kernel.dao.orm.Session;
 import com.liferay.portal.kernel.log.Log;
@@ -85,6 +86,519 @@ public class QuestionRecordLinkPersistenceImpl extends BasePersistenceImpl<Quest
 	public static final FinderPath FINDER_PATH_COUNT_ALL = new FinderPath(QuestionRecordLinkModelImpl.ENTITY_CACHE_ENABLED,
 			QuestionRecordLinkModelImpl.FINDER_CACHE_ENABLED, Long.class,
 			FINDER_CLASS_NAME_LIST_WITHOUT_PAGINATION, "countAll", new String[0]);
+	public static final FinderPath FINDER_PATH_WITH_PAGINATION_FIND_BY_DDLRECORDID =
+		new FinderPath(QuestionRecordLinkModelImpl.ENTITY_CACHE_ENABLED,
+			QuestionRecordLinkModelImpl.FINDER_CACHE_ENABLED,
+			QuestionRecordLinkImpl.class,
+			FINDER_CLASS_NAME_LIST_WITH_PAGINATION, "findByDdlRecordId",
+			new String[] {
+				Long.class.getName(),
+				
+			Integer.class.getName(), Integer.class.getName(),
+				OrderByComparator.class.getName()
+			});
+	public static final FinderPath FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_DDLRECORDID =
+		new FinderPath(QuestionRecordLinkModelImpl.ENTITY_CACHE_ENABLED,
+			QuestionRecordLinkModelImpl.FINDER_CACHE_ENABLED,
+			QuestionRecordLinkImpl.class,
+			FINDER_CLASS_NAME_LIST_WITHOUT_PAGINATION, "findByDdlRecordId",
+			new String[] { Long.class.getName() },
+			QuestionRecordLinkModelImpl.DDLRECORDID_COLUMN_BITMASK);
+	public static final FinderPath FINDER_PATH_COUNT_BY_DDLRECORDID = new FinderPath(QuestionRecordLinkModelImpl.ENTITY_CACHE_ENABLED,
+			QuestionRecordLinkModelImpl.FINDER_CACHE_ENABLED, Long.class,
+			FINDER_CLASS_NAME_LIST_WITHOUT_PAGINATION, "countByDdlRecordId",
+			new String[] { Long.class.getName() });
+
+	/**
+	 * Returns all the question record links where ddlRecordId = &#63;.
+	 *
+	 * @param ddlRecordId the ddl record ID
+	 * @return the matching question record links
+	 */
+	@Override
+	public List<QuestionRecordLink> findByDdlRecordId(long ddlRecordId) {
+		return findByDdlRecordId(ddlRecordId, QueryUtil.ALL_POS,
+			QueryUtil.ALL_POS, null);
+	}
+
+	/**
+	 * Returns a range of all the question record links where ddlRecordId = &#63;.
+	 *
+	 * <p>
+	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link QuestionRecordLinkModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	 * </p>
+	 *
+	 * @param ddlRecordId the ddl record ID
+	 * @param start the lower bound of the range of question record links
+	 * @param end the upper bound of the range of question record links (not inclusive)
+	 * @return the range of matching question record links
+	 */
+	@Override
+	public List<QuestionRecordLink> findByDdlRecordId(long ddlRecordId,
+		int start, int end) {
+		return findByDdlRecordId(ddlRecordId, start, end, null);
+	}
+
+	/**
+	 * Returns an ordered range of all the question record links where ddlRecordId = &#63;.
+	 *
+	 * <p>
+	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link QuestionRecordLinkModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	 * </p>
+	 *
+	 * @param ddlRecordId the ddl record ID
+	 * @param start the lower bound of the range of question record links
+	 * @param end the upper bound of the range of question record links (not inclusive)
+	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
+	 * @return the ordered range of matching question record links
+	 */
+	@Override
+	public List<QuestionRecordLink> findByDdlRecordId(long ddlRecordId,
+		int start, int end,
+		OrderByComparator<QuestionRecordLink> orderByComparator) {
+		return findByDdlRecordId(ddlRecordId, start, end, orderByComparator,
+			true);
+	}
+
+	/**
+	 * Returns an ordered range of all the question record links where ddlRecordId = &#63;.
+	 *
+	 * <p>
+	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link QuestionRecordLinkModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	 * </p>
+	 *
+	 * @param ddlRecordId the ddl record ID
+	 * @param start the lower bound of the range of question record links
+	 * @param end the upper bound of the range of question record links (not inclusive)
+	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
+	 * @param retrieveFromCache whether to retrieve from the finder cache
+	 * @return the ordered range of matching question record links
+	 */
+	@Override
+	public List<QuestionRecordLink> findByDdlRecordId(long ddlRecordId,
+		int start, int end,
+		OrderByComparator<QuestionRecordLink> orderByComparator,
+		boolean retrieveFromCache) {
+		boolean pagination = true;
+		FinderPath finderPath = null;
+		Object[] finderArgs = null;
+
+		if ((start == QueryUtil.ALL_POS) && (end == QueryUtil.ALL_POS) &&
+				(orderByComparator == null)) {
+			pagination = false;
+			finderPath = FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_DDLRECORDID;
+			finderArgs = new Object[] { ddlRecordId };
+		}
+		else {
+			finderPath = FINDER_PATH_WITH_PAGINATION_FIND_BY_DDLRECORDID;
+			finderArgs = new Object[] { ddlRecordId, start, end, orderByComparator };
+		}
+
+		List<QuestionRecordLink> list = null;
+
+		if (retrieveFromCache) {
+			list = (List<QuestionRecordLink>)finderCache.getResult(finderPath,
+					finderArgs, this);
+
+			if ((list != null) && !list.isEmpty()) {
+				for (QuestionRecordLink questionRecordLink : list) {
+					if ((ddlRecordId != questionRecordLink.getDdlRecordId())) {
+						list = null;
+
+						break;
+					}
+				}
+			}
+		}
+
+		if (list == null) {
+			StringBundler query = null;
+
+			if (orderByComparator != null) {
+				query = new StringBundler(3 +
+						(orderByComparator.getOrderByFields().length * 2));
+			}
+			else {
+				query = new StringBundler(3);
+			}
+
+			query.append(_SQL_SELECT_QUESTIONRECORDLINK_WHERE);
+
+			query.append(_FINDER_COLUMN_DDLRECORDID_DDLRECORDID_2);
+
+			if (orderByComparator != null) {
+				appendOrderByComparator(query, _ORDER_BY_ENTITY_ALIAS,
+					orderByComparator);
+			}
+			else
+			 if (pagination) {
+				query.append(QuestionRecordLinkModelImpl.ORDER_BY_JPQL);
+			}
+
+			String sql = query.toString();
+
+			Session session = null;
+
+			try {
+				session = openSession();
+
+				Query q = session.createQuery(sql);
+
+				QueryPos qPos = QueryPos.getInstance(q);
+
+				qPos.add(ddlRecordId);
+
+				if (!pagination) {
+					list = (List<QuestionRecordLink>)QueryUtil.list(q,
+							getDialect(), start, end, false);
+
+					Collections.sort(list);
+
+					list = Collections.unmodifiableList(list);
+				}
+				else {
+					list = (List<QuestionRecordLink>)QueryUtil.list(q,
+							getDialect(), start, end);
+				}
+
+				cacheResult(list);
+
+				finderCache.putResult(finderPath, finderArgs, list);
+			}
+			catch (Exception e) {
+				finderCache.removeResult(finderPath, finderArgs);
+
+				throw processException(e);
+			}
+			finally {
+				closeSession(session);
+			}
+		}
+
+		return list;
+	}
+
+	/**
+	 * Returns the first question record link in the ordered set where ddlRecordId = &#63;.
+	 *
+	 * @param ddlRecordId the ddl record ID
+	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	 * @return the first matching question record link
+	 * @throws NoSuchQuestionRecordLinkException if a matching question record link could not be found
+	 */
+	@Override
+	public QuestionRecordLink findByDdlRecordId_First(long ddlRecordId,
+		OrderByComparator<QuestionRecordLink> orderByComparator)
+		throws NoSuchQuestionRecordLinkException {
+		QuestionRecordLink questionRecordLink = fetchByDdlRecordId_First(ddlRecordId,
+				orderByComparator);
+
+		if (questionRecordLink != null) {
+			return questionRecordLink;
+		}
+
+		StringBundler msg = new StringBundler(4);
+
+		msg.append(_NO_SUCH_ENTITY_WITH_KEY);
+
+		msg.append("ddlRecordId=");
+		msg.append(ddlRecordId);
+
+		msg.append(StringPool.CLOSE_CURLY_BRACE);
+
+		throw new NoSuchQuestionRecordLinkException(msg.toString());
+	}
+
+	/**
+	 * Returns the first question record link in the ordered set where ddlRecordId = &#63;.
+	 *
+	 * @param ddlRecordId the ddl record ID
+	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	 * @return the first matching question record link, or <code>null</code> if a matching question record link could not be found
+	 */
+	@Override
+	public QuestionRecordLink fetchByDdlRecordId_First(long ddlRecordId,
+		OrderByComparator<QuestionRecordLink> orderByComparator) {
+		List<QuestionRecordLink> list = findByDdlRecordId(ddlRecordId, 0, 1,
+				orderByComparator);
+
+		if (!list.isEmpty()) {
+			return list.get(0);
+		}
+
+		return null;
+	}
+
+	/**
+	 * Returns the last question record link in the ordered set where ddlRecordId = &#63;.
+	 *
+	 * @param ddlRecordId the ddl record ID
+	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	 * @return the last matching question record link
+	 * @throws NoSuchQuestionRecordLinkException if a matching question record link could not be found
+	 */
+	@Override
+	public QuestionRecordLink findByDdlRecordId_Last(long ddlRecordId,
+		OrderByComparator<QuestionRecordLink> orderByComparator)
+		throws NoSuchQuestionRecordLinkException {
+		QuestionRecordLink questionRecordLink = fetchByDdlRecordId_Last(ddlRecordId,
+				orderByComparator);
+
+		if (questionRecordLink != null) {
+			return questionRecordLink;
+		}
+
+		StringBundler msg = new StringBundler(4);
+
+		msg.append(_NO_SUCH_ENTITY_WITH_KEY);
+
+		msg.append("ddlRecordId=");
+		msg.append(ddlRecordId);
+
+		msg.append(StringPool.CLOSE_CURLY_BRACE);
+
+		throw new NoSuchQuestionRecordLinkException(msg.toString());
+	}
+
+	/**
+	 * Returns the last question record link in the ordered set where ddlRecordId = &#63;.
+	 *
+	 * @param ddlRecordId the ddl record ID
+	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	 * @return the last matching question record link, or <code>null</code> if a matching question record link could not be found
+	 */
+	@Override
+	public QuestionRecordLink fetchByDdlRecordId_Last(long ddlRecordId,
+		OrderByComparator<QuestionRecordLink> orderByComparator) {
+		int count = countByDdlRecordId(ddlRecordId);
+
+		if (count == 0) {
+			return null;
+		}
+
+		List<QuestionRecordLink> list = findByDdlRecordId(ddlRecordId,
+				count - 1, count, orderByComparator);
+
+		if (!list.isEmpty()) {
+			return list.get(0);
+		}
+
+		return null;
+	}
+
+	/**
+	 * Returns the question record links before and after the current question record link in the ordered set where ddlRecordId = &#63;.
+	 *
+	 * @param questionOrder the primary key of the current question record link
+	 * @param ddlRecordId the ddl record ID
+	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	 * @return the previous, current, and next question record link
+	 * @throws NoSuchQuestionRecordLinkException if a question record link with the primary key could not be found
+	 */
+	@Override
+	public QuestionRecordLink[] findByDdlRecordId_PrevAndNext(
+		long questionOrder, long ddlRecordId,
+		OrderByComparator<QuestionRecordLink> orderByComparator)
+		throws NoSuchQuestionRecordLinkException {
+		QuestionRecordLink questionRecordLink = findByPrimaryKey(questionOrder);
+
+		Session session = null;
+
+		try {
+			session = openSession();
+
+			QuestionRecordLink[] array = new QuestionRecordLinkImpl[3];
+
+			array[0] = getByDdlRecordId_PrevAndNext(session,
+					questionRecordLink, ddlRecordId, orderByComparator, true);
+
+			array[1] = questionRecordLink;
+
+			array[2] = getByDdlRecordId_PrevAndNext(session,
+					questionRecordLink, ddlRecordId, orderByComparator, false);
+
+			return array;
+		}
+		catch (Exception e) {
+			throw processException(e);
+		}
+		finally {
+			closeSession(session);
+		}
+	}
+
+	protected QuestionRecordLink getByDdlRecordId_PrevAndNext(Session session,
+		QuestionRecordLink questionRecordLink, long ddlRecordId,
+		OrderByComparator<QuestionRecordLink> orderByComparator,
+		boolean previous) {
+		StringBundler query = null;
+
+		if (orderByComparator != null) {
+			query = new StringBundler(4 +
+					(orderByComparator.getOrderByConditionFields().length * 3) +
+					(orderByComparator.getOrderByFields().length * 3));
+		}
+		else {
+			query = new StringBundler(3);
+		}
+
+		query.append(_SQL_SELECT_QUESTIONRECORDLINK_WHERE);
+
+		query.append(_FINDER_COLUMN_DDLRECORDID_DDLRECORDID_2);
+
+		if (orderByComparator != null) {
+			String[] orderByConditionFields = orderByComparator.getOrderByConditionFields();
+
+			if (orderByConditionFields.length > 0) {
+				query.append(WHERE_AND);
+			}
+
+			for (int i = 0; i < orderByConditionFields.length; i++) {
+				query.append(_ORDER_BY_ENTITY_ALIAS);
+				query.append(orderByConditionFields[i]);
+
+				if ((i + 1) < orderByConditionFields.length) {
+					if (orderByComparator.isAscending() ^ previous) {
+						query.append(WHERE_GREATER_THAN_HAS_NEXT);
+					}
+					else {
+						query.append(WHERE_LESSER_THAN_HAS_NEXT);
+					}
+				}
+				else {
+					if (orderByComparator.isAscending() ^ previous) {
+						query.append(WHERE_GREATER_THAN);
+					}
+					else {
+						query.append(WHERE_LESSER_THAN);
+					}
+				}
+			}
+
+			query.append(ORDER_BY_CLAUSE);
+
+			String[] orderByFields = orderByComparator.getOrderByFields();
+
+			for (int i = 0; i < orderByFields.length; i++) {
+				query.append(_ORDER_BY_ENTITY_ALIAS);
+				query.append(orderByFields[i]);
+
+				if ((i + 1) < orderByFields.length) {
+					if (orderByComparator.isAscending() ^ previous) {
+						query.append(ORDER_BY_ASC_HAS_NEXT);
+					}
+					else {
+						query.append(ORDER_BY_DESC_HAS_NEXT);
+					}
+				}
+				else {
+					if (orderByComparator.isAscending() ^ previous) {
+						query.append(ORDER_BY_ASC);
+					}
+					else {
+						query.append(ORDER_BY_DESC);
+					}
+				}
+			}
+		}
+		else {
+			query.append(QuestionRecordLinkModelImpl.ORDER_BY_JPQL);
+		}
+
+		String sql = query.toString();
+
+		Query q = session.createQuery(sql);
+
+		q.setFirstResult(0);
+		q.setMaxResults(2);
+
+		QueryPos qPos = QueryPos.getInstance(q);
+
+		qPos.add(ddlRecordId);
+
+		if (orderByComparator != null) {
+			Object[] values = orderByComparator.getOrderByConditionValues(questionRecordLink);
+
+			for (Object value : values) {
+				qPos.add(value);
+			}
+		}
+
+		List<QuestionRecordLink> list = q.list();
+
+		if (list.size() == 2) {
+			return list.get(1);
+		}
+		else {
+			return null;
+		}
+	}
+
+	/**
+	 * Removes all the question record links where ddlRecordId = &#63; from the database.
+	 *
+	 * @param ddlRecordId the ddl record ID
+	 */
+	@Override
+	public void removeByDdlRecordId(long ddlRecordId) {
+		for (QuestionRecordLink questionRecordLink : findByDdlRecordId(
+				ddlRecordId, QueryUtil.ALL_POS, QueryUtil.ALL_POS, null)) {
+			remove(questionRecordLink);
+		}
+	}
+
+	/**
+	 * Returns the number of question record links where ddlRecordId = &#63;.
+	 *
+	 * @param ddlRecordId the ddl record ID
+	 * @return the number of matching question record links
+	 */
+	@Override
+	public int countByDdlRecordId(long ddlRecordId) {
+		FinderPath finderPath = FINDER_PATH_COUNT_BY_DDLRECORDID;
+
+		Object[] finderArgs = new Object[] { ddlRecordId };
+
+		Long count = (Long)finderCache.getResult(finderPath, finderArgs, this);
+
+		if (count == null) {
+			StringBundler query = new StringBundler(2);
+
+			query.append(_SQL_COUNT_QUESTIONRECORDLINK_WHERE);
+
+			query.append(_FINDER_COLUMN_DDLRECORDID_DDLRECORDID_2);
+
+			String sql = query.toString();
+
+			Session session = null;
+
+			try {
+				session = openSession();
+
+				Query q = session.createQuery(sql);
+
+				QueryPos qPos = QueryPos.getInstance(q);
+
+				qPos.add(ddlRecordId);
+
+				count = (Long)q.uniqueResult();
+
+				finderCache.putResult(finderPath, finderArgs, count);
+			}
+			catch (Exception e) {
+				finderCache.removeResult(finderPath, finderArgs);
+
+				throw processException(e);
+			}
+			finally {
+				closeSession(session);
+			}
+		}
+
+		return count.intValue();
+	}
+
+	private static final String _FINDER_COLUMN_DDLRECORDID_DDLRECORDID_2 = "questionRecordLink.ddlRecordId = ?";
 
 	public QuestionRecordLinkPersistenceImpl() {
 		setModelClass(QuestionRecordLink.class);
@@ -275,6 +789,8 @@ public class QuestionRecordLinkPersistenceImpl extends BasePersistenceImpl<Quest
 
 		boolean isNew = questionRecordLink.isNew();
 
+		QuestionRecordLinkModelImpl questionRecordLinkModelImpl = (QuestionRecordLinkModelImpl)questionRecordLink;
+
 		Session session = null;
 
 		try {
@@ -298,8 +814,27 @@ public class QuestionRecordLinkPersistenceImpl extends BasePersistenceImpl<Quest
 
 		finderCache.clearCache(FINDER_CLASS_NAME_LIST_WITH_PAGINATION);
 
-		if (isNew) {
+		if (isNew || !QuestionRecordLinkModelImpl.COLUMN_BITMASK_ENABLED) {
 			finderCache.clearCache(FINDER_CLASS_NAME_LIST_WITHOUT_PAGINATION);
+		}
+
+		else {
+			if ((questionRecordLinkModelImpl.getColumnBitmask() &
+					FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_DDLRECORDID.getColumnBitmask()) != 0) {
+				Object[] args = new Object[] {
+						questionRecordLinkModelImpl.getOriginalDdlRecordId()
+					};
+
+				finderCache.removeResult(FINDER_PATH_COUNT_BY_DDLRECORDID, args);
+				finderCache.removeResult(FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_DDLRECORDID,
+					args);
+
+				args = new Object[] { questionRecordLinkModelImpl.getDdlRecordId() };
+
+				finderCache.removeResult(FINDER_PATH_COUNT_BY_DDLRECORDID, args);
+				finderCache.removeResult(FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_DDLRECORDID,
+					args);
+			}
 		}
 
 		entityCache.putResult(QuestionRecordLinkModelImpl.ENTITY_CACHE_ENABLED,
@@ -741,9 +1276,12 @@ public class QuestionRecordLinkPersistenceImpl extends BasePersistenceImpl<Quest
 	protected FinderCache finderCache;
 	private static final String _SQL_SELECT_QUESTIONRECORDLINK = "SELECT questionRecordLink FROM QuestionRecordLink questionRecordLink";
 	private static final String _SQL_SELECT_QUESTIONRECORDLINK_WHERE_PKS_IN = "SELECT questionRecordLink FROM QuestionRecordLink questionRecordLink WHERE questionOrder IN (";
+	private static final String _SQL_SELECT_QUESTIONRECORDLINK_WHERE = "SELECT questionRecordLink FROM QuestionRecordLink questionRecordLink WHERE ";
 	private static final String _SQL_COUNT_QUESTIONRECORDLINK = "SELECT COUNT(questionRecordLink) FROM QuestionRecordLink questionRecordLink";
+	private static final String _SQL_COUNT_QUESTIONRECORDLINK_WHERE = "SELECT COUNT(questionRecordLink) FROM QuestionRecordLink questionRecordLink WHERE ";
 	private static final String _ORDER_BY_ENTITY_ALIAS = "questionRecordLink.";
 	private static final String _NO_SUCH_ENTITY_WITH_PRIMARY_KEY = "No QuestionRecordLink exists with the primary key ";
+	private static final String _NO_SUCH_ENTITY_WITH_KEY = "No QuestionRecordLink exists with the key {";
 	private static final Log _log = LogFactoryUtil.getLog(QuestionRecordLinkPersistenceImpl.class);
 	private static final Set<String> _badColumnNames = SetUtil.fromArray(new String[] {
 				"active"

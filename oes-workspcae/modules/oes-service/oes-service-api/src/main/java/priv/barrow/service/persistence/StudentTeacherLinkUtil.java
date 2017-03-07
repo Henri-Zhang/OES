@@ -118,8 +118,8 @@ public class StudentTeacherLinkUtil {
 	* @param studentId the student ID
 	* @return the matching student teacher links
 	*/
-	public static List<StudentTeacherLink> findByteacherId(long studentId) {
-		return getPersistence().findByteacherId(studentId);
+	public static List<StudentTeacherLink> findByStudentId(long studentId) {
+		return getPersistence().findByStudentId(studentId);
 	}
 
 	/**
@@ -134,9 +134,9 @@ public class StudentTeacherLinkUtil {
 	* @param end the upper bound of the range of student teacher links (not inclusive)
 	* @return the range of matching student teacher links
 	*/
-	public static List<StudentTeacherLink> findByteacherId(long studentId,
+	public static List<StudentTeacherLink> findByStudentId(long studentId,
 		int start, int end) {
-		return getPersistence().findByteacherId(studentId, start, end);
+		return getPersistence().findByStudentId(studentId, start, end);
 	}
 
 	/**
@@ -152,11 +152,11 @@ public class StudentTeacherLinkUtil {
 	* @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	* @return the ordered range of matching student teacher links
 	*/
-	public static List<StudentTeacherLink> findByteacherId(long studentId,
+	public static List<StudentTeacherLink> findByStudentId(long studentId,
 		int start, int end,
 		OrderByComparator<StudentTeacherLink> orderByComparator) {
 		return getPersistence()
-				   .findByteacherId(studentId, start, end, orderByComparator);
+				   .findByStudentId(studentId, start, end, orderByComparator);
 	}
 
 	/**
@@ -173,12 +173,12 @@ public class StudentTeacherLinkUtil {
 	* @param retrieveFromCache whether to retrieve from the finder cache
 	* @return the ordered range of matching student teacher links
 	*/
-	public static List<StudentTeacherLink> findByteacherId(long studentId,
+	public static List<StudentTeacherLink> findByStudentId(long studentId,
 		int start, int end,
 		OrderByComparator<StudentTeacherLink> orderByComparator,
 		boolean retrieveFromCache) {
 		return getPersistence()
-				   .findByteacherId(studentId, start, end, orderByComparator,
+				   .findByStudentId(studentId, start, end, orderByComparator,
 			retrieveFromCache);
 	}
 
@@ -190,11 +190,11 @@ public class StudentTeacherLinkUtil {
 	* @return the first matching student teacher link
 	* @throws NoSuchStudentTeacherLinkException if a matching student teacher link could not be found
 	*/
-	public static StudentTeacherLink findByteacherId_First(long studentId,
+	public static StudentTeacherLink findByStudentId_First(long studentId,
 		OrderByComparator<StudentTeacherLink> orderByComparator)
 		throws priv.barrow.exception.NoSuchStudentTeacherLinkException {
 		return getPersistence()
-				   .findByteacherId_First(studentId, orderByComparator);
+				   .findByStudentId_First(studentId, orderByComparator);
 	}
 
 	/**
@@ -204,10 +204,10 @@ public class StudentTeacherLinkUtil {
 	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	* @return the first matching student teacher link, or <code>null</code> if a matching student teacher link could not be found
 	*/
-	public static StudentTeacherLink fetchByteacherId_First(long studentId,
+	public static StudentTeacherLink fetchByStudentId_First(long studentId,
 		OrderByComparator<StudentTeacherLink> orderByComparator) {
 		return getPersistence()
-				   .fetchByteacherId_First(studentId, orderByComparator);
+				   .fetchByStudentId_First(studentId, orderByComparator);
 	}
 
 	/**
@@ -218,11 +218,11 @@ public class StudentTeacherLinkUtil {
 	* @return the last matching student teacher link
 	* @throws NoSuchStudentTeacherLinkException if a matching student teacher link could not be found
 	*/
-	public static StudentTeacherLink findByteacherId_Last(long studentId,
+	public static StudentTeacherLink findByStudentId_Last(long studentId,
 		OrderByComparator<StudentTeacherLink> orderByComparator)
 		throws priv.barrow.exception.NoSuchStudentTeacherLinkException {
 		return getPersistence()
-				   .findByteacherId_Last(studentId, orderByComparator);
+				   .findByStudentId_Last(studentId, orderByComparator);
 	}
 
 	/**
@@ -232,10 +232,10 @@ public class StudentTeacherLinkUtil {
 	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	* @return the last matching student teacher link, or <code>null</code> if a matching student teacher link could not be found
 	*/
-	public static StudentTeacherLink fetchByteacherId_Last(long studentId,
+	public static StudentTeacherLink fetchByStudentId_Last(long studentId,
 		OrderByComparator<StudentTeacherLink> orderByComparator) {
 		return getPersistence()
-				   .fetchByteacherId_Last(studentId, orderByComparator);
+				   .fetchByStudentId_Last(studentId, orderByComparator);
 	}
 
 	/**
@@ -243,8 +243,8 @@ public class StudentTeacherLinkUtil {
 	*
 	* @param studentId the student ID
 	*/
-	public static void removeByteacherId(long studentId) {
-		getPersistence().removeByteacherId(studentId);
+	public static void removeByStudentId(long studentId) {
+		getPersistence().removeByStudentId(studentId);
 	}
 
 	/**
@@ -253,8 +253,8 @@ public class StudentTeacherLinkUtil {
 	* @param studentId the student ID
 	* @return the number of matching student teacher links
 	*/
-	public static int countByteacherId(long studentId) {
-		return getPersistence().countByteacherId(studentId);
+	public static int countByStudentId(long studentId) {
+		return getPersistence().countByStudentId(studentId);
 	}
 
 	/**

@@ -1,0 +1,357 @@
+/**
+ * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ */
+
+package priv.barrow.model;
+
+import aQute.bnd.annotation.ProviderType;
+
+import com.liferay.expando.kernel.model.ExpandoBridge;
+
+import com.liferay.portal.kernel.model.ModelWrapper;
+import com.liferay.portal.kernel.service.ServiceContext;
+
+import java.io.Serializable;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+
+/**
+ * <p>
+ * This class is a wrapper for {@link StudentExam}.
+ * </p>
+ *
+ * @author Brian Wing Shun Chan
+ * @see StudentExam
+ * @generated
+ */
+@ProviderType
+public class StudentExamWrapper implements StudentExam,
+	ModelWrapper<StudentExam> {
+	public StudentExamWrapper(StudentExam studentExam) {
+		_studentExam = studentExam;
+	}
+
+	@Override
+	public Class<?> getModelClass() {
+		return StudentExam.class;
+	}
+
+	@Override
+	public String getModelClassName() {
+		return StudentExam.class.getName();
+	}
+
+	@Override
+	public Map<String, Object> getModelAttributes() {
+		Map<String, Object> attributes = new HashMap<String, Object>();
+
+		attributes.put("examRecordId", getExamRecordId());
+		attributes.put("studentId", getStudentId());
+		attributes.put("inProgress", getInProgress());
+		attributes.put("done", getDone());
+
+		return attributes;
+	}
+
+	@Override
+	public void setModelAttributes(Map<String, Object> attributes) {
+		Long examRecordId = (Long)attributes.get("examRecordId");
+
+		if (examRecordId != null) {
+			setExamRecordId(examRecordId);
+		}
+
+		Long studentId = (Long)attributes.get("studentId");
+
+		if (studentId != null) {
+			setStudentId(studentId);
+		}
+
+		Boolean inProgress = (Boolean)attributes.get("inProgress");
+
+		if (inProgress != null) {
+			setInProgress(inProgress);
+		}
+
+		Boolean done = (Boolean)attributes.get("done");
+
+		if (done != null) {
+			setDone(done);
+		}
+	}
+
+	/**
+	* Returns the done of this student exam.
+	*
+	* @return the done of this student exam
+	*/
+	@Override
+	public boolean getDone() {
+		return _studentExam.getDone();
+	}
+
+	/**
+	* Returns the in progress of this student exam.
+	*
+	* @return the in progress of this student exam
+	*/
+	@Override
+	public boolean getInProgress() {
+		return _studentExam.getInProgress();
+	}
+
+	@Override
+	public boolean isCachedModel() {
+		return _studentExam.isCachedModel();
+	}
+
+	/**
+	* Returns <code>true</code> if this student exam is done.
+	*
+	* @return <code>true</code> if this student exam is done; <code>false</code> otherwise
+	*/
+	@Override
+	public boolean isDone() {
+		return _studentExam.isDone();
+	}
+
+	@Override
+	public boolean isEscapedModel() {
+		return _studentExam.isEscapedModel();
+	}
+
+	/**
+	* Returns <code>true</code> if this student exam is in progress.
+	*
+	* @return <code>true</code> if this student exam is in progress; <code>false</code> otherwise
+	*/
+	@Override
+	public boolean isInProgress() {
+		return _studentExam.isInProgress();
+	}
+
+	@Override
+	public boolean isNew() {
+		return _studentExam.isNew();
+	}
+
+	@Override
+	public ExpandoBridge getExpandoBridge() {
+		return _studentExam.getExpandoBridge();
+	}
+
+	@Override
+	public com.liferay.portal.kernel.model.CacheModel<priv.barrow.model.StudentExam> toCacheModel() {
+		return _studentExam.toCacheModel();
+	}
+
+	@Override
+	public int compareTo(priv.barrow.model.StudentExam studentExam) {
+		return _studentExam.compareTo(studentExam);
+	}
+
+	@Override
+	public int hashCode() {
+		return _studentExam.hashCode();
+	}
+
+	@Override
+	public Serializable getPrimaryKeyObj() {
+		return _studentExam.getPrimaryKeyObj();
+	}
+
+	@Override
+	public java.lang.Object clone() {
+		return new StudentExamWrapper((StudentExam)_studentExam.clone());
+	}
+
+	@Override
+	public java.lang.String toString() {
+		return _studentExam.toString();
+	}
+
+	@Override
+	public java.lang.String toXmlString() {
+		return _studentExam.toXmlString();
+	}
+
+	/**
+	* Returns the exam record ID of this student exam.
+	*
+	* @return the exam record ID of this student exam
+	*/
+	@Override
+	public long getExamRecordId() {
+		return _studentExam.getExamRecordId();
+	}
+
+	/**
+	* Returns the student ID of this student exam.
+	*
+	* @return the student ID of this student exam
+	*/
+	@Override
+	public long getStudentId() {
+		return _studentExam.getStudentId();
+	}
+
+	@Override
+	public priv.barrow.model.StudentExam toEscapedModel() {
+		return new StudentExamWrapper(_studentExam.toEscapedModel());
+	}
+
+	@Override
+	public priv.barrow.model.StudentExam toUnescapedModel() {
+		return new StudentExamWrapper(_studentExam.toUnescapedModel());
+	}
+
+	/**
+	* Returns the primary key of this student exam.
+	*
+	* @return the primary key of this student exam
+	*/
+	@Override
+	public priv.barrow.service.persistence.StudentExamPK getPrimaryKey() {
+		return _studentExam.getPrimaryKey();
+	}
+
+	@Override
+	public void persist() {
+		_studentExam.persist();
+	}
+
+	@Override
+	public void setCachedModel(boolean cachedModel) {
+		_studentExam.setCachedModel(cachedModel);
+	}
+
+	/**
+	* Sets whether this student exam is done.
+	*
+	* @param done the done of this student exam
+	*/
+	@Override
+	public void setDone(boolean done) {
+		_studentExam.setDone(done);
+	}
+
+	/**
+	* Sets the exam record ID of this student exam.
+	*
+	* @param examRecordId the exam record ID of this student exam
+	*/
+	@Override
+	public void setExamRecordId(long examRecordId) {
+		_studentExam.setExamRecordId(examRecordId);
+	}
+
+	@Override
+	public void setExpandoBridgeAttributes(ExpandoBridge expandoBridge) {
+		_studentExam.setExpandoBridgeAttributes(expandoBridge);
+	}
+
+	@Override
+	public void setExpandoBridgeAttributes(
+		com.liferay.portal.kernel.model.BaseModel<?> baseModel) {
+		_studentExam.setExpandoBridgeAttributes(baseModel);
+	}
+
+	@Override
+	public void setExpandoBridgeAttributes(ServiceContext serviceContext) {
+		_studentExam.setExpandoBridgeAttributes(serviceContext);
+	}
+
+	/**
+	* Sets whether this student exam is in progress.
+	*
+	* @param inProgress the in progress of this student exam
+	*/
+	@Override
+	public void setInProgress(boolean inProgress) {
+		_studentExam.setInProgress(inProgress);
+	}
+
+	@Override
+	public void setNew(boolean n) {
+		_studentExam.setNew(n);
+	}
+
+	/**
+	* Sets the primary key of this student exam.
+	*
+	* @param primaryKey the primary key of this student exam
+	*/
+	@Override
+	public void setPrimaryKey(
+		priv.barrow.service.persistence.StudentExamPK primaryKey) {
+		_studentExam.setPrimaryKey(primaryKey);
+	}
+
+	@Override
+	public void setPrimaryKeyObj(Serializable primaryKeyObj) {
+		_studentExam.setPrimaryKeyObj(primaryKeyObj);
+	}
+
+	/**
+	* Sets the student ID of this student exam.
+	*
+	* @param studentId the student ID of this student exam
+	*/
+	@Override
+	public void setStudentId(long studentId) {
+		_studentExam.setStudentId(studentId);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+
+		if (!(obj instanceof StudentExamWrapper)) {
+			return false;
+		}
+
+		StudentExamWrapper studentExamWrapper = (StudentExamWrapper)obj;
+
+		if (Objects.equals(_studentExam, studentExamWrapper._studentExam)) {
+			return true;
+		}
+
+		return false;
+	}
+
+	@Override
+	public StudentExam getWrappedModel() {
+		return _studentExam;
+	}
+
+	@Override
+	public boolean isEntityCacheEnabled() {
+		return _studentExam.isEntityCacheEnabled();
+	}
+
+	@Override
+	public boolean isFinderCacheEnabled() {
+		return _studentExam.isFinderCacheEnabled();
+	}
+
+	@Override
+	public void resetOriginalValues() {
+		_studentExam.resetOriginalValues();
+	}
+
+	private final StudentExam _studentExam;
+}

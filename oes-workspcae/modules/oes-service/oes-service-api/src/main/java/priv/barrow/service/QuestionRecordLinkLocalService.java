@@ -141,6 +141,8 @@ public interface QuestionRecordLinkLocalService extends BaseLocalService,
 	public <T> List<T> dynamicQuery(DynamicQuery dynamicQuery, int start,
 		int end, OrderByComparator<T> orderByComparator);
 
+	public List<QuestionRecordLink> findByDdlRecordId(long ddlRecordId);
+
 	public List<QuestionRecordLink> findRandomQuestionReocrdLinks(int count);
 
 	public List<QuestionRecordLink> findRecentUpdateQuestionReocrdLinks(

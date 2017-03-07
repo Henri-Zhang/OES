@@ -48,7 +48,7 @@ public interface ExamQuestionLinkPersistence extends BasePersistence<ExamQuestio
 	* @param examRecordId the exam record ID
 	* @return the matching exam question links
 	*/
-	public java.util.List<ExamQuestionLink> findByexamRecordId(
+	public java.util.List<ExamQuestionLink> findByExamRecordId(
 		long examRecordId);
 
 	/**
@@ -63,7 +63,7 @@ public interface ExamQuestionLinkPersistence extends BasePersistence<ExamQuestio
 	* @param end the upper bound of the range of exam question links (not inclusive)
 	* @return the range of matching exam question links
 	*/
-	public java.util.List<ExamQuestionLink> findByexamRecordId(
+	public java.util.List<ExamQuestionLink> findByExamRecordId(
 		long examRecordId, int start, int end);
 
 	/**
@@ -79,7 +79,7 @@ public interface ExamQuestionLinkPersistence extends BasePersistence<ExamQuestio
 	* @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	* @return the ordered range of matching exam question links
 	*/
-	public java.util.List<ExamQuestionLink> findByexamRecordId(
+	public java.util.List<ExamQuestionLink> findByExamRecordId(
 		long examRecordId, int start, int end,
 		com.liferay.portal.kernel.util.OrderByComparator<ExamQuestionLink> orderByComparator);
 
@@ -97,7 +97,7 @@ public interface ExamQuestionLinkPersistence extends BasePersistence<ExamQuestio
 	* @param retrieveFromCache whether to retrieve from the finder cache
 	* @return the ordered range of matching exam question links
 	*/
-	public java.util.List<ExamQuestionLink> findByexamRecordId(
+	public java.util.List<ExamQuestionLink> findByExamRecordId(
 		long examRecordId, int start, int end,
 		com.liferay.portal.kernel.util.OrderByComparator<ExamQuestionLink> orderByComparator,
 		boolean retrieveFromCache);
@@ -110,7 +110,7 @@ public interface ExamQuestionLinkPersistence extends BasePersistence<ExamQuestio
 	* @return the first matching exam question link
 	* @throws NoSuchExamQuestionLinkException if a matching exam question link could not be found
 	*/
-	public ExamQuestionLink findByexamRecordId_First(long examRecordId,
+	public ExamQuestionLink findByExamRecordId_First(long examRecordId,
 		com.liferay.portal.kernel.util.OrderByComparator<ExamQuestionLink> orderByComparator)
 		throws NoSuchExamQuestionLinkException;
 
@@ -121,7 +121,7 @@ public interface ExamQuestionLinkPersistence extends BasePersistence<ExamQuestio
 	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	* @return the first matching exam question link, or <code>null</code> if a matching exam question link could not be found
 	*/
-	public ExamQuestionLink fetchByexamRecordId_First(long examRecordId,
+	public ExamQuestionLink fetchByExamRecordId_First(long examRecordId,
 		com.liferay.portal.kernel.util.OrderByComparator<ExamQuestionLink> orderByComparator);
 
 	/**
@@ -132,7 +132,7 @@ public interface ExamQuestionLinkPersistence extends BasePersistence<ExamQuestio
 	* @return the last matching exam question link
 	* @throws NoSuchExamQuestionLinkException if a matching exam question link could not be found
 	*/
-	public ExamQuestionLink findByexamRecordId_Last(long examRecordId,
+	public ExamQuestionLink findByExamRecordId_Last(long examRecordId,
 		com.liferay.portal.kernel.util.OrderByComparator<ExamQuestionLink> orderByComparator)
 		throws NoSuchExamQuestionLinkException;
 
@@ -143,7 +143,7 @@ public interface ExamQuestionLinkPersistence extends BasePersistence<ExamQuestio
 	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	* @return the last matching exam question link, or <code>null</code> if a matching exam question link could not be found
 	*/
-	public ExamQuestionLink fetchByexamRecordId_Last(long examRecordId,
+	public ExamQuestionLink fetchByExamRecordId_Last(long examRecordId,
 		com.liferay.portal.kernel.util.OrderByComparator<ExamQuestionLink> orderByComparator);
 
 	/**
@@ -155,7 +155,7 @@ public interface ExamQuestionLinkPersistence extends BasePersistence<ExamQuestio
 	* @return the previous, current, and next exam question link
 	* @throws NoSuchExamQuestionLinkException if a exam question link with the primary key could not be found
 	*/
-	public ExamQuestionLink[] findByexamRecordId_PrevAndNext(
+	public ExamQuestionLink[] findByExamRecordId_PrevAndNext(
 		priv.barrow.service.persistence.ExamQuestionLinkPK examQuestionLinkPK,
 		long examRecordId,
 		com.liferay.portal.kernel.util.OrderByComparator<ExamQuestionLink> orderByComparator)
@@ -166,7 +166,7 @@ public interface ExamQuestionLinkPersistence extends BasePersistence<ExamQuestio
 	*
 	* @param examRecordId the exam record ID
 	*/
-	public void removeByexamRecordId(long examRecordId);
+	public void removeByExamRecordId(long examRecordId);
 
 	/**
 	* Returns the number of exam question links where examRecordId = &#63;.
@@ -174,7 +174,7 @@ public interface ExamQuestionLinkPersistence extends BasePersistence<ExamQuestio
 	* @param examRecordId the exam record ID
 	* @return the number of matching exam question links
 	*/
-	public int countByexamRecordId(long examRecordId);
+	public int countByExamRecordId(long examRecordId);
 
 	/**
 	* Caches the exam question link in the entity cache if it is enabled.

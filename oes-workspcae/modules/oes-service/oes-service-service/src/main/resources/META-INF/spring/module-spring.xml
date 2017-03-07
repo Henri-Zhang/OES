@@ -6,6 +6,8 @@
 	<bean class="priv.barrow.service.impl.QuestionRecordLinkLocalServiceImpl" id="priv.barrow.service.QuestionRecordLinkLocalService" />
 	<bean class="priv.barrow.service.persistence.impl.QuestionRecordLinkPersistenceImpl" id="priv.barrow.service.persistence.QuestionRecordLinkPersistence" parent="basePersistence" />
 	<bean class="priv.barrow.service.persistence.impl.QuestionRecordLinkFinderImpl" id="priv.barrow.service.persistence.QuestionRecordLinkFinder" parent="basePersistence" />
+	<bean class="priv.barrow.service.impl.StudentExamLinkLocalServiceImpl" id="priv.barrow.service.StudentExamLinkLocalService" />
+	<bean class="priv.barrow.service.persistence.impl.StudentExamLinkPersistenceImpl" id="priv.barrow.service.persistence.StudentExamLinkPersistence" parent="basePersistence" />
 	<bean class="priv.barrow.service.impl.StudentTeacherLinkLocalServiceImpl" id="priv.barrow.service.StudentTeacherLinkLocalService" />
 	<bean class="priv.barrow.service.persistence.impl.StudentTeacherLinkPersistenceImpl" id="priv.barrow.service.persistence.StudentTeacherLinkPersistence" parent="basePersistence" />
 	<bean class="priv.barrow.service.impl.TeacherUserLinkLocalServiceImpl" id="priv.barrow.service.TeacherUserLinkLocalService" />

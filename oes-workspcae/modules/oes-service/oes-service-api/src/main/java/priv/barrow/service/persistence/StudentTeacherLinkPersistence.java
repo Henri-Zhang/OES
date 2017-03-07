@@ -48,7 +48,7 @@ public interface StudentTeacherLinkPersistence extends BasePersistence<StudentTe
 	* @param studentId the student ID
 	* @return the matching student teacher links
 	*/
-	public java.util.List<StudentTeacherLink> findByteacherId(long studentId);
+	public java.util.List<StudentTeacherLink> findByStudentId(long studentId);
 
 	/**
 	* Returns a range of all the student teacher links where studentId = &#63;.
@@ -62,7 +62,7 @@ public interface StudentTeacherLinkPersistence extends BasePersistence<StudentTe
 	* @param end the upper bound of the range of student teacher links (not inclusive)
 	* @return the range of matching student teacher links
 	*/
-	public java.util.List<StudentTeacherLink> findByteacherId(long studentId,
+	public java.util.List<StudentTeacherLink> findByStudentId(long studentId,
 		int start, int end);
 
 	/**
@@ -78,7 +78,7 @@ public interface StudentTeacherLinkPersistence extends BasePersistence<StudentTe
 	* @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	* @return the ordered range of matching student teacher links
 	*/
-	public java.util.List<StudentTeacherLink> findByteacherId(long studentId,
+	public java.util.List<StudentTeacherLink> findByStudentId(long studentId,
 		int start, int end,
 		com.liferay.portal.kernel.util.OrderByComparator<StudentTeacherLink> orderByComparator);
 
@@ -96,7 +96,7 @@ public interface StudentTeacherLinkPersistence extends BasePersistence<StudentTe
 	* @param retrieveFromCache whether to retrieve from the finder cache
 	* @return the ordered range of matching student teacher links
 	*/
-	public java.util.List<StudentTeacherLink> findByteacherId(long studentId,
+	public java.util.List<StudentTeacherLink> findByStudentId(long studentId,
 		int start, int end,
 		com.liferay.portal.kernel.util.OrderByComparator<StudentTeacherLink> orderByComparator,
 		boolean retrieveFromCache);
@@ -109,7 +109,7 @@ public interface StudentTeacherLinkPersistence extends BasePersistence<StudentTe
 	* @return the first matching student teacher link
 	* @throws NoSuchStudentTeacherLinkException if a matching student teacher link could not be found
 	*/
-	public StudentTeacherLink findByteacherId_First(long studentId,
+	public StudentTeacherLink findByStudentId_First(long studentId,
 		com.liferay.portal.kernel.util.OrderByComparator<StudentTeacherLink> orderByComparator)
 		throws NoSuchStudentTeacherLinkException;
 
@@ -120,7 +120,7 @@ public interface StudentTeacherLinkPersistence extends BasePersistence<StudentTe
 	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	* @return the first matching student teacher link, or <code>null</code> if a matching student teacher link could not be found
 	*/
-	public StudentTeacherLink fetchByteacherId_First(long studentId,
+	public StudentTeacherLink fetchByStudentId_First(long studentId,
 		com.liferay.portal.kernel.util.OrderByComparator<StudentTeacherLink> orderByComparator);
 
 	/**
@@ -131,7 +131,7 @@ public interface StudentTeacherLinkPersistence extends BasePersistence<StudentTe
 	* @return the last matching student teacher link
 	* @throws NoSuchStudentTeacherLinkException if a matching student teacher link could not be found
 	*/
-	public StudentTeacherLink findByteacherId_Last(long studentId,
+	public StudentTeacherLink findByStudentId_Last(long studentId,
 		com.liferay.portal.kernel.util.OrderByComparator<StudentTeacherLink> orderByComparator)
 		throws NoSuchStudentTeacherLinkException;
 
@@ -142,7 +142,7 @@ public interface StudentTeacherLinkPersistence extends BasePersistence<StudentTe
 	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	* @return the last matching student teacher link, or <code>null</code> if a matching student teacher link could not be found
 	*/
-	public StudentTeacherLink fetchByteacherId_Last(long studentId,
+	public StudentTeacherLink fetchByStudentId_Last(long studentId,
 		com.liferay.portal.kernel.util.OrderByComparator<StudentTeacherLink> orderByComparator);
 
 	/**
@@ -150,7 +150,7 @@ public interface StudentTeacherLinkPersistence extends BasePersistence<StudentTe
 	*
 	* @param studentId the student ID
 	*/
-	public void removeByteacherId(long studentId);
+	public void removeByStudentId(long studentId);
 
 	/**
 	* Returns the number of student teacher links where studentId = &#63;.
@@ -158,7 +158,7 @@ public interface StudentTeacherLinkPersistence extends BasePersistence<StudentTe
 	* @param studentId the student ID
 	* @return the number of matching student teacher links
 	*/
-	public int countByteacherId(long studentId);
+	public int countByStudentId(long studentId);
 
 	/**
 	* Caches the student teacher link in the entity cache if it is enabled.

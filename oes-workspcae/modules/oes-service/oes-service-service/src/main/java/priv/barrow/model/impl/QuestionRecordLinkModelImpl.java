@@ -88,7 +88,11 @@ public class QuestionRecordLinkModelImpl extends BaseModelImpl<QuestionRecordLin
 	public static final boolean FINDER_CACHE_ENABLED = GetterUtil.getBoolean(priv.barrow.service.util.ServiceProps.get(
 				"value.object.finder.cache.enabled.priv.barrow.model.QuestionRecordLink"),
 			true);
-	public static final boolean COLUMN_BITMASK_ENABLED = false;
+	public static final boolean COLUMN_BITMASK_ENABLED = GetterUtil.getBoolean(priv.barrow.service.util.ServiceProps.get(
+				"value.object.column.bitmask.enabled.priv.barrow.model.QuestionRecordLink"),
+			true);
+	public static final long DDLRECORDID_COLUMN_BITMASK = 1L;
+	public static final long QUESTIONORDER_COLUMN_BITMASK = 2L;
 	public static final long LOCK_EXPIRATION_TIME = GetterUtil.getLong(priv.barrow.service.util.ServiceProps.get(
 				"lock.expiration.time.priv.barrow.model.QuestionRecordLink"));
 
@@ -185,7 +189,19 @@ public class QuestionRecordLinkModelImpl extends BaseModelImpl<QuestionRecordLin
 
 	@Override
 	public void setDdlRecordId(long ddlRecordId) {
+		_columnBitmask |= DDLRECORDID_COLUMN_BITMASK;
+
+		if (!_setOriginalDdlRecordId) {
+			_setOriginalDdlRecordId = true;
+
+			_originalDdlRecordId = _ddlRecordId;
+		}
+
 		_ddlRecordId = ddlRecordId;
+	}
+
+	public long getOriginalDdlRecordId() {
+		return _originalDdlRecordId;
 	}
 
 	@Override
@@ -216,6 +232,10 @@ public class QuestionRecordLinkModelImpl extends BaseModelImpl<QuestionRecordLin
 	@Override
 	public void setQuestionDescription(String questionDescription) {
 		_questionDescription = questionDescription;
+	}
+
+	public long getColumnBitmask() {
+		return _columnBitmask;
 	}
 
 	@Override
@@ -309,6 +329,13 @@ public class QuestionRecordLinkModelImpl extends BaseModelImpl<QuestionRecordLin
 
 	@Override
 	public void resetOriginalValues() {
+		QuestionRecordLinkModelImpl questionRecordLinkModelImpl = this;
+
+		questionRecordLinkModelImpl._originalDdlRecordId = questionRecordLinkModelImpl._ddlRecordId;
+
+		questionRecordLinkModelImpl._setOriginalDdlRecordId = false;
+
+		questionRecordLinkModelImpl._columnBitmask = 0;
 	}
 
 	@Override
@@ -386,7 +413,10 @@ public class QuestionRecordLinkModelImpl extends BaseModelImpl<QuestionRecordLin
 		};
 	private long _questionOrder;
 	private long _ddlRecordId;
+	private long _originalDdlRecordId;
+	private boolean _setOriginalDdlRecordId;
 	private boolean _active;
 	private String _questionDescription;
+	private long _columnBitmask;
 	private QuestionRecordLink _escapedModel;
 }

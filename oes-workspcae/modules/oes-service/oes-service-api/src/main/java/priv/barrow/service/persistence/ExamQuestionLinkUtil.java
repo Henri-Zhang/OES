@@ -117,8 +117,8 @@ public class ExamQuestionLinkUtil {
 	* @param examRecordId the exam record ID
 	* @return the matching exam question links
 	*/
-	public static List<ExamQuestionLink> findByexamRecordId(long examRecordId) {
-		return getPersistence().findByexamRecordId(examRecordId);
+	public static List<ExamQuestionLink> findByExamRecordId(long examRecordId) {
+		return getPersistence().findByExamRecordId(examRecordId);
 	}
 
 	/**
@@ -133,9 +133,9 @@ public class ExamQuestionLinkUtil {
 	* @param end the upper bound of the range of exam question links (not inclusive)
 	* @return the range of matching exam question links
 	*/
-	public static List<ExamQuestionLink> findByexamRecordId(long examRecordId,
+	public static List<ExamQuestionLink> findByExamRecordId(long examRecordId,
 		int start, int end) {
-		return getPersistence().findByexamRecordId(examRecordId, start, end);
+		return getPersistence().findByExamRecordId(examRecordId, start, end);
 	}
 
 	/**
@@ -151,11 +151,11 @@ public class ExamQuestionLinkUtil {
 	* @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
 	* @return the ordered range of matching exam question links
 	*/
-	public static List<ExamQuestionLink> findByexamRecordId(long examRecordId,
+	public static List<ExamQuestionLink> findByExamRecordId(long examRecordId,
 		int start, int end,
 		OrderByComparator<ExamQuestionLink> orderByComparator) {
 		return getPersistence()
-				   .findByexamRecordId(examRecordId, start, end,
+				   .findByExamRecordId(examRecordId, start, end,
 			orderByComparator);
 	}
 
@@ -173,12 +173,12 @@ public class ExamQuestionLinkUtil {
 	* @param retrieveFromCache whether to retrieve from the finder cache
 	* @return the ordered range of matching exam question links
 	*/
-	public static List<ExamQuestionLink> findByexamRecordId(long examRecordId,
+	public static List<ExamQuestionLink> findByExamRecordId(long examRecordId,
 		int start, int end,
 		OrderByComparator<ExamQuestionLink> orderByComparator,
 		boolean retrieveFromCache) {
 		return getPersistence()
-				   .findByexamRecordId(examRecordId, start, end,
+				   .findByExamRecordId(examRecordId, start, end,
 			orderByComparator, retrieveFromCache);
 	}
 
@@ -190,11 +190,11 @@ public class ExamQuestionLinkUtil {
 	* @return the first matching exam question link
 	* @throws NoSuchExamQuestionLinkException if a matching exam question link could not be found
 	*/
-	public static ExamQuestionLink findByexamRecordId_First(long examRecordId,
+	public static ExamQuestionLink findByExamRecordId_First(long examRecordId,
 		OrderByComparator<ExamQuestionLink> orderByComparator)
 		throws priv.barrow.exception.NoSuchExamQuestionLinkException {
 		return getPersistence()
-				   .findByexamRecordId_First(examRecordId, orderByComparator);
+				   .findByExamRecordId_First(examRecordId, orderByComparator);
 	}
 
 	/**
@@ -204,10 +204,10 @@ public class ExamQuestionLinkUtil {
 	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	* @return the first matching exam question link, or <code>null</code> if a matching exam question link could not be found
 	*/
-	public static ExamQuestionLink fetchByexamRecordId_First(
+	public static ExamQuestionLink fetchByExamRecordId_First(
 		long examRecordId, OrderByComparator<ExamQuestionLink> orderByComparator) {
 		return getPersistence()
-				   .fetchByexamRecordId_First(examRecordId, orderByComparator);
+				   .fetchByExamRecordId_First(examRecordId, orderByComparator);
 	}
 
 	/**
@@ -218,11 +218,11 @@ public class ExamQuestionLinkUtil {
 	* @return the last matching exam question link
 	* @throws NoSuchExamQuestionLinkException if a matching exam question link could not be found
 	*/
-	public static ExamQuestionLink findByexamRecordId_Last(long examRecordId,
+	public static ExamQuestionLink findByExamRecordId_Last(long examRecordId,
 		OrderByComparator<ExamQuestionLink> orderByComparator)
 		throws priv.barrow.exception.NoSuchExamQuestionLinkException {
 		return getPersistence()
-				   .findByexamRecordId_Last(examRecordId, orderByComparator);
+				   .findByExamRecordId_Last(examRecordId, orderByComparator);
 	}
 
 	/**
@@ -232,10 +232,10 @@ public class ExamQuestionLinkUtil {
 	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	* @return the last matching exam question link, or <code>null</code> if a matching exam question link could not be found
 	*/
-	public static ExamQuestionLink fetchByexamRecordId_Last(long examRecordId,
+	public static ExamQuestionLink fetchByExamRecordId_Last(long examRecordId,
 		OrderByComparator<ExamQuestionLink> orderByComparator) {
 		return getPersistence()
-				   .fetchByexamRecordId_Last(examRecordId, orderByComparator);
+				   .fetchByExamRecordId_Last(examRecordId, orderByComparator);
 	}
 
 	/**
@@ -247,12 +247,12 @@ public class ExamQuestionLinkUtil {
 	* @return the previous, current, and next exam question link
 	* @throws NoSuchExamQuestionLinkException if a exam question link with the primary key could not be found
 	*/
-	public static ExamQuestionLink[] findByexamRecordId_PrevAndNext(
+	public static ExamQuestionLink[] findByExamRecordId_PrevAndNext(
 		priv.barrow.service.persistence.ExamQuestionLinkPK examQuestionLinkPK,
 		long examRecordId, OrderByComparator<ExamQuestionLink> orderByComparator)
 		throws priv.barrow.exception.NoSuchExamQuestionLinkException {
 		return getPersistence()
-				   .findByexamRecordId_PrevAndNext(examQuestionLinkPK,
+				   .findByExamRecordId_PrevAndNext(examQuestionLinkPK,
 			examRecordId, orderByComparator);
 	}
 
@@ -261,8 +261,8 @@ public class ExamQuestionLinkUtil {
 	*
 	* @param examRecordId the exam record ID
 	*/
-	public static void removeByexamRecordId(long examRecordId) {
-		getPersistence().removeByexamRecordId(examRecordId);
+	public static void removeByExamRecordId(long examRecordId) {
+		getPersistence().removeByExamRecordId(examRecordId);
 	}
 
 	/**
@@ -271,8 +271,8 @@ public class ExamQuestionLinkUtil {
 	* @param examRecordId the exam record ID
 	* @return the number of matching exam question links
 	*/
-	public static int countByexamRecordId(long examRecordId) {
-		return getPersistence().countByexamRecordId(examRecordId);
+	public static int countByExamRecordId(long examRecordId) {
+		return getPersistence().countByExamRecordId(examRecordId);
 	}
 
 	/**

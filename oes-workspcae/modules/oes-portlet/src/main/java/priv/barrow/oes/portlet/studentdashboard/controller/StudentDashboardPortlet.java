@@ -1,6 +1,7 @@
 package priv.barrow.oes.portlet.studentdashboard.controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.portlet.ActionRequest;
 import javax.portlet.ActionResponse;
@@ -17,15 +18,20 @@ import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.model.User;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
+import com.liferay.portal.kernel.service.UserLocalServiceUtil;
 import com.liferay.portal.kernel.theme.ThemeDisplay;
 import com.liferay.portal.kernel.util.ParamUtil;
 import com.liferay.portal.kernel.util.Validator;
 import com.liferay.portal.kernel.util.WebKeys;
 
 import priv.barrow.exception.NoSuchStudentTeacherLinkException;
+import priv.barrow.model.StudentExamLink;
 import priv.barrow.model.StudentTeacherLink;
+import priv.barrow.oes.portlet.model.Exam;
 import priv.barrow.oes.portlet.studentdashboard.constants.Constants;
+import priv.barrow.oes.portlet.util.ExamUtil;
 import priv.barrow.oes.portlet.util.StudentUtil;
+import priv.barrow.service.StudentExamLinkLocalServiceUtil;
 import priv.barrow.service.StudentTeacherLinkLocalServiceUtil;
 
 @Component(
@@ -63,13 +69,36 @@ public class StudentDashboardPortlet extends MVCPortlet {
             LOG.error(String.format("Get StudentTeacherLink by studentId [%d] faield.", userId), e);
         }
 
-        long teacherId = 0L;
-        if (Validator.isNotNull(studentTeacherLink)) {
-            teacherId = studentTeacherLink.getTeacherId();
+        if (Validator.isNull(studentTeacherLink)) {
             renderRequest.setAttribute(Constants.HAS_TEACHER, false);
-            super.doView(renderRequest, renderResponse);
+            include(viewTemplate, renderRequest, renderResponse);
             return;
         }
+
+        long teacherId = studentTeacherLink.getTeacherId();
+        User teacher = null;
+        try {
+            teacher = UserLocalServiceUtil.getUser(teacherId);
+        } catch (PortalException e) {
+            LOG.error(String.format("Get teacher by teacherId failed. teacherId: [%d]", teacherId), e);
+        }
+
+        List<StudentExamLink> toDoExamLinks =
+                StudentExamLinkLocalServiceUtil.findByStudentIdAndStatus(userId, false, false);
+        List<StudentExamLink> inProgressExamLinks =
+                StudentExamLinkLocalServiceUtil.findByStudentIdAndStatus(userId, true, false);
+        List<StudentExamLink> doneExamLinks =
+                StudentExamLinkLocalServiceUtil.findByStudentIdAndStatus(userId, false, false);
+
+        List<Exam> toDoExams = ExamUtil.getExamsByStudentExamLinks(toDoExamLinks);
+        List<Exam> inProgressExams = ExamUtil.getExamsByStudentExamLinks(inProgressExamLinks);
+        List<Exam> doneExams = ExamUtil.getExamsByStudentExamLinks(doneExamLinks);
+
+        renderRequest.setAttribute("toDoExams", toDoExams);
+        renderRequest.setAttribute("inProgressExams", inProgressExams);
+        renderRequest.setAttribute("doneExams", doneExams);
+        renderRequest.setAttribute("teacher", teacher);
+        renderRequest.setAttribute(Constants.HAS_TEACHER, true);
 
         super.doView(renderRequest, renderResponse);
     }

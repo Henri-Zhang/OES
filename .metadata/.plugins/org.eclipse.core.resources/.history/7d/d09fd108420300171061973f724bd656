@@ -1,0 +1,434 @@
+/**
+ * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ */
+
+package priv.barrow.service.persistence;
+
+import aQute.bnd.annotation.ProviderType;
+
+import com.liferay.portal.kernel.service.persistence.BasePersistence;
+
+import priv.barrow.exception.NoSuchStudentExamException;
+
+import priv.barrow.model.StudentExam;
+
+/**
+ * The persistence interface for the student exam service.
+ *
+ * <p>
+ * Caching information and settings can be found in <code>portal.properties</code>
+ * </p>
+ *
+ * @author Brian Wing Shun Chan
+ * @see priv.barrow.service.persistence.impl.StudentExamPersistenceImpl
+ * @see StudentExamUtil
+ * @generated
+ */
+@ProviderType
+public interface StudentExamPersistence extends BasePersistence<StudentExam> {
+	/*
+	 * NOTE FOR DEVELOPERS:
+	 *
+	 * Never modify or reference this interface directly. Always use {@link StudentExamUtil} to access the student exam persistence. Modify <code>service.xml</code> and rerun ServiceBuilder to regenerate this interface.
+	 */
+
+	/**
+	* Returns all the student exams where examRecordId = &#63;.
+	*
+	* @param examRecordId the exam record ID
+	* @return the matching student exams
+	*/
+	public java.util.List<StudentExam> findByexamRecordId(long examRecordId);
+
+	/**
+	* Returns a range of all the student exams where examRecordId = &#63;.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link StudentExamModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param examRecordId the exam record ID
+	* @param start the lower bound of the range of student exams
+	* @param end the upper bound of the range of student exams (not inclusive)
+	* @return the range of matching student exams
+	*/
+	public java.util.List<StudentExam> findByexamRecordId(long examRecordId,
+		int start, int end);
+
+	/**
+	* Returns an ordered range of all the student exams where examRecordId = &#63;.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link StudentExamModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param examRecordId the exam record ID
+	* @param start the lower bound of the range of student exams
+	* @param end the upper bound of the range of student exams (not inclusive)
+	* @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
+	* @return the ordered range of matching student exams
+	*/
+	public java.util.List<StudentExam> findByexamRecordId(long examRecordId,
+		int start, int end,
+		com.liferay.portal.kernel.util.OrderByComparator<StudentExam> orderByComparator);
+
+	/**
+	* Returns an ordered range of all the student exams where examRecordId = &#63;.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link StudentExamModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param examRecordId the exam record ID
+	* @param start the lower bound of the range of student exams
+	* @param end the upper bound of the range of student exams (not inclusive)
+	* @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
+	* @param retrieveFromCache whether to retrieve from the finder cache
+	* @return the ordered range of matching student exams
+	*/
+	public java.util.List<StudentExam> findByexamRecordId(long examRecordId,
+		int start, int end,
+		com.liferay.portal.kernel.util.OrderByComparator<StudentExam> orderByComparator,
+		boolean retrieveFromCache);
+
+	/**
+	* Returns the first student exam in the ordered set where examRecordId = &#63;.
+	*
+	* @param examRecordId the exam record ID
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the first matching student exam
+	* @throws NoSuchStudentExamException if a matching student exam could not be found
+	*/
+	public StudentExam findByexamRecordId_First(long examRecordId,
+		com.liferay.portal.kernel.util.OrderByComparator<StudentExam> orderByComparator)
+		throws NoSuchStudentExamException;
+
+	/**
+	* Returns the first student exam in the ordered set where examRecordId = &#63;.
+	*
+	* @param examRecordId the exam record ID
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the first matching student exam, or <code>null</code> if a matching student exam could not be found
+	*/
+	public StudentExam fetchByexamRecordId_First(long examRecordId,
+		com.liferay.portal.kernel.util.OrderByComparator<StudentExam> orderByComparator);
+
+	/**
+	* Returns the last student exam in the ordered set where examRecordId = &#63;.
+	*
+	* @param examRecordId the exam record ID
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the last matching student exam
+	* @throws NoSuchStudentExamException if a matching student exam could not be found
+	*/
+	public StudentExam findByexamRecordId_Last(long examRecordId,
+		com.liferay.portal.kernel.util.OrderByComparator<StudentExam> orderByComparator)
+		throws NoSuchStudentExamException;
+
+	/**
+	* Returns the last student exam in the ordered set where examRecordId = &#63;.
+	*
+	* @param examRecordId the exam record ID
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the last matching student exam, or <code>null</code> if a matching student exam could not be found
+	*/
+	public StudentExam fetchByexamRecordId_Last(long examRecordId,
+		com.liferay.portal.kernel.util.OrderByComparator<StudentExam> orderByComparator);
+
+	/**
+	* Returns the student exams before and after the current student exam in the ordered set where examRecordId = &#63;.
+	*
+	* @param studentExamPK the primary key of the current student exam
+	* @param examRecordId the exam record ID
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the previous, current, and next student exam
+	* @throws NoSuchStudentExamException if a student exam with the primary key could not be found
+	*/
+	public StudentExam[] findByexamRecordId_PrevAndNext(
+		priv.barrow.service.persistence.StudentExamPK studentExamPK,
+		long examRecordId,
+		com.liferay.portal.kernel.util.OrderByComparator<StudentExam> orderByComparator)
+		throws NoSuchStudentExamException;
+
+	/**
+	* Removes all the student exams where examRecordId = &#63; from the database.
+	*
+	* @param examRecordId the exam record ID
+	*/
+	public void removeByexamRecordId(long examRecordId);
+
+	/**
+	* Returns the number of student exams where examRecordId = &#63;.
+	*
+	* @param examRecordId the exam record ID
+	* @return the number of matching student exams
+	*/
+	public int countByexamRecordId(long examRecordId);
+
+	/**
+	* Returns all the student exams where studentId = &#63;.
+	*
+	* @param studentId the student ID
+	* @return the matching student exams
+	*/
+	public java.util.List<StudentExam> findBystudentId(long studentId);
+
+	/**
+	* Returns a range of all the student exams where studentId = &#63;.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link StudentExamModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param studentId the student ID
+	* @param start the lower bound of the range of student exams
+	* @param end the upper bound of the range of student exams (not inclusive)
+	* @return the range of matching student exams
+	*/
+	public java.util.List<StudentExam> findBystudentId(long studentId,
+		int start, int end);
+
+	/**
+	* Returns an ordered range of all the student exams where studentId = &#63;.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link StudentExamModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param studentId the student ID
+	* @param start the lower bound of the range of student exams
+	* @param end the upper bound of the range of student exams (not inclusive)
+	* @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
+	* @return the ordered range of matching student exams
+	*/
+	public java.util.List<StudentExam> findBystudentId(long studentId,
+		int start, int end,
+		com.liferay.portal.kernel.util.OrderByComparator<StudentExam> orderByComparator);
+
+	/**
+	* Returns an ordered range of all the student exams where studentId = &#63;.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link StudentExamModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param studentId the student ID
+	* @param start the lower bound of the range of student exams
+	* @param end the upper bound of the range of student exams (not inclusive)
+	* @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
+	* @param retrieveFromCache whether to retrieve from the finder cache
+	* @return the ordered range of matching student exams
+	*/
+	public java.util.List<StudentExam> findBystudentId(long studentId,
+		int start, int end,
+		com.liferay.portal.kernel.util.OrderByComparator<StudentExam> orderByComparator,
+		boolean retrieveFromCache);
+
+	/**
+	* Returns the first student exam in the ordered set where studentId = &#63;.
+	*
+	* @param studentId the student ID
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the first matching student exam
+	* @throws NoSuchStudentExamException if a matching student exam could not be found
+	*/
+	public StudentExam findBystudentId_First(long studentId,
+		com.liferay.portal.kernel.util.OrderByComparator<StudentExam> orderByComparator)
+		throws NoSuchStudentExamException;
+
+	/**
+	* Returns the first student exam in the ordered set where studentId = &#63;.
+	*
+	* @param studentId the student ID
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the first matching student exam, or <code>null</code> if a matching student exam could not be found
+	*/
+	public StudentExam fetchBystudentId_First(long studentId,
+		com.liferay.portal.kernel.util.OrderByComparator<StudentExam> orderByComparator);
+
+	/**
+	* Returns the last student exam in the ordered set where studentId = &#63;.
+	*
+	* @param studentId the student ID
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the last matching student exam
+	* @throws NoSuchStudentExamException if a matching student exam could not be found
+	*/
+	public StudentExam findBystudentId_Last(long studentId,
+		com.liferay.portal.kernel.util.OrderByComparator<StudentExam> orderByComparator)
+		throws NoSuchStudentExamException;
+
+	/**
+	* Returns the last student exam in the ordered set where studentId = &#63;.
+	*
+	* @param studentId the student ID
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the last matching student exam, or <code>null</code> if a matching student exam could not be found
+	*/
+	public StudentExam fetchBystudentId_Last(long studentId,
+		com.liferay.portal.kernel.util.OrderByComparator<StudentExam> orderByComparator);
+
+	/**
+	* Returns the student exams before and after the current student exam in the ordered set where studentId = &#63;.
+	*
+	* @param studentExamPK the primary key of the current student exam
+	* @param studentId the student ID
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the previous, current, and next student exam
+	* @throws NoSuchStudentExamException if a student exam with the primary key could not be found
+	*/
+	public StudentExam[] findBystudentId_PrevAndNext(
+		priv.barrow.service.persistence.StudentExamPK studentExamPK,
+		long studentId,
+		com.liferay.portal.kernel.util.OrderByComparator<StudentExam> orderByComparator)
+		throws NoSuchStudentExamException;
+
+	/**
+	* Removes all the student exams where studentId = &#63; from the database.
+	*
+	* @param studentId the student ID
+	*/
+	public void removeBystudentId(long studentId);
+
+	/**
+	* Returns the number of student exams where studentId = &#63;.
+	*
+	* @param studentId the student ID
+	* @return the number of matching student exams
+	*/
+	public int countBystudentId(long studentId);
+
+	/**
+	* Caches the student exam in the entity cache if it is enabled.
+	*
+	* @param studentExam the student exam
+	*/
+	public void cacheResult(StudentExam studentExam);
+
+	/**
+	* Caches the student exams in the entity cache if it is enabled.
+	*
+	* @param studentExams the student exams
+	*/
+	public void cacheResult(java.util.List<StudentExam> studentExams);
+
+	/**
+	* Creates a new student exam with the primary key. Does not add the student exam to the database.
+	*
+	* @param studentExamPK the primary key for the new student exam
+	* @return the new student exam
+	*/
+	public StudentExam create(
+		priv.barrow.service.persistence.StudentExamPK studentExamPK);
+
+	/**
+	* Removes the student exam with the primary key from the database. Also notifies the appropriate model listeners.
+	*
+	* @param studentExamPK the primary key of the student exam
+	* @return the student exam that was removed
+	* @throws NoSuchStudentExamException if a student exam with the primary key could not be found
+	*/
+	public StudentExam remove(
+		priv.barrow.service.persistence.StudentExamPK studentExamPK)
+		throws NoSuchStudentExamException;
+
+	public StudentExam updateImpl(StudentExam studentExam);
+
+	/**
+	* Returns the student exam with the primary key or throws a {@link NoSuchStudentExamException} if it could not be found.
+	*
+	* @param studentExamPK the primary key of the student exam
+	* @return the student exam
+	* @throws NoSuchStudentExamException if a student exam with the primary key could not be found
+	*/
+	public StudentExam findByPrimaryKey(
+		priv.barrow.service.persistence.StudentExamPK studentExamPK)
+		throws NoSuchStudentExamException;
+
+	/**
+	* Returns the student exam with the primary key or returns <code>null</code> if it could not be found.
+	*
+	* @param studentExamPK the primary key of the student exam
+	* @return the student exam, or <code>null</code> if a student exam with the primary key could not be found
+	*/
+	public StudentExam fetchByPrimaryKey(
+		priv.barrow.service.persistence.StudentExamPK studentExamPK);
+
+	@Override
+	public java.util.Map<java.io.Serializable, StudentExam> fetchByPrimaryKeys(
+		java.util.Set<java.io.Serializable> primaryKeys);
+
+	/**
+	* Returns all the student exams.
+	*
+	* @return the student exams
+	*/
+	public java.util.List<StudentExam> findAll();
+
+	/**
+	* Returns a range of all the student exams.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link StudentExamModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param start the lower bound of the range of student exams
+	* @param end the upper bound of the range of student exams (not inclusive)
+	* @return the range of student exams
+	*/
+	public java.util.List<StudentExam> findAll(int start, int end);
+
+	/**
+	* Returns an ordered range of all the student exams.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link StudentExamModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param start the lower bound of the range of student exams
+	* @param end the upper bound of the range of student exams (not inclusive)
+	* @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
+	* @return the ordered range of student exams
+	*/
+	public java.util.List<StudentExam> findAll(int start, int end,
+		com.liferay.portal.kernel.util.OrderByComparator<StudentExam> orderByComparator);
+
+	/**
+	* Returns an ordered range of all the student exams.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link StudentExamModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param start the lower bound of the range of student exams
+	* @param end the upper bound of the range of student exams (not inclusive)
+	* @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
+	* @param retrieveFromCache whether to retrieve from the finder cache
+	* @return the ordered range of student exams
+	*/
+	public java.util.List<StudentExam> findAll(int start, int end,
+		com.liferay.portal.kernel.util.OrderByComparator<StudentExam> orderByComparator,
+		boolean retrieveFromCache);
+
+	/**
+	* Removes all the student exams from the database.
+	*/
+	public void removeAll();
+
+	/**
+	* Returns the number of student exams.
+	*
+	* @return the number of student exams
+	*/
+	public int countAll();
+}

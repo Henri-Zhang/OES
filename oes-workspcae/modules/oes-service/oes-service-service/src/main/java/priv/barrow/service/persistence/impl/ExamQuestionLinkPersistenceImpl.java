@@ -88,7 +88,7 @@ public class ExamQuestionLinkPersistenceImpl extends BasePersistenceImpl<ExamQue
 		new FinderPath(ExamQuestionLinkModelImpl.ENTITY_CACHE_ENABLED,
 			ExamQuestionLinkModelImpl.FINDER_CACHE_ENABLED,
 			ExamQuestionLinkImpl.class, FINDER_CLASS_NAME_LIST_WITH_PAGINATION,
-			"findByexamRecordId",
+			"findByExamRecordId",
 			new String[] {
 				Long.class.getName(),
 				
@@ -99,12 +99,12 @@ public class ExamQuestionLinkPersistenceImpl extends BasePersistenceImpl<ExamQue
 		new FinderPath(ExamQuestionLinkModelImpl.ENTITY_CACHE_ENABLED,
 			ExamQuestionLinkModelImpl.FINDER_CACHE_ENABLED,
 			ExamQuestionLinkImpl.class,
-			FINDER_CLASS_NAME_LIST_WITHOUT_PAGINATION, "findByexamRecordId",
+			FINDER_CLASS_NAME_LIST_WITHOUT_PAGINATION, "findByExamRecordId",
 			new String[] { Long.class.getName() },
 			ExamQuestionLinkModelImpl.EXAMRECORDID_COLUMN_BITMASK);
 	public static final FinderPath FINDER_PATH_COUNT_BY_EXAMRECORDID = new FinderPath(ExamQuestionLinkModelImpl.ENTITY_CACHE_ENABLED,
 			ExamQuestionLinkModelImpl.FINDER_CACHE_ENABLED, Long.class,
-			FINDER_CLASS_NAME_LIST_WITHOUT_PAGINATION, "countByexamRecordId",
+			FINDER_CLASS_NAME_LIST_WITHOUT_PAGINATION, "countByExamRecordId",
 			new String[] { Long.class.getName() });
 
 	/**
@@ -114,8 +114,8 @@ public class ExamQuestionLinkPersistenceImpl extends BasePersistenceImpl<ExamQue
 	 * @return the matching exam question links
 	 */
 	@Override
-	public List<ExamQuestionLink> findByexamRecordId(long examRecordId) {
-		return findByexamRecordId(examRecordId, QueryUtil.ALL_POS,
+	public List<ExamQuestionLink> findByExamRecordId(long examRecordId) {
+		return findByExamRecordId(examRecordId, QueryUtil.ALL_POS,
 			QueryUtil.ALL_POS, null);
 	}
 
@@ -132,9 +132,9 @@ public class ExamQuestionLinkPersistenceImpl extends BasePersistenceImpl<ExamQue
 	 * @return the range of matching exam question links
 	 */
 	@Override
-	public List<ExamQuestionLink> findByexamRecordId(long examRecordId,
+	public List<ExamQuestionLink> findByExamRecordId(long examRecordId,
 		int start, int end) {
-		return findByexamRecordId(examRecordId, start, end, null);
+		return findByExamRecordId(examRecordId, start, end, null);
 	}
 
 	/**
@@ -151,10 +151,10 @@ public class ExamQuestionLinkPersistenceImpl extends BasePersistenceImpl<ExamQue
 	 * @return the ordered range of matching exam question links
 	 */
 	@Override
-	public List<ExamQuestionLink> findByexamRecordId(long examRecordId,
+	public List<ExamQuestionLink> findByExamRecordId(long examRecordId,
 		int start, int end,
 		OrderByComparator<ExamQuestionLink> orderByComparator) {
-		return findByexamRecordId(examRecordId, start, end, orderByComparator,
+		return findByExamRecordId(examRecordId, start, end, orderByComparator,
 			true);
 	}
 
@@ -173,7 +173,7 @@ public class ExamQuestionLinkPersistenceImpl extends BasePersistenceImpl<ExamQue
 	 * @return the ordered range of matching exam question links
 	 */
 	@Override
-	public List<ExamQuestionLink> findByexamRecordId(long examRecordId,
+	public List<ExamQuestionLink> findByExamRecordId(long examRecordId,
 		int start, int end,
 		OrderByComparator<ExamQuestionLink> orderByComparator,
 		boolean retrieveFromCache) {
@@ -289,10 +289,10 @@ public class ExamQuestionLinkPersistenceImpl extends BasePersistenceImpl<ExamQue
 	 * @throws NoSuchExamQuestionLinkException if a matching exam question link could not be found
 	 */
 	@Override
-	public ExamQuestionLink findByexamRecordId_First(long examRecordId,
+	public ExamQuestionLink findByExamRecordId_First(long examRecordId,
 		OrderByComparator<ExamQuestionLink> orderByComparator)
 		throws NoSuchExamQuestionLinkException {
-		ExamQuestionLink examQuestionLink = fetchByexamRecordId_First(examRecordId,
+		ExamQuestionLink examQuestionLink = fetchByExamRecordId_First(examRecordId,
 				orderByComparator);
 
 		if (examQuestionLink != null) {
@@ -319,9 +319,9 @@ public class ExamQuestionLinkPersistenceImpl extends BasePersistenceImpl<ExamQue
 	 * @return the first matching exam question link, or <code>null</code> if a matching exam question link could not be found
 	 */
 	@Override
-	public ExamQuestionLink fetchByexamRecordId_First(long examRecordId,
+	public ExamQuestionLink fetchByExamRecordId_First(long examRecordId,
 		OrderByComparator<ExamQuestionLink> orderByComparator) {
-		List<ExamQuestionLink> list = findByexamRecordId(examRecordId, 0, 1,
+		List<ExamQuestionLink> list = findByExamRecordId(examRecordId, 0, 1,
 				orderByComparator);
 
 		if (!list.isEmpty()) {
@@ -340,10 +340,10 @@ public class ExamQuestionLinkPersistenceImpl extends BasePersistenceImpl<ExamQue
 	 * @throws NoSuchExamQuestionLinkException if a matching exam question link could not be found
 	 */
 	@Override
-	public ExamQuestionLink findByexamRecordId_Last(long examRecordId,
+	public ExamQuestionLink findByExamRecordId_Last(long examRecordId,
 		OrderByComparator<ExamQuestionLink> orderByComparator)
 		throws NoSuchExamQuestionLinkException {
-		ExamQuestionLink examQuestionLink = fetchByexamRecordId_Last(examRecordId,
+		ExamQuestionLink examQuestionLink = fetchByExamRecordId_Last(examRecordId,
 				orderByComparator);
 
 		if (examQuestionLink != null) {
@@ -370,15 +370,15 @@ public class ExamQuestionLinkPersistenceImpl extends BasePersistenceImpl<ExamQue
 	 * @return the last matching exam question link, or <code>null</code> if a matching exam question link could not be found
 	 */
 	@Override
-	public ExamQuestionLink fetchByexamRecordId_Last(long examRecordId,
+	public ExamQuestionLink fetchByExamRecordId_Last(long examRecordId,
 		OrderByComparator<ExamQuestionLink> orderByComparator) {
-		int count = countByexamRecordId(examRecordId);
+		int count = countByExamRecordId(examRecordId);
 
 		if (count == 0) {
 			return null;
 		}
 
-		List<ExamQuestionLink> list = findByexamRecordId(examRecordId,
+		List<ExamQuestionLink> list = findByExamRecordId(examRecordId,
 				count - 1, count, orderByComparator);
 
 		if (!list.isEmpty()) {
@@ -398,7 +398,7 @@ public class ExamQuestionLinkPersistenceImpl extends BasePersistenceImpl<ExamQue
 	 * @throws NoSuchExamQuestionLinkException if a exam question link with the primary key could not be found
 	 */
 	@Override
-	public ExamQuestionLink[] findByexamRecordId_PrevAndNext(
+	public ExamQuestionLink[] findByExamRecordId_PrevAndNext(
 		ExamQuestionLinkPK examQuestionLinkPK, long examRecordId,
 		OrderByComparator<ExamQuestionLink> orderByComparator)
 		throws NoSuchExamQuestionLinkException {
@@ -411,12 +411,12 @@ public class ExamQuestionLinkPersistenceImpl extends BasePersistenceImpl<ExamQue
 
 			ExamQuestionLink[] array = new ExamQuestionLinkImpl[3];
 
-			array[0] = getByexamRecordId_PrevAndNext(session, examQuestionLink,
+			array[0] = getByExamRecordId_PrevAndNext(session, examQuestionLink,
 					examRecordId, orderByComparator, true);
 
 			array[1] = examQuestionLink;
 
-			array[2] = getByexamRecordId_PrevAndNext(session, examQuestionLink,
+			array[2] = getByExamRecordId_PrevAndNext(session, examQuestionLink,
 					examRecordId, orderByComparator, false);
 
 			return array;
@@ -429,7 +429,7 @@ public class ExamQuestionLinkPersistenceImpl extends BasePersistenceImpl<ExamQue
 		}
 	}
 
-	protected ExamQuestionLink getByexamRecordId_PrevAndNext(Session session,
+	protected ExamQuestionLink getByExamRecordId_PrevAndNext(Session session,
 		ExamQuestionLink examQuestionLink, long examRecordId,
 		OrderByComparator<ExamQuestionLink> orderByComparator, boolean previous) {
 		StringBundler query = null;
@@ -541,8 +541,8 @@ public class ExamQuestionLinkPersistenceImpl extends BasePersistenceImpl<ExamQue
 	 * @param examRecordId the exam record ID
 	 */
 	@Override
-	public void removeByexamRecordId(long examRecordId) {
-		for (ExamQuestionLink examQuestionLink : findByexamRecordId(
+	public void removeByExamRecordId(long examRecordId) {
+		for (ExamQuestionLink examQuestionLink : findByExamRecordId(
 				examRecordId, QueryUtil.ALL_POS, QueryUtil.ALL_POS, null)) {
 			remove(examQuestionLink);
 		}
@@ -555,7 +555,7 @@ public class ExamQuestionLinkPersistenceImpl extends BasePersistenceImpl<ExamQue
 	 * @return the number of matching exam question links
 	 */
 	@Override
-	public int countByexamRecordId(long examRecordId) {
+	public int countByExamRecordId(long examRecordId) {
 		FinderPath finderPath = FINDER_PATH_COUNT_BY_EXAMRECORDID;
 
 		Object[] finderArgs = new Object[] { examRecordId };

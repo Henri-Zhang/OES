@@ -99,4 +99,9 @@ public class QuestionRecordLinkLocalServiceImpl extends QuestionRecordLinkLocalS
                 userNameKeyword);
     }
 
+    @Override
+    public List<QuestionRecordLink> findByDdlRecordId(long ddlRecordId) {
+        return getQuestionRecordLinkPersistence().findByDdlRecordId(ddlRecordId);
+    }
+
 }

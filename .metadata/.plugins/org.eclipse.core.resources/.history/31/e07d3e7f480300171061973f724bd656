@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.0.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_0_0.dtd">
+
+<service-builder>
+    <entity local-service="true" name="StudentExamLink" remote-service="false">
+        <column name="examRecordId" primary="true" type="long" />
+        <column name="studentId" primary="true" type="long" />
+        <column name="inProgress" type="boolean" />
+        <column name="done" type="boolean" />
+        <finder name="ExamRecordId" return-type="Collection">
+            <finder-column name="examRecordId" />
+        </finder>
+        <finder name="StudentId" return-type="Collection">
+            <finder-column name="studentId" />
+        </finder>
+        <finder name="StudentIdAndStatus" return-type="Collection">
+            <column name="inProgress" type="boolean" />
+            <column name="done" type="boolean" />
+        </finder>
+    </entity>
+</service-builder>

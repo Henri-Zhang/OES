@@ -151,6 +151,12 @@ public class QuestionRecordLinkLocalServiceWrapper
 	}
 
 	@Override
+	public java.util.List<priv.barrow.model.QuestionRecordLink> findByDdlRecordId(
+		long ddlRecordId) {
+		return _questionRecordLinkLocalService.findByDdlRecordId(ddlRecordId);
+	}
+
+	@Override
 	public java.util.List<priv.barrow.model.QuestionRecordLink> findRandomQuestionReocrdLinks(
 		int count) {
 		return _questionRecordLinkLocalService.findRandomQuestionReocrdLinks(count);

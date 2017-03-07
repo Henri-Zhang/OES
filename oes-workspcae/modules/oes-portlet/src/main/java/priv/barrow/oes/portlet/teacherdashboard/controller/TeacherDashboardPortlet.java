@@ -48,12 +48,11 @@ public class TeacherDashboardPortlet extends MVCPortlet {
         long examStructureId = AddRecordUtil.getDDMStructureIdByName("Exam");
         DDLRecordSet examRecordSet = AddRecordUtil.getDDLRecordSet(examStructureId);
         List<DDLRecord> examRecords = AddRecordUtil.getExamDDLRecords(examRecordSet.getRecordSetId(), userId);
-        List<Exam> exams = ExamUtil.getExams(examRecords);
-        System.out.println("-------------" + exams.size());
-        System.out.println("=====" + exams.get(0).getName());
+        List<Exam> exams = ExamUtil.getExamsByRecords(examRecords);
 
         renderRequest.setAttribute(ExamConstants.EXMAS, exams);
 
         super.doView(renderRequest, renderResponse);
     }
+
 }

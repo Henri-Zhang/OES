@@ -47,6 +47,7 @@ import priv.barrow.service.StudentTeacherLinkLocalService;
 import priv.barrow.service.persistence.ExamQuestionLinkPersistence;
 import priv.barrow.service.persistence.QuestionRecordLinkFinder;
 import priv.barrow.service.persistence.QuestionRecordLinkPersistence;
+import priv.barrow.service.persistence.StudentExamLinkPersistence;
 import priv.barrow.service.persistence.StudentTeacherLinkPersistence;
 import priv.barrow.service.persistence.TeacherUserLinkFinder;
 import priv.barrow.service.persistence.TeacherUserLinkPersistence;
@@ -418,6 +419,44 @@ public abstract class StudentTeacherLinkLocalServiceBaseImpl
 	}
 
 	/**
+	 * Returns the student exam link local service.
+	 *
+	 * @return the student exam link local service
+	 */
+	public priv.barrow.service.StudentExamLinkLocalService getStudentExamLinkLocalService() {
+		return studentExamLinkLocalService;
+	}
+
+	/**
+	 * Sets the student exam link local service.
+	 *
+	 * @param studentExamLinkLocalService the student exam link local service
+	 */
+	public void setStudentExamLinkLocalService(
+		priv.barrow.service.StudentExamLinkLocalService studentExamLinkLocalService) {
+		this.studentExamLinkLocalService = studentExamLinkLocalService;
+	}
+
+	/**
+	 * Returns the student exam link persistence.
+	 *
+	 * @return the student exam link persistence
+	 */
+	public StudentExamLinkPersistence getStudentExamLinkPersistence() {
+		return studentExamLinkPersistence;
+	}
+
+	/**
+	 * Sets the student exam link persistence.
+	 *
+	 * @param studentExamLinkPersistence the student exam link persistence
+	 */
+	public void setStudentExamLinkPersistence(
+		StudentExamLinkPersistence studentExamLinkPersistence) {
+		this.studentExamLinkPersistence = studentExamLinkPersistence;
+	}
+
+	/**
 	 * Returns the student teacher link local service.
 	 *
 	 * @return the student teacher link local service
@@ -687,6 +726,10 @@ public abstract class StudentTeacherLinkLocalServiceBaseImpl
 	protected QuestionRecordLinkPersistence questionRecordLinkPersistence;
 	@BeanReference(type = QuestionRecordLinkFinder.class)
 	protected QuestionRecordLinkFinder questionRecordLinkFinder;
+	@BeanReference(type = priv.barrow.service.StudentExamLinkLocalService.class)
+	protected priv.barrow.service.StudentExamLinkLocalService studentExamLinkLocalService;
+	@BeanReference(type = StudentExamLinkPersistence.class)
+	protected StudentExamLinkPersistence studentExamLinkPersistence;
 	@BeanReference(type = StudentTeacherLinkLocalService.class)
 	protected StudentTeacherLinkLocalService studentTeacherLinkLocalService;
 	@BeanReference(type = StudentTeacherLinkPersistence.class)

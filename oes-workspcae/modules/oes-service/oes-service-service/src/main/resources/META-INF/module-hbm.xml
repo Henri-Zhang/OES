@@ -4,6 +4,7 @@
 <hibernate-mapping auto-import="false" default-lazy="false">
 	<import class="priv.barrow.model.ExamQuestionLink" />
 	<import class="priv.barrow.model.QuestionRecordLink" />
+	<import class="priv.barrow.model.StudentExamLink" />
 	<import class="priv.barrow.model.StudentTeacherLink" />
 	<import class="priv.barrow.model.TeacherUserLink" />
 	<class name="priv.barrow.model.impl.ExamQuestionLinkImpl" table="OES_ExamQuestionLink">
@@ -20,6 +21,14 @@
 		<property name="ddlRecordId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
 		<property column="active_" name="active" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
 		<property name="questionDescription" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="priv.barrow.model.impl.StudentExamLinkImpl" table="OES_StudentExamLink">
+		<composite-id class="priv.barrow.service.persistence.StudentExamLinkPK" name="primaryKey">
+			<key-property name="examRecordId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+			<key-property name="studentId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		</composite-id>
+		<property name="inProgress" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="done" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
 	</class>
 	<class name="priv.barrow.model.impl.StudentTeacherLinkImpl" table="OES_StudentTeacherLink">
 		<id name="studentId" type="long">

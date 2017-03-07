@@ -136,9 +136,9 @@ public class ExamQuestionLinkLocalServiceUtil {
 				   .dynamicQuery(dynamicQuery, start, end, orderByComparator);
 	}
 
-	public static java.util.List<priv.barrow.model.ExamQuestionLink> findByexamRecordId(
+	public static java.util.List<priv.barrow.model.ExamQuestionLink> findByExamRecordId(
 		long examRecordId) {
-		return getService().findByexamRecordId(examRecordId);
+		return getService().findByExamRecordId(examRecordId);
 	}
 
 	/**
