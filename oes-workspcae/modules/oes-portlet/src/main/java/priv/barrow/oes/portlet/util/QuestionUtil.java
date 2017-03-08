@@ -21,7 +21,7 @@ import com.liferay.portal.kernel.util.Validator;
 
 import priv.barrow.model.ExamQuestionLink;
 import priv.barrow.model.QuestionRecordLink;
-import priv.barrow.oes.portlet.model.Constants;
+import priv.barrow.oes.portlet.constants.QuestionConstants;
 import priv.barrow.oes.portlet.model.Question;
 import priv.barrow.service.QuestionRecordLinkLocalServiceUtil;
 
@@ -78,12 +78,12 @@ public class QuestionUtil {
         Locale locale = LocaleUtil.getDefault();
         Map<String, List<DDMFormFieldValue>> fieldValues = ddmFormValues.getDDMFormFieldValuesMap();
 
-        DDMFormFieldValue descriptionFormFieldValue = fieldValues.get(Constants.DESCRIPTION).get(0);
-        DDMFormFieldValue optionAFormFieldValue = fieldValues.get(Constants.OPTION_A).get(0);
-        DDMFormFieldValue optionBFormFieldValue = fieldValues.get(Constants.OPTION_B).get(0);
-        DDMFormFieldValue optionCFormFieldValue = fieldValues.get(Constants.OPTION_C).get(0);
-        DDMFormFieldValue optionDFormFieldValue = fieldValues.get(Constants.OPTION_D).get(0);
-        DDMFormFieldValue answerFormFieldValue = fieldValues.get(Constants.ANSWER).get(0);
+        DDMFormFieldValue descriptionFormFieldValue = fieldValues.get(QuestionConstants.DESCRIPTION_FIELD_NAME).get(0);
+        DDMFormFieldValue optionAFormFieldValue = fieldValues.get(QuestionConstants.OPTION_A_FIELD_NAME).get(0);
+        DDMFormFieldValue optionBFormFieldValue = fieldValues.get(QuestionConstants.OPTION_B_FIELD_NAME).get(0);
+        DDMFormFieldValue optionCFormFieldValue = fieldValues.get(QuestionConstants.OPTION_C_FIELD_NAME).get(0);
+        DDMFormFieldValue optionDFormFieldValue = fieldValues.get(QuestionConstants.OPTION_D_FIELD_NAME).get(0);
+        DDMFormFieldValue answerFormFieldValue = fieldValues.get(QuestionConstants.ANSWER_FIELD_NAME).get(0);
 
         Value descriptionValue = descriptionFormFieldValue.getValue();
         Value optionAValue = optionAFormFieldValue.getValue();
@@ -137,12 +137,12 @@ public class QuestionUtil {
         Locale locale = LocaleUtil.getDefault();
         Map<String, List<DDMFormFieldValue>> fieldValues = ddmFormValues.getDDMFormFieldValuesMap();
 
-        DDMFormFieldValue descriptionFormFieldValue = fieldValues.get(Constants.DESCRIPTION).get(0);
-        DDMFormFieldValue optionAFormFieldValue = fieldValues.get(Constants.OPTION_A).get(0);
-        DDMFormFieldValue optionBFormFieldValue = fieldValues.get(Constants.OPTION_B).get(0);
-        DDMFormFieldValue optionCFormFieldValue = fieldValues.get(Constants.OPTION_C).get(0);
-        DDMFormFieldValue optionDFormFieldValue = fieldValues.get(Constants.OPTION_D).get(0);
-        DDMFormFieldValue answerFormFieldValue = fieldValues.get(Constants.ANSWER).get(0);
+        DDMFormFieldValue descriptionFormFieldValue = fieldValues.get(QuestionConstants.DESCRIPTION_FIELD_NAME).get(0);
+        DDMFormFieldValue optionAFormFieldValue = fieldValues.get(QuestionConstants.OPTION_A_FIELD_NAME).get(0);
+        DDMFormFieldValue optionBFormFieldValue = fieldValues.get(QuestionConstants.OPTION_B_FIELD_NAME).get(0);
+        DDMFormFieldValue optionCFormFieldValue = fieldValues.get(QuestionConstants.OPTION_C_FIELD_NAME).get(0);
+        DDMFormFieldValue optionDFormFieldValue = fieldValues.get(QuestionConstants.OPTION_D_FIELD_NAME).get(0);
+        DDMFormFieldValue answerFormFieldValue = fieldValues.get(QuestionConstants.ANSWER_FIELD_NAME).get(0);
 
         Value descriptionValue = descriptionFormFieldValue.getValue();
         Value optionAValue = optionAFormFieldValue.getValue();

@@ -33,7 +33,7 @@ import com.liferay.portal.kernel.util.WebKeys;
 
 import priv.barrow.model.ExamQuestionLink;
 import priv.barrow.model.QuestionRecordLink;
-import priv.barrow.oes.portlet.addquestion.constants.Constants;
+import priv.barrow.oes.portlet.constants.ExamConstants;
 import priv.barrow.oes.portlet.util.AddRecordUtil;
 import priv.barrow.oes.portlet.util.ExamUtil;
 import priv.barrow.service.ExamQuestionLinkLocalServiceUtil;
@@ -67,7 +67,7 @@ public class CreateExamPortlet extends MVCPortlet {
         long classNameId = PortalUtil.getClassNameId(DDMStructure.class);
 
         DDMStructure examStructure =
-                AddRecordUtil.getDDMStructureByName(priv.barrow.oes.portlet.model.Constants.EXAM);
+                AddRecordUtil.getDDMStructureByName(ExamConstants.EXAM_STRUCTURE_NAME);
         if (Validator.isNull(examStructure)) {
             return;
         }
@@ -78,14 +78,14 @@ public class CreateExamPortlet extends MVCPortlet {
             return;
         }
 
-        renderRequest.setAttribute(Constants.CLASS_NAME_ID, classNameId);
-        renderRequest.setAttribute(Constants.CLASS_PK, classPK);
-        renderRequest.setAttribute(Constants.FIELDS, fields);
+        renderRequest.setAttribute(ExamConstants.CLASS_NAME_ID, classNameId);
+        renderRequest.setAttribute(ExamConstants.CLASS_PK, classPK);
+        renderRequest.setAttribute(ExamConstants.FIELDS, fields);
 
         super.doView(renderRequest, renderResponse);
     }
 
-    @ProcessAction(name = "createExam")
+    @ProcessAction(name = ExamConstants.CREATE_EXAM)
     public void createExam(ActionRequest actionRequest, ActionResponse actionResponse) {
         UploadPortletRequest uploadPortletRequest = PortalUtil.getUploadPortletRequest(actionRequest);
         ThemeDisplay themeDisplay = (ThemeDisplay) actionRequest.getAttribute(WebKeys.THEME_DISPLAY);
@@ -100,7 +100,7 @@ public class CreateExamPortlet extends MVCPortlet {
 
         long userId = themeDisplay.getUserId();
         DDMStructure examStructure =
-                AddRecordUtil.getDDMStructureByName(priv.barrow.oes.portlet.model.Constants.EXAM);
+                AddRecordUtil.getDDMStructureByName(ExamConstants.EXAM_STRUCTURE_NAME);
         if (Validator.isNull(examStructure)) {
             return;
         }
@@ -129,7 +129,7 @@ public class CreateExamPortlet extends MVCPortlet {
         }
 
         Map<String, Object> examValuesMap = ExamUtil.getExamValueMap(fields);
-        int questionCount = (int) examValuesMap.get("questionCount");
+        int questionCount = (int) examValuesMap.get(ExamConstants.QUESTION_COUNT);
 
         List<QuestionRecordLink> randomQuestionRecordLinks =
                 QuestionRecordLinkLocalServiceUtil.findRandomQuestionReocrdLinks(questionCount);

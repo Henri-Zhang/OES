@@ -13,6 +13,21 @@
 
 <c:choose>
     <c:when test="${hasTeacher }">
+        <h3>Exams To Do</h3>
+        <c:forEach items="${toDoExams }" var="exam">
+            <span>${exam.name }</span>
+            <aui:a href="/take-exam?examId=${exam.examId }">Start</aui:a>
+        </c:forEach>
+        <h3>Exams In Progress</h3>
+        <c:forEach items="${inProgressExams }" var="exam">
+            <span>${exam.name }</span>
+            <aui:button value="continue" />
+        </c:forEach>
+        <h3>Exams Done</h3>
+        <c:forEach items="${doneExams }" var="exam">
+            <span>${exam.name }</span>
+            <aui:button value="review" />
+        </c:forEach>
     </c:when>
     <c:otherwise>
         <h4>Please choose your teacher firstly.</h4>

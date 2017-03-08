@@ -45,12 +45,12 @@ public class TeacherDashboardPortlet extends MVCPortlet {
         ThemeDisplay themeDisplay = (ThemeDisplay) renderRequest.getAttribute(WebKeys.THEME_DISPLAY);
         long userId = themeDisplay.getUserId();
 
-        long examStructureId = AddRecordUtil.getDDMStructureIdByName("Exam");
+        long examStructureId = AddRecordUtil.getDDMStructureIdByName(ExamConstants.EXAM_STRUCTURE_NAME);
         DDLRecordSet examRecordSet = AddRecordUtil.getDDLRecordSet(examStructureId);
         List<DDLRecord> examRecords = AddRecordUtil.getExamDDLRecords(examRecordSet.getRecordSetId(), userId);
         List<Exam> exams = ExamUtil.getExamsByRecords(examRecords);
 
-        renderRequest.setAttribute(ExamConstants.EXMAS, exams);
+        renderRequest.setAttribute(ExamConstants.EXAMS, exams);
 
         super.doView(renderRequest, renderResponse);
     }

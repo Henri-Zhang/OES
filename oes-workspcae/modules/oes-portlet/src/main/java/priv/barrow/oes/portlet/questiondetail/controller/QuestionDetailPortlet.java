@@ -28,7 +28,7 @@ import com.liferay.portal.kernel.util.PortalUtil;
 import com.liferay.portal.kernel.util.Validator;
 
 import priv.barrow.model.QuestionRecordLink;
-import priv.barrow.oes.portlet.questiondetail.constants.Constants;
+import priv.barrow.oes.portlet.constants.QuestionConstants;
 import priv.barrow.oes.portlet.util.AddRecordUtil;
 import priv.barrow.service.QuestionRecordLinkLocalServiceUtil;
 
@@ -58,7 +58,7 @@ public class QuestionDetailPortlet extends MVCPortlet {
 
         HttpServletRequest request =
                 PortalUtil.getOriginalServletRequest(PortalUtil.getHttpServletRequest(renderRequest));
-        long questionOrder = ParamUtil.get(request, Constants.QUESTION_ORDER, 0L);
+        long questionOrder = ParamUtil.get(request, QuestionConstants.QUESTION_ORDER, 0L);
         // TODO questionOrder == 0;
         QuestionRecordLink questionRecordLink = null;
         try {
@@ -78,7 +78,7 @@ public class QuestionDetailPortlet extends MVCPortlet {
         long classNameId = PortalUtil.getClassNameId(DDMStructure.class);
 
         DDMStructure questionStructure =
-                AddRecordUtil.getDDMStructureByName(priv.barrow.oes.portlet.model.Constants.QUESTION);
+                AddRecordUtil.getDDMStructureByName(QuestionConstants.QUESTION_STRUCTURE_NAME);
         if (Validator.isNull(questionStructure)) {
             return;
         }
@@ -102,19 +102,19 @@ public class QuestionDetailPortlet extends MVCPortlet {
             return;
         }
 
-        renderRequest.setAttribute(Constants.QUESTION_FORM_VALUES, questionFormValues);
-        renderRequest.setAttribute(Constants.QUESTION_ORDER, questionOrder);
-        renderRequest.setAttribute(Constants.CLASS_NAME_ID, classNameId);
-        renderRequest.setAttribute(Constants.CLASS_PK, classPK);
-        renderRequest.setAttribute(Constants.FIELDS, fields);
+        renderRequest.setAttribute(QuestionConstants.QUESTION_FORM_VALUES, questionFormValues);
+        renderRequest.setAttribute(QuestionConstants.QUESTION_ORDER, questionOrder);
+        renderRequest.setAttribute(QuestionConstants.CLASS_NAME_ID, classNameId);
+        renderRequest.setAttribute(QuestionConstants.CLASS_PK, classPK);
+        renderRequest.setAttribute(QuestionConstants.FIELDS, fields);
 
         super.doView(renderRequest, renderResponse);
     }
 
-    @ProcessAction(name = "deleteQuestion")
+    @ProcessAction(name = QuestionConstants.DELETE_QUESTION)
     public void deleteQuestion(ActionRequest actionRequest, ActionResponse actionResponse) throws IOException {
         // TODO Parameter questionOrder
-        long questionOrder = ParamUtil.get(actionRequest, Constants.QUESTION_ORDER, 1L);
+        long questionOrder = ParamUtil.get(actionRequest, QuestionConstants.QUESTION_ORDER, 1L);
         QuestionRecordLink questionRecordLink = null;
         try {
             questionRecordLink = QuestionRecordLinkLocalServiceUtil.getQuestionRecordLink(questionOrder);

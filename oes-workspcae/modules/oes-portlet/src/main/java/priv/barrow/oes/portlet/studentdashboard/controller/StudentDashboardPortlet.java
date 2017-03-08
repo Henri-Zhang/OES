@@ -27,8 +27,9 @@ import com.liferay.portal.kernel.util.WebKeys;
 import priv.barrow.exception.NoSuchStudentTeacherLinkException;
 import priv.barrow.model.StudentExamLink;
 import priv.barrow.model.StudentTeacherLink;
+import priv.barrow.oes.portlet.constants.StudentConstants;
+import priv.barrow.oes.portlet.constants.TeacherConstants;
 import priv.barrow.oes.portlet.model.Exam;
-import priv.barrow.oes.portlet.studentdashboard.constants.Constants;
 import priv.barrow.oes.portlet.util.ExamUtil;
 import priv.barrow.oes.portlet.util.StudentUtil;
 import priv.barrow.service.StudentExamLinkLocalServiceUtil;
@@ -70,7 +71,7 @@ public class StudentDashboardPortlet extends MVCPortlet {
         }
 
         if (Validator.isNull(studentTeacherLink)) {
-            renderRequest.setAttribute(Constants.HAS_TEACHER, false);
+            renderRequest.setAttribute(StudentConstants.HAS_TEACHER, false);
             include(viewTemplate, renderRequest, renderResponse);
             return;
         }
@@ -88,24 +89,24 @@ public class StudentDashboardPortlet extends MVCPortlet {
         List<StudentExamLink> inProgressExamLinks =
                 StudentExamLinkLocalServiceUtil.findByStudentIdAndStatus(userId, true, false);
         List<StudentExamLink> doneExamLinks =
-                StudentExamLinkLocalServiceUtil.findByStudentIdAndStatus(userId, false, false);
+                StudentExamLinkLocalServiceUtil.findByStudentIdAndStatus(userId, false, true);
 
         List<Exam> toDoExams = ExamUtil.getExamsByStudentExamLinks(toDoExamLinks);
         List<Exam> inProgressExams = ExamUtil.getExamsByStudentExamLinks(inProgressExamLinks);
         List<Exam> doneExams = ExamUtil.getExamsByStudentExamLinks(doneExamLinks);
 
-        renderRequest.setAttribute("toDoExams", toDoExams);
-        renderRequest.setAttribute("inProgressExams", inProgressExams);
-        renderRequest.setAttribute("doneExams", doneExams);
-        renderRequest.setAttribute("teacher", teacher);
-        renderRequest.setAttribute(Constants.HAS_TEACHER, true);
+        renderRequest.setAttribute(StudentConstants.TO_DO_EXAMS, toDoExams);
+        renderRequest.setAttribute(StudentConstants.IN_PROGRESS_EXAMS, inProgressExams);
+        renderRequest.setAttribute(StudentConstants.DONE_EXAMS, doneExams);
+        renderRequest.setAttribute(TeacherConstants.TEACHER, teacher);
+        renderRequest.setAttribute(StudentConstants.HAS_TEACHER, true);
 
         super.doView(renderRequest, renderResponse);
     }
 
-    @ProcessAction(name = "chooseTeacher")
+    @ProcessAction(name = StudentConstants.CHOOSE_TEACHER)
     public void chooseTeacher(ActionRequest actionRequest, ActionResponse actionResponse) {
-        long teacherId = ParamUtil.get(actionRequest, Constants.TEACHER_ID, 0L);
+        long teacherId = ParamUtil.get(actionRequest, TeacherConstants.TEACHER_ID, 0L);
         if (teacherId == 0) {
             LOG.error("No parameter teacherId was sent.");
             return;

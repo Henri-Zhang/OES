@@ -34,7 +34,7 @@ import com.liferay.portal.kernel.util.Validator;
 import com.liferay.portal.kernel.util.WebKeys;
 
 import priv.barrow.model.QuestionRecordLink;
-import priv.barrow.oes.portlet.editquestion.constants.Constants;
+import priv.barrow.oes.portlet.constants.QuestionConstants;
 import priv.barrow.oes.portlet.util.AddRecordUtil;
 import priv.barrow.service.QuestionRecordLinkLocalServiceUtil;
 
@@ -64,7 +64,7 @@ public class EditQuestionPortlet extends MVCPortlet {
 
         HttpServletRequest request =
                 PortalUtil.getOriginalServletRequest(PortalUtil.getHttpServletRequest(renderRequest));
-        long questionOrder = ParamUtil.get(request, Constants.QUESTION_ORDER, 0L);
+        long questionOrder = ParamUtil.get(request, QuestionConstants.QUESTION_ORDER, 0L);
         // TODO questionOrder == 0;
         QuestionRecordLink questionRecordLink = null;
         try {
@@ -84,7 +84,7 @@ public class EditQuestionPortlet extends MVCPortlet {
         long classNameId = PortalUtil.getClassNameId(DDMStructure.class);
 
         DDMStructure questionStructure =
-                AddRecordUtil.getDDMStructureByName(priv.barrow.oes.portlet.model.Constants.QUESTION);
+                AddRecordUtil.getDDMStructureByName(QuestionConstants.QUESTION_STRUCTURE_NAME);
         if (Validator.isNull(questionStructure)) {
             return;
         }
@@ -108,18 +108,18 @@ public class EditQuestionPortlet extends MVCPortlet {
             return;
         }
 
-        renderRequest.setAttribute(Constants.QUESTION_ORDER, questionOrder);
-        renderRequest.setAttribute(Constants.QUESTION_FORM_VALUES, questionFormValues);
-        renderRequest.setAttribute(Constants.CLASS_NAME_ID, classNameId);
-        renderRequest.setAttribute(Constants.CLASS_PK, classPK);
-        renderRequest.setAttribute(Constants.FIELDS, fields);
+        renderRequest.setAttribute(QuestionConstants.QUESTION_ORDER, questionOrder);
+        renderRequest.setAttribute(QuestionConstants.QUESTION_FORM_VALUES, questionFormValues);
+        renderRequest.setAttribute(QuestionConstants.CLASS_NAME_ID, classNameId);
+        renderRequest.setAttribute(QuestionConstants.CLASS_PK, classPK);
+        renderRequest.setAttribute(QuestionConstants.FIELDS, fields);
 
         super.doView(renderRequest, renderResponse);
     }
 
-    @ProcessAction(name = "updateQuestion")
+    @ProcessAction(name = QuestionConstants.UPDATE_QUESTION)
     public void updateQuestion(ActionRequest actionRequest, ActionResponse actionResponse) {
-        long questionOrder = ParamUtil.get(actionRequest, Constants.QUESTION_ORDER, 0L);
+        long questionOrder = ParamUtil.get(actionRequest, QuestionConstants.QUESTION_ORDER, 0L);
         if (questionOrder == 0) {
             return;
         }
@@ -146,11 +146,11 @@ public class EditQuestionPortlet extends MVCPortlet {
         }
 
         long questionStructureId =
-                AddRecordUtil.getDDMStructureIdByName(priv.barrow.oes.portlet.model.Constants.QUESTION);
+                AddRecordUtil.getDDMStructureIdByName(QuestionConstants.QUESTION_STRUCTURE_NAME);
 
         Fields fields = null;
         try {
-            fields = DDMUtil.getFields(questionStructureId, Constants.EDIT_QUESTION_FIELDS_NAMESPACE, serviceContext);
+            fields = DDMUtil.getFields(questionStructureId, QuestionConstants.EDIT_QUESTION_FIELDS_NAMESPACE, serviceContext);
         } catch (PortalException e) {
             LOG.error(String.format("Get Fields failed. structureId: [%d], fieldsNamespcae: [%s]",
                     questionRecordId), e);
@@ -164,13 +164,13 @@ public class EditQuestionPortlet extends MVCPortlet {
         }
 
         // Updates questionRecordLink.
-        Field field = fields.get(Constants.DESCRIPTION);
+        Field field = fields.get(QuestionConstants.DESCRIPTION_FIELD_NAME);
         String questionDescription = field.getValue().toString();
         questionRecordLink.setQuestionDescription(questionDescription);
         QuestionRecordLinkLocalServiceUtil.updateQuestionRecordLink(questionRecordLink);
 
         try {
-            actionResponse.sendRedirect(String.format(Constants.QUESTION_DETAIL_URL, questionOrder));
+            actionResponse.sendRedirect(String.format(QuestionConstants.QUESTION_DETAIL_URL, questionOrder));
         } catch (IOException e) {
             LOG.error(String.format("Redirect to question detail page failed. questionOrder: [%d]", questionOrder), e);
         }

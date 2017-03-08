@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.List;
 
 public class Exam {
+    private long examId;
     private String name;
     private int questionCount;
     private List<Question> questions;
@@ -11,14 +12,23 @@ public class Exam {
     private String creatorName;
     private Date createdTime;
 
-    public Exam(String name, int questionCount, List<Question> questions,
+    public Exam(Long examId, String name, int questionCount, List<Question> questions,
             long creatorId, String creatorName, Date createdTime) {
+        this.examId = examId;
         this.name = name;
         this.questionCount = questionCount;
         this.questions = questions;
         this.creatorId = creatorId;
         this.creatorName = creatorName;
         this.createdTime = createdTime;
+    }
+
+    public long getExamId() {
+        return examId;
+    }
+
+    public void setExamId(long examId) {
+        this.examId = examId;
     }
 
     public String getName() {

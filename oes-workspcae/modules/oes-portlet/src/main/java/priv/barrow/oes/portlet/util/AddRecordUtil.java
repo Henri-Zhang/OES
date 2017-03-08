@@ -21,8 +21,9 @@ import com.liferay.portal.kernel.service.ServiceContext;
 import com.liferay.portal.kernel.util.StringPool;
 import com.liferay.portal.kernel.util.Validator;
 
+import priv.barrow.oes.portlet.constants.ExamConstants;
+import priv.barrow.oes.portlet.constants.QuestionConstants;
 import priv.barrow.oes.portlet.exception.NoExamStructureException;
-import priv.barrow.oes.portlet.model.Constants;
 
 public class AddRecordUtil {
 
@@ -39,9 +40,9 @@ public class AddRecordUtil {
 
     public static DDMStructure getDDMStructureByName(String structureName) {
         DynamicQuery structrueQuery = DDMStructureLocalServiceUtil.dynamicQuery();
-        Property property = PropertyFactoryUtil.forName(Constants.NAME);
+        Property property = PropertyFactoryUtil.forName(QuestionConstants.NAME);
         Criterion criterion =
-                property.like(StringPool.PERCENT+ structureName + Constants.NAME_END_TAG + StringPool.PERCENT);
+                property.like(StringPool.PERCENT+ structureName + QuestionConstants.NAME_END_TAG + StringPool.PERCENT);
         structrueQuery.add(criterion);
         List<DDMStructure> ddmStructures = DDMStructureLocalServiceUtil.dynamicQuery(structrueQuery);
 
@@ -71,7 +72,7 @@ public class AddRecordUtil {
 
     public static DDLRecordSet getDDLRecordSet(long structureId) {
         DynamicQuery dynamicQuery = DDLRecordSetLocalServiceUtil.dynamicQuery();
-        Property property = PropertyFactoryUtil.forName("DDMStructureId");
+        Property property = PropertyFactoryUtil.forName(ExamConstants.DDM_STRUCTURE_ID);
         Criterion criterion = property.eq(structureId);
         dynamicQuery.add(criterion);
         List<DDLRecordSet> list = DDLRecordSetLocalServiceUtil.dynamicQuery(dynamicQuery);
@@ -84,10 +85,10 @@ public class AddRecordUtil {
 
     public static List<DDLRecord> getExamDDLRecords(long recordSetId, long userId) {
         DynamicQuery dynamicQuery = DDLRecordLocalServiceUtil.dynamicQuery();
-        Property recordSetIdProperty = PropertyFactoryUtil.forName("recordSetId");
+        Property recordSetIdProperty = PropertyFactoryUtil.forName(ExamConstants.RECORD_SET_ID);
         Criterion recordSetIdCriterion = recordSetIdProperty.eq(recordSetId);
         dynamicQuery.add(recordSetIdCriterion);
-        Property userIdProperty = PropertyFactoryUtil.forName("userId");
+        Property userIdProperty = PropertyFactoryUtil.forName(ExamConstants.USER_ID);
         Criterion userIdCriterion = userIdProperty.eq(userId);
         dynamicQuery.add(userIdCriterion);
 

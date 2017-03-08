@@ -24,7 +24,7 @@ import com.liferay.portal.kernel.upload.UploadPortletRequest;
 import com.liferay.portal.kernel.util.PortalUtil;
 
 import priv.barrow.model.QuestionRecordLink;
-import priv.barrow.oes.portlet.contentdashboard.constans.Constans;
+import priv.barrow.oes.portlet.constants.QuestionConstants;
 import priv.barrow.oes.portlet.model.Question;
 import priv.barrow.oes.portlet.util.DataUtil;
 import priv.barrow.oes.portlet.util.QuestionUtil;
@@ -58,7 +58,7 @@ public class ContentDashboardPortlet extends MVCPortlet {
                 QuestionRecordLinkLocalServiceUtil.findRecentUpdateQuestionReocrdLinks(RECENT_QUESTION_COUNT);
         List<Question> recentUpdateQuestions = QuestionUtil.getQuestions(questionRecordLinks);
 
-        renderRequest.setAttribute(Constans.RECENT_UPDATE_QUESTIONS, recentUpdateQuestions);
+        renderRequest.setAttribute(QuestionConstants.RECENT_UPDATE_QUESTIONS, recentUpdateQuestions);
         super.doView(renderRequest, renderResponse);
     }
 
@@ -67,7 +67,6 @@ public class ContentDashboardPortlet extends MVCPortlet {
         UploadPortletRequest uploadPortletRequest = PortalUtil.getUploadPortletRequest(actionRequest);
         ServiceContext serviceContext = null;
         try {
-//            serviceContext = ServiceContextFactory.getInstance(uploadPortletRequest);
             serviceContext = ServiceContextFactory.getInstance(DDLRecord.class.getName(), actionRequest);
         } catch (PortalException e) {
             LOG.error("Get ServiceContext from UploadPortletRequest failed.", e);

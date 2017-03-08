@@ -32,7 +32,7 @@ import com.liferay.portal.kernel.util.PortalUtil;
 import com.liferay.portal.kernel.util.Validator;
 import com.liferay.portal.kernel.util.WebKeys;
 
-import priv.barrow.oes.portlet.addquestion.constants.Constants;
+import priv.barrow.oes.portlet.constants.QuestionConstants;
 import priv.barrow.oes.portlet.util.AddRecordUtil;
 import priv.barrow.service.QuestionRecordLinkLocalServiceUtil;
 
@@ -62,7 +62,7 @@ public class AddQuestionPortlet extends MVCPortlet {
         long classNameId = PortalUtil.getClassNameId(DDMStructure.class);
 
         DDMStructure questionStructure =
-                AddRecordUtil.getDDMStructureByName(priv.barrow.oes.portlet.model.Constants.QUESTION);
+                AddRecordUtil.getDDMStructureByName(QuestionConstants.QUESTION_STRUCTURE_NAME);
         if (Validator.isNull(questionStructure)) {
             return;
         }
@@ -73,9 +73,9 @@ public class AddQuestionPortlet extends MVCPortlet {
             return;
         }
 
-        renderRequest.setAttribute(Constants.CLASS_NAME_ID, classNameId);
-        renderRequest.setAttribute(Constants.CLASS_PK, classPK);
-        renderRequest.setAttribute(Constants.FIELDS, fields);
+        renderRequest.setAttribute(QuestionConstants.CLASS_NAME_ID, classNameId);
+        renderRequest.setAttribute(QuestionConstants.CLASS_PK, classPK);
+        renderRequest.setAttribute(QuestionConstants.FIELDS, fields);
 
         super.doView(renderRequest, renderResponse);
     }
@@ -98,7 +98,7 @@ public class AddQuestionPortlet extends MVCPortlet {
         }
 
         long questionStructureId =
-                AddRecordUtil.getDDMStructureIdByName(priv.barrow.oes.portlet.model.Constants.QUESTION);
+                AddRecordUtil.getDDMStructureIdByName(QuestionConstants.QUESTION_STRUCTURE_NAME);
 
         Fields fields = AddRecordUtil.getStructureFields(questionStructureId, serviceContext);
         if (Validator.isNull(fields)) {
@@ -123,7 +123,7 @@ public class AddQuestionPortlet extends MVCPortlet {
         }
 
         // Adds a QuestionRecordLink to oes_questionrecordlink.
-        Field field = fields.get(Constants.DESCRIPTION);
+        Field field = fields.get(QuestionConstants.DESCRIPTION_FIELD_NAME);
         String questionDescription = field.getValue().toString();
         QuestionRecordLinkLocalServiceUtil.addQuestionRecordLink(newRecord.getRecordId(), questionDescription);
     }

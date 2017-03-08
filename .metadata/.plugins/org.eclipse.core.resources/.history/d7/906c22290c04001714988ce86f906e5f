@@ -1,0 +1,7 @@
+package priv.barrow.oes.portlet.constants;
+
+public class StudentConstants {
+    public static final String TEACHER_ID = "teacherId";
+    public static final String HAS_TEACHER = "hasTeacher";
+
+}

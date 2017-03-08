@@ -1,0 +1,11 @@
+package priv.barrow.oes.portlet.constants;
+
+public class ExamConstants {
+    public static final String EXAM = "exam";
+    public static final String EXAM = "exams";
+    public static final String EXMA_ID = "examId";
+    public static final String EXAM_NAME_FIELD_NAME = "ExamName";
+    public static final String QUESTION_COUNT_FIELD_NAME = "QuestionCount";
+    public static final long INEXISTENT_EXAM_ID = -1L;
+
+}

@@ -88,7 +88,7 @@ public class ExamUtil {
 
         String creatorName = creator.getFullName();
 
-        return new Exam(examName, questionCount, questions, creatorId, creatorName, createdTime);
+        return new Exam(examRecordId, examName, questionCount, questions, creatorId, creatorName, createdTime);
     }
 
     public static List<Exam> getExamsByRecords(List<DDLRecord> examRecords) {
