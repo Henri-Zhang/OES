@@ -2,11 +2,21 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping auto-import="false" default-lazy="false">
+	<import class="priv.barrow.model.ExamData" />
 	<import class="priv.barrow.model.ExamQuestionLink" />
 	<import class="priv.barrow.model.QuestionRecordLink" />
 	<import class="priv.barrow.model.StudentExamLink" />
 	<import class="priv.barrow.model.StudentTeacherLink" />
 	<import class="priv.barrow.model.TeacherUserLink" />
+	<class name="priv.barrow.model.impl.ExamDataImpl" table="OES_ExamData">
+		<id name="PK" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="examId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="studentId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="questionOrder" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="result" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
 	<class name="priv.barrow.model.impl.ExamQuestionLinkImpl" table="OES_ExamQuestionLink">
 		<composite-id class="priv.barrow.service.persistence.ExamQuestionLinkPK" name="primaryKey">
 			<key-property name="examRecordId" type="com.liferay.portal.dao.orm.hibernate.LongType" />

@@ -1,3 +1,11 @@
+create table OES_ExamData (
+	PK LONG not null primary key,
+	examId LONG,
+	studentId LONG,
+	questionOrder LONG,
+	result VARCHAR(75) null
+);
+
 create table OES_ExamQuestionLink (
 	examRecordId LONG not null,
 	questionRecordId LONG not null,

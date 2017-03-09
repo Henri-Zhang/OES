@@ -1,3 +1,5 @@
+create index IX_990F6931 on OES_ExamData (examId, studentId, questionOrder);
+
 create index IX_B992FEA6 on OES_ExamQuestionLink (examRecordId);
 
 create index IX_D2C6A24F on OES_QuestionRecordLink (ddlRecordId);

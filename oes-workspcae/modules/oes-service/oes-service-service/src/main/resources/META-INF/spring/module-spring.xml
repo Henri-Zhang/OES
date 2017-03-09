@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean class="priv.barrow.service.impl.ExamDataLocalServiceImpl" id="priv.barrow.service.ExamDataLocalService" />
+	<bean class="priv.barrow.service.persistence.impl.ExamDataPersistenceImpl" id="priv.barrow.service.persistence.ExamDataPersistence" parent="basePersistence" />
 	<bean class="priv.barrow.service.impl.ExamQuestionLinkLocalServiceImpl" id="priv.barrow.service.ExamQuestionLinkLocalService" />
 	<bean class="priv.barrow.service.persistence.impl.ExamQuestionLinkPersistenceImpl" id="priv.barrow.service.persistence.ExamQuestionLinkPersistence" parent="basePersistence" />
 	<bean class="priv.barrow.service.impl.QuestionRecordLinkLocalServiceImpl" id="priv.barrow.service.QuestionRecordLinkLocalService" />

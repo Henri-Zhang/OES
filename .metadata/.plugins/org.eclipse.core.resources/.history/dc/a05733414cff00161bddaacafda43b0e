@@ -1,7 +1,0 @@
-package priv.barrow.oes.portlet.search;
-
-import com.liferay.portal.kernel.dao.search.SearchContainer;
-
-public class TeacherSearch extends SearchContainer<R> {
-
-}

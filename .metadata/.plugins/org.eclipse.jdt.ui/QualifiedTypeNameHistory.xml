@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="priv.barrow.model.QuestionRecordLink"/>
-<fullyQualifiedTypeName name="priv.barrow.service.persistence.QuestionRecordLinkFinder"/>
-<fullyQualifiedTypeName name="priv.barrow.service.persistence.QuestionRecordLinkFinderUtil"/>
-<fullyQualifiedTypeName name="com.liferay.portal.dao.orm.custom.sql.CustomSQLUtil"/>
-<fullyQualifiedTypeName name="com.liferay.util.dao.orm.CustomSQLUtil"/>
-<fullyQualifiedTypeName name="com.liferay.portal.kernel.dao.search.DAOParamUtil"/>
 <fullyQualifiedTypeName name="priv.barrow.oes.portlet.search.TeacherSearchTerms"/>
 <fullyQualifiedTypeName name="priv.barrow.oes.portlet.search.TeacherDisplayTerms"/>
 <fullyQualifiedTypeName name="javax.portlet.PortletURL"/>
@@ -16,17 +10,11 @@
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="java.math.BigInteger"/>
 <fullyQualifiedTypeName name="priv.barrow.oes.portlet.studentdashboard.constants.Constants"/>
-<fullyQualifiedTypeName name="com.liferay.portal.kernel.theme.ThemeDisplay"/>
-<fullyQualifiedTypeName name="com.liferay.portal.kernel.util.WebKeys"/>
-<fullyQualifiedTypeName name="com.liferay.portal.kernel.model.User"/>
 <fullyQualifiedTypeName name="priv.barrow.oes.portlet.util.StudentUtil"/>
 <fullyQualifiedTypeName name="priv.barrow.service.StudentTeacherLinkLocalServiceUtil"/>
 <fullyQualifiedTypeName name="priv.barrow.model.StudentTeacherLink"/>
 <fullyQualifiedTypeName name="com.liferay.portal.kernel.model.Role"/>
 <fullyQualifiedTypeName name="com.liferay.portal.kernel.service.RoleLocalServiceUtil"/>
-<fullyQualifiedTypeName name="com.liferay.portal.kernel.util.Validator"/>
-<fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="com.liferay.portal.kernel.util.ParamUtil"/>
 <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="com.liferay.portal.kernel.log.Log"/>
@@ -46,10 +34,8 @@
 <fullyQualifiedTypeName name="com.liferay.dynamic.data.mapping.storage.DDMFormFieldValue"/>
 <fullyQualifiedTypeName name="com.liferay.dynamic.data.mapping.storage.DDMFormValues"/>
 <fullyQualifiedTypeName name="java.util.Locale"/>
-<fullyQualifiedTypeName name="com.liferay.portal.kernel.util.StringPool"/>
 <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
 <fullyQualifiedTypeName name="com.liferay.portal.kernel.transaction.Transactional"/>
-<fullyQualifiedTypeName name="java.lang.Override"/>
 <fullyQualifiedTypeName name="priv.barrow.service.ExamQuestionLinkLocalServiceUtil"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="priv.barrow.oes.portlet.model.Question"/>
@@ -58,6 +44,20 @@
 <fullyQualifiedTypeName name="com.liferay.dynamic.data.lists.model.DDLRecord"/>
 <fullyQualifiedTypeName name="priv.barrow.model.ExamQuestionLink"/>
 <fullyQualifiedTypeName name="java.util.Set"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="priv.barrow.oes.portlet.constants.ExamConstants"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.util.PortalUtil"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.model.User"/>
+<fullyQualifiedTypeName name="priv.barrow.oes.portlet.constants.StudentConstants"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.util.ParamUtil"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.util.StringPool"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.util.Validator"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.exception.PortalException"/>
+<fullyQualifiedTypeName name="javax.security.auth.x500.X500Principal"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="priv.barrow.service.ExamDataLocalServiceUtil"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.theme.ThemeDisplay"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.util.WebKeys"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="priv.barrow.model.ExamData"/>
 </qualifiedTypeNameHistroy>

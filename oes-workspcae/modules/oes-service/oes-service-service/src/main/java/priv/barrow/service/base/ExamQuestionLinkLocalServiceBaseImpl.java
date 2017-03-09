@@ -44,6 +44,7 @@ import com.liferay.portal.spring.extender.service.ServiceReference;
 import priv.barrow.model.ExamQuestionLink;
 
 import priv.barrow.service.ExamQuestionLinkLocalService;
+import priv.barrow.service.persistence.ExamDataPersistence;
 import priv.barrow.service.persistence.ExamQuestionLinkPK;
 import priv.barrow.service.persistence.ExamQuestionLinkPersistence;
 import priv.barrow.service.persistence.QuestionRecordLinkFinder;
@@ -327,6 +328,43 @@ public abstract class ExamQuestionLinkLocalServiceBaseImpl
 	public ExamQuestionLink updateExamQuestionLink(
 		ExamQuestionLink examQuestionLink) {
 		return examQuestionLinkPersistence.update(examQuestionLink);
+	}
+
+	/**
+	 * Returns the exam data local service.
+	 *
+	 * @return the exam data local service
+	 */
+	public priv.barrow.service.ExamDataLocalService getExamDataLocalService() {
+		return examDataLocalService;
+	}
+
+	/**
+	 * Sets the exam data local service.
+	 *
+	 * @param examDataLocalService the exam data local service
+	 */
+	public void setExamDataLocalService(
+		priv.barrow.service.ExamDataLocalService examDataLocalService) {
+		this.examDataLocalService = examDataLocalService;
+	}
+
+	/**
+	 * Returns the exam data persistence.
+	 *
+	 * @return the exam data persistence
+	 */
+	public ExamDataPersistence getExamDataPersistence() {
+		return examDataPersistence;
+	}
+
+	/**
+	 * Sets the exam data persistence.
+	 *
+	 * @param examDataPersistence the exam data persistence
+	 */
+	public void setExamDataPersistence(ExamDataPersistence examDataPersistence) {
+		this.examDataPersistence = examDataPersistence;
 	}
 
 	/**
@@ -722,6 +760,10 @@ public abstract class ExamQuestionLinkLocalServiceBaseImpl
 		}
 	}
 
+	@BeanReference(type = priv.barrow.service.ExamDataLocalService.class)
+	protected priv.barrow.service.ExamDataLocalService examDataLocalService;
+	@BeanReference(type = ExamDataPersistence.class)
+	protected ExamDataPersistence examDataPersistence;
 	@BeanReference(type = ExamQuestionLinkLocalService.class)
 	protected ExamQuestionLinkLocalService examQuestionLinkLocalService;
 	@BeanReference(type = ExamQuestionLinkPersistence.class)

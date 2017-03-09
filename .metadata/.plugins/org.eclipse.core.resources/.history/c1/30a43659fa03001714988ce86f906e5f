@@ -1,7 +1,0 @@
-package priv.barrow.oes.portlet.takeeaxm.controller;
-
-import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
-
-public class TakeExamPortlet extends MVCPortlet {
-
-}
