@@ -9311,3 +9311,552 @@ Java Model Exception: Java Model Status [wars does not exist]
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
 !SUBENTRY 1 org.eclipse.jdt.core 4 969 2017-03-09 23:30:34.748
 !MESSAGE wars does not exist
+!SESSION 2017-03-10 20:37:48.334 -----------------------------------------------
+eclipse.buildId=4.6.2.M20161116-1100
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui 2 0 2017-03-10 20:38:01.145
+!MESSAGE Warnings while parsing the images from the 'org.eclipse.ui.commandImages' extension point.
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-03-10 20:38:01.145
+!MESSAGE Cannot bind to an undefined command: plug-in='com.liferay.ide.project.ui', id='com.liferay.ide.project.ui.upgrade.openLiferay7UpgradeAssistant'
+
+!ENTRY org.apache.ivyde.eclipse 1 0 2017-03-10 20:38:24.096
+!MESSAGE starting IvyDE plugin
+
+!ENTRY org.apache.ivyde.eclipse 1 0 2017-03-10 20:38:24.234
+!MESSAGE IvyDE plugin started
+
+!ENTRY org.eclipse.jface.text 4 0 2017-03-10 20:45:08.375
+!MESSAGE Unexpected runtime error while computing a text hover
+!STACK 0
+org.eclipse.jdt.internal.compiler.problem.AbortCompilation: Pb(324) The type aQute.bnd.annotation.ProviderType cannot be resolved. It is indirectly referenced from required .class files
+	at org.eclipse.jdt.internal.compiler.problem.ProblemHandler.handle(ProblemHandler.java:159)
+	at org.eclipse.jdt.internal.compiler.problem.ProblemHandler.handle(ProblemHandler.java:226)
+	at org.eclipse.jdt.internal.compiler.problem.ProblemReporter.handle(ProblemReporter.java:2393)
+	at org.eclipse.jdt.internal.compiler.problem.ProblemReporter.isClassPathCorrect(ProblemReporter.java:4761)
+	at org.eclipse.jdt.internal.compiler.lookup.UnresolvedReferenceBinding.resolve(UnresolvedReferenceBinding.java:110)
+	at org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.resolveType(BinaryTypeBinding.java:212)
+	at org.eclipse.jdt.internal.compiler.lookup.PackageBinding.getTypeOrPackage(PackageBinding.java:186)
+	at org.eclipse.jdt.internal.compiler.lookup.CompilationUnitScope.findImport(CompilationUnitScope.java:466)
+	at org.eclipse.jdt.internal.compiler.lookup.CompilationUnitScope.findSingleImport(CompilationUnitScope.java:520)
+	at org.eclipse.jdt.internal.compiler.lookup.CompilationUnitScope.resolveSingleImport(CompilationUnitScope.java:733)
+	at org.eclipse.jdt.internal.compiler.lookup.Scope.getTypeOrPackage(Scope.java:3214)
+	at org.eclipse.jdt.internal.compiler.lookup.Scope.getType(Scope.java:2946)
+	at org.eclipse.jdt.internal.compiler.ast.SingleTypeReference.getTypeBinding(SingleTypeReference.java:51)
+	at org.eclipse.jdt.internal.compiler.ast.TypeReference.internalResolveType(TypeReference.java:495)
+	at org.eclipse.jdt.internal.compiler.ast.TypeReference.resolveType(TypeReference.java:586)
+	at org.eclipse.jdt.internal.compiler.ast.TypeReference.resolveType(TypeReference.java:582)
+	at org.eclipse.jdt.internal.compiler.ast.TypeReference.resolveType(TypeReference.java:578)
+	at org.eclipse.jdt.internal.compiler.ast.Annotation.resolveType(Annotation.java:792)
+	at org.eclipse.jdt.internal.compiler.ast.ASTNode.resolveAnnotations(ASTNode.java:837)
+	at org.eclipse.jdt.internal.compiler.ast.ASTNode.resolveAnnotations(ASTNode.java:705)
+	at org.eclipse.jdt.internal.compiler.lookup.SourceTypeBinding.getAnnotationTagBits(SourceTypeBinding.java:1022)
+	at org.eclipse.jdt.internal.compiler.lookup.SourceTypeBinding.retrieveAnnotationHolder(SourceTypeBinding.java:2284)
+	at org.eclipse.jdt.internal.compiler.lookup.ReferenceBinding.retrieveAnnotations(ReferenceBinding.java:1682)
+	at org.eclipse.jdt.internal.compiler.lookup.ReferenceBinding.getAnnotations(ReferenceBinding.java:974)
+	at org.eclipse.jdt.core.dom.TypeBinding.getAnnotations(TypeBinding.java:116)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getAnnotations(JavadocHover.java:1090)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.addAnnotations(JavadocHover.java:1031)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:714)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:635)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:627)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:164)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:86)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:165)
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.332
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.AssetCategory.search5'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.333
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.AssetTag.get-tags5'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.333
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.AssetTag.get-tags-count3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.333
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.AssetTag.merge-tags3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.334
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.AssetTag.search5'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.335
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.BlogsEntry.get-group-entries4'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.335
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.BookmarksEntry.open-entry1'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.336
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.BookmarksFolder.get-subfolder-ids3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.336
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.ClassName.fetch-class-name-id1'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.337
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.DDLRecord.add-record5'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.338
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.DDMStructure.get-structures1'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.338
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.DDMTemplate.search10'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.339
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.DDMTemplate.search13'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.340
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.DDMTemplate.search-count10'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.340
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.DDMTemplate.search-count7'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.340
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.DLApp.add-file-entry9'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.341
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.DLApp.get-file-entries3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.341
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.DLApp.get-file-entries5'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.341
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.DLApp.get-folders5'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.342
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.DLApp.get-group-file-entries5'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.342
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.DLApp.get-subfolder-ids3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.343
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.DLApp.update-file-entry9'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.343
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.DLFileEntry.get-file-entries6'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.344
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.DLFileEntry.get-file-entries6'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.344
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.DLFileEntry.get-file-entries-count3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.344
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.DLFileEntry.get-file-entries-count3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.345
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.DLFileEntryType.update-file-entry-type5'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.345
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.DLFolder.get-subfolder-ids3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.346
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.ExpandoValue.get-data5'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.347
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.JournalArticle.get-article3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.347
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.JournalArticle.get-latest-article3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.347
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.JournalArticle.move-article-from-trash4'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.348
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.JournalArticle.search20'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.348
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.JournalArticle.search-count17'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.348
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.JournalFolder.get-folders-and-articles-count3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.348
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.JournalFolder.get-subfolder-ids3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.349
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.JournalStructure.get-structures1'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.349
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.Layout.import-layouts4'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.350
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.Layout.update-layout15'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.350
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.LayoutSet.update-logo4'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.351
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.MBCategory.delete-category2'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.351
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.MBCategory.get-categories4'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.351
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.MBCategory.get-categories5'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.352
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.MBCategory.get-categories-count2'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.352
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.MBCategory.get-categories-count3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.352
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.MBThread.get-group-threads6'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.353
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.MBThread.get-group-threads-count4'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.353
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.MDRAction.add-action6'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.353
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.MDRAction.update-action6'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.353
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.MDRRule.update-rule6'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.354
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.PortletPreferences.restore-archived-preferences5'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.355
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.PortletPreferences.restore-archived-preferences5'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.355
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.Region.get-regions1'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.356
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.SocialActivity.get-activities3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.356
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.SocialActivity.get-activities5'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.357
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.SocialActivity.get-activities-count1'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.357
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.SocialActivity.get-activities-count3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.357
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.TrashEntry.delete-entries1'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.358
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.UserGroup.get-user-group1'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.359
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.UserGroupGroupRole.add-user-group-group-roles3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.359
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.UserGroupGroupRole.delete-user-group-group-roles3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.359
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.UserGroupRole.add-user-group-roles3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.359
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.UserGroupRole.delete-user-group-roles3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.360
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.WikiPage.get-page3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.360
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.WikiPage.get-page3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.446
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-10 20:45:10.446
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 4 0 2017-03-10 20:46:49.980
+!MESSAGE Unexpected runtime error while computing a text hover
+!STACK 0
+org.eclipse.jdt.internal.compiler.problem.AbortCompilation: Pb(324) The type aQute.bnd.annotation.ProviderType cannot be resolved. It is indirectly referenced from required .class files
+	at org.eclipse.jdt.internal.compiler.problem.ProblemHandler.handle(ProblemHandler.java:159)
+	at org.eclipse.jdt.internal.compiler.problem.ProblemHandler.handle(ProblemHandler.java:226)
+	at org.eclipse.jdt.internal.compiler.problem.ProblemReporter.handle(ProblemReporter.java:2393)
+	at org.eclipse.jdt.internal.compiler.problem.ProblemReporter.isClassPathCorrect(ProblemReporter.java:4761)
+	at org.eclipse.jdt.internal.compiler.lookup.UnresolvedReferenceBinding.resolve(UnresolvedReferenceBinding.java:110)
+	at org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.resolveType(BinaryTypeBinding.java:212)
+	at org.eclipse.jdt.internal.compiler.lookup.PackageBinding.getTypeOrPackage(PackageBinding.java:186)
+	at org.eclipse.jdt.internal.compiler.lookup.CompilationUnitScope.findImport(CompilationUnitScope.java:466)
+	at org.eclipse.jdt.internal.compiler.lookup.CompilationUnitScope.findSingleImport(CompilationUnitScope.java:520)
+	at org.eclipse.jdt.internal.compiler.lookup.CompilationUnitScope.resolveSingleImport(CompilationUnitScope.java:733)
+	at org.eclipse.jdt.internal.compiler.lookup.Scope.getTypeOrPackage(Scope.java:3214)
+	at org.eclipse.jdt.internal.compiler.lookup.Scope.getType(Scope.java:2946)
+	at org.eclipse.jdt.internal.compiler.ast.SingleTypeReference.getTypeBinding(SingleTypeReference.java:51)
+	at org.eclipse.jdt.internal.compiler.ast.TypeReference.internalResolveType(TypeReference.java:495)
+	at org.eclipse.jdt.internal.compiler.ast.TypeReference.resolveType(TypeReference.java:586)
+	at org.eclipse.jdt.internal.compiler.ast.TypeReference.resolveType(TypeReference.java:582)
+	at org.eclipse.jdt.internal.compiler.ast.TypeReference.resolveType(TypeReference.java:578)
+	at org.eclipse.jdt.internal.compiler.ast.Annotation.resolveType(Annotation.java:792)
+	at org.eclipse.jdt.internal.compiler.ast.ASTNode.resolveAnnotations(ASTNode.java:837)
+	at org.eclipse.jdt.internal.compiler.ast.ASTNode.resolveAnnotations(ASTNode.java:705)
+	at org.eclipse.jdt.internal.compiler.lookup.SourceTypeBinding.getAnnotationTagBits(SourceTypeBinding.java:1022)
+	at org.eclipse.jdt.internal.compiler.lookup.SourceTypeBinding.retrieveAnnotationHolder(SourceTypeBinding.java:2284)
+	at org.eclipse.jdt.internal.compiler.lookup.ReferenceBinding.retrieveAnnotations(ReferenceBinding.java:1682)
+	at org.eclipse.jdt.internal.compiler.lookup.ReferenceBinding.getAnnotations(ReferenceBinding.java:974)
+	at org.eclipse.jdt.core.dom.TypeBinding.getAnnotations(TypeBinding.java:116)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getAnnotations(JavadocHover.java:1090)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.addAnnotations(JavadocHover.java:1031)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:714)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:635)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:627)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:164)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:86)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:165)
+
+!ENTRY com.liferay.ide.core 2 0 2017-03-10 20:49:20.377
+!MESSAGE RemoteSystemsTempFiles does not exist
+!STACK 1
+Java Model Exception: Java Model Status [RemoteSystemsTempFiles does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:566)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:247)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:579)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:316)
+	at org.eclipse.jdt.internal.core.Openable.open(Openable.java:433)
+	at com.liferay.ide.core.BaseLiferayProject.getSourceFolders(BaseLiferayProject.java:108)
+	at com.liferay.ide.server.core.portal.PortalSourcePathComputerDelegate.collectPortalContainers(PortalSourcePathComputerDelegate.java:121)
+	at com.liferay.ide.server.core.portal.PortalSourcePathComputerDelegate.computeSourceContainers(PortalSourcePathComputerDelegate.java:86)
+	at org.eclipse.debug.internal.core.sourcelookup.SourcePathComputer.computeSourceContainers(SourcePathComputer.java:71)
+	at org.eclipse.debug.core.sourcelookup.containers.DefaultSourceContainer.createSourceContainers(DefaultSourceContainer.java:117)
+	at org.eclipse.debug.core.sourcelookup.containers.CompositeSourceContainer.getSourceContainers(CompositeSourceContainer.java:133)
+	at org.eclipse.debug.core.sourcelookup.containers.CompositeSourceContainer.findSourceElements(CompositeSourceContainer.java:48)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupParticipant.findSourceElements(AbstractSourceLookupParticipant.java:70)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupDirector$SourceLookupQuery.run(AbstractSourceLookupDirector.java:142)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupDirector.doSourceLookup(AbstractSourceLookupDirector.java:505)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupDirector.getSourceElement(AbstractSourceLookupDirector.java:785)
+	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupFacility.lookup(SourceLookupFacility.java:344)
+	at org.eclipse.debug.ui.DebugUITools.lookupSource(DebugUITools.java:1224)
+	at org.eclipse.jdt.internal.debug.ui.JavaDebugOptionsManager.getProblem(JavaDebugOptionsManager.java:590)
+	at org.eclipse.jdt.internal.debug.ui.breakpoints.SuspendOnCompilationErrorListener.breakpointHit(SuspendOnCompilationErrorListener.java:71)
+	at org.eclipse.jdt.internal.debug.core.breakpoints.BreakpointListenerManager$JavaBreakpointListenerProxy.breakpointHit(BreakpointListenerManager.java:164)
+	at org.eclipse.jdt.internal.debug.core.JDIDebugPlugin$HitNotifier.run(JDIDebugPlugin.java:746)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.debug.core.JDIDebugPlugin$AbstractNotifier.notifyListeners(JDIDebugPlugin.java:546)
+	at org.eclipse.jdt.internal.debug.core.JDIDebugPlugin$HitNotifier.notifyHit(JDIDebugPlugin.java:762)
+	at org.eclipse.jdt.internal.debug.core.JDIDebugPlugin.fireBreakpointHit(JDIDebugPlugin.java:498)
+	at org.eclipse.jdt.internal.debug.core.model.JDIThread.handleSuspendForBreakpoint(JDIThread.java:1415)
+	at org.eclipse.jdt.internal.debug.core.breakpoints.JavaBreakpoint.suspend(JavaBreakpoint.java:407)
+	at org.eclipse.jdt.internal.debug.core.breakpoints.JavaExceptionBreakpoint.handleBreakpointEvent(JavaExceptionBreakpoint.java:393)
+	at org.eclipse.jdt.internal.debug.core.breakpoints.JavaBreakpoint.handleEvent(JavaBreakpoint.java:313)
+	at org.eclipse.jdt.internal.debug.core.EventDispatcher.dispatch(EventDispatcher.java:152)
+	at org.eclipse.jdt.internal.debug.core.EventDispatcher.access$0(EventDispatcher.java:100)
+	at org.eclipse.jdt.internal.debug.core.EventDispatcher$1.run(EventDispatcher.java:250)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2017-03-10 20:49:20.378
+!MESSAGE RemoteSystemsTempFiles does not exist
+
+!ENTRY com.liferay.ide.core 2 0 2017-03-10 20:49:20.379
+!MESSAGE Servers does not exist
+!STACK 1
+Java Model Exception: Java Model Status [Servers does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:566)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:247)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:579)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:316)
+	at org.eclipse.jdt.internal.core.Openable.open(Openable.java:433)
+	at com.liferay.ide.core.BaseLiferayProject.getSourceFolders(BaseLiferayProject.java:108)
+	at com.liferay.ide.server.core.portal.PortalSourcePathComputerDelegate.collectPortalContainers(PortalSourcePathComputerDelegate.java:121)
+	at com.liferay.ide.server.core.portal.PortalSourcePathComputerDelegate.computeSourceContainers(PortalSourcePathComputerDelegate.java:86)
+	at org.eclipse.debug.internal.core.sourcelookup.SourcePathComputer.computeSourceContainers(SourcePathComputer.java:71)
+	at org.eclipse.debug.core.sourcelookup.containers.DefaultSourceContainer.createSourceContainers(DefaultSourceContainer.java:117)
+	at org.eclipse.debug.core.sourcelookup.containers.CompositeSourceContainer.getSourceContainers(CompositeSourceContainer.java:133)
+	at org.eclipse.debug.core.sourcelookup.containers.CompositeSourceContainer.findSourceElements(CompositeSourceContainer.java:48)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupParticipant.findSourceElements(AbstractSourceLookupParticipant.java:70)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupDirector$SourceLookupQuery.run(AbstractSourceLookupDirector.java:142)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupDirector.doSourceLookup(AbstractSourceLookupDirector.java:505)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupDirector.getSourceElement(AbstractSourceLookupDirector.java:785)
+	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupFacility.lookup(SourceLookupFacility.java:344)
+	at org.eclipse.debug.ui.DebugUITools.lookupSource(DebugUITools.java:1224)
+	at org.eclipse.jdt.internal.debug.ui.JavaDebugOptionsManager.getProblem(JavaDebugOptionsManager.java:590)
+	at org.eclipse.jdt.internal.debug.ui.breakpoints.SuspendOnCompilationErrorListener.breakpointHit(SuspendOnCompilationErrorListener.java:71)
+	at org.eclipse.jdt.internal.debug.core.breakpoints.BreakpointListenerManager$JavaBreakpointListenerProxy.breakpointHit(BreakpointListenerManager.java:164)
+	at org.eclipse.jdt.internal.debug.core.JDIDebugPlugin$HitNotifier.run(JDIDebugPlugin.java:746)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.debug.core.JDIDebugPlugin$AbstractNotifier.notifyListeners(JDIDebugPlugin.java:546)
+	at org.eclipse.jdt.internal.debug.core.JDIDebugPlugin$HitNotifier.notifyHit(JDIDebugPlugin.java:762)
+	at org.eclipse.jdt.internal.debug.core.JDIDebugPlugin.fireBreakpointHit(JDIDebugPlugin.java:498)
+	at org.eclipse.jdt.internal.debug.core.model.JDIThread.handleSuspendForBreakpoint(JDIThread.java:1415)
+	at org.eclipse.jdt.internal.debug.core.breakpoints.JavaBreakpoint.suspend(JavaBreakpoint.java:407)
+	at org.eclipse.jdt.internal.debug.core.breakpoints.JavaExceptionBreakpoint.handleBreakpointEvent(JavaExceptionBreakpoint.java:393)
+	at org.eclipse.jdt.internal.debug.core.breakpoints.JavaBreakpoint.handleEvent(JavaBreakpoint.java:313)
+	at org.eclipse.jdt.internal.debug.core.EventDispatcher.dispatch(EventDispatcher.java:152)
+	at org.eclipse.jdt.internal.debug.core.EventDispatcher.access$0(EventDispatcher.java:100)
+	at org.eclipse.jdt.internal.debug.core.EventDispatcher$1.run(EventDispatcher.java:250)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2017-03-10 20:49:20.380
+!MESSAGE Servers does not exist
+
+!ENTRY com.liferay.ide.core 2 0 2017-03-10 20:49:20.381
+!MESSAGE liferay-ce-portal-src-7.0-ga3 does not exist
+!STACK 1
+Java Model Exception: Java Model Status [liferay-ce-portal-src-7.0-ga3 does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:566)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:247)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:579)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:316)
+	at org.eclipse.jdt.internal.core.Openable.open(Openable.java:433)
+	at com.liferay.ide.core.BaseLiferayProject.getSourceFolders(BaseLiferayProject.java:108)
+	at com.liferay.ide.server.core.portal.PortalSourcePathComputerDelegate.collectPortalContainers(PortalSourcePathComputerDelegate.java:121)
+	at com.liferay.ide.server.core.portal.PortalSourcePathComputerDelegate.computeSourceContainers(PortalSourcePathComputerDelegate.java:86)
+	at org.eclipse.debug.internal.core.sourcelookup.SourcePathComputer.computeSourceContainers(SourcePathComputer.java:71)
+	at org.eclipse.debug.core.sourcelookup.containers.DefaultSourceContainer.createSourceContainers(DefaultSourceContainer.java:117)
+	at org.eclipse.debug.core.sourcelookup.containers.CompositeSourceContainer.getSourceContainers(CompositeSourceContainer.java:133)
+	at org.eclipse.debug.core.sourcelookup.containers.CompositeSourceContainer.findSourceElements(CompositeSourceContainer.java:48)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupParticipant.findSourceElements(AbstractSourceLookupParticipant.java:70)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupDirector$SourceLookupQuery.run(AbstractSourceLookupDirector.java:142)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupDirector.doSourceLookup(AbstractSourceLookupDirector.java:505)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupDirector.getSourceElement(AbstractSourceLookupDirector.java:785)
+	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupFacility.lookup(SourceLookupFacility.java:344)
+	at org.eclipse.debug.ui.DebugUITools.lookupSource(DebugUITools.java:1224)
+	at org.eclipse.jdt.internal.debug.ui.JavaDebugOptionsManager.getProblem(JavaDebugOptionsManager.java:590)
+	at org.eclipse.jdt.internal.debug.ui.breakpoints.SuspendOnCompilationErrorListener.breakpointHit(SuspendOnCompilationErrorListener.java:71)
+	at org.eclipse.jdt.internal.debug.core.breakpoints.BreakpointListenerManager$JavaBreakpointListenerProxy.breakpointHit(BreakpointListenerManager.java:164)
+	at org.eclipse.jdt.internal.debug.core.JDIDebugPlugin$HitNotifier.run(JDIDebugPlugin.java:746)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.debug.core.JDIDebugPlugin$AbstractNotifier.notifyListeners(JDIDebugPlugin.java:546)
+	at org.eclipse.jdt.internal.debug.core.JDIDebugPlugin$HitNotifier.notifyHit(JDIDebugPlugin.java:762)
+	at org.eclipse.jdt.internal.debug.core.JDIDebugPlugin.fireBreakpointHit(JDIDebugPlugin.java:498)
+	at org.eclipse.jdt.internal.debug.core.model.JDIThread.handleSuspendForBreakpoint(JDIThread.java:1415)
+	at org.eclipse.jdt.internal.debug.core.breakpoints.JavaBreakpoint.suspend(JavaBreakpoint.java:407)
+	at org.eclipse.jdt.internal.debug.core.breakpoints.JavaExceptionBreakpoint.handleBreakpointEvent(JavaExceptionBreakpoint.java:393)
+	at org.eclipse.jdt.internal.debug.core.breakpoints.JavaBreakpoint.handleEvent(JavaBreakpoint.java:313)
+	at org.eclipse.jdt.internal.debug.core.EventDispatcher.dispatch(EventDispatcher.java:152)
+	at org.eclipse.jdt.internal.debug.core.EventDispatcher.access$0(EventDispatcher.java:100)
+	at org.eclipse.jdt.internal.debug.core.EventDispatcher$1.run(EventDispatcher.java:250)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2017-03-10 20:49:20.382
+!MESSAGE liferay-ce-portal-src-7.0-ga3 does not exist
+
+!ENTRY com.liferay.ide.core 2 0 2017-03-10 20:49:20.382
+!MESSAGE modules does not exist
+!STACK 1
+Java Model Exception: Java Model Status [modules does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:566)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:247)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:579)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:316)
+	at org.eclipse.jdt.internal.core.Openable.open(Openable.java:433)
+	at com.liferay.ide.core.BaseLiferayProject.getSourceFolders(BaseLiferayProject.java:108)
+	at com.liferay.ide.server.core.portal.PortalSourcePathComputerDelegate.collectPortalContainers(PortalSourcePathComputerDelegate.java:121)
+	at com.liferay.ide.server.core.portal.PortalSourcePathComputerDelegate.computeSourceContainers(PortalSourcePathComputerDelegate.java:86)
+	at org.eclipse.debug.internal.core.sourcelookup.SourcePathComputer.computeSourceContainers(SourcePathComputer.java:71)
+	at org.eclipse.debug.core.sourcelookup.containers.DefaultSourceContainer.createSourceContainers(DefaultSourceContainer.java:117)
+	at org.eclipse.debug.core.sourcelookup.containers.CompositeSourceContainer.getSourceContainers(CompositeSourceContainer.java:133)
+	at org.eclipse.debug.core.sourcelookup.containers.CompositeSourceContainer.findSourceElements(CompositeSourceContainer.java:48)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupParticipant.findSourceElements(AbstractSourceLookupParticipant.java:70)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupDirector$SourceLookupQuery.run(AbstractSourceLookupDirector.java:142)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupDirector.doSourceLookup(AbstractSourceLookupDirector.java:505)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupDirector.getSourceElement(AbstractSourceLookupDirector.java:785)
+	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupFacility.lookup(SourceLookupFacility.java:344)
+	at org.eclipse.debug.ui.DebugUITools.lookupSource(DebugUITools.java:1224)
+	at org.eclipse.jdt.internal.debug.ui.JavaDebugOptionsManager.getProblem(JavaDebugOptionsManager.java:590)
+	at org.eclipse.jdt.internal.debug.ui.breakpoints.SuspendOnCompilationErrorListener.breakpointHit(SuspendOnCompilationErrorListener.java:71)
+	at org.eclipse.jdt.internal.debug.core.breakpoints.BreakpointListenerManager$JavaBreakpointListenerProxy.breakpointHit(BreakpointListenerManager.java:164)
+	at org.eclipse.jdt.internal.debug.core.JDIDebugPlugin$HitNotifier.run(JDIDebugPlugin.java:746)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.debug.core.JDIDebugPlugin$AbstractNotifier.notifyListeners(JDIDebugPlugin.java:546)
+	at org.eclipse.jdt.internal.debug.core.JDIDebugPlugin$HitNotifier.notifyHit(JDIDebugPlugin.java:762)
+	at org.eclipse.jdt.internal.debug.core.JDIDebugPlugin.fireBreakpointHit(JDIDebugPlugin.java:498)
+	at org.eclipse.jdt.internal.debug.core.model.JDIThread.handleSuspendForBreakpoint(JDIThread.java:1415)
+	at org.eclipse.jdt.internal.debug.core.breakpoints.JavaBreakpoint.suspend(JavaBreakpoint.java:407)
+	at org.eclipse.jdt.internal.debug.core.breakpoints.JavaExceptionBreakpoint.handleBreakpointEvent(JavaExceptionBreakpoint.java:393)
+	at org.eclipse.jdt.internal.debug.core.breakpoints.JavaBreakpoint.handleEvent(JavaBreakpoint.java:313)
+	at org.eclipse.jdt.internal.debug.core.EventDispatcher.dispatch(EventDispatcher.java:152)
+	at org.eclipse.jdt.internal.debug.core.EventDispatcher.access$0(EventDispatcher.java:100)
+	at org.eclipse.jdt.internal.debug.core.EventDispatcher$1.run(EventDispatcher.java:250)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2017-03-10 20:49:20.383
+!MESSAGE modules does not exist
+
+!ENTRY com.liferay.ide.core 2 0 2017-03-10 20:49:20.667
+!MESSAGE oes-service does not exist
+!STACK 1
+Java Model Exception: Java Model Status [oes-service does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:566)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:247)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:579)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:316)
+	at org.eclipse.jdt.internal.core.Openable.open(Openable.java:433)
+	at com.liferay.ide.core.BaseLiferayProject.getSourceFolders(BaseLiferayProject.java:108)
+	at com.liferay.ide.server.core.portal.PortalSourcePathComputerDelegate.collectPortalContainers(PortalSourcePathComputerDelegate.java:121)
+	at com.liferay.ide.server.core.portal.PortalSourcePathComputerDelegate.computeSourceContainers(PortalSourcePathComputerDelegate.java:86)
+	at org.eclipse.debug.internal.core.sourcelookup.SourcePathComputer.computeSourceContainers(SourcePathComputer.java:71)
+	at org.eclipse.debug.core.sourcelookup.containers.DefaultSourceContainer.createSourceContainers(DefaultSourceContainer.java:117)
+	at org.eclipse.debug.core.sourcelookup.containers.CompositeSourceContainer.getSourceContainers(CompositeSourceContainer.java:133)
+	at org.eclipse.debug.core.sourcelookup.containers.CompositeSourceContainer.findSourceElements(CompositeSourceContainer.java:48)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupParticipant.findSourceElements(AbstractSourceLookupParticipant.java:70)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupDirector$SourceLookupQuery.run(AbstractSourceLookupDirector.java:142)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupDirector.doSourceLookup(AbstractSourceLookupDirector.java:505)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupDirector.getSourceElement(AbstractSourceLookupDirector.java:785)
+	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupFacility.lookup(SourceLookupFacility.java:344)
+	at org.eclipse.debug.ui.DebugUITools.lookupSource(DebugUITools.java:1224)
+	at org.eclipse.jdt.internal.debug.ui.JavaDebugOptionsManager.getProblem(JavaDebugOptionsManager.java:590)
+	at org.eclipse.jdt.internal.debug.ui.breakpoints.SuspendOnCompilationErrorListener.breakpointHit(SuspendOnCompilationErrorListener.java:71)
+	at org.eclipse.jdt.internal.debug.core.breakpoints.BreakpointListenerManager$JavaBreakpointListenerProxy.breakpointHit(BreakpointListenerManager.java:164)
+	at org.eclipse.jdt.internal.debug.core.JDIDebugPlugin$HitNotifier.run(JDIDebugPlugin.java:746)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.debug.core.JDIDebugPlugin$AbstractNotifier.notifyListeners(JDIDebugPlugin.java:546)
+	at org.eclipse.jdt.internal.debug.core.JDIDebugPlugin$HitNotifier.notifyHit(JDIDebugPlugin.java:762)
+	at org.eclipse.jdt.internal.debug.core.JDIDebugPlugin.fireBreakpointHit(JDIDebugPlugin.java:498)
+	at org.eclipse.jdt.internal.debug.core.model.JDIThread.handleSuspendForBreakpoint(JDIThread.java:1415)
+	at org.eclipse.jdt.internal.debug.core.breakpoints.JavaBreakpoint.suspend(JavaBreakpoint.java:407)
+	at org.eclipse.jdt.internal.debug.core.breakpoints.JavaExceptionBreakpoint.handleBreakpointEvent(JavaExceptionBreakpoint.java:393)
+	at org.eclipse.jdt.internal.debug.core.breakpoints.JavaBreakpoint.handleEvent(JavaBreakpoint.java:313)
+	at org.eclipse.jdt.internal.debug.core.EventDispatcher.dispatch(EventDispatcher.java:152)
+	at org.eclipse.jdt.internal.debug.core.EventDispatcher.access$0(EventDispatcher.java:100)
+	at org.eclipse.jdt.internal.debug.core.EventDispatcher$1.run(EventDispatcher.java:250)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2017-03-10 20:49:20.667
+!MESSAGE oes-service does not exist
+
+!ENTRY com.liferay.ide.core 2 0 2017-03-10 20:49:21.481
+!MESSAGE wars does not exist
+!STACK 1
+Java Model Exception: Java Model Status [wars does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:566)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:247)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:579)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:316)
+	at org.eclipse.jdt.internal.core.Openable.open(Openable.java:433)
+	at com.liferay.ide.core.BaseLiferayProject.getSourceFolders(BaseLiferayProject.java:108)
+	at com.liferay.ide.server.core.portal.PortalSourcePathComputerDelegate.collectPortalContainers(PortalSourcePathComputerDelegate.java:121)
+	at com.liferay.ide.server.core.portal.PortalSourcePathComputerDelegate.computeSourceContainers(PortalSourcePathComputerDelegate.java:86)
+	at org.eclipse.debug.internal.core.sourcelookup.SourcePathComputer.computeSourceContainers(SourcePathComputer.java:71)
+	at org.eclipse.debug.core.sourcelookup.containers.DefaultSourceContainer.createSourceContainers(DefaultSourceContainer.java:117)
+	at org.eclipse.debug.core.sourcelookup.containers.CompositeSourceContainer.getSourceContainers(CompositeSourceContainer.java:133)
+	at org.eclipse.debug.core.sourcelookup.containers.CompositeSourceContainer.findSourceElements(CompositeSourceContainer.java:48)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupParticipant.findSourceElements(AbstractSourceLookupParticipant.java:70)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupDirector$SourceLookupQuery.run(AbstractSourceLookupDirector.java:142)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupDirector.doSourceLookup(AbstractSourceLookupDirector.java:505)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupDirector.getSourceElement(AbstractSourceLookupDirector.java:785)
+	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupFacility.lookup(SourceLookupFacility.java:344)
+	at org.eclipse.debug.ui.DebugUITools.lookupSource(DebugUITools.java:1224)
+	at org.eclipse.jdt.internal.debug.ui.JavaDebugOptionsManager.getProblem(JavaDebugOptionsManager.java:590)
+	at org.eclipse.jdt.internal.debug.ui.breakpoints.SuspendOnCompilationErrorListener.breakpointHit(SuspendOnCompilationErrorListener.java:71)
+	at org.eclipse.jdt.internal.debug.core.breakpoints.BreakpointListenerManager$JavaBreakpointListenerProxy.breakpointHit(BreakpointListenerManager.java:164)
+	at org.eclipse.jdt.internal.debug.core.JDIDebugPlugin$HitNotifier.run(JDIDebugPlugin.java:746)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.debug.core.JDIDebugPlugin$AbstractNotifier.notifyListeners(JDIDebugPlugin.java:546)
+	at org.eclipse.jdt.internal.debug.core.JDIDebugPlugin$HitNotifier.notifyHit(JDIDebugPlugin.java:762)
+	at org.eclipse.jdt.internal.debug.core.JDIDebugPlugin.fireBreakpointHit(JDIDebugPlugin.java:498)
+	at org.eclipse.jdt.internal.debug.core.model.JDIThread.handleSuspendForBreakpoint(JDIThread.java:1415)
+	at org.eclipse.jdt.internal.debug.core.breakpoints.JavaBreakpoint.suspend(JavaBreakpoint.java:407)
+	at org.eclipse.jdt.internal.debug.core.breakpoints.JavaExceptionBreakpoint.handleBreakpointEvent(JavaExceptionBreakpoint.java:393)
+	at org.eclipse.jdt.internal.debug.core.breakpoints.JavaBreakpoint.handleEvent(JavaBreakpoint.java:313)
+	at org.eclipse.jdt.internal.debug.core.EventDispatcher.dispatch(EventDispatcher.java:152)
+	at org.eclipse.jdt.internal.debug.core.EventDispatcher.access$0(EventDispatcher.java:100)
+	at org.eclipse.jdt.internal.debug.core.EventDispatcher$1.run(EventDispatcher.java:250)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2017-03-10 20:49:21.482
+!MESSAGE wars does not exist

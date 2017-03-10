@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.osgi.service.component.annotations.Component;
 
+import com.liferay.counter.kernel.service.CounterLocalServiceUtil;
 import com.liferay.dynamic.data.lists.model.DDLRecord;
 import com.liferay.dynamic.data.lists.service.DDLRecordLocalServiceUtil;
 import com.liferay.portal.kernel.exception.PortalException;
@@ -23,6 +24,7 @@ import com.liferay.portal.kernel.theme.ThemeDisplay;
 import com.liferay.portal.kernel.util.ParamUtil;
 import com.liferay.portal.kernel.util.PortalUtil;
 import com.liferay.portal.kernel.util.StringPool;
+import com.liferay.portal.kernel.util.Validator;
 import com.liferay.portal.kernel.util.WebKeys;
 
 import priv.barrow.model.ExamData;
@@ -92,16 +94,33 @@ public class TakeExamPortlet extends MVCPortlet {
         String result = ParamUtil.getString(resourceRequest, "result", StringPool.BLANK);
         System.out.println(examId + "#" + questionOrder + "#" + result);
 
-//        if (studentId != userId) {
-//            throw new PortletException("Not current user.");
-//        }
-//
-//        if (examId == 0 || questionOrder == 0 || Validator.isBlank(result)) {
-//            throw new PortletException("Parameters error.");
-//        }
+        if (studentId != userId) {
+            throw new PortletException("Not current user.");
+        }
+
+        if (examId == 0 || questionOrder == 0 || Validator.isBlank(result)) {
+            throw new PortletException("Parameters error.");
+        }
 
         List<ExamData> examDatas =
                 ExamDataLocalServiceUtil.findByExamIdAndStudentIdAndQuestionOrder(examId, studentId, questionOrder);
+
+        if (examDatas.isEmpty()) {
+            ExamData examData = ExamDataLocalServiceUtil.createExamData(CounterLocalServiceUtil.increment());
+            examData.setExamId(examId);
+            examData.setStudentId(studentId);
+            examData.setQuestionOrder(questionOrder);
+            examData.setResult(result);
+
+            ExamDataLocalServiceUtil.addExamData(examData);
+        } else {
+            ExamData examData = examDatas.get(0);
+            examData.setResult(result);
+
+            ExamDataLocalServiceUtil.updateExamData(examData);
+        }
+
+        System.out.println("##################################################");
 
         super.serveResource(resourceRequest, resourceResponse);
     }
