@@ -1,0 +1,14 @@
+.question-container {
+	display: block;
+	width: 500px;
+	height: 400px;
+	margin: 0;
+	overflow: hidden;
+
+	.question-list {
+	    
+	    .question-card {
+	        
+	    }
+	}
+}

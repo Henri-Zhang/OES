@@ -20,5 +20,7 @@ public class QuestionConstants {
     public static final String OPTION_C_FIELD_NAME = "OptionC";
     public static final String OPTION_D_FIELD_NAME = "OptionD";
     public static final String ANSWER_FIELD_NAME = "Answer";
+    public static final String RESULT = "result";
+    public static final long INEXISTENT_QUESTION_ORDER = -1L;
 
 }

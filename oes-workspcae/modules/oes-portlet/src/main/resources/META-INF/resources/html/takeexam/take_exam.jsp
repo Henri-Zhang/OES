@@ -14,15 +14,14 @@
 
 <h1>${exam.name }</h1>
 <aui:input name="switch" type="checkbox" label="auto-switch-next-question" /><br />
+<aui:input name="resourceURL" type="hidden" value="<%=resourceURL.toString()%>" />
 <aui:input name="examId" type="hidden" value="${exam.examId }" />
 <aui:input name="studentId" type="hidden" value="${studentId }" />
-<aui:input name="questionOrder" type="hidden" />
-<aui:input name="result" type="hidden" />
-<aui:input name="resourceURL" type="hidden" value="<%=resourceURL.toString()%>" />
-<div>
-    <div>
+<aui:button name="prevQuestion" value="Previous" disabled="true" />
+<div class="question-container">
+    <div class="question-list">
         <c:forEach items="${questions }" var="question">
-            <div>
+            <div class="question-card">
                 <span>${question.description }</span><br />
                 <aui:input name="${question.order }" type="radio" value="A" label="${question.optionA }" /><br />
                 <aui:input name="${question.order }" type="radio" value="B" label="${question.optionB }" /><br />
@@ -33,3 +32,4 @@
         </c:forEach>
     </div>
 </div>
+<aui:button name="nextQuestion" value="Next" />

@@ -9,5 +9,6 @@ public class StudentConstants {
     public static final String STUDENT_ROLE_NAME = "Student";
     public static final String STUDENT = "student";
     public static final String STUDENT_ID = "studentId";
+    public static final long INEXISTENT_STUDENT_ID = -1L;
 
 }

@@ -1,0 +1,15 @@
+.question-container {
+	display: block;
+	width: 500px;
+	height: 400px;
+	margin: 0;
+	overflow: hidden;
+	border-color: green;
+
+	.question-list {
+	    
+	    .question-card {
+	        
+	    }
+	}
+}

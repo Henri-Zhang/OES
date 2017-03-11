@@ -471,6 +471,156 @@ public interface StudentExamLinkPersistence extends BasePersistence<StudentExamL
 		boolean done);
 
 	/**
+	* Returns all the student exam links where examRecordId = &#63; and studentId = &#63;.
+	*
+	* @param examRecordId the exam record ID
+	* @param studentId the student ID
+	* @return the matching student exam links
+	*/
+	public java.util.List<StudentExamLink> findByExamRecordIdAndStudentId(
+		long examRecordId, long studentId);
+
+	/**
+	* Returns a range of all the student exam links where examRecordId = &#63; and studentId = &#63;.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link StudentExamLinkModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param examRecordId the exam record ID
+	* @param studentId the student ID
+	* @param start the lower bound of the range of student exam links
+	* @param end the upper bound of the range of student exam links (not inclusive)
+	* @return the range of matching student exam links
+	*/
+	public java.util.List<StudentExamLink> findByExamRecordIdAndStudentId(
+		long examRecordId, long studentId, int start, int end);
+
+	/**
+	* Returns an ordered range of all the student exam links where examRecordId = &#63; and studentId = &#63;.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link StudentExamLinkModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param examRecordId the exam record ID
+	* @param studentId the student ID
+	* @param start the lower bound of the range of student exam links
+	* @param end the upper bound of the range of student exam links (not inclusive)
+	* @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
+	* @return the ordered range of matching student exam links
+	*/
+	public java.util.List<StudentExamLink> findByExamRecordIdAndStudentId(
+		long examRecordId, long studentId, int start, int end,
+		com.liferay.portal.kernel.util.OrderByComparator<StudentExamLink> orderByComparator);
+
+	/**
+	* Returns an ordered range of all the student exam links where examRecordId = &#63; and studentId = &#63;.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link StudentExamLinkModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param examRecordId the exam record ID
+	* @param studentId the student ID
+	* @param start the lower bound of the range of student exam links
+	* @param end the upper bound of the range of student exam links (not inclusive)
+	* @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
+	* @param retrieveFromCache whether to retrieve from the finder cache
+	* @return the ordered range of matching student exam links
+	*/
+	public java.util.List<StudentExamLink> findByExamRecordIdAndStudentId(
+		long examRecordId, long studentId, int start, int end,
+		com.liferay.portal.kernel.util.OrderByComparator<StudentExamLink> orderByComparator,
+		boolean retrieveFromCache);
+
+	/**
+	* Returns the first student exam link in the ordered set where examRecordId = &#63; and studentId = &#63;.
+	*
+	* @param examRecordId the exam record ID
+	* @param studentId the student ID
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the first matching student exam link
+	* @throws NoSuchStudentExamLinkException if a matching student exam link could not be found
+	*/
+	public StudentExamLink findByExamRecordIdAndStudentId_First(
+		long examRecordId, long studentId,
+		com.liferay.portal.kernel.util.OrderByComparator<StudentExamLink> orderByComparator)
+		throws NoSuchStudentExamLinkException;
+
+	/**
+	* Returns the first student exam link in the ordered set where examRecordId = &#63; and studentId = &#63;.
+	*
+	* @param examRecordId the exam record ID
+	* @param studentId the student ID
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the first matching student exam link, or <code>null</code> if a matching student exam link could not be found
+	*/
+	public StudentExamLink fetchByExamRecordIdAndStudentId_First(
+		long examRecordId, long studentId,
+		com.liferay.portal.kernel.util.OrderByComparator<StudentExamLink> orderByComparator);
+
+	/**
+	* Returns the last student exam link in the ordered set where examRecordId = &#63; and studentId = &#63;.
+	*
+	* @param examRecordId the exam record ID
+	* @param studentId the student ID
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the last matching student exam link
+	* @throws NoSuchStudentExamLinkException if a matching student exam link could not be found
+	*/
+	public StudentExamLink findByExamRecordIdAndStudentId_Last(
+		long examRecordId, long studentId,
+		com.liferay.portal.kernel.util.OrderByComparator<StudentExamLink> orderByComparator)
+		throws NoSuchStudentExamLinkException;
+
+	/**
+	* Returns the last student exam link in the ordered set where examRecordId = &#63; and studentId = &#63;.
+	*
+	* @param examRecordId the exam record ID
+	* @param studentId the student ID
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the last matching student exam link, or <code>null</code> if a matching student exam link could not be found
+	*/
+	public StudentExamLink fetchByExamRecordIdAndStudentId_Last(
+		long examRecordId, long studentId,
+		com.liferay.portal.kernel.util.OrderByComparator<StudentExamLink> orderByComparator);
+
+	/**
+	* Returns the student exam links before and after the current student exam link in the ordered set where examRecordId = &#63; and studentId = &#63;.
+	*
+	* @param studentExamLinkPK the primary key of the current student exam link
+	* @param examRecordId the exam record ID
+	* @param studentId the student ID
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the previous, current, and next student exam link
+	* @throws NoSuchStudentExamLinkException if a student exam link with the primary key could not be found
+	*/
+	public StudentExamLink[] findByExamRecordIdAndStudentId_PrevAndNext(
+		priv.barrow.service.persistence.StudentExamLinkPK studentExamLinkPK,
+		long examRecordId, long studentId,
+		com.liferay.portal.kernel.util.OrderByComparator<StudentExamLink> orderByComparator)
+		throws NoSuchStudentExamLinkException;
+
+	/**
+	* Removes all the student exam links where examRecordId = &#63; and studentId = &#63; from the database.
+	*
+	* @param examRecordId the exam record ID
+	* @param studentId the student ID
+	*/
+	public void removeByExamRecordIdAndStudentId(long examRecordId,
+		long studentId);
+
+	/**
+	* Returns the number of student exam links where examRecordId = &#63; and studentId = &#63;.
+	*
+	* @param examRecordId the exam record ID
+	* @param studentId the student ID
+	* @return the number of matching student exam links
+	*/
+	public int countByExamRecordIdAndStudentId(long examRecordId, long studentId);
+
+	/**
 	* Caches the student exam link in the entity cache if it is enabled.
 	*
 	* @param studentExamLink the student exam link

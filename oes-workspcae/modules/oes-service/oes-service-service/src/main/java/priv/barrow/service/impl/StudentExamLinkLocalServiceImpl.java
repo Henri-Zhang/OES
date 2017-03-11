@@ -52,4 +52,9 @@ public class StudentExamLinkLocalServiceImpl extends StudentExamLinkLocalService
         return getStudentExamLinkPersistence().findByStudentIdAndStatus(studentId, inProgress, done);
     }
 
+    @Override
+    public List<StudentExamLink> findByExamRecordIdAndStudentId(long examRecordId, long studentId) {
+        return getStudentExamLinkPersistence().findByExamRecordIdAndStudentId(examRecordId, studentId);
+    }
+
 }

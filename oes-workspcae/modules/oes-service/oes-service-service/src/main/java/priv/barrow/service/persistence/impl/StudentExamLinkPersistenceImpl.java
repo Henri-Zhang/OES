@@ -1710,6 +1710,570 @@ public class StudentExamLinkPersistenceImpl extends BasePersistenceImpl<StudentE
 	private static final String _FINDER_COLUMN_STUDENTIDANDSTATUS_STUDENTID_2 = "studentExamLink.id.studentId = ? AND ";
 	private static final String _FINDER_COLUMN_STUDENTIDANDSTATUS_INPROGRESS_2 = "studentExamLink.inProgress = ? AND ";
 	private static final String _FINDER_COLUMN_STUDENTIDANDSTATUS_DONE_2 = "studentExamLink.done = ?";
+	public static final FinderPath FINDER_PATH_WITH_PAGINATION_FIND_BY_EXAMRECORDIDANDSTUDENTID =
+		new FinderPath(StudentExamLinkModelImpl.ENTITY_CACHE_ENABLED,
+			StudentExamLinkModelImpl.FINDER_CACHE_ENABLED,
+			StudentExamLinkImpl.class, FINDER_CLASS_NAME_LIST_WITH_PAGINATION,
+			"findByExamRecordIdAndStudentId",
+			new String[] {
+				Long.class.getName(), Long.class.getName(),
+				
+			Integer.class.getName(), Integer.class.getName(),
+				OrderByComparator.class.getName()
+			});
+	public static final FinderPath FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_EXAMRECORDIDANDSTUDENTID =
+		new FinderPath(StudentExamLinkModelImpl.ENTITY_CACHE_ENABLED,
+			StudentExamLinkModelImpl.FINDER_CACHE_ENABLED,
+			StudentExamLinkImpl.class,
+			FINDER_CLASS_NAME_LIST_WITHOUT_PAGINATION,
+			"findByExamRecordIdAndStudentId",
+			new String[] { Long.class.getName(), Long.class.getName() },
+			StudentExamLinkModelImpl.EXAMRECORDID_COLUMN_BITMASK |
+			StudentExamLinkModelImpl.STUDENTID_COLUMN_BITMASK);
+	public static final FinderPath FINDER_PATH_COUNT_BY_EXAMRECORDIDANDSTUDENTID =
+		new FinderPath(StudentExamLinkModelImpl.ENTITY_CACHE_ENABLED,
+			StudentExamLinkModelImpl.FINDER_CACHE_ENABLED, Long.class,
+			FINDER_CLASS_NAME_LIST_WITHOUT_PAGINATION,
+			"countByExamRecordIdAndStudentId",
+			new String[] { Long.class.getName(), Long.class.getName() });
+
+	/**
+	 * Returns all the student exam links where examRecordId = &#63; and studentId = &#63;.
+	 *
+	 * @param examRecordId the exam record ID
+	 * @param studentId the student ID
+	 * @return the matching student exam links
+	 */
+	@Override
+	public List<StudentExamLink> findByExamRecordIdAndStudentId(
+		long examRecordId, long studentId) {
+		return findByExamRecordIdAndStudentId(examRecordId, studentId,
+			QueryUtil.ALL_POS, QueryUtil.ALL_POS, null);
+	}
+
+	/**
+	 * Returns a range of all the student exam links where examRecordId = &#63; and studentId = &#63;.
+	 *
+	 * <p>
+	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link StudentExamLinkModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	 * </p>
+	 *
+	 * @param examRecordId the exam record ID
+	 * @param studentId the student ID
+	 * @param start the lower bound of the range of student exam links
+	 * @param end the upper bound of the range of student exam links (not inclusive)
+	 * @return the range of matching student exam links
+	 */
+	@Override
+	public List<StudentExamLink> findByExamRecordIdAndStudentId(
+		long examRecordId, long studentId, int start, int end) {
+		return findByExamRecordIdAndStudentId(examRecordId, studentId, start,
+			end, null);
+	}
+
+	/**
+	 * Returns an ordered range of all the student exam links where examRecordId = &#63; and studentId = &#63;.
+	 *
+	 * <p>
+	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link StudentExamLinkModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	 * </p>
+	 *
+	 * @param examRecordId the exam record ID
+	 * @param studentId the student ID
+	 * @param start the lower bound of the range of student exam links
+	 * @param end the upper bound of the range of student exam links (not inclusive)
+	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
+	 * @return the ordered range of matching student exam links
+	 */
+	@Override
+	public List<StudentExamLink> findByExamRecordIdAndStudentId(
+		long examRecordId, long studentId, int start, int end,
+		OrderByComparator<StudentExamLink> orderByComparator) {
+		return findByExamRecordIdAndStudentId(examRecordId, studentId, start,
+			end, orderByComparator, true);
+	}
+
+	/**
+	 * Returns an ordered range of all the student exam links where examRecordId = &#63; and studentId = &#63;.
+	 *
+	 * <p>
+	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link StudentExamLinkModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	 * </p>
+	 *
+	 * @param examRecordId the exam record ID
+	 * @param studentId the student ID
+	 * @param start the lower bound of the range of student exam links
+	 * @param end the upper bound of the range of student exam links (not inclusive)
+	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
+	 * @param retrieveFromCache whether to retrieve from the finder cache
+	 * @return the ordered range of matching student exam links
+	 */
+	@Override
+	public List<StudentExamLink> findByExamRecordIdAndStudentId(
+		long examRecordId, long studentId, int start, int end,
+		OrderByComparator<StudentExamLink> orderByComparator,
+		boolean retrieveFromCache) {
+		boolean pagination = true;
+		FinderPath finderPath = null;
+		Object[] finderArgs = null;
+
+		if ((start == QueryUtil.ALL_POS) && (end == QueryUtil.ALL_POS) &&
+				(orderByComparator == null)) {
+			pagination = false;
+			finderPath = FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_EXAMRECORDIDANDSTUDENTID;
+			finderArgs = new Object[] { examRecordId, studentId };
+		}
+		else {
+			finderPath = FINDER_PATH_WITH_PAGINATION_FIND_BY_EXAMRECORDIDANDSTUDENTID;
+			finderArgs = new Object[] {
+					examRecordId, studentId,
+					
+					start, end, orderByComparator
+				};
+		}
+
+		List<StudentExamLink> list = null;
+
+		if (retrieveFromCache) {
+			list = (List<StudentExamLink>)finderCache.getResult(finderPath,
+					finderArgs, this);
+
+			if ((list != null) && !list.isEmpty()) {
+				for (StudentExamLink studentExamLink : list) {
+					if ((examRecordId != studentExamLink.getExamRecordId()) ||
+							(studentId != studentExamLink.getStudentId())) {
+						list = null;
+
+						break;
+					}
+				}
+			}
+		}
+
+		if (list == null) {
+			StringBundler query = null;
+
+			if (orderByComparator != null) {
+				query = new StringBundler(4 +
+						(orderByComparator.getOrderByFields().length * 2));
+			}
+			else {
+				query = new StringBundler(4);
+			}
+
+			query.append(_SQL_SELECT_STUDENTEXAMLINK_WHERE);
+
+			query.append(_FINDER_COLUMN_EXAMRECORDIDANDSTUDENTID_EXAMRECORDID_2);
+
+			query.append(_FINDER_COLUMN_EXAMRECORDIDANDSTUDENTID_STUDENTID_2);
+
+			if (orderByComparator != null) {
+				appendOrderByComparator(query, _ORDER_BY_ENTITY_ALIAS,
+					orderByComparator);
+			}
+			else
+			 if (pagination) {
+				query.append(StudentExamLinkModelImpl.ORDER_BY_JPQL);
+			}
+
+			String sql = query.toString();
+
+			Session session = null;
+
+			try {
+				session = openSession();
+
+				Query q = session.createQuery(sql);
+
+				QueryPos qPos = QueryPos.getInstance(q);
+
+				qPos.add(examRecordId);
+
+				qPos.add(studentId);
+
+				if (!pagination) {
+					list = (List<StudentExamLink>)QueryUtil.list(q,
+							getDialect(), start, end, false);
+
+					Collections.sort(list);
+
+					list = Collections.unmodifiableList(list);
+				}
+				else {
+					list = (List<StudentExamLink>)QueryUtil.list(q,
+							getDialect(), start, end);
+				}
+
+				cacheResult(list);
+
+				finderCache.putResult(finderPath, finderArgs, list);
+			}
+			catch (Exception e) {
+				finderCache.removeResult(finderPath, finderArgs);
+
+				throw processException(e);
+			}
+			finally {
+				closeSession(session);
+			}
+		}
+
+		return list;
+	}
+
+	/**
+	 * Returns the first student exam link in the ordered set where examRecordId = &#63; and studentId = &#63;.
+	 *
+	 * @param examRecordId the exam record ID
+	 * @param studentId the student ID
+	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	 * @return the first matching student exam link
+	 * @throws NoSuchStudentExamLinkException if a matching student exam link could not be found
+	 */
+	@Override
+	public StudentExamLink findByExamRecordIdAndStudentId_First(
+		long examRecordId, long studentId,
+		OrderByComparator<StudentExamLink> orderByComparator)
+		throws NoSuchStudentExamLinkException {
+		StudentExamLink studentExamLink = fetchByExamRecordIdAndStudentId_First(examRecordId,
+				studentId, orderByComparator);
+
+		if (studentExamLink != null) {
+			return studentExamLink;
+		}
+
+		StringBundler msg = new StringBundler(6);
+
+		msg.append(_NO_SUCH_ENTITY_WITH_KEY);
+
+		msg.append("examRecordId=");
+		msg.append(examRecordId);
+
+		msg.append(", studentId=");
+		msg.append(studentId);
+
+		msg.append(StringPool.CLOSE_CURLY_BRACE);
+
+		throw new NoSuchStudentExamLinkException(msg.toString());
+	}
+
+	/**
+	 * Returns the first student exam link in the ordered set where examRecordId = &#63; and studentId = &#63;.
+	 *
+	 * @param examRecordId the exam record ID
+	 * @param studentId the student ID
+	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	 * @return the first matching student exam link, or <code>null</code> if a matching student exam link could not be found
+	 */
+	@Override
+	public StudentExamLink fetchByExamRecordIdAndStudentId_First(
+		long examRecordId, long studentId,
+		OrderByComparator<StudentExamLink> orderByComparator) {
+		List<StudentExamLink> list = findByExamRecordIdAndStudentId(examRecordId,
+				studentId, 0, 1, orderByComparator);
+
+		if (!list.isEmpty()) {
+			return list.get(0);
+		}
+
+		return null;
+	}
+
+	/**
+	 * Returns the last student exam link in the ordered set where examRecordId = &#63; and studentId = &#63;.
+	 *
+	 * @param examRecordId the exam record ID
+	 * @param studentId the student ID
+	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	 * @return the last matching student exam link
+	 * @throws NoSuchStudentExamLinkException if a matching student exam link could not be found
+	 */
+	@Override
+	public StudentExamLink findByExamRecordIdAndStudentId_Last(
+		long examRecordId, long studentId,
+		OrderByComparator<StudentExamLink> orderByComparator)
+		throws NoSuchStudentExamLinkException {
+		StudentExamLink studentExamLink = fetchByExamRecordIdAndStudentId_Last(examRecordId,
+				studentId, orderByComparator);
+
+		if (studentExamLink != null) {
+			return studentExamLink;
+		}
+
+		StringBundler msg = new StringBundler(6);
+
+		msg.append(_NO_SUCH_ENTITY_WITH_KEY);
+
+		msg.append("examRecordId=");
+		msg.append(examRecordId);
+
+		msg.append(", studentId=");
+		msg.append(studentId);
+
+		msg.append(StringPool.CLOSE_CURLY_BRACE);
+
+		throw new NoSuchStudentExamLinkException(msg.toString());
+	}
+
+	/**
+	 * Returns the last student exam link in the ordered set where examRecordId = &#63; and studentId = &#63;.
+	 *
+	 * @param examRecordId the exam record ID
+	 * @param studentId the student ID
+	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	 * @return the last matching student exam link, or <code>null</code> if a matching student exam link could not be found
+	 */
+	@Override
+	public StudentExamLink fetchByExamRecordIdAndStudentId_Last(
+		long examRecordId, long studentId,
+		OrderByComparator<StudentExamLink> orderByComparator) {
+		int count = countByExamRecordIdAndStudentId(examRecordId, studentId);
+
+		if (count == 0) {
+			return null;
+		}
+
+		List<StudentExamLink> list = findByExamRecordIdAndStudentId(examRecordId,
+				studentId, count - 1, count, orderByComparator);
+
+		if (!list.isEmpty()) {
+			return list.get(0);
+		}
+
+		return null;
+	}
+
+	/**
+	 * Returns the student exam links before and after the current student exam link in the ordered set where examRecordId = &#63; and studentId = &#63;.
+	 *
+	 * @param studentExamLinkPK the primary key of the current student exam link
+	 * @param examRecordId the exam record ID
+	 * @param studentId the student ID
+	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	 * @return the previous, current, and next student exam link
+	 * @throws NoSuchStudentExamLinkException if a student exam link with the primary key could not be found
+	 */
+	@Override
+	public StudentExamLink[] findByExamRecordIdAndStudentId_PrevAndNext(
+		StudentExamLinkPK studentExamLinkPK, long examRecordId, long studentId,
+		OrderByComparator<StudentExamLink> orderByComparator)
+		throws NoSuchStudentExamLinkException {
+		StudentExamLink studentExamLink = findByPrimaryKey(studentExamLinkPK);
+
+		Session session = null;
+
+		try {
+			session = openSession();
+
+			StudentExamLink[] array = new StudentExamLinkImpl[3];
+
+			array[0] = getByExamRecordIdAndStudentId_PrevAndNext(session,
+					studentExamLink, examRecordId, studentId,
+					orderByComparator, true);
+
+			array[1] = studentExamLink;
+
+			array[2] = getByExamRecordIdAndStudentId_PrevAndNext(session,
+					studentExamLink, examRecordId, studentId,
+					orderByComparator, false);
+
+			return array;
+		}
+		catch (Exception e) {
+			throw processException(e);
+		}
+		finally {
+			closeSession(session);
+		}
+	}
+
+	protected StudentExamLink getByExamRecordIdAndStudentId_PrevAndNext(
+		Session session, StudentExamLink studentExamLink, long examRecordId,
+		long studentId, OrderByComparator<StudentExamLink> orderByComparator,
+		boolean previous) {
+		StringBundler query = null;
+
+		if (orderByComparator != null) {
+			query = new StringBundler(5 +
+					(orderByComparator.getOrderByConditionFields().length * 3) +
+					(orderByComparator.getOrderByFields().length * 3));
+		}
+		else {
+			query = new StringBundler(4);
+		}
+
+		query.append(_SQL_SELECT_STUDENTEXAMLINK_WHERE);
+
+		query.append(_FINDER_COLUMN_EXAMRECORDIDANDSTUDENTID_EXAMRECORDID_2);
+
+		query.append(_FINDER_COLUMN_EXAMRECORDIDANDSTUDENTID_STUDENTID_2);
+
+		if (orderByComparator != null) {
+			String[] orderByConditionFields = orderByComparator.getOrderByConditionFields();
+
+			if (orderByConditionFields.length > 0) {
+				query.append(WHERE_AND);
+			}
+
+			for (int i = 0; i < orderByConditionFields.length; i++) {
+				query.append(_ORDER_BY_ENTITY_ALIAS);
+				query.append(orderByConditionFields[i]);
+
+				if ((i + 1) < orderByConditionFields.length) {
+					if (orderByComparator.isAscending() ^ previous) {
+						query.append(WHERE_GREATER_THAN_HAS_NEXT);
+					}
+					else {
+						query.append(WHERE_LESSER_THAN_HAS_NEXT);
+					}
+				}
+				else {
+					if (orderByComparator.isAscending() ^ previous) {
+						query.append(WHERE_GREATER_THAN);
+					}
+					else {
+						query.append(WHERE_LESSER_THAN);
+					}
+				}
+			}
+
+			query.append(ORDER_BY_CLAUSE);
+
+			String[] orderByFields = orderByComparator.getOrderByFields();
+
+			for (int i = 0; i < orderByFields.length; i++) {
+				query.append(_ORDER_BY_ENTITY_ALIAS);
+				query.append(orderByFields[i]);
+
+				if ((i + 1) < orderByFields.length) {
+					if (orderByComparator.isAscending() ^ previous) {
+						query.append(ORDER_BY_ASC_HAS_NEXT);
+					}
+					else {
+						query.append(ORDER_BY_DESC_HAS_NEXT);
+					}
+				}
+				else {
+					if (orderByComparator.isAscending() ^ previous) {
+						query.append(ORDER_BY_ASC);
+					}
+					else {
+						query.append(ORDER_BY_DESC);
+					}
+				}
+			}
+		}
+		else {
+			query.append(StudentExamLinkModelImpl.ORDER_BY_JPQL);
+		}
+
+		String sql = query.toString();
+
+		Query q = session.createQuery(sql);
+
+		q.setFirstResult(0);
+		q.setMaxResults(2);
+
+		QueryPos qPos = QueryPos.getInstance(q);
+
+		qPos.add(examRecordId);
+
+		qPos.add(studentId);
+
+		if (orderByComparator != null) {
+			Object[] values = orderByComparator.getOrderByConditionValues(studentExamLink);
+
+			for (Object value : values) {
+				qPos.add(value);
+			}
+		}
+
+		List<StudentExamLink> list = q.list();
+
+		if (list.size() == 2) {
+			return list.get(1);
+		}
+		else {
+			return null;
+		}
+	}
+
+	/**
+	 * Removes all the student exam links where examRecordId = &#63; and studentId = &#63; from the database.
+	 *
+	 * @param examRecordId the exam record ID
+	 * @param studentId the student ID
+	 */
+	@Override
+	public void removeByExamRecordIdAndStudentId(long examRecordId,
+		long studentId) {
+		for (StudentExamLink studentExamLink : findByExamRecordIdAndStudentId(
+				examRecordId, studentId, QueryUtil.ALL_POS, QueryUtil.ALL_POS,
+				null)) {
+			remove(studentExamLink);
+		}
+	}
+
+	/**
+	 * Returns the number of student exam links where examRecordId = &#63; and studentId = &#63;.
+	 *
+	 * @param examRecordId the exam record ID
+	 * @param studentId the student ID
+	 * @return the number of matching student exam links
+	 */
+	@Override
+	public int countByExamRecordIdAndStudentId(long examRecordId, long studentId) {
+		FinderPath finderPath = FINDER_PATH_COUNT_BY_EXAMRECORDIDANDSTUDENTID;
+
+		Object[] finderArgs = new Object[] { examRecordId, studentId };
+
+		Long count = (Long)finderCache.getResult(finderPath, finderArgs, this);
+
+		if (count == null) {
+			StringBundler query = new StringBundler(3);
+
+			query.append(_SQL_COUNT_STUDENTEXAMLINK_WHERE);
+
+			query.append(_FINDER_COLUMN_EXAMRECORDIDANDSTUDENTID_EXAMRECORDID_2);
+
+			query.append(_FINDER_COLUMN_EXAMRECORDIDANDSTUDENTID_STUDENTID_2);
+
+			String sql = query.toString();
+
+			Session session = null;
+
+			try {
+				session = openSession();
+
+				Query q = session.createQuery(sql);
+
+				QueryPos qPos = QueryPos.getInstance(q);
+
+				qPos.add(examRecordId);
+
+				qPos.add(studentId);
+
+				count = (Long)q.uniqueResult();
+
+				finderCache.putResult(finderPath, finderArgs, count);
+			}
+			catch (Exception e) {
+				finderCache.removeResult(finderPath, finderArgs);
+
+				throw processException(e);
+			}
+			finally {
+				closeSession(session);
+			}
+		}
+
+		return count.intValue();
+	}
+
+	private static final String _FINDER_COLUMN_EXAMRECORDIDANDSTUDENTID_EXAMRECORDID_2 =
+		"studentExamLink.id.examRecordId = ? AND ";
+	private static final String _FINDER_COLUMN_EXAMRECORDIDANDSTUDENTID_STUDENTID_2 =
+		"studentExamLink.id.studentId = ?";
 
 	public StudentExamLinkPersistenceImpl() {
 		setModelClass(StudentExamLink.class);
@@ -1985,6 +2549,29 @@ public class StudentExamLinkPersistenceImpl extends BasePersistenceImpl<StudentE
 				finderCache.removeResult(FINDER_PATH_COUNT_BY_STUDENTIDANDSTATUS,
 					args);
 				finderCache.removeResult(FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_STUDENTIDANDSTATUS,
+					args);
+			}
+
+			if ((studentExamLinkModelImpl.getColumnBitmask() &
+					FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_EXAMRECORDIDANDSTUDENTID.getColumnBitmask()) != 0) {
+				Object[] args = new Object[] {
+						studentExamLinkModelImpl.getOriginalExamRecordId(),
+						studentExamLinkModelImpl.getOriginalStudentId()
+					};
+
+				finderCache.removeResult(FINDER_PATH_COUNT_BY_EXAMRECORDIDANDSTUDENTID,
+					args);
+				finderCache.removeResult(FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_EXAMRECORDIDANDSTUDENTID,
+					args);
+
+				args = new Object[] {
+						studentExamLinkModelImpl.getExamRecordId(),
+						studentExamLinkModelImpl.getStudentId()
+					};
+
+				finderCache.removeResult(FINDER_PATH_COUNT_BY_EXAMRECORDIDANDSTUDENTID,
+					args);
+				finderCache.removeResult(FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_EXAMRECORDIDANDSTUDENTID,
 					args);
 			}
 		}

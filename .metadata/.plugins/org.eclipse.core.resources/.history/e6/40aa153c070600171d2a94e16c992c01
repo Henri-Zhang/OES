@@ -1,0 +1,23 @@
+div.question-container {
+	display: block;
+	width: 500px;
+	height: 400px;
+	margin: 0 auto;
+	overflow: hidden;
+    border: 1px solid green;
+
+}
+
+div.question-list {
+    display: inline-flex;
+}
+
+div.question-card {
+    width: 500px;
+    height: 400px;
+    float: left;
+}
+
+span {
+	color: red;
+}

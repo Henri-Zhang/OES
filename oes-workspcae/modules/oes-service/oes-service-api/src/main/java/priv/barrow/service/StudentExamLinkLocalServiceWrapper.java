@@ -147,6 +147,13 @@ public class StudentExamLinkLocalServiceWrapper
 	}
 
 	@Override
+	public java.util.List<priv.barrow.model.StudentExamLink> findByExamRecordIdAndStudentId(
+		long examRecordId, long studentId) {
+		return _studentExamLinkLocalService.findByExamRecordIdAndStudentId(examRecordId,
+			studentId);
+	}
+
+	@Override
 	public java.util.List<priv.barrow.model.StudentExamLink> findByStudentId(
 		long studentId) {
 		return _studentExamLinkLocalService.findByStudentId(studentId);

@@ -28,20 +28,25 @@ import com.liferay.portal.kernel.util.Validator;
 import com.liferay.portal.kernel.util.WebKeys;
 
 import priv.barrow.model.ExamData;
+import priv.barrow.model.StudentExamLink;
 import priv.barrow.oes.portlet.constants.ExamConstants;
+import priv.barrow.oes.portlet.constants.QuestionConstants;
 import priv.barrow.oes.portlet.constants.StudentConstants;
 import priv.barrow.oes.portlet.model.Exam;
 import priv.barrow.oes.portlet.util.ExamUtil;
 import priv.barrow.service.ExamDataLocalServiceUtil;
+import priv.barrow.service.StudentExamLinkLocalServiceUtil;
 
 @Component(
     immediate = true,
     property = {
         "com.liferay.portlet.display-category=Student",
         "com.liferay.portlet.instanceable=true",
+        "com.liferay.portlet.ajaxable=true",
+        "com.liferay.portlet.requires-namespaced-parameters=false",
         "javax.portlet.display-name=Take Exam",
         "javax.portlet.init-param.template-path=/",
-        "com.liferay.portlet.header-portlet-css=/css/takeexam/take_exam.css",
+        "com.liferay.portlet.footer-portlet-css=/css/takeexam/take_exam.css",
         "com.liferay.portlet.footer-portlet-javascript=/js/takeexam/take_exam.js",
         "javax.portlet.init-param.view-template=/html/takeexam/take_exam.jsp",
         "javax.portlet.resource-bundle=content.Language",
@@ -67,6 +72,13 @@ public class TakeExamPortlet extends MVCPortlet {
             throw new PortletException("No examId exist.");
         }
 
+        StudentExamLink studentExamLink =
+                StudentExamLinkLocalServiceUtil.findByExamRecordIdAndStudentId(examId, studentId).get(0);
+        if (studentExamLink.getDone()) {
+            throw new PortletException(
+                    String.format("This exam have completed. examId: [%d], studentId: [%d]", examId, studentId));
+        }
+
         DDLRecord examRecord = null;
         try {
             examRecord = DDLRecordLocalServiceUtil.getDDLRecord(examId);
@@ -88,17 +100,19 @@ public class TakeExamPortlet extends MVCPortlet {
         ThemeDisplay themeDisplay = (ThemeDisplay) resourceRequest.getAttribute(WebKeys.THEME_DISPLAY);
         long userId = themeDisplay.getUserId();
 
-        long examId = ParamUtil.getLong(resourceRequest, "examId", 0L);
-        long studentId = ParamUtil.getLong(resourceRequest, "studentId", 0L);
-        long questionOrder = ParamUtil.getLong(resourceRequest, "questionOrder", 0L);
-        String result = ParamUtil.getString(resourceRequest, "result", StringPool.BLANK);
-        System.out.println(examId + "#" + questionOrder + "#" + result);
+        long examId = ParamUtil.getLong(resourceRequest, ExamConstants.EXAM_ID, ExamConstants.INEXISTENT_EXAM_ID);
+        long studentId = ParamUtil.getLong(resourceRequest,
+                StudentConstants.STUDENT_ID, StudentConstants.INEXISTENT_STUDENT_ID);
+        long questionOrder = ParamUtil.getLong(resourceRequest,
+                QuestionConstants.QUESTION_ORDER, QuestionConstants.INEXISTENT_QUESTION_ORDER);
+        String result = ParamUtil.getString(resourceRequest, QuestionConstants.RESULT, StringPool.BLANK);
 
         if (studentId != userId) {
             throw new PortletException("Not current user.");
         }
 
-        if (examId == 0 || questionOrder == 0 || Validator.isBlank(result)) {
+        if (examId == ExamConstants.INEXISTENT_EXAM_ID || studentId == StudentConstants.INEXISTENT_STUDENT_ID ||
+                questionOrder == QuestionConstants.INEXISTENT_QUESTION_ORDER || Validator.isBlank(result)) {
             throw new PortletException("Parameters error.");
         }
 
@@ -119,8 +133,6 @@ public class TakeExamPortlet extends MVCPortlet {
 
             ExamDataLocalServiceUtil.updateExamData(examData);
         }
-
-        System.out.println("##################################################");
 
         super.serveResource(resourceRequest, resourceResponse);
     }

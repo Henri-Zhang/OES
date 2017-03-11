@@ -18,5 +18,9 @@
             <finder-column name="inProgress" />
             <finder-column name="done" />
         </finder>
+        <finder name="ExamRecordIdAndStudentId" return-type="Collection">
+            <finder-column name="examRecordId" />
+            <finder-column name="studentId" />
+        </finder>
     </entity>
 </service-builder>
