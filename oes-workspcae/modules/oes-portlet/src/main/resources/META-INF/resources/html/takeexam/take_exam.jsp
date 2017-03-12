@@ -22,6 +22,7 @@
     <div class="question-list">
         <c:forEach items="${questions }" var="question">
             <div class="question-card">
+                <h3 id="index">${index + 1 }</h3>
                 <span>${question.description }</span><br />
                 <aui:input name="${question.order }" type="radio" value="A" label="${question.optionA }" /><br />
                 <aui:input name="${question.order }" type="radio" value="B" label="${question.optionB }" /><br />
@@ -33,3 +34,9 @@
     </div>
 </div>
 <aui:button name="nextQuestion" value="Next" />
+<portlet:actionURL name="submit" var="submitURL">
+    <portlet:param name="examId" value="${exam.examId }"/>
+</portlet:actionURL>
+<aui:a href="${submit }" class="btn">
+    <liferay-ui:message key="submit" />
+</aui:a>

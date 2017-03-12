@@ -1,4 +1,0 @@
-AUI().use(
-	'aui-io-request',
-	
-);

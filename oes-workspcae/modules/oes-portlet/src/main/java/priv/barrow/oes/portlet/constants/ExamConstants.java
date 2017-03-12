@@ -16,5 +16,6 @@ public class ExamConstants {
     public static final String DDM_STRUCTURE_ID = "DDMStructureId";
     public static final String RECORD_SET_ID = "recordSetId";
     public static final String USER_ID = "userId";
+    public static final String REVIEW_EXAM_URL_WITH_EXAM_ID = "/review-exam?examId=%d";
 
 }

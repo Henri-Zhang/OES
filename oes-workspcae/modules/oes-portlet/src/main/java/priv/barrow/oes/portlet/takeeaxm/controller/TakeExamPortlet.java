@@ -3,8 +3,11 @@ package priv.barrow.oes.portlet.takeeaxm.controller;
 import java.io.IOException;
 import java.util.List;
 
+import javax.portlet.ActionRequest;
+import javax.portlet.ActionResponse;
 import javax.portlet.Portlet;
 import javax.portlet.PortletException;
+import javax.portlet.ProcessAction;
 import javax.portlet.RenderRequest;
 import javax.portlet.RenderResponse;
 import javax.portlet.ResourceRequest;
@@ -63,6 +66,10 @@ public class TakeExamPortlet extends MVCPortlet {
     public void doView(RenderRequest renderRequest, RenderResponse renderResponse)
             throws IOException, PortletException {
         ThemeDisplay themeDisplay = (ThemeDisplay) renderRequest.getAttribute(WebKeys.THEME_DISPLAY);
+        if (!themeDisplay.isSignedIn()) {
+            include(helpTemplate, renderRequest, renderResponse);
+            return;
+        }
         long studentId = themeDisplay.getUserId();
 
         HttpServletRequest request =
@@ -91,7 +98,41 @@ public class TakeExamPortlet extends MVCPortlet {
         renderRequest.setAttribute(ExamConstants.EXAM, exam);
         renderRequest.setAttribute(StudentConstants.STUDENT_ID, studentId);
 
+        studentExamLink.setInProgress(true);
+        StudentExamLinkLocalServiceUtil.updateStudentExamLink(studentExamLink);
+
         super.doView(renderRequest, renderResponse);
+    }
+
+    @ProcessAction(name = "submit")
+    public void submit(ActionRequest actionRequest, ActionResponse actionResponse) {
+        long examId = ParamUtil.getLong(actionRequest, ExamConstants.EXAM_ID, ExamConstants.INEXISTENT_EXAM_ID);
+        if (examId == ExamConstants.INEXISTENT_EXAM_ID) {
+            LOG.warn("No examId parameter, can't submit exam.");
+            return;
+        }
+
+        long studentId = PortalUtil.getUserId(actionRequest);
+        StudentExamLink studentExamLink = null;
+        try {
+            studentExamLink =
+                    StudentExamLinkLocalServiceUtil.findByExamRecordIdAndStudentId(examId, studentId).get(0);
+        } catch (NullPointerException e) {
+            LOG.error(String.format("Can't get StudentExamLink by examId: [%d] and studentId: [%d].",
+                    examId, studentId));
+            return;
+        }
+
+        studentExamLink.setDone(true);
+        StudentExamLinkLocalServiceUtil.updateStudentExamLink(studentExamLink);
+
+        String reviewExamURL = String.format(ExamConstants.REVIEW_EXAM_URL_WITH_EXAM_ID, examId);
+        try {
+            actionResponse.sendRedirect(reviewExamURL);
+        } catch (IOException e) {
+            LOG.error(String.format("Send redirect to review exam page failed. URL: %s", reviewExamURL));
+        }
+
     }
 
     @Override

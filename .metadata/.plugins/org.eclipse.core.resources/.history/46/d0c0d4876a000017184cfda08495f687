@@ -1,7 +1,0 @@
-package priv.barrow.oes.portlet.search;
-
-import com.liferay.portal.kernel.dao.search.DisplayTerms;
-
-public class TeacherDisplayTerms extends DisplayTerms {
-
-}
