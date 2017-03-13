@@ -21,6 +21,7 @@ import com.liferay.portal.kernel.service.UserLocalServiceUtil;
 import com.liferay.portal.kernel.util.LocaleUtil;
 import com.liferay.portal.kernel.util.StringPool;
 
+import priv.barrow.model.ExamData;
 import priv.barrow.model.ExamQuestionLink;
 import priv.barrow.model.StudentExamLink;
 import priv.barrow.oes.portlet.constants.ExamConstants;
@@ -117,6 +118,15 @@ public class ExamUtil {
         }
 
         return exams;
+    }
+
+    public static Map<Long, String> convertToResultMap(List<ExamData> examDatas) {
+        Map<Long, String> resultMap = new HashMap<>();
+        for (ExamData examData : examDatas) {
+            resultMap.put(examData.getQuestionOrder(), examData.getResult());
+        }
+
+        return resultMap;
     }
 
 }

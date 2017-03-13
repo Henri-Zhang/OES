@@ -134,6 +134,8 @@ public interface ExamDataLocalService extends BaseLocalService,
 	public <T> List<T> dynamicQuery(DynamicQuery dynamicQuery, int start,
 		int end, OrderByComparator<T> orderByComparator);
 
+	public List<ExamData> findByExamIdAndStudentId(long examId, long studentId);
+
 	public List<ExamData> findByExamIdAndStudentIdAndQuestionOrder(
 		long examId, long studentId, long questionOrder);
 

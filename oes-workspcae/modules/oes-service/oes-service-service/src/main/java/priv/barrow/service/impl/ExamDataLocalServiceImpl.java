@@ -42,4 +42,9 @@ public class ExamDataLocalServiceImpl extends ExamDataLocalServiceBaseImpl {
         return getExamDataPersistence().findByExamIdAndStudentIdAndQuestionOrder(examId, studentId, questionOrder);
     }
 
+    @Override
+    public List<ExamData> findByExamIdAndStudentId(long examId, long studentId) {
+        return getExamDataPersistence().findByExamIdAndStudentId(examId, studentId);
+    }
+
 }

@@ -1,0 +1,27 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
+<%@ taglib uri="http://liferay.com/tld/aui" prefix="aui" %>
+<%@ taglib uri="http://liferay.com/tld/portlet" prefix="liferay-portlet" %>
+<%@ taglib uri="http://liferay.com/tld/theme" prefix="liferay-theme" %>
+<%@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
+
+<liferay-theme:defineObjects />
+
+<portlet:defineObjects />
+
+<c:set var="questions" value="${exam.questions }" scope="request" />
+
+<c:forEach items="questions" var="question">
+    <h3>${question.description }</h3>
+    <span>A </span>
+    <span>${question.optionA }</span><br />
+    <span>B </span>
+    <span>${question.optionB }</span><br />
+    <span>C </span>
+    <span>${question.optionC }</span><br />
+    <span>D </span>
+    <span>${question.optionD }</span><br />
+    <span>Your choice: </span>
+    <span>${resultMap[${question.order }] }</span><br />
+    <span>Answer: </span>
+</c:forEach>

@@ -139,6 +139,12 @@ public class ExamDataLocalServiceWrapper implements ExamDataLocalService,
 	}
 
 	@Override
+	public java.util.List<priv.barrow.model.ExamData> findByExamIdAndStudentId(
+		long examId, long studentId) {
+		return _examDataLocalService.findByExamIdAndStudentId(examId, studentId);
+	}
+
+	@Override
 	public java.util.List<priv.barrow.model.ExamData> findByExamIdAndStudentIdAndQuestionOrder(
 		long examId, long studentId, long questionOrder) {
 		return _examDataLocalService.findByExamIdAndStudentIdAndQuestionOrder(examId,

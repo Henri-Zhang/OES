@@ -13,5 +13,9 @@
             <finder-column name="studentId" />
             <finder-column name="questionOrder" />
         </finder>
+        <finder name="ExamIdAndStudentId" return-type="Collection">
+            <finder-column name="examId" />
+            <finder-column name="studentId" />
+        </finder>
     </entity>
 </service-builder>

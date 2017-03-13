@@ -136,6 +136,11 @@ public class ExamDataLocalServiceUtil {
 				   .dynamicQuery(dynamicQuery, start, end, orderByComparator);
 	}
 
+	public static java.util.List<priv.barrow.model.ExamData> findByExamIdAndStudentId(
+		long examId, long studentId) {
+		return getService().findByExamIdAndStudentId(examId, studentId);
+	}
+
 	public static java.util.List<priv.barrow.model.ExamData> findByExamIdAndStudentIdAndQuestionOrder(
 		long examId, long studentId, long questionOrder) {
 		return getService()
