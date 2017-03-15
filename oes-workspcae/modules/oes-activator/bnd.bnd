@@ -1,0 +1,4 @@
+Bundle-Activator: priv.barrow.activator.OesActivator
+Bundle-Name: oes-activator
+Bundle-SymbolicName: priv.barrow.activator
+Bundle-Version: 1.0.0

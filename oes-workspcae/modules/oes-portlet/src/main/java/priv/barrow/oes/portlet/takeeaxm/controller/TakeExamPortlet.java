@@ -2,6 +2,7 @@ package priv.barrow.oes.portlet.takeeaxm.controller;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 
 import javax.portlet.ActionRequest;
 import javax.portlet.ActionResponse;
@@ -95,8 +96,12 @@ public class TakeExamPortlet extends MVCPortlet {
 
         Exam exam = ExamUtil.getExam(examRecord);
 
+        List<ExamData> examDatas = ExamDataLocalServiceUtil.findByExamIdAndStudentId(examId, studentId);
+        Map<Long, String> resultMap = ExamUtil.convertToResultMap(examDatas);
+
         renderRequest.setAttribute(ExamConstants.EXAM, exam);
         renderRequest.setAttribute(StudentConstants.STUDENT_ID, studentId);
+        renderRequest.setAttribute(ExamConstants.RESULT_MAP, resultMap);
 
         studentExamLink.setInProgress(true);
         StudentExamLinkLocalServiceUtil.updateStudentExamLink(studentExamLink);

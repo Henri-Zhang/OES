@@ -20,14 +20,43 @@
 <aui:button name="prevQuestion" value="Previous" disabled="true" />
 <div class="question-container">
     <div class="question-list">
-        <c:forEach items="${questions }" var="question">
+        <c:forEach items="${questions }" var="question" varStatus="status">
             <div class="question-card">
-                <h3 id="index">${index + 1 }</h3>
+                <h3 id="index">${status.count }</h3>
                 <span>${question.description }</span><br />
-                <aui:input name="${question.order }" type="radio" value="A" label="${question.optionA }" /><br />
-                <aui:input name="${question.order }" type="radio" value="B" label="${question.optionB }" /><br />
-                <aui:input name="${question.order }" type="radio" value="C" label="${question.optionC }" /><br />
-                <aui:input name="${question.order }" type="radio" value="D" label="${question.optionD }" /><br />
+                <c:set var="questionOrder" value="${question.order }" />
+                <c:choose>
+                    <c:when test="${'A' eq resultMap[questionOrder] }">
+                        <aui:input name="${questionOrder }" type="radio" value="A" label="${question.optionA }" checked="true" /><br />
+                        <aui:input name="${questionOrder }" type="radio" value="B" label="${question.optionB }" /><br />
+                        <aui:input name="${questionOrder }" type="radio" value="C" label="${question.optionC }" /><br />
+                        <aui:input name="${questionOrder }" type="radio" value="D" label="${question.optionD }" /><br />
+                    </c:when>
+                    <c:when test="${'B' eq resultMap[questionOrder] }">
+                        <aui:input name="${questionOrder }" type="radio" value="A" label="${question.optionA }" /><br />
+                        <aui:input name="${questionOrder }" type="radio" value="B" label="${question.optionB }" checked="true" /><br />
+                        <aui:input name="${questionOrder }" type="radio" value="C" label="${question.optionC }" /><br />
+                        <aui:input name="${questionOrder }" type="radio" value="D" label="${question.optionD }" /><br />
+                    </c:when>
+                    <c:when test="${'C' eq resultMap[questionOrder] }">
+                        <aui:input name="${questionOrder }" type="radio" value="A" label="${question.optionA }" /><br />
+                        <aui:input name="${questionOrder }" type="radio" value="B" label="${question.optionB }" /><br />
+                        <aui:input name="${questionOrder }" type="radio" value="C" label="${question.optionC }" checked="true" /><br />
+                        <aui:input name="${questionOrder }" type="radio" value="D" label="${question.optionD }" /><br />
+                    </c:when>
+                    <c:when test="${'D' eq resultMap[questionOrder] }">
+                        <aui:input name="${questionOrder }" type="radio" value="A" label="${question.optionA }" /><br />
+                        <aui:input name="${questionOrder }" type="radio" value="B" label="${question.optionB }" /><br />
+                        <aui:input name="${questionOrder }" type="radio" value="C" label="${question.optionC }" /><br />
+                        <aui:input name="${questionOrder }" type="radio" value="D" label="${question.optionD }" checked="true" /><br />
+                    </c:when>
+                    <c:otherwise>
+                        <aui:input name="${questionOrder }" type="radio" value="A" label="${question.optionA }" /><br />
+                        <aui:input name="${questionOrder }" type="radio" value="B" label="${question.optionB }" /><br />
+                        <aui:input name="${questionOrder }" type="radio" value="C" label="${question.optionC }" /><br />
+                        <aui:input name="${questionOrder }" type="radio" value="D" label="${question.optionD }" /><br />
+                    </c:otherwise>
+                </c:choose>
                 <hr />
             </div>
         </c:forEach>
