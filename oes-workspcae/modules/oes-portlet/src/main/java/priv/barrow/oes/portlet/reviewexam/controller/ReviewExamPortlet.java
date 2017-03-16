@@ -38,7 +38,7 @@ import priv.barrow.service.ExamDataLocalServiceUtil;
         "com.liferay.portlet.instanceable=true",
         "com.liferay.portlet.ajaxable=true",
         "com.liferay.portlet.requires-namespaced-parameters=false",
-        "javax.portlet.display-name=review Exam",
+        "javax.portlet.display-name=Review Exam",
         "javax.portlet.init-param.template-path=/",
         "com.liferay.portlet.footer-portlet-css=/css/reviewexam/review_exam.css",
         "com.liferay.portlet.footer-portlet-javascript=/js/reviewexam/review_exam.js",

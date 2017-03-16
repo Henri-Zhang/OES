@@ -9,4 +9,5 @@ dependencies {
 	compileOnly group: "com.liferay", name: "com.liferay.dynamic.data.mapping.data.provider", version: "2.0.0"
 	compileOnly group: "com.liferay", name: "com.liferay.dynamic.data.lists.api", version: "2.0.0"
 	compileOnly project(":modules:oes-service:oes-service-api")
+	compile group: "org.osgi", name:"org.osgi.service.component.annotations", version:"1.3.0"
 }

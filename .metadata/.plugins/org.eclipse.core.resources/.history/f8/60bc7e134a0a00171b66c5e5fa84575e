@@ -1,0 +1,16 @@
+package priv.barrow.oes.portlet.action;
+
+import javax.portlet.ActionRequest;
+import javax.portlet.ActionResponse;
+
+import com.liferay.portal.kernel.portlet.bridges.mvc.BaseMVCActionCommand;
+
+public class CustomLoginAction extends BaseMVCActionCommand {
+
+    @Override
+    protected void doProcessAction(ActionRequest actionRequest, ActionResponse actionResponse) throws Exception {
+        // TODO Auto-generated method stub
+
+    }
+
+}
