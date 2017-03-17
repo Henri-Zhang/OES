@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="com.liferay.login.web.internal.portlet.action.LoginMVCActionCommand">
+  <implementation class="com.liferay.login.web.internal.portlet.action.LoginMVCActionCommand"/>
+  <service>
+    <provide interface="com.liferay.portal.kernel.portlet.bridges.mvc.MVCActionCommand"/>
+  </service>
+  <property name="mvc.command.name" type="String" value="/login/login"/>
+  <property name="javax.portlet.name" type="String">com_liferay_login_web_portlet_FastLoginPortlet
+com_liferay_login_web_portlet_LoginPortlet</property>
+</component>

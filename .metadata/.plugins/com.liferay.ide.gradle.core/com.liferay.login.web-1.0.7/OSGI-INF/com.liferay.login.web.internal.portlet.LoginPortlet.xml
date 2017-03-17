@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="com.liferay.login.web.internal.portlet.LoginPortlet" immediate="true">
+  <implementation class="com.liferay.login.web.internal.portlet.LoginPortlet"/>
+  <service>
+    <provide interface="javax.portlet.Portlet"/>
+  </service>
+  <property name="javax.portlet.expiration-cache" type="String" value="0"/>
+  <property name="com.liferay.portlet.render-weight" type="String" value="50"/>
+  <property name="javax.portlet.security-role-ref" type="String" value="guest,power-user,user"/>
+  <property name="javax.portlet.init-param.config-template" type="String" value="/configuration.jsp"/>
+  <property name="javax.portlet.init-param.template-path" type="String" value="/"/>
+  <property name="com.liferay.portlet.private-session-attributes" type="String" value="false"/>
+  <property name="com.liferay.portlet.css-class-wrapper" type="String" value="portlet-login"/>
+  <property name="com.liferay.portlet.display-category" type="String" value="category.tools"/>
+  <property name="com.liferay.portlet.preferences-owned-by-group" type="String" value="true"/>
+  <property name="javax.portlet.supports.mime-type" type="String" value="text/html"/>
+  <property name="javax.portlet.init-param.view-template" type="String" value="/login.jsp"/>
+  <property name="com.liferay.portlet.private-request-attributes" type="String" value="false"/>
+  <property name="com.liferay.portlet.add-default-resource" type="String" value="true"/>
+  <property name="javax.portlet.resource-bundle" type="String" value="content.Language"/>
+  <property name="javax.portlet.init-param.add-process-action-success-action" type="String" value="false"/>
+  <property name="javax.portlet.name" type="String" value="com_liferay_login_web_portlet_LoginPortlet"/>
+  <property name="com.liferay.portlet.use-default-template" type="String" value="true"/>
+  <property name="javax.portlet.display-name" type="String" value="Sign In"/>
+  <property name="com.liferay.portlet.icon" type="String" value="/icons/login.png"/>
+</component>

@@ -3450,3 +3450,228 @@ java.lang.RuntimeException
 
 !ENTRY org.eclipse.jface.text 2 0 2017-03-16 21:12:01.614
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+!SESSION 2017-03-17 21:30:49.226 -----------------------------------------------
+eclipse.buildId=4.6.2.M20161116-1100
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-03-17 21:31:09.169
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.ui 2 0 2017-03-17 21:31:19.295
+!MESSAGE Warnings while parsing the images from the 'org.eclipse.ui.commandImages' extension point.
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-03-17 21:31:19.295
+!MESSAGE Cannot bind to an undefined command: plug-in='com.liferay.ide.project.ui', id='com.liferay.ide.project.ui.upgrade.openLiferay7UpgradeAssistant'
+
+!ENTRY org.apache.ivyde.eclipse 1 0 2017-03-17 21:32:09.011
+!MESSAGE starting IvyDE plugin
+
+!ENTRY org.apache.ivyde.eclipse 1 0 2017-03-17 21:32:09.465
+!MESSAGE IvyDE plugin started
+
+!ENTRY org.eclipse.jst.jsp.core 4 4 2017-03-17 21:55:55.764
+!MESSAGE A workspace crash was detected. The previous session did not exit normally. Not using saved taglib indexes.
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.513
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.AssetCategory.search5'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.513
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.AssetTag.get-tags5'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.514
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.AssetTag.get-tags-count3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.514
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.AssetTag.merge-tags3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.514
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.AssetTag.search5'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.514
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.BlogsEntry.get-group-entries4'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.515
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.BookmarksEntry.open-entry1'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.516
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.BookmarksFolder.get-subfolder-ids3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.516
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.ClassName.fetch-class-name-id1'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.516
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.DDLRecord.add-record5'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.517
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.DDMStructure.get-structures1'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.517
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.DDMTemplate.search10'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.518
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.DDMTemplate.search13'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.519
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.DDMTemplate.search-count10'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.519
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.DDMTemplate.search-count7'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.519
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.DLApp.add-file-entry9'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.520
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.DLApp.get-file-entries3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.520
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.DLApp.get-file-entries5'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.520
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.DLApp.get-folders5'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.521
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.DLApp.get-group-file-entries5'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.521
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.DLApp.get-subfolder-ids3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.522
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.DLApp.update-file-entry9'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.522
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.DLFileEntry.get-file-entries6'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.522
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.DLFileEntry.get-file-entries6'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.522
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.DLFileEntry.get-file-entries-count3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.523
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.DLFileEntry.get-file-entries-count3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.523
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.DLFileEntryType.update-file-entry-type5'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.524
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.DLFolder.get-subfolder-ids3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.524
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.ExpandoValue.get-data5'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.525
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.JournalArticle.get-article3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.526
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.JournalArticle.get-latest-article3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.526
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.JournalArticle.move-article-from-trash4'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.526
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.JournalArticle.search20'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.526
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.JournalArticle.search-count17'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.527
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.JournalFolder.get-folders-and-articles-count3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.527
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.JournalFolder.get-subfolder-ids3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.528
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.JournalStructure.get-structures1'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.528
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.Layout.import-layouts4'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.529
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.Layout.update-layout15'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.529
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.LayoutSet.update-logo4'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.530
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.MBCategory.delete-category2'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.530
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.MBCategory.get-categories4'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.530
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.MBCategory.get-categories5'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.530
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.MBCategory.get-categories-count2'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.531
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.MBCategory.get-categories-count3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.531
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.MBThread.get-group-threads6'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.532
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.MBThread.get-group-threads-count4'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.532
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.MDRAction.add-action6'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.532
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.MDRAction.update-action6'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.532
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.MDRRule.update-rule6'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.533
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.PortletPreferences.restore-archived-preferences5'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.533
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.PortletPreferences.restore-archived-preferences5'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.534
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.Region.get-regions1'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.534
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.SocialActivity.get-activities3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.534
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.SocialActivity.get-activities5'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.535
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.SocialActivity.get-activities-count1'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.535
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.SocialActivity.get-activities-count3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.535
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.TrashEntry.delete-entries1'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.536
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.UserGroup.get-user-group1'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.537
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.UserGroupGroupRole.add-user-group-group-roles3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.537
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.UserGroupGroupRole.delete-user-group-group-roles3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.537
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.UserGroupRole.add-user-group-roles3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.538
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.UserGroupRole.delete-user-group-roles3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.538
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.WikiPage.get-page3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.538
+!MESSAGE Duplicate template id: 'com.liferay.ide.ui.templates.WikiPage.get-page3'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.673
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-03-17 23:12:23.674
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="com.liferay.login.web.internal.portlet.action.CreateAnonymousAccountMVCActionCommand">
+  <implementation class="com.liferay.login.web.internal.portlet.action.CreateAnonymousAccountMVCActionCommand"/>
+  <service>
+    <provide interface="com.liferay.portal.kernel.portlet.bridges.mvc.MVCActionCommand"/>
+  </service>
+  <reference name="UserLocalService" interface="com.liferay.portal.kernel.service.UserLocalService" bind="setUserLocalService"/>
+  <reference name="UserService" interface="com.liferay.portal.kernel.service.UserService" bind="setUserService"/>
+  <property name="mvc.command.name" type="String" value="/login/create_anonymous_account"/>
+  <property name="javax.portlet.name" type="String">com_liferay_login_web_portlet_FastLoginPortlet
+com_liferay_login_web_portlet_LoginPortlet</property>
+</component>

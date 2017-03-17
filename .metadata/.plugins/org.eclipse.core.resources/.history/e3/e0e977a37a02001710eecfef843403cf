@@ -1,6 +1,0 @@
-package priv.barrow.oes.portlet.constants;
-
-public class ExamConstants {
-    public static final String exmas = "exams";
-    
-}

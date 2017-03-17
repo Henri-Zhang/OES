@@ -10,325 +10,13 @@
 		<item value="1000" key="org.eclipse.search.resultpage.limit"/>
 	</section>
 	<section name="TextSearchPage">
-		<item value="9" key="HISTORY_SIZE"/>
+		<item value="10" key="HISTORY_SIZE"/>
 		<item value="true" key="CASE_SENSITIVE"/>
 		<item value="false" key="REG_EX_SEARCH"/>
 		<item value="false" key="WHOLE_WORD"/>
 		<item value="false" key="SEARCH_DERIVED"/>
 		<item value="false" key="SEARCH_IN_BINARIES"/>
 		<section name="HISTORY6">
-			<item value="true" key="ignoreCase"/>
-			<item value="0" key="scope"/>
-			<item value="false" key="isWholeWord"/>
-			<item value="494" key="textPattern"/>
-			<item value="false" key="isRegExSearch"/>
-			<list key="fileNamePatterns">
-				<item value="*.java"/>
-				<item value="*.png"/>
-				<item value="*.confluence"/>
-				<item value="*.xjb"/>
-				<item value="*.html"/>
-				<item value="*.tagx"/>
-				<item value="*.gradle"/>
-				<item value="*.mediawiki"/>
-				<item value="*.tracwiki"/>
-				<item value="*.dbk"/>
-				<item value="*.mdtext"/>
-				<item value="*.sqlpage"/>
-				<item value="*.shtml"/>
-				<item value="*.tagxf"/>
-				<item value="*.workingsets"/>
-				<item value="*.dita"/>
-				<item value="*.product"/>
-				<item value="*.chromium"/>
-				<item value="*.patch"/>
-				<item value="*.adoc"/>
-				<item value="*.target"/>
-				<item value="*.scss"/>
-				<item value="*.js"/>
-				<item value="*.jsf"/>
-				<item value="*.emof"/>
-				<item value="*.macrodef"/>
-				<item value="*.markdown"/>
-				<item value="*.jspf"/>
-				<item value="*.bmp"/>
-				<item value="*.htpl"/>
-				<item value="*.wsil"/>
-				<item value="*.ecore2xml"/>
-				<item value="*.jspx"/>
-				<item value="*.tag"/>
-				<item value="*.ecore2ecore"/>
-				<item value="*.jar"/>
-				<item value="*.bnd"/>
-				<item value="*.genmodel"/>
-				<item value="*.xml"/>
-				<item value="*.xmi"/>
-				<item value="*.ico"/>
-				<item value="*.tagf"/>
-				<item value="*.shtm"/>
-				<item value="*.zip"/>
-				<item value="*.textile"/>
-				<item value="*.twiki"/>
-				<item value="*.ent"/>
-				<item value="*.ecore"/>
-				<item value="*.war"/>
-				<item value="*.wsdl"/>
-				<item value="*.ant"/>
-				<item value="*.md"/>
-				<item value="*.prefs"/>
-				<item value="*.jpeg"/>
-				<item value="*.json"/>
-				<item value="*.tpl"/>
-				<item value="*.txt"/>
-				<item value="*.wsdd"/>
-				<item value="*.ddl"/>
-				<item value="*.tld"/>
-				<item value="*.xhtml"/>
-				<item value="*.server"/>
-				<item value="*.mod"/>
-				<item value="*.css"/>
-				<item value="*.class"/>
-				<item value="*.xsd"/>
-				<item value="*.jsp"/>
-				<item value="*.gif"/>
-				<item value="*.log"/>
-				<item value="*.jardesc"/>
-				<item value="*.exsd"/>
-				<item value="*.xsl"/>
-				<item value="*.xslt"/>
-				<item value="*.e4xmi"/>
-				<item value="*.pom"/>
-				<item value="*.sql"/>
-				<item value="*.jsv"/>
-				<item value="*.jtpl"/>
-				<item value="*.setup"/>
-				<item value="*.ad"/>
-				<item value="*.asciidoc"/>
-				<item value="*.ear"/>
-				<item value="*.wml"/>
-				<item value="*.class without source"/>
-				<item value="*.dtd"/>
-				<item value="*.ljsp"/>
-				<item value="*.ditamap"/>
-				<item value="*.htm"/>
-				<item value="*.jpage"/>
-				<item value="*.jpg"/>
-				<item value="*.properties"/>
-				<item value="*.wsimsg"/>
-				<item value="*.bndrun"/>
-			</list>
-			<list key="workingSets">
-			</list>
-		</section>
-		<section name="HISTORY7">
-			<item value="true" key="ignoreCase"/>
-			<item value="0" key="scope"/>
-			<item value="false" key="isWholeWord"/>
-			<item value=".control-menu-level-1" key="textPattern"/>
-			<item value="false" key="isRegExSearch"/>
-			<list key="fileNamePatterns">
-				<item value="*.java"/>
-				<item value="*.png"/>
-				<item value="*.confluence"/>
-				<item value="*.xjb"/>
-				<item value="*.html"/>
-				<item value="*.tagx"/>
-				<item value="*.gradle"/>
-				<item value="*.mediawiki"/>
-				<item value="*.tracwiki"/>
-				<item value="*.dbk"/>
-				<item value="*.mdtext"/>
-				<item value="*.sqlpage"/>
-				<item value="*.shtml"/>
-				<item value="*.tagxf"/>
-				<item value="*.workingsets"/>
-				<item value="*.dita"/>
-				<item value="*.product"/>
-				<item value="*.chromium"/>
-				<item value="*.patch"/>
-				<item value="*.adoc"/>
-				<item value="*.target"/>
-				<item value="*.scss"/>
-				<item value="*.js"/>
-				<item value="*.jsf"/>
-				<item value="*.emof"/>
-				<item value="*.macrodef"/>
-				<item value="*.markdown"/>
-				<item value="*.jspf"/>
-				<item value="*.bmp"/>
-				<item value="*.htpl"/>
-				<item value="*.wsil"/>
-				<item value="*.ecore2xml"/>
-				<item value="*.jspx"/>
-				<item value="*.tag"/>
-				<item value="*.ecore2ecore"/>
-				<item value="*.jar"/>
-				<item value="*.bnd"/>
-				<item value="*.genmodel"/>
-				<item value="*.xml"/>
-				<item value="*.xmi"/>
-				<item value="*.ico"/>
-				<item value="*.tagf"/>
-				<item value="*.shtm"/>
-				<item value="*.zip"/>
-				<item value="*.textile"/>
-				<item value="*.twiki"/>
-				<item value="*.ent"/>
-				<item value="*.ecore"/>
-				<item value="*.war"/>
-				<item value="*.wsdl"/>
-				<item value="*.ant"/>
-				<item value="*.md"/>
-				<item value="*.prefs"/>
-				<item value="*.jpeg"/>
-				<item value="*.json"/>
-				<item value="*.tpl"/>
-				<item value="*.txt"/>
-				<item value="*.wsdd"/>
-				<item value="*.ddl"/>
-				<item value="*.tld"/>
-				<item value="*.xhtml"/>
-				<item value="*.server"/>
-				<item value="*.mod"/>
-				<item value="*.css"/>
-				<item value="*.class"/>
-				<item value="*.xsd"/>
-				<item value="*.jsp"/>
-				<item value="*.gif"/>
-				<item value="*.log"/>
-				<item value="*.jardesc"/>
-				<item value="*.exsd"/>
-				<item value="*.xsl"/>
-				<item value="*.xslt"/>
-				<item value="*.e4xmi"/>
-				<item value="*.pom"/>
-				<item value="*.sql"/>
-				<item value="*.jsv"/>
-				<item value="*.jtpl"/>
-				<item value="*.setup"/>
-				<item value="*.ad"/>
-				<item value="*.asciidoc"/>
-				<item value="*.ear"/>
-				<item value="*.wml"/>
-				<item value="*.class without source"/>
-				<item value="*.dtd"/>
-				<item value="*.ljsp"/>
-				<item value="*.ditamap"/>
-				<item value="*.htm"/>
-				<item value="*.jpage"/>
-				<item value="*.jpg"/>
-				<item value="*.properties"/>
-				<item value="*.wsimsg"/>
-				<item value="*.bndrun"/>
-			</list>
-			<list key="workingSets">
-			</list>
-		</section>
-		<section name="HISTORY4">
-			<item value="false" key="ignoreCase"/>
-			<item value="0" key="scope"/>
-			<item value="false" key="isWholeWord"/>
-			<item value="ddm" key="textPattern"/>
-			<item value="false" key="isRegExSearch"/>
-			<list key="fileNamePatterns">
-				<item value="*.java"/>
-				<item value="*.png"/>
-				<item value="*.confluence"/>
-				<item value="*.xjb"/>
-				<item value="*.html"/>
-				<item value="*.tagx"/>
-				<item value="*.gradle"/>
-				<item value="*.mediawiki"/>
-				<item value="*.tracwiki"/>
-				<item value="*.dbk"/>
-				<item value="*.mdtext"/>
-				<item value="*.sqlpage"/>
-				<item value="*.shtml"/>
-				<item value="*.tagxf"/>
-				<item value="*.workingsets"/>
-				<item value="*.dita"/>
-				<item value="*.product"/>
-				<item value="*.chromium"/>
-				<item value="*.patch"/>
-				<item value="*.adoc"/>
-				<item value="*.target"/>
-				<item value="*.scss"/>
-				<item value="*.js"/>
-				<item value="*.jsf"/>
-				<item value="*.emof"/>
-				<item value="*.macrodef"/>
-				<item value="*.markdown"/>
-				<item value="*.jspf"/>
-				<item value="*.bmp"/>
-				<item value="*.htpl"/>
-				<item value="*.wsil"/>
-				<item value="*.ecore2xml"/>
-				<item value="*.jspx"/>
-				<item value="*.tag"/>
-				<item value="*.ecore2ecore"/>
-				<item value="*.jar"/>
-				<item value="*.bnd"/>
-				<item value="*.genmodel"/>
-				<item value="*.xml"/>
-				<item value="*.xmi"/>
-				<item value="*.ico"/>
-				<item value="*.tagf"/>
-				<item value="*.shtm"/>
-				<item value="*.zip"/>
-				<item value="*.textile"/>
-				<item value="*.twiki"/>
-				<item value="*.ent"/>
-				<item value="*.ecore"/>
-				<item value="*.war"/>
-				<item value="*.wsdl"/>
-				<item value="*.ant"/>
-				<item value="*.md"/>
-				<item value="*.prefs"/>
-				<item value="*.jpeg"/>
-				<item value="*.json"/>
-				<item value="*.tpl"/>
-				<item value="*.txt"/>
-				<item value="*.wsdd"/>
-				<item value="*.ddl"/>
-				<item value="*.tld"/>
-				<item value="*.xhtml"/>
-				<item value="*.server"/>
-				<item value="*.mod"/>
-				<item value="*.css"/>
-				<item value="*.class"/>
-				<item value="*.xsd"/>
-				<item value="*.jsp"/>
-				<item value="*.gif"/>
-				<item value="*.log"/>
-				<item value="*.jardesc"/>
-				<item value="*.exsd"/>
-				<item value="*.xsl"/>
-				<item value="*.xslt"/>
-				<item value="*.e4xmi"/>
-				<item value="*.pom"/>
-				<item value="*.sql"/>
-				<item value="*.jsv"/>
-				<item value="*.jtpl"/>
-				<item value="*.setup"/>
-				<item value="*.ad"/>
-				<item value="*.asciidoc"/>
-				<item value="*.ear"/>
-				<item value="*.wml"/>
-				<item value="*.class without source"/>
-				<item value="*.dtd"/>
-				<item value="*.ljsp"/>
-				<item value="*.ditamap"/>
-				<item value="*.htm"/>
-				<item value="*.jpage"/>
-				<item value="*.jpg"/>
-				<item value="*.properties"/>
-				<item value="*.wsimsg"/>
-				<item value="*.bndrun"/>
-			</list>
-			<list key="workingSets">
-			</list>
-		</section>
-		<section name="HISTORY5">
 			<item value="true" key="ignoreCase"/>
 			<item value="0" key="scope"/>
 			<item value="false" key="isWholeWord"/>
@@ -432,11 +120,427 @@
 			<list key="workingSets">
 			</list>
 		</section>
+		<section name="HISTORY7">
+			<item value="true" key="ignoreCase"/>
+			<item value="0" key="scope"/>
+			<item value="false" key="isWholeWord"/>
+			<item value="494" key="textPattern"/>
+			<item value="false" key="isRegExSearch"/>
+			<list key="fileNamePatterns">
+				<item value="*.java"/>
+				<item value="*.png"/>
+				<item value="*.confluence"/>
+				<item value="*.xjb"/>
+				<item value="*.html"/>
+				<item value="*.tagx"/>
+				<item value="*.gradle"/>
+				<item value="*.mediawiki"/>
+				<item value="*.tracwiki"/>
+				<item value="*.dbk"/>
+				<item value="*.mdtext"/>
+				<item value="*.sqlpage"/>
+				<item value="*.shtml"/>
+				<item value="*.tagxf"/>
+				<item value="*.workingsets"/>
+				<item value="*.dita"/>
+				<item value="*.product"/>
+				<item value="*.chromium"/>
+				<item value="*.patch"/>
+				<item value="*.adoc"/>
+				<item value="*.target"/>
+				<item value="*.scss"/>
+				<item value="*.js"/>
+				<item value="*.jsf"/>
+				<item value="*.emof"/>
+				<item value="*.macrodef"/>
+				<item value="*.markdown"/>
+				<item value="*.jspf"/>
+				<item value="*.bmp"/>
+				<item value="*.htpl"/>
+				<item value="*.wsil"/>
+				<item value="*.ecore2xml"/>
+				<item value="*.jspx"/>
+				<item value="*.tag"/>
+				<item value="*.ecore2ecore"/>
+				<item value="*.jar"/>
+				<item value="*.bnd"/>
+				<item value="*.genmodel"/>
+				<item value="*.xml"/>
+				<item value="*.xmi"/>
+				<item value="*.ico"/>
+				<item value="*.tagf"/>
+				<item value="*.shtm"/>
+				<item value="*.zip"/>
+				<item value="*.textile"/>
+				<item value="*.twiki"/>
+				<item value="*.ent"/>
+				<item value="*.ecore"/>
+				<item value="*.war"/>
+				<item value="*.wsdl"/>
+				<item value="*.ant"/>
+				<item value="*.md"/>
+				<item value="*.prefs"/>
+				<item value="*.jpeg"/>
+				<item value="*.json"/>
+				<item value="*.tpl"/>
+				<item value="*.txt"/>
+				<item value="*.wsdd"/>
+				<item value="*.ddl"/>
+				<item value="*.tld"/>
+				<item value="*.xhtml"/>
+				<item value="*.server"/>
+				<item value="*.mod"/>
+				<item value="*.css"/>
+				<item value="*.class"/>
+				<item value="*.xsd"/>
+				<item value="*.jsp"/>
+				<item value="*.gif"/>
+				<item value="*.log"/>
+				<item value="*.jardesc"/>
+				<item value="*.exsd"/>
+				<item value="*.xsl"/>
+				<item value="*.xslt"/>
+				<item value="*.e4xmi"/>
+				<item value="*.pom"/>
+				<item value="*.sql"/>
+				<item value="*.jsv"/>
+				<item value="*.jtpl"/>
+				<item value="*.setup"/>
+				<item value="*.ad"/>
+				<item value="*.asciidoc"/>
+				<item value="*.ear"/>
+				<item value="*.wml"/>
+				<item value="*.class without source"/>
+				<item value="*.dtd"/>
+				<item value="*.ljsp"/>
+				<item value="*.ditamap"/>
+				<item value="*.htm"/>
+				<item value="*.jpage"/>
+				<item value="*.jpg"/>
+				<item value="*.properties"/>
+				<item value="*.wsimsg"/>
+				<item value="*.bndrun"/>
+			</list>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY4">
+			<item value="false" key="ignoreCase"/>
+			<item value="0" key="scope"/>
+			<item value="false" key="isWholeWord"/>
+			<item value="liferay-ddm" key="textPattern"/>
+			<item value="false" key="isRegExSearch"/>
+			<list key="fileNamePatterns">
+				<item value="*.java"/>
+				<item value="*.png"/>
+				<item value="*.confluence"/>
+				<item value="*.xjb"/>
+				<item value="*.html"/>
+				<item value="*.tagx"/>
+				<item value="*.gradle"/>
+				<item value="*.mediawiki"/>
+				<item value="*.tracwiki"/>
+				<item value="*.dbk"/>
+				<item value="*.mdtext"/>
+				<item value="*.sqlpage"/>
+				<item value="*.shtml"/>
+				<item value="*.tagxf"/>
+				<item value="*.workingsets"/>
+				<item value="*.dita"/>
+				<item value="*.product"/>
+				<item value="*.chromium"/>
+				<item value="*.patch"/>
+				<item value="*.adoc"/>
+				<item value="*.target"/>
+				<item value="*.scss"/>
+				<item value="*.js"/>
+				<item value="*.jsf"/>
+				<item value="*.emof"/>
+				<item value="*.macrodef"/>
+				<item value="*.markdown"/>
+				<item value="*.jspf"/>
+				<item value="*.bmp"/>
+				<item value="*.htpl"/>
+				<item value="*.wsil"/>
+				<item value="*.ecore2xml"/>
+				<item value="*.jspx"/>
+				<item value="*.tag"/>
+				<item value="*.ecore2ecore"/>
+				<item value="*.jar"/>
+				<item value="*.bnd"/>
+				<item value="*.genmodel"/>
+				<item value="*.xml"/>
+				<item value="*.xmi"/>
+				<item value="*.ico"/>
+				<item value="*.tagf"/>
+				<item value="*.shtm"/>
+				<item value="*.zip"/>
+				<item value="*.textile"/>
+				<item value="*.twiki"/>
+				<item value="*.ent"/>
+				<item value="*.ecore"/>
+				<item value="*.war"/>
+				<item value="*.wsdl"/>
+				<item value="*.ant"/>
+				<item value="*.md"/>
+				<item value="*.prefs"/>
+				<item value="*.jpeg"/>
+				<item value="*.json"/>
+				<item value="*.tpl"/>
+				<item value="*.txt"/>
+				<item value="*.wsdd"/>
+				<item value="*.ddl"/>
+				<item value="*.tld"/>
+				<item value="*.xhtml"/>
+				<item value="*.server"/>
+				<item value="*.mod"/>
+				<item value="*.css"/>
+				<item value="*.class"/>
+				<item value="*.xsd"/>
+				<item value="*.jsp"/>
+				<item value="*.gif"/>
+				<item value="*.log"/>
+				<item value="*.jardesc"/>
+				<item value="*.exsd"/>
+				<item value="*.xsl"/>
+				<item value="*.xslt"/>
+				<item value="*.e4xmi"/>
+				<item value="*.pom"/>
+				<item value="*.sql"/>
+				<item value="*.jsv"/>
+				<item value="*.jtpl"/>
+				<item value="*.setup"/>
+				<item value="*.ad"/>
+				<item value="*.asciidoc"/>
+				<item value="*.ear"/>
+				<item value="*.wml"/>
+				<item value="*.class without source"/>
+				<item value="*.dtd"/>
+				<item value="*.ljsp"/>
+				<item value="*.ditamap"/>
+				<item value="*.htm"/>
+				<item value="*.jpage"/>
+				<item value="*.jpg"/>
+				<item value="*.properties"/>
+				<item value="*.wsimsg"/>
+				<item value="*.bndrun"/>
+			</list>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY5">
+			<item value="false" key="ignoreCase"/>
+			<item value="0" key="scope"/>
+			<item value="false" key="isWholeWord"/>
+			<item value="ddm" key="textPattern"/>
+			<item value="false" key="isRegExSearch"/>
+			<list key="fileNamePatterns">
+				<item value="*.java"/>
+				<item value="*.png"/>
+				<item value="*.confluence"/>
+				<item value="*.xjb"/>
+				<item value="*.html"/>
+				<item value="*.tagx"/>
+				<item value="*.gradle"/>
+				<item value="*.mediawiki"/>
+				<item value="*.tracwiki"/>
+				<item value="*.dbk"/>
+				<item value="*.mdtext"/>
+				<item value="*.sqlpage"/>
+				<item value="*.shtml"/>
+				<item value="*.tagxf"/>
+				<item value="*.workingsets"/>
+				<item value="*.dita"/>
+				<item value="*.product"/>
+				<item value="*.chromium"/>
+				<item value="*.patch"/>
+				<item value="*.adoc"/>
+				<item value="*.target"/>
+				<item value="*.scss"/>
+				<item value="*.js"/>
+				<item value="*.jsf"/>
+				<item value="*.emof"/>
+				<item value="*.macrodef"/>
+				<item value="*.markdown"/>
+				<item value="*.jspf"/>
+				<item value="*.bmp"/>
+				<item value="*.htpl"/>
+				<item value="*.wsil"/>
+				<item value="*.ecore2xml"/>
+				<item value="*.jspx"/>
+				<item value="*.tag"/>
+				<item value="*.ecore2ecore"/>
+				<item value="*.jar"/>
+				<item value="*.bnd"/>
+				<item value="*.genmodel"/>
+				<item value="*.xml"/>
+				<item value="*.xmi"/>
+				<item value="*.ico"/>
+				<item value="*.tagf"/>
+				<item value="*.shtm"/>
+				<item value="*.zip"/>
+				<item value="*.textile"/>
+				<item value="*.twiki"/>
+				<item value="*.ent"/>
+				<item value="*.ecore"/>
+				<item value="*.war"/>
+				<item value="*.wsdl"/>
+				<item value="*.ant"/>
+				<item value="*.md"/>
+				<item value="*.prefs"/>
+				<item value="*.jpeg"/>
+				<item value="*.json"/>
+				<item value="*.tpl"/>
+				<item value="*.txt"/>
+				<item value="*.wsdd"/>
+				<item value="*.ddl"/>
+				<item value="*.tld"/>
+				<item value="*.xhtml"/>
+				<item value="*.server"/>
+				<item value="*.mod"/>
+				<item value="*.css"/>
+				<item value="*.class"/>
+				<item value="*.xsd"/>
+				<item value="*.jsp"/>
+				<item value="*.gif"/>
+				<item value="*.log"/>
+				<item value="*.jardesc"/>
+				<item value="*.exsd"/>
+				<item value="*.xsl"/>
+				<item value="*.xslt"/>
+				<item value="*.e4xmi"/>
+				<item value="*.pom"/>
+				<item value="*.sql"/>
+				<item value="*.jsv"/>
+				<item value="*.jtpl"/>
+				<item value="*.setup"/>
+				<item value="*.ad"/>
+				<item value="*.asciidoc"/>
+				<item value="*.ear"/>
+				<item value="*.wml"/>
+				<item value="*.class without source"/>
+				<item value="*.dtd"/>
+				<item value="*.ljsp"/>
+				<item value="*.ditamap"/>
+				<item value="*.htm"/>
+				<item value="*.jpage"/>
+				<item value="*.jpg"/>
+				<item value="*.properties"/>
+				<item value="*.wsimsg"/>
+				<item value="*.bndrun"/>
+			</list>
+			<list key="workingSets">
+			</list>
+		</section>
 		<section name="EXTENSIONS">
 			<item value="*.java" key="0"/>
 			<item value="*.ad, *.adoc, *.ant, *.asciidoc, *.bmp, *.bnd, *.bndrun, *.chromium, *.class, *.class without source, *.confluence, *.css, *.dbk, *.ddl, *.dita, *.ditamap, *.dtd, *.e4xmi, *.ear, *.ecore, *.ecore2ecore, *.ecore2xml, *.emof, *.ent, *.exsd, *.genmodel, *.gif, *.gradle, *.htm, *.html, *.htpl, *.ico, *.jar, *.jardesc, *.java, *.jpage, *.jpeg, *.jpg, *.js, *.jsf, *.json, *.jsp, *.jspf, *.jspx, *.jsv, *.jtpl, *.ljsp, *.log, *.macrodef, *.markdown, *.md, *.mdtext, *.mediawiki, *.mod, *.patch, *.png, *.pom, *.prefs, *.product, *.properties, *.scss, *.server, *.setup, *.shtm, *.shtml, *.sql, *.sqlpage, *.tag, *.tagf, *.tagx, *.tagxf, *.target, *.textile, *.tld, *.tpl, *.tracwiki, *.twiki, *.txt, *.war, *.wml, *.workingsets, *.wsdd, *.wsdl, *.wsil, *.wsimsg, *.xhtml, *.xjb, *.xmi, *.xml, *.xsd, *.xsl, *.xslt, *.zip" key="1"/>
 		</section>
 		<section name="HISTORY8">
+			<item value="true" key="ignoreCase"/>
+			<item value="0" key="scope"/>
+			<item value="false" key="isWholeWord"/>
+			<item value=".control-menu-level-1" key="textPattern"/>
+			<item value="false" key="isRegExSearch"/>
+			<list key="fileNamePatterns">
+				<item value="*.java"/>
+				<item value="*.png"/>
+				<item value="*.confluence"/>
+				<item value="*.xjb"/>
+				<item value="*.html"/>
+				<item value="*.tagx"/>
+				<item value="*.gradle"/>
+				<item value="*.mediawiki"/>
+				<item value="*.tracwiki"/>
+				<item value="*.dbk"/>
+				<item value="*.mdtext"/>
+				<item value="*.sqlpage"/>
+				<item value="*.shtml"/>
+				<item value="*.tagxf"/>
+				<item value="*.workingsets"/>
+				<item value="*.dita"/>
+				<item value="*.product"/>
+				<item value="*.chromium"/>
+				<item value="*.patch"/>
+				<item value="*.adoc"/>
+				<item value="*.target"/>
+				<item value="*.scss"/>
+				<item value="*.js"/>
+				<item value="*.jsf"/>
+				<item value="*.emof"/>
+				<item value="*.macrodef"/>
+				<item value="*.markdown"/>
+				<item value="*.jspf"/>
+				<item value="*.bmp"/>
+				<item value="*.htpl"/>
+				<item value="*.wsil"/>
+				<item value="*.ecore2xml"/>
+				<item value="*.jspx"/>
+				<item value="*.tag"/>
+				<item value="*.ecore2ecore"/>
+				<item value="*.jar"/>
+				<item value="*.bnd"/>
+				<item value="*.genmodel"/>
+				<item value="*.xml"/>
+				<item value="*.xmi"/>
+				<item value="*.ico"/>
+				<item value="*.tagf"/>
+				<item value="*.shtm"/>
+				<item value="*.zip"/>
+				<item value="*.textile"/>
+				<item value="*.twiki"/>
+				<item value="*.ent"/>
+				<item value="*.ecore"/>
+				<item value="*.war"/>
+				<item value="*.wsdl"/>
+				<item value="*.ant"/>
+				<item value="*.md"/>
+				<item value="*.prefs"/>
+				<item value="*.jpeg"/>
+				<item value="*.json"/>
+				<item value="*.tpl"/>
+				<item value="*.txt"/>
+				<item value="*.wsdd"/>
+				<item value="*.ddl"/>
+				<item value="*.tld"/>
+				<item value="*.xhtml"/>
+				<item value="*.server"/>
+				<item value="*.mod"/>
+				<item value="*.css"/>
+				<item value="*.class"/>
+				<item value="*.xsd"/>
+				<item value="*.jsp"/>
+				<item value="*.gif"/>
+				<item value="*.log"/>
+				<item value="*.jardesc"/>
+				<item value="*.exsd"/>
+				<item value="*.xsl"/>
+				<item value="*.xslt"/>
+				<item value="*.e4xmi"/>
+				<item value="*.pom"/>
+				<item value="*.sql"/>
+				<item value="*.jsv"/>
+				<item value="*.jtpl"/>
+				<item value="*.setup"/>
+				<item value="*.ad"/>
+				<item value="*.asciidoc"/>
+				<item value="*.ear"/>
+				<item value="*.wml"/>
+				<item value="*.class without source"/>
+				<item value="*.dtd"/>
+				<item value="*.ljsp"/>
+				<item value="*.ditamap"/>
+				<item value="*.htm"/>
+				<item value="*.jpage"/>
+				<item value="*.jpg"/>
+				<item value="*.properties"/>
+				<item value="*.wsimsg"/>
+				<item value="*.bndrun"/>
+			</list>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY9">
 			<item value="true" key="ignoreCase"/>
 			<item value="0" key="scope"/>
 			<item value="false" key="isWholeWord"/>
@@ -544,102 +648,10 @@
 			<item value="false" key="ignoreCase"/>
 			<item value="0" key="scope"/>
 			<item value="false" key="isWholeWord"/>
-			<item value="liferay-ddm:html" key="textPattern"/>
+			<item value="com.liferay.blogs.kernel.service.persistence.BlogsEntryFinder" key="textPattern"/>
 			<item value="false" key="isRegExSearch"/>
 			<list key="fileNamePatterns">
 				<item value="*.java"/>
-				<item value="*.png"/>
-				<item value="*.confluence"/>
-				<item value="*.xjb"/>
-				<item value="*.html"/>
-				<item value="*.tagx"/>
-				<item value="*.gradle"/>
-				<item value="*.mediawiki"/>
-				<item value="*.tracwiki"/>
-				<item value="*.dbk"/>
-				<item value="*.mdtext"/>
-				<item value="*.sqlpage"/>
-				<item value="*.shtml"/>
-				<item value="*.tagxf"/>
-				<item value="*.workingsets"/>
-				<item value="*.dita"/>
-				<item value="*.product"/>
-				<item value="*.chromium"/>
-				<item value="*.patch"/>
-				<item value="*.adoc"/>
-				<item value="*.target"/>
-				<item value="*.scss"/>
-				<item value="*.js"/>
-				<item value="*.jsf"/>
-				<item value="*.emof"/>
-				<item value="*.macrodef"/>
-				<item value="*.markdown"/>
-				<item value="*.jspf"/>
-				<item value="*.bmp"/>
-				<item value="*.htpl"/>
-				<item value="*.wsil"/>
-				<item value="*.ecore2xml"/>
-				<item value="*.jspx"/>
-				<item value="*.tag"/>
-				<item value="*.ecore2ecore"/>
-				<item value="*.jar"/>
-				<item value="*.bnd"/>
-				<item value="*.genmodel"/>
-				<item value="*.xml"/>
-				<item value="*.xmi"/>
-				<item value="*.ico"/>
-				<item value="*.tagf"/>
-				<item value="*.shtm"/>
-				<item value="*.zip"/>
-				<item value="*.textile"/>
-				<item value="*.twiki"/>
-				<item value="*.ent"/>
-				<item value="*.ecore"/>
-				<item value="*.war"/>
-				<item value="*.wsdl"/>
-				<item value="*.ant"/>
-				<item value="*.md"/>
-				<item value="*.prefs"/>
-				<item value="*.jpeg"/>
-				<item value="*.json"/>
-				<item value="*.tpl"/>
-				<item value="*.txt"/>
-				<item value="*.wsdd"/>
-				<item value="*.ddl"/>
-				<item value="*.tld"/>
-				<item value="*.xhtml"/>
-				<item value="*.server"/>
-				<item value="*.mod"/>
-				<item value="*.css"/>
-				<item value="*.class"/>
-				<item value="*.xsd"/>
-				<item value="*.jsp"/>
-				<item value="*.gif"/>
-				<item value="*.log"/>
-				<item value="*.jardesc"/>
-				<item value="*.exsd"/>
-				<item value="*.xsl"/>
-				<item value="*.xslt"/>
-				<item value="*.e4xmi"/>
-				<item value="*.pom"/>
-				<item value="*.sql"/>
-				<item value="*.jsv"/>
-				<item value="*.jtpl"/>
-				<item value="*.setup"/>
-				<item value="*.ad"/>
-				<item value="*.asciidoc"/>
-				<item value="*.ear"/>
-				<item value="*.wml"/>
-				<item value="*.class without source"/>
-				<item value="*.dtd"/>
-				<item value="*.ljsp"/>
-				<item value="*.ditamap"/>
-				<item value="*.htm"/>
-				<item value="*.jpage"/>
-				<item value="*.jpg"/>
-				<item value="*.properties"/>
-				<item value="*.wsimsg"/>
-				<item value="*.bndrun"/>
 			</list>
 			<list key="workingSets">
 			</list>
@@ -648,7 +660,7 @@
 			<item value="false" key="ignoreCase"/>
 			<item value="0" key="scope"/>
 			<item value="false" key="isWholeWord"/>
-			<item value="liferay-ddm" key="textPattern"/>
+			<item value="liferay-ddm:html" key="textPattern"/>
 			<item value="false" key="isRegExSearch"/>
 			<list key="fileNamePatterns">
 				<item value="*.java"/>
@@ -752,7 +764,7 @@
 			<item value="false" key="ignoreCase"/>
 			<item value="0" key="scope"/>
 			<item value="false" key="isWholeWord"/>
-			<item value="implements Value" key="textPattern"/>
+			<item value="/login/create_account" key="textPattern"/>
 			<item value="false" key="isRegExSearch"/>
 			<list key="fileNamePatterns">
 				<item value="*.java"/>
@@ -764,7 +776,7 @@
 			<item value="false" key="ignoreCase"/>
 			<item value="0" key="scope"/>
 			<item value="false" key="isWholeWord"/>
-			<item value="com.liferay.blogs.kernel.service.persistence.BlogsEntryFinder" key="textPattern"/>
+			<item value="implements Value" key="textPattern"/>
 			<item value="false" key="isRegExSearch"/>
 			<list key="fileNamePatterns">
 				<item value="*.java"/>
@@ -805,7 +817,7 @@
 		<item value="1274" key="DIALOG_WIDTH"/>
 		<item value="1|Cantarell|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 		<item value="577" key="DIALOG_HEIGHT"/>
-		<item value="459" key="DIALOG_X_ORIGIN"/>
-		<item value="211" key="DIALOG_Y_ORIGIN"/>
+		<item value="92" key="DIALOG_X_ORIGIN"/>
+		<item value="129" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="com.liferay.login.web.internal.portlet.action.LoginConfigurationActionImpl">
+  <implementation class="com.liferay.login.web.internal.portlet.action.LoginConfigurationActionImpl"/>
+  <service>
+    <provide interface="com.liferay.portal.kernel.portlet.ConfigurationAction"/>
+  </service>
+  <property name="javax.portlet.name" type="String">com_liferay_login_web_portlet_FastLoginPortlet
+com_liferay_login_web_portlet_LoginPortlet</property>
+</component>

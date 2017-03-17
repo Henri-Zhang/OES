@@ -1,6 +1,0 @@
-package priv.barrow.oes.portlet.model;
-
-public class Constants {
-    public static final String EXAM = "Exam";
-    
-}

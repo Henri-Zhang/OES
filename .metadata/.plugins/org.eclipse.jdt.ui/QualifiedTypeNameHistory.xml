@@ -40,7 +40,6 @@
 <fullyQualifiedTypeName name="com.liferay.portal.kernel.model.User"/>
 <fullyQualifiedTypeName name="priv.barrow.oes.portlet.constants.StudentConstants"/>
 <fullyQualifiedTypeName name="com.liferay.portal.kernel.util.StringPool"/>
-<fullyQualifiedTypeName name="com.liferay.portal.kernel.util.Validator"/>
 <fullyQualifiedTypeName name="com.liferay.portal.kernel.exception.PortalException"/>
 <fullyQualifiedTypeName name="javax.security.auth.x500.X500Principal"/>
 <fullyQualifiedTypeName name="java.lang.Override"/>
@@ -60,4 +59,5 @@
 <fullyQualifiedTypeName name="priv.barrow.oes.portlet.constants.ExamConstants"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="priv.barrow.service.StudentExamLinkLocalServiceUtil"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.util.Validator"/>
 </qualifiedTypeNameHistroy>

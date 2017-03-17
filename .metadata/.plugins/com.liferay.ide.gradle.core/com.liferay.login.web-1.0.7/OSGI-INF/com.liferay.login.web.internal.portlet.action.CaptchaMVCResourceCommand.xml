@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="com.liferay.login.web.internal.portlet.action.CaptchaMVCResourceCommand">
+  <implementation class="com.liferay.login.web.internal.portlet.action.CaptchaMVCResourceCommand"/>
+  <service>
+    <provide interface="com.liferay.portal.kernel.portlet.bridges.mvc.MVCResourceCommand"/>
+  </service>
+  <property name="mvc.command.name" type="String" value="/login/captcha"/>
+  <property name="javax.portlet.name" type="String">com_liferay_login_web_portlet_FastLoginPortlet
+com_liferay_login_web_portlet_LoginPortlet</property>
+</component>

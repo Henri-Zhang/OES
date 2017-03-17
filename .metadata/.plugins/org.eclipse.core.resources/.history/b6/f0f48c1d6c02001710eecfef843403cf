@@ -1,4 +1,0 @@
-<liferay-ui:icon-menu>
-    <liferay-ui:icon image="edit" url="/edit-quesiton?questionOrder=${question.order }" target="_blank"/>
-    <liferay-ui:icon image="impersonate_user" url="/question-detail?questionOrder=${question.order }" target="_blank" />
-</liferay-ui:icon-menu>

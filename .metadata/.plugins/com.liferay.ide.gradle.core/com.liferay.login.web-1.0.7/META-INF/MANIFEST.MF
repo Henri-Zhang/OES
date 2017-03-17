@@ -1,0 +1,119 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1470252858512
+Bundle-ManifestVersion: 2
+Bundle-Name: Liferay Login Web
+Bundle-SymbolicName: com.liferay.login.web
+Bundle-Vendor: Liferay, Inc.
+Bundle-Version: 1.0.7
+Created-By: 1.8.0_92 (Oracle Corporation)
+Import-Package: com.liferay.expando.kernel.model;version="[1.0,2)",com
+ .liferay.exportimport.kernel.lar;version="[1.1,2)",com.liferay.petra.
+ content;version="[1.0,2)",com.liferay.portal.kernel.annotation;versio
+ n="[6.3,7)",com.liferay.portal.kernel.bean;version="[7.0,8)",com.life
+ ray.portal.kernel.captcha;version="[6.3,7)",com.liferay.portal.kernel
+ .dao.orm;version="[7.0,8)",com.liferay.portal.kernel.exception;versio
+ n="[7.0,8)",com.liferay.portal.kernel.json;version="[7.0,8)",com.life
+ ray.portal.kernel.language;version="[7.1,8)",com.liferay.portal.kerne
+ l.log;version="[7.0,8)",com.liferay.portal.kernel.model;version="[1.0
+ ,2)",com.liferay.portal.kernel.portlet;version="[7.3,8)",com.liferay.
+ portal.kernel.portlet.bridges.mvc;version="[1.2,2)",com.liferay.porta
+ l.kernel.resiliency.spi.agent.annotation;version="[6.2,7)",com.lifera
+ y.portal.kernel.search;version="[7.2,8)",com.liferay.portal.kernel.se
+ curity.auth;version="[1.0,2)",com.liferay.portal.kernel.security.auth
+ .session;version="[1.0,2)",com.liferay.portal.kernel.service;version=
+ "[1.4,2)",com.liferay.portal.kernel.servlet;version="[7.2,8)",com.lif
+ eray.portal.kernel.servlet.taglib.ui;version="[6.3,7)",com.liferay.po
+ rtal.kernel.settings;version="[1.0,2)",com.liferay.portal.kernel.them
+ e;version="[1.0,2)",com.liferay.portal.kernel.upgrade;version="[7.1,8
+ )",com.liferay.portal.kernel.upload;version="[6.3,7)",com.liferay.por
+ tal.kernel.util;version="[7.4,8)",com.liferay.portal.kernel.workflow;
+ version="[7.0,8)",com.liferay.portal.kernel.xml;version="[7.0,8)",com
+ .liferay.portal.security.auth;version="[1.0,2)",com.liferay.portal.up
+ grade.registry;version="[1.0,2)",com.liferay.portal.util;version="[1.
+ 0,2)",javax.portlet;version="[2.0,3)",javax.servlet;version="[3.0,4)"
+ ,javax.servlet.http;version="[3.0,4)",javax.net.ssl
+Javac-Debug: on
+Javac-Deprecation: off
+Javac-Encoding: UTF-8
+Liferay-Releng-App-Description: Apps and Features: System Settings, We
+ b Content Editors, Web Content Template Languages, Theme Tools, Mobil
+ e Device Rules, Facebook Authentication, LDAP Authentication, NTLM Au
+ thentication, OpenID Authentication, OpenSSO Authentication, Remote A
+ uthentication (AuthVerifiers), SSO-based Authentication, Token-based 
+ Authentication, Portal Scripting, Elasticsearch Support, Solr Support
+ , Documents and Media Store Implementations, and more.<br /><br />The
+  Foundation suite provides applications and features that extend the 
+ functionality provided by Liferay's core. Much of the functionality t
+ hat belonged to Liferay's core prior to Liferay 7 has been extracted 
+ into the modules of the Foundation suite. The authentication modules 
+ provide a variety of mechanisms for allowing users and remote applica
+ tions to authenticate to Liferay. The LDAP Authentication module allo
+ ws administrators to establish connections to one or more LDAP direct
+ ories from which users can be imported or exported. The SSO modules a
+ llow users to authenticate to Liferay using a variety of single-sign 
+ on solutions. The Token-based Authentication module allows users or r
+ emote applications to authenticate to Liferay without a password. The
+  Scripting modules allow scripts to be written to invoke Liferay's AP
+ I in several languages including Groovy, Beanshell, Python, Ruby, and
+  JavaScript.
+Liferay-Releng-App-Title: Liferay CE Foundation
+Liferay-Releng-Bundle: true
+Liferay-Releng-Category: Utility
+Liferay-Releng-Deprecated: false
+Liferay-Releng-Labs: false
+Liferay-Releng-Marketplace: true
+Liferay-Releng-Portal-Required: true
+Liferay-Releng-Public: true
+Liferay-Releng-Restart-Required: true
+Liferay-Releng-Support-Url: http://www.liferay.com
+Liferay-Releng-Supported: false
+Private-Package: com.liferay.login.web.internal.constants,com.liferay.
+ login.web.internal.portlet,com.liferay.login.web.internal.portlet.act
+ ion,com.liferay.login.web.internal.portlet.util,com.liferay.login.web
+ .internal.upgrade,com.liferay.login.web.internal.upgrade.v1_0_0,conte
+ nt,resource-actions
+Provide-Capability: osgi.service;objectClass:List<String>="com.liferay
+ .portal.kernel.portlet.ConfigurationAction",osgi.service;objectClass:
+ List<String>="com.liferay.portal.kernel.portlet.bridges.mvc.MVCAction
+ Command",osgi.service;objectClass:List<String>="com.liferay.portal.ke
+ rnel.portlet.bridges.mvc.MVCRenderCommand",osgi.service;objectClass:L
+ ist<String>="com.liferay.portal.kernel.portlet.bridges.mvc.MVCResourc
+ eCommand",osgi.service;objectClass:List<String>="com.liferay.portal.u
+ pgrade.registry.UpgradeStepRegistrator",osgi.service;objectClass:List
+ <String>="javax.portlet.Portlet",liferay.resource.bundle;bundle.symbo
+ lic.name="com.liferay.login.web";resource.bundle.base.name="content.L
+ anguage"
+Require-Capability: osgi.extender;filter:="(&(osgi.extender=jsp.taglib
+ )(uri=http://java.sun.com/portlet_2_0))",osgi.extender;filter:="(&(os
+ gi.extender=jsp.taglib)(uri=http://liferay.com/tld/aui))",osgi.extend
+ er;filter:="(&(osgi.extender=jsp.taglib)(uri=http://liferay.com/tld/f
+ rontend))",osgi.extender;filter:="(&(osgi.extender=jsp.taglib)(uri=ht
+ tp://liferay.com/tld/portlet))",osgi.extender;filter:="(&(osgi.extend
+ er=jsp.taglib)(uri=http://liferay.com/tld/theme))",osgi.extender;filt
+ er:="(&(osgi.extender=jsp.taglib)(uri=http://liferay.com/tld/ui))",os
+ gi.extender;filter:="(&(osgi.extender=jsp.taglib)(uri=http://liferay.
+ com/tld/util))",osgi.service;filter:="(objectClass=com.liferay.portal
+ .kernel.service.LayoutLocalService)";effective:=active,osgi.service;f
+ ilter:="(objectClass=com.liferay.portal.kernel.service.UserLocalServi
+ ce)";effective:=active,osgi.service;filter:="(objectClass=com.liferay
+ .portal.kernel.service.UserService)";effective:=active,osgi.ee;filter
+ :="(&(osgi.ee=JavaSE)(version=1.7))"
+Service-Component: OSGI-INF/com.liferay.login.web.internal.portlet.Fas
+ tLoginPortlet.xml,OSGI-INF/com.liferay.login.web.internal.portlet.Log
+ inPortlet.xml,OSGI-INF/com.liferay.login.web.internal.portlet.action.
+ CaptchaMVCResourceCommand.xml,OSGI-INF/com.liferay.login.web.internal
+ .portlet.action.CreateAccountMVCActionCommand.xml,OSGI-INF/com.lifera
+ y.login.web.internal.portlet.action.CreateAccountMVCRenderCommand.xml
+ ,OSGI-INF/com.liferay.login.web.internal.portlet.action.CreateAnonymo
+ usAccountMVCActionCommand.xml,OSGI-INF/com.liferay.login.web.internal
+ .portlet.action.CreateAnonymousAccountMVCRenderCommand.xml,OSGI-INF/c
+ om.liferay.login.web.internal.portlet.action.ForgotPasswordMVCActionC
+ ommand.xml,OSGI-INF/com.liferay.login.web.internal.portlet.action.For
+ gotPasswordMVCRenderCommand.xml,OSGI-INF/com.liferay.login.web.intern
+ al.portlet.action.LoginConfigurationActionImpl.xml,OSGI-INF/com.lifer
+ ay.login.web.internal.portlet.action.LoginMVCActionCommand.xml,OSGI-I
+ NF/com.liferay.login.web.internal.portlet.action.LoginMVCRenderComman
+ d.xml,OSGI-INF/com.liferay.login.web.internal.portlet.action.LoginRed
+ irectMVCRenderCommand.xml,OSGI-INF/com.liferay.login.web.internal.upg
+ rade.LoginWebUpgrade.xml
+Tool: Bnd-3.2.0.201605172007
