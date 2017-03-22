@@ -1,7 +1,0 @@
-package priv.barrow.oes.portlet.exception;
-
-import javax.portlet.PortletException;
-
-public class ParameterException extends PortletException {
-
-}

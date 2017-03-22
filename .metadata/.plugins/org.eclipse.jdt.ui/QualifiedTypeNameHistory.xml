@@ -44,20 +44,20 @@
 <fullyQualifiedTypeName name="javax.security.auth.x500.X500Principal"/>
 <fullyQualifiedTypeName name="java.lang.Override"/>
 <fullyQualifiedTypeName name="priv.barrow.service.ExamDataLocalServiceUtil"/>
-<fullyQualifiedTypeName name="com.liferay.portal.kernel.util.WebKeys"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="priv.barrow.model.ExamData"/>
-<fullyQualifiedTypeName name="javax.portlet.ProcessAction"/>
 <fullyQualifiedTypeName name="java.util.jar.Attributes.Name"/>
-<fullyQualifiedTypeName name="javax.portlet.ActionRequest"/>
-<fullyQualifiedTypeName name="javax.portlet.ActionResponse"/>
 <fullyQualifiedTypeName name="com.liferay.portal.kernel.util.ParamUtil"/>
-<fullyQualifiedTypeName name="com.liferay.portal.kernel.theme.ThemeDisplay"/>
 <fullyQualifiedTypeName name="com.liferay.portal.kernel.util.PortalUtil"/>
 <fullyQualifiedTypeName name="priv.barrow.model.StudentExamLink"/>
 <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
 <fullyQualifiedTypeName name="priv.barrow.oes.portlet.constants.ExamConstants"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="priv.barrow.service.StudentExamLinkLocalServiceUtil"/>
 <fullyQualifiedTypeName name="com.liferay.portal.kernel.util.Validator"/>
+<fullyQualifiedTypeName name="javax.portlet.ProcessAction"/>
+<fullyQualifiedTypeName name="javax.portlet.ActionRequest"/>
+<fullyQualifiedTypeName name="javax.portlet.ActionResponse"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.util.WebKeys"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.theme.ThemeDisplay"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
 </qualifiedTypeNameHistroy>
