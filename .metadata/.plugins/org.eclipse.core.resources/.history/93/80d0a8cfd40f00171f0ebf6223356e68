@@ -1,0 +1,15 @@
+package oes.custom.login;
+
+@Component(
+    property = {
+        "javax.portlet.name=com_liferay_login_web_portlet_FastLoginPortlet",
+        "javax.portlet.name=com_liferay_login_web_portlet_LoginPortlet",
+        "mvc.command.name=/login/login",
+        "service.ranking:Integer=161"
+    },
+    service = MVCActionCommand.class
+)
+
+public class CustomLoginMVCActionCommand extends BaseMVCActionCommand {
+
+}
