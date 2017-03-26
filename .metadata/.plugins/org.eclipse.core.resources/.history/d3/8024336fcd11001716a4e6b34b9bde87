@@ -1,0 +1,14 @@
+package oes.custom.login;
+
+import com.liferay.portal.kernel.events.ActionException;
+import com.liferay.portal.kernel.events.LifecycleAction;
+import com.liferay.portal.kernel.events.LifecycleEvent;
+
+public class CustomDefaultLandingPageAction extends Action {
+
+    @Override
+    public final void processLifecycleEvent(LifecycleEvent lifecycleEvent) throws ActionException {
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+    }
+
+}

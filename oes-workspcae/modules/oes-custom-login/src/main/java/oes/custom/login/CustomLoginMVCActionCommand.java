@@ -15,7 +15,7 @@ import com.liferay.portal.kernel.portlet.bridges.mvc.MVCActionCommand;
         "javax.portlet.name=com_liferay_login_web_portlet_FastLoginPortlet",
         "javax.portlet.name=com_liferay_login_web_portlet_LoginPortlet",
         "mvc.command.name=/login/login",
-        "service.ranking:Integer=16627"
+        "service.ranking:Integer=6627"
     },
     service = MVCActionCommand.class
 )

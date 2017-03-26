@@ -1,0 +1,22 @@
+package oes.custom.login;
+
+import org.osgi.service.component.annotations.Component;
+
+import com.liferay.portal.kernel.events.ActionException;
+import com.liferay.portal.kernel.events.LifecycleAction;
+import com.liferay.portal.kernel.events.LifecycleEvent;
+
+
+@Component(
+    immediate = true, property = {"key=login.events.post"},
+    service = LifecycleAction.class
+)
+public class CustomDefaultLandingPageAction implements LifecycleAction {
+
+    @Override
+    public final void processLifecycleEvent(LifecycleEvent lifecycleEvent) throws ActionException {
+        // TODO Auto-generated method stub
+        super.processLifecycleEvent(lifecycleEvent);
+    }
+
+}

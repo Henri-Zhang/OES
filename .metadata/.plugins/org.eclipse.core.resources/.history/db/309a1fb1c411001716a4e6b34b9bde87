@@ -1,0 +1,5 @@
+Bundle-Name: oes-custom-login
+Bundle-SymbolicName: oes.custom.login
+Bundle-Version: 1.0.0
+Fragment-Host: com.liferay.login.web;bundle-version="1.0.7"
+-sources: true
