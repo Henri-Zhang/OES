@@ -21,11 +21,14 @@ import com.liferay.portal.kernel.model.User;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
 import com.liferay.portal.kernel.service.RoleLocalServiceUtil;
 import com.liferay.portal.kernel.service.UserLocalServiceUtil;
+import com.liferay.portal.kernel.servlet.SessionErrors;
 import com.liferay.portal.kernel.theme.ThemeDisplay;
 import com.liferay.portal.kernel.util.ParamUtil;
 import com.liferay.portal.kernel.util.StringPool;
+import com.liferay.portal.kernel.util.Validator;
 import com.liferay.portal.kernel.util.WebKeys;
 
+import priv.barrow.oes.portlet.exception.EmailRegisteredException;
 import priv.barrow.oes.portlet.signup.constant.Constants;
 import priv.barrow.oes.portlet.signup.model.SignUpModel;
 
@@ -56,6 +59,9 @@ public class SignUpPortlet extends MVCPortlet {
     public void doView(RenderRequest renderRequest, RenderResponse renderResponse)
             throws IOException, PortletException {
 
+        ThemeDisplay themeDisplay = (ThemeDisplay) renderRequest.getAttribute(WebKeys.THEME_DISPLAY);
+        themeDisplay.isSignedIn();
+
         super.doView(renderRequest, renderResponse);
     }
 
@@ -64,12 +70,21 @@ public class SignUpPortlet extends MVCPortlet {
         SignUpModel signUpModel = getSignUpModel(actionRequest);
         ThemeDisplay themeDisplay = (ThemeDisplay) actionRequest.getAttribute(WebKeys.THEME_DISPLAY);
         long companyId = themeDisplay.getCompanyId();
+
+        try {
+            verifyEmail(actionRequest, companyId, signUpModel.getEmail());
+        } catch (EmailRegisteredException e) {
+            LOG.error(String.format(e.getMessage() + "Email: [%s]", signUpModel.getEmail()), e);
+            return;
+        }
+
         Locale defaultLocale = Locale.getDefault();
         Role role = null;
         try {
             role = RoleLocalServiceUtil.getRole(companyId, signUpModel.getRole());
         } catch (PortalException e) {
             LOG.error(String.format("Get role by role name [%s] failed.", signUpModel.getRole()), e);
+            return;
         }
 
         try {
@@ -118,6 +133,18 @@ public class SignUpPortlet extends MVCPortlet {
                 new SignUpModel(firstName, lastName, email, confirmEmail, role, password, confirmPassword);
 
         return signUpModel;
+    }
+
+    private boolean verifyEmail(ActionRequest actionRequest, long companyId, String email)
+                throws EmailRegisteredException {
+
+        User user = UserLocalServiceUtil.fetchUserByEmailAddress(companyId, email);
+        if (Validator.isNotNull(user)) {
+            EmailRegisteredException exception = new EmailRegisteredException("This email has been registered.");
+            SessionErrors.add(actionRequest, exception.getClass());
+        }
+
+        return true;
     }
 
 }

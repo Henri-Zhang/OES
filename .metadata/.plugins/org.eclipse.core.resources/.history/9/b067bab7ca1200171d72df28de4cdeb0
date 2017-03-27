@@ -1,0 +1,5 @@
+package priv.barrow.oes.portlet.exception;
+
+public class EmailRegisteredException extends Exception {
+
+}

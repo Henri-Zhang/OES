@@ -1,0 +1,5 @@
+package priv.barrow.oes.portlet.landingpage;
+
+public enum OESRoles {
+    STUDENT("Student"), TEACHER("Teacher"), CONTENT_ADMIN("Content Admin"), SYS
+}

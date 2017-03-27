@@ -1,0 +1,25 @@
+package priv.barrow.oes.portlet.landingpage;
+
+import javax.portlet.Portlet;
+
+import org.osgi.service.component.annotations.Component;
+
+import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
+
+@Component(
+    immediate = true,
+    property = {
+        "com.liferay.portlet.display-category=Tools",
+        "com.liferay.portlet.instanceable=true",
+        "javax.portlet.display-name=Landing Page",
+        "javax.portlet.init-param.template-path=/",
+        "javax.portlet.init-param.view-template=/html/viewquestions/view_questions.jsp",
+        "javax.portlet.resource-bundle=content.Language",
+        "javax.portlet.security-role-ref=power-user,user"
+    },
+    service = Portlet.class
+)
+
+public class LandingPagePortlet extends MVCPortlet {
+
+}

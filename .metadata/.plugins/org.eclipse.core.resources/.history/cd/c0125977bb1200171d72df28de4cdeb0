@@ -1,0 +1,7 @@
+package priv.barrow.oes.portlet.landingpage;
+
+import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
+
+public class LandingPagePortlet extends MVCPortlet {
+
+}

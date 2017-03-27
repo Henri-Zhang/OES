@@ -72,6 +72,7 @@ public class DataUtil {
                 newRecord = DDLRecordLocalServiceUtil.addRecord(20164, 20147, 50950, 0, fieldsMap, serviceContext);
             } catch (PortalException e) {
                 e.printStackTrace();
+                System.out.println("No." + i + "This question import failed." + description);
                 continue;
             }
 
@@ -80,7 +81,7 @@ public class DataUtil {
             }
 
             QuestionRecordLinkLocalServiceUtil.addQuestionRecordLink(newRecord.getRecordId(), description);
-
+            System.out.println("No." + i + "This question import completed." + description);
         }
 
         System.out.println("-----------------");

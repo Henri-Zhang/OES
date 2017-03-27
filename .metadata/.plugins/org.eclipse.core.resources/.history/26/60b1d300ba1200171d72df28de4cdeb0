@@ -1,0 +1,16 @@
+package priv.barrow.oes.portlet.action;
+
+import javax.portlet.ActionRequest;
+import javax.portlet.ActionResponse;
+
+import com.liferay.portal.kernel.events.Action;
+
+public class CustomLoginAction extends Action {
+
+    @Override
+    protected void doProcessAction(ActionRequest actionRequest, ActionResponse actionResponse) throws Exception {
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%");
+
+    }
+
+}

@@ -1,0 +1,8 @@
+<script>
+    AUI.use('node',
+        function(A) {
+            var landingPage = A.one('#landingPage').val();
+            location.herf="${landingPage }";
+        }
+    );
+</script>

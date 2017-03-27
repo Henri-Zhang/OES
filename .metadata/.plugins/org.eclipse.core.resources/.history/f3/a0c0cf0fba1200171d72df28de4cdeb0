@@ -1,0 +1,19 @@
+package priv.barrow.oes.portlet.action;
+
+import javax.portlet.ActionRequest;
+import javax.portlet.ActionResponse;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.liferay.portal.kernel.events.Action;
+import com.liferay.portal.kernel.events.ActionException;
+
+public class CustomLandingPageAction extends Action {
+
+    @Override
+    public void run(HttpServletRequest request, HttpServletResponse response) throws ActionException {
+        System.out.println("++++++++++++++++++++++++++++++++++++++");
+        
+    }
+
+}
