@@ -1,0 +1,7 @@
+<script>
+    AUI.use('node',
+        function(A) {
+            location.herf="/home";
+        }
+    );
+</script>

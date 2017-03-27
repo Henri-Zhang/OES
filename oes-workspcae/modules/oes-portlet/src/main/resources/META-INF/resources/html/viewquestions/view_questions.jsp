@@ -1,10 +1,11 @@
-<%@page import="java.sql.Timestamp"%>
-<%@page import="javax.portlet.PortletURL"%>
-<%@page import="priv.barrow.oes.portlet.util.QuestionUtil"%>
-<%@page import="priv.barrow.service.QuestionRecordLinkLocalServiceUtil"%>
-<%@page import="priv.barrow.oes.portlet.search.QuestionDisplayTerms"%>
-<%@page import="priv.barrow.oes.portlet.search.QuestionSearchTerms"%>
-<%@page import="priv.barrow.oes.portlet.search.QuestionSearch"%>
+<%@ page import="java.sql.Timestamp"%>
+<%@ page import="javax.portlet.PortletURL"%>
+<%@ page import="priv.barrow.oes.portlet.util.QuestionUtil"%>
+<%@ page import="priv.barrow.service.QuestionRecordLinkLocalServiceUtil"%>
+<%@ page import="priv.barrow.oes.portlet.search.QuestionDisplayTerms"%>
+<%@ page import="priv.barrow.oes.portlet.search.QuestionSearchTerms"%>
+<%@ page import="priv.barrow.oes.portlet.search.QuestionSearch"%>
+<%@ page import="com.liferay.portal.kernel.util.WebKeys"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
 <%@ taglib uri="http://liferay.com/tld/aui" prefix="aui" %>
@@ -27,7 +28,7 @@
             QuestionSearchTerms searchTerms = (QuestionSearchTerms) searchContainer.getSearchTerms();
             QuestionDisplayTerms displayTerms = (QuestionDisplayTerms) searchContainer.getDisplayTerms();
         %>
-        <aui:nav-bar-search>
+        <%-- <aui:nav-bar-search>
             <aui:input name="<%= displayTerms.SEARCH_QUESTION_ORDER_START %>" type="text" />
             <aui:input name="<%= displayTerms.SEARCH_QUESTION_ORDER_END %>" type="text" />
             <aui:input name="<%= displayTerms.SEARCH_UPDATE_DATE_START %>" type="text" />
@@ -35,7 +36,7 @@
             <aui:input name="<%= displayTerms.SEARCH_QUESTION_KEYWORD %>" type="text" />
             <aui:input name="<%= displayTerms.SEARCH_USER_NAME_KEYWORD %>" type="text" />
 	        <aui:button value="search" type="submit" />
-        </aui:nav-bar-search>
+        </aui:nav-bar-search> --%>
 
         <liferay-ui:search-container-results>
         <%

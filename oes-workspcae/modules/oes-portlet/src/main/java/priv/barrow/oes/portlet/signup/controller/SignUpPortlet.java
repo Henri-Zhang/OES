@@ -60,7 +60,10 @@ public class SignUpPortlet extends MVCPortlet {
             throws IOException, PortletException {
 
         ThemeDisplay themeDisplay = (ThemeDisplay) renderRequest.getAttribute(WebKeys.THEME_DISPLAY);
-        themeDisplay.isSignedIn();
+        if (themeDisplay.isSignedIn()) {
+            include("/META-INF/resources/html/redirect_home.jsp", renderRequest, renderResponse);
+            return;
+        }
 
         super.doView(renderRequest, renderResponse);
     }
@@ -117,7 +120,15 @@ public class SignUpPortlet extends MVCPortlet {
                     null);
         } catch (PortalException e) {
             LOG.error("Create new user failed.");
+            return;
         }
+
+        try {
+            actionResponse.sendRedirect("/sign-in");
+        } catch (IOException e) {
+            LOG.error("Send redirect to sign in page failed.");
+        }
+
     }
 
     private SignUpModel getSignUpModel(ActionRequest actionRequest) {

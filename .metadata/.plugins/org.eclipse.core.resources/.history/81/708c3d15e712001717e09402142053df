@@ -1,0 +1,6 @@
+<script>
+    AUI.use(function(A) {
+            location.herf="/home";
+        }
+    );
+</script>

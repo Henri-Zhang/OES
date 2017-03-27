@@ -24,9 +24,9 @@
 </c:forEach>
 <br />
 <aui:a calss="btn btn-lg btn-primary btn-default" href="/view-questions">
-    <liferay-ui:message key="add-question" />
-</aui:a>
-<aui:a calss="btn btn-lg btn-primary btn-default" href="/add-question">
     <liferay-ui:message key="view-questions" />
 </aui:a>
-<aui:a calss="btn btn-lg btn-primary btn-default" href="${importQuestionURL }">Import Questions</aui:a>
+<aui:a calss="btn btn-lg btn-primary btn-default" href="/add-question">
+    <liferay-ui:message key="add-question" />
+</aui:a>
+<aui:a calss="btn btn-lg btn-primary btn-default" style="display: none" href="${importQuestionURL }">Import Questions</aui:a>
