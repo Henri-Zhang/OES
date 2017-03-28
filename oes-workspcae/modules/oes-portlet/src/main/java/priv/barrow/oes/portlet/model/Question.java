@@ -1,5 +1,7 @@
 package priv.barrow.oes.portlet.model;
 
+import java.util.Date;
+
 public class Question {
 
     private long order;
@@ -9,6 +11,10 @@ public class Question {
     private String optionC;
     private String optionD;
     private String answer;
+    private long creatorId;
+    private String creatorName;
+    private Date createdTime;
+    private Date modifiedTime;
 
     public Question() {}
 

@@ -1,7 +1,3 @@
 <script>
-    AUI.use('node',
-        function(A) {
-            location.herf="${landingPage }";
-        }
-    );
+    window.location.href="${landingPage }";
 </script>

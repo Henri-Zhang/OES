@@ -5,7 +5,6 @@
     margin: 0 auto;
     overflow: hidden;
     border: 1px solid green;
-
 }
 
 .question-list {
@@ -17,8 +16,4 @@
     width: 500px;
     height: 400px;
     float: left;
-}
-
-span {
-    color: red;
 }

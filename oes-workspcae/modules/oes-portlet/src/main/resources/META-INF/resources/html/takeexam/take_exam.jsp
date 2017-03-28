@@ -18,8 +18,8 @@
 <aui:input name="examId" type="hidden" value="${exam.examId }" />
 <aui:input name="studentId" type="hidden" value="${studentId }" />
 <aui:button name="prevQuestion" value="Previous" disabled="true" />
-<div class="question-container">
-    <div class="question-list">
+<!-- <div class="question-container">
+    <div class="question-list"> -->
         <c:forEach items="${questions }" var="question" varStatus="status">
             <div class="question-card">
                 <h3 id="index">${status.count }</h3>
@@ -60,8 +60,8 @@
                 <hr />
             </div>
         </c:forEach>
-    </div>
-</div>
+<!--     </div>
+</div> -->
 <aui:button name="nextQuestion" value="Next" />
 <portlet:actionURL name="submit" var="submitURL">
     <portlet:param name="examId" value="${exam.examId }"/>

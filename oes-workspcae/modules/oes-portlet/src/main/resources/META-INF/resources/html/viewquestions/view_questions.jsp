@@ -27,16 +27,17 @@
         <%
             QuestionSearchTerms searchTerms = (QuestionSearchTerms) searchContainer.getSearchTerms();
             QuestionDisplayTerms displayTerms = (QuestionDisplayTerms) searchContainer.getDisplayTerms();
+            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~");
         %>
         <%-- <aui:nav-bar-search>
+        </aui:nav-bar-search> --%>
             <aui:input name="<%= displayTerms.SEARCH_QUESTION_ORDER_START %>" type="text" />
             <aui:input name="<%= displayTerms.SEARCH_QUESTION_ORDER_END %>" type="text" />
             <aui:input name="<%= displayTerms.SEARCH_UPDATE_DATE_START %>" type="text" />
             <aui:input name="<%= displayTerms.SEARCH_UPDATE_DATE_END %>" type="text" />
             <aui:input name="<%= displayTerms.SEARCH_QUESTION_KEYWORD %>" type="text" />
             <aui:input name="<%= displayTerms.SEARCH_USER_NAME_KEYWORD %>" type="text" />
-	        <aui:button value="search" type="submit" />
-        </aui:nav-bar-search> --%>
+            <aui:button value="search" type="submit" />
 
         <liferay-ui:search-container-results>
         <%
