@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;oes-workspcae/themes/top_head.jsp&apos;" deleteContents="false" description="Delete resource &apos;oes-workspcae/themes/top_head.jsp&apos;" element1="/oes-workspcae/themes/top_head.jsp" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1490711013026"/>
+</session>
