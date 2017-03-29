@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="com.liferay.product.navigation.control.menu.web.internal.portlet.ProductNavigationControlMenuPortlet" immediate="true">
+  <implementation class="com.liferay.product.navigation.control.menu.web.internal.portlet.ProductNavigationControlMenuPortlet"/>
+  <service>
+    <provide interface="javax.portlet.Portlet"/>
+  </service>
+  <property name="javax.portlet.init-param.view-template" type="String" value="/view.jsp"/>
+  <property name="com.liferay.portlet.system" type="String" value="true"/>
+  <property name="com.liferay.portlet.add-default-resource" type="String" value="true"/>
+  <property name="javax.portlet.resource-bundle" type="String" value="content.Language"/>
+  <property name="javax.portlet.name" type="String" value="com_liferay_product_navigation_control_menu_web_portlet_ProductNavigationControlMenuPortlet"/>
+  <property name="com.liferay.portlet.instanceable" type="String" value="false"/>
+  <property name="com.liferay.portlet.use-default-template" type="String" value="false"/>
+  <property name="javax.portlet.display-name" type="String" value="Control Menu"/>
+  <property name="com.liferay.portlet.css-class-wrapper" type="String" value="portlet-control-menu"/>
+  <property name="com.liferay.portlet.display-category" type="String" value="category.hidden"/>
+  <property name="javax.portlet.supports.mime-type" type="String" value="text/html"/>
+</component>

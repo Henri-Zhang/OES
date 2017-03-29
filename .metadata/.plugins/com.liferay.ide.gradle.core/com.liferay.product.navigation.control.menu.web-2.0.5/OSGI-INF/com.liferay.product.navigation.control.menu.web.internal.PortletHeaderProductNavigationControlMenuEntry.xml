@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="com.liferay.product.navigation.control.menu.web.internal.PortletHeaderProductNavigationControlMenuEntry" immediate="true">
+  <implementation class="com.liferay.product.navigation.control.menu.web.internal.PortletHeaderProductNavigationControlMenuEntry"/>
+  <service>
+    <provide interface="com.liferay.product.navigation.control.menu.ProductNavigationControlMenuEntry"/>
+  </service>
+  <reference name="ServletContext" interface="javax.servlet.ServletContext" target="(osgi.web.symbolicname=com.liferay.product.navigation.control.menu.web)" bind="setServletContext"/>
+  <property name="product.navigation.control.menu.entry.order" type="Integer" value="100"/>
+  <property name="product.navigation.control.menu.category.key" type="String" value="tools"/>
+</scr:component>

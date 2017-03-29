@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="com.liferay.announcements.web.internal.messaging.CheckEntryMessageListener" immediate="true" activate="activate" deactivate="deactivate">
+  <implementation class="com.liferay.announcements.web.internal.messaging.CheckEntryMessageListener"/>
+  <service>
+    <provide interface="com.liferay.announcements.web.internal.messaging.CheckEntryMessageListener"/>
+  </service>
+  <reference name="AnnouncementsEntryLocalService" interface="com.liferay.announcements.kernel.service.AnnouncementsEntryLocalService" bind="setAnnouncementsEntryLocalService"/>
+  <reference name="ModuleServiceLifecycle" interface="com.liferay.portal.kernel.module.framework.ModuleServiceLifecycle" target="(module.service.lifecycle=portal.initialized)" bind="setModuleServiceLifecycle"/>
+  <reference name="SchedulerEngineHelper" interface="com.liferay.portal.kernel.scheduler.SchedulerEngineHelper" bind="setSchedulerEngineHelper"/>
+  <reference name="TriggerFactory" interface="com.liferay.portal.kernel.scheduler.TriggerFactory" bind="setTriggerFactory"/>
+</scr:component>

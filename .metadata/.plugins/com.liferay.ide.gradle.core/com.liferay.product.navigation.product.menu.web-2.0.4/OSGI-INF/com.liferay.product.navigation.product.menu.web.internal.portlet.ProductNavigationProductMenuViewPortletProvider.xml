@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="com.liferay.product.navigation.product.menu.web.internal.portlet.ProductNavigationProductMenuViewPortletProvider" immediate="true">
+  <implementation class="com.liferay.product.navigation.product.menu.web.internal.portlet.ProductNavigationProductMenuViewPortletProvider"/>
+  <service>
+    <provide interface="com.liferay.portal.kernel.portlet.ViewPortletProvider"/>
+  </service>
+  <property name="model.class.name" type="String" value="com.liferay.admin.kernel.util.PortalProductMenuApplicationType$ProductMenu"/>
+</component>

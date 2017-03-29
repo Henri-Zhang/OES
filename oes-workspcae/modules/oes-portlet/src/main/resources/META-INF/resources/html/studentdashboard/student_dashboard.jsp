@@ -18,25 +18,21 @@
         </h3>
         <c:forEach items="${toDoExams }" var="exam">
             <span>${exam.name }</span>
-            <aui:a href="/take-exam?examId=${exam.examId }">
-                <liferay-ui:message key="start" />
-            </aui:a>
+            <aui:button class="btn btn-lg btn-primary btn-default" href="/take-exam?examId=${exam.examId }" value="start" />
         </c:forEach>
         <h3>
             <liferay-ui:message key="exams-in-progress" />
         </h3>
         <c:forEach items="${inProgressExams }" var="exam">
             <span>${exam.name }</span>
-            <aui:a href="/take-exam?examId=${exam.examId }">
-                <liferay-ui:message key="continue" />
-            </aui:a>
+            <aui:button class="btn btn-lg btn-primary btn-default" href="/take-exam?examId=${exam.examId }" value="continue" />
         </c:forEach>
         <h3>
             <liferay-ui:message key="exams-completed" />
         </h3>
         <c:forEach items="${doneExams }" var="exam">
             <span>${exam.name }</span>
-            <aui:button value="review" />
+            <aui:button class="btn btn-lg btn-primary btn-default" href="/review-exam?examId=${exam.examId }&studentId=${studentId }" value="review" />
         </c:forEach>
     </c:when>
     <c:otherwise>

@@ -29,18 +29,18 @@ AUI().use(
             }
         );
 
-        prevQuestionButton.on(
+        /*prevQuestionButton.on(
             'click',
             function(e) {
-            	prevQuestionButton.addClass('disabled');
-            	nextQuestionButton.addClass('disabled');
-            	
-            	var questionList = A.one('div.question-list');
+                prevQuestionButton.addClass('disabled');
+                nextQuestionButton.addClass('disabled');
+                
+                var questionList = A.one('div.question-list');
                 var questionListWidth = questionList.width();
                 var currentMarginLeft = 0 - questionList.getMargin('left');
 
                 if (currentMarginLeft >= 0) {
-                	prevQuestionButton.addClass('disabled');
+                    prevQuestionButton.addClass('disabled');
                     return;
                 }
 
@@ -56,7 +56,7 @@ AUI().use(
 
                 A.one('button[name*=nextQuestion]').removeClass('disabled');
                 if (targetMarginLeft >= 0) {
-                	prevQuestionButton.addClass('disabled');
+                    prevQuestionButton.addClass('disabled');
                 }
             }
         );
@@ -64,15 +64,15 @@ AUI().use(
         nextQuestionButton.on(
             'click',
             function(e) {
-            	prevQuestionButton.addClass('disabled');
-            	nextQuestionButton.addClass('disabled');
-            	
-            	var questionList = A.one('div.question-list');
+                prevQuestionButton.addClass('disabled');
+                nextQuestionButton.addClass('disabled');
+                
+                var questionList = A.one('div.question-list');
                 var questionListWidth = questionList.width();
                 var currentMarginLeft = 0 - questionList.getMargin('left');
 
                 if (Math.abs(currentMarginLeft) >= questionListWidth - 500) {
-                	nextQuestionButton.addClass('disabled');
+                    nextQuestionButton.addClass('disabled');
                     return;
                 }
 
@@ -88,10 +88,10 @@ AUI().use(
 
                 A.one('button[name*=prevQuestion]').removeClass('disabled');
                 if (Math.abs(targetMarginLeft) >= questionListWidth - 500) {
-                	nextQuestionButton.addClass('disabled');
+                    nextQuestionButton.addClass('disabled');
                 }
             }
-        );
+        );*/
 
     }
 );

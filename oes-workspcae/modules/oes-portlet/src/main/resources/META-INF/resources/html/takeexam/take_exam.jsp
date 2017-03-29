@@ -17,8 +17,8 @@
 <aui:input name="resourceURL" type="hidden" value="<%=resourceURL.toString()%>" />
 <aui:input name="examId" type="hidden" value="${exam.examId }" />
 <aui:input name="studentId" type="hidden" value="${studentId }" />
-<aui:button name="prevQuestion" value="Previous" disabled="true" />
-<!-- <div class="question-container">
+<!-- <aui:button name="prevQuestion" value="Previous" disabled="true" />
+<div class="question-container">
     <div class="question-list"> -->
         <c:forEach items="${questions }" var="question" varStatus="status">
             <div class="question-card">
@@ -61,11 +61,9 @@
             </div>
         </c:forEach>
 <!--     </div>
-</div> -->
-<aui:button name="nextQuestion" value="Next" />
+</div>
+<aui:button name="nextQuestion" value="Next" /> -->
 <portlet:actionURL name="submit" var="submitURL">
     <portlet:param name="examId" value="${exam.examId }"/>
 </portlet:actionURL>
-<aui:a href="${submit }" class="btn">
-    <liferay-ui:message key="submit" />
-</aui:a>
+<aui:button href="${submitURL }" value="submit" />

@@ -100,6 +100,7 @@ public class StudentDashboardPortlet extends MVCPortlet {
         renderRequest.setAttribute(StudentConstants.DONE_EXAMS, doneExams);
         renderRequest.setAttribute(TeacherConstants.TEACHER, teacher);
         renderRequest.setAttribute(StudentConstants.HAS_TEACHER, true);
+        renderRequest.setAttribute(StudentConstants.STUDENT_ID, userId);
 
         super.doView(renderRequest, renderResponse);
     }

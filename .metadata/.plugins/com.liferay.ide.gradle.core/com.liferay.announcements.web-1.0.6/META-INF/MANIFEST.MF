@@ -1,0 +1,145 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1469290240981
+Bundle-ManifestVersion: 2
+Bundle-Name: Liferay Announcements Web
+Bundle-SymbolicName: com.liferay.announcements.web
+Bundle-Vendor: Liferay, Inc.
+Bundle-Version: 1.0.6
+Created-By: 1.8.0_92 (Oracle Corporation)
+Export-Package: com.liferay.announcements.web.constants;version="1.0.0
+ "
+Import-Package: com.liferay.announcements.kernel.exception;version="[1
+ .0,2)",com.liferay.announcements.kernel.model;version="[1.0,2)",com.l
+ iferay.announcements.kernel.service;version="[1.0,2)",com.liferay.ann
+ ouncements.kernel.util;version="[1.0,2)",com.liferay.expando.kernel.m
+ odel;version="[1.0,2)",com.liferay.exportimport.kernel.lar;version="[
+ 1.1,2)",com.liferay.portal.kernel.annotation;version="[6.3,7)",com.li
+ feray.portal.kernel.bean;version="[7.0,8)",com.liferay.portal.kernel.
+ configuration;version="[6.2,7)",com.liferay.portal.kernel.dao.orm;ver
+ sion="[7.0,8)",com.liferay.portal.kernel.dao.search;version="[7.2,8)"
+ ,com.liferay.portal.kernel.display.context;version="[1.0,2)",com.life
+ ray.portal.kernel.display.context.util;version="[1.0,2)",com.liferay.
+ portal.kernel.exception;version="[7.0,8)",com.liferay.portal.kernel.j
+ son;version="[7.0,8)",com.liferay.portal.kernel.language;version="[7.
+ 1,8)",com.liferay.portal.kernel.messaging;version="[7.0,8)",com.lifer
+ ay.portal.kernel.model;version="[1.0,2)",com.liferay.portal.kernel.mo
+ dule.framework;version="[1.1,2)",com.liferay.portal.kernel.portlet;ve
+ rsion="[7.2,8)",com.liferay.portal.kernel.portlet.bridges.mvc;version
+ ="[1.2,2)",com.liferay.portal.kernel.resiliency.spi.agent.annotation;
+ version="[6.2,7)",com.liferay.portal.kernel.scheduler;version="[7.0,8
+ )",com.liferay.portal.kernel.search;version="[7.2,8)",com.liferay.por
+ tal.kernel.security.auth;version="[1.0,2)",com.liferay.portal.kernel.
+ security.permission;version="[1.1,2)",com.liferay.portal.kernel.servi
+ ce;version="[1.3,2)",com.liferay.portal.kernel.service.permission;ver
+ sion="[1.0,2)",com.liferay.portal.kernel.servlet;version="[7.1,8)",co
+ m.liferay.portal.kernel.servlet.taglib.ui;version="[6.3,7)",com.lifer
+ ay.portal.kernel.theme;version="[1.0,2)",com.liferay.portal.kernel.up
+ grade;version="[7.1,8)",com.liferay.portal.kernel.upload;version="[6.
+ 3,7)",com.liferay.portal.kernel.util;version="[7.3,8)",com.liferay.po
+ rtal.upgrade.registry;version="[1.0,2)",com.liferay.portal.util;versi
+ on="[1.0,2)",com.liferay.portlet.announcements.model.impl,com.liferay
+ .portlet.announcements.service.permission,com.liferay.taglib.search;v
+ ersion="[1.0,2)",javax.portlet;version="[2.0,3)",javax.servlet;versio
+ n="[3.0,4)",javax.servlet.http;version="[3.0,4)"
+Javac-Debug: on
+Javac-Deprecation: off
+Javac-Encoding: UTF-8
+Liferay-Releng-App-Description: Apps and Features: Activities, Alerts,
+  Announcements, Blogs, Documents and Media, Friend Requests,Invitatio
+ n, Media Gallery, Meetups, Message Boards, Mentions, Microblogs, Page
+  Flags/Comments/Ratings, Social Activity/Equity, User and Group Stati
+ stics, Wiki.<br /><br />The Collaboration suite provides applications
+  and features that help users share ideas, implement them, and produc
+ e terrific results. Its apps such as Message Boards and Blogs help us
+ ers start discussions, ask questions, share ideas, and connect with o
+ ther users. Wiki allows users to share in-depth information. And Aler
+ ts and Announcements facilitate broadcasting information and notifica
+ tions.<br /><br />As users collaborate, they're sure to produce impor
+ tant files. The suite's Documents and Media Library allows users to s
+ tore files, share them, and publish them. It not only works with Life
+ ray's built-in repository but also allows you to integrate with exter
+ nal repositories, such CMIS repositories and Google Docs. Users can a
+ dd and share all kinds of files, including documents, presentations, 
+ images, and videos. And the suite's Documents and Media app and Media
+  Gallery help users display files the way they like them.<br /><br />
+ As users engage in site activities, you'll want to recognize them and
+  connect them with other users. The suite's social networking apps an
+ d features enable you to attribute social equity to active users auto
+ matically by increasing their rank on the site. You can even highligh
+ t user activities to show your site's liveliness. The Mentions featur
+ e facilitates notifying specific users in the context of site content
+ , discussions, and comments. The social apps also help users share th
+ eir thoughts on the your sites and other social sites, such as Facebo
+ ok and Twitter. Combined with the suite's collaboration and document 
+ management features, the Collaboration suite’s social features help
+  develop awesome communities, foster high morale, and make work inter
+ esting.<br /><br />This suite may contain modules that depend on Foun
+ dation suite modules.
+Liferay-Releng-App-Title: Liferay CE Collaboration
+Liferay-Releng-Bundle: true
+Liferay-Releng-Category: Communication
+Liferay-Releng-Deprecated: false
+Liferay-Releng-Labs: false
+Liferay-Releng-Marketplace: true
+Liferay-Releng-Portal-Required: true
+Liferay-Releng-Public: true
+Liferay-Releng-Restart-Required: true
+Liferay-Releng-Support-Url: http://www.liferay.com
+Liferay-Releng-Supported: false
+Private-Package: com.liferay.announcements.web.internal.display.contex
+ t,com.liferay.announcements.web.internal.display.context.util,com.lif
+ eray.announcements.web.internal.messaging,com.liferay.announcements.w
+ eb.internal.portlet,com.liferay.announcements.web.internal.portlet.ac
+ tion,com.liferay.announcements.web.internal.upgrade,content,resource-
+ actions
+Provide-Capability: osgi.service;objectClass:List<String>="com.liferay
+ .announcements.web.internal.messaging.CheckEntryMessageListener",osgi
+ .service;objectClass:List<String>="com.liferay.portal.kernel.portlet.
+ ConfigurationAction",osgi.service;objectClass:List<String>="com.lifer
+ ay.portal.kernel.portlet.EditPortletProvider,com.liferay.portal.kerne
+ l.portlet.ManagePortletProvider,com.liferay.portal.kernel.portlet.Vie
+ wPortletProvider",osgi.service;objectClass:List<String>="com.liferay.
+ portal.kernel.portlet.bridges.mvc.MVCActionCommand",osgi.service;obje
+ ctClass:List<String>="com.liferay.portal.kernel.portlet.bridges.mvc.M
+ VCRenderCommand",osgi.service;objectClass:List<String>="com.liferay.p
+ ortal.upgrade.registry.UpgradeStepRegistrator",osgi.service;objectCla
+ ss:List<String>="javax.portlet.Portlet",liferay.resource.bundle;bundl
+ e.symbolic.name="com.liferay.announcements.web";resource.bundle.base.
+ name="content.Language"
+Require-Capability: osgi.extender;filter:="(&(osgi.extender=jsp.taglib
+ )(uri=http://java.sun.com/portlet_2_0))",osgi.extender;filter:="(&(os
+ gi.extender=jsp.taglib)(uri=http://liferay.com/tld/aui))",osgi.extend
+ er;filter:="(&(osgi.extender=jsp.taglib)(uri=http://liferay.com/tld/f
+ rontend))",osgi.extender;filter:="(&(osgi.extender=jsp.taglib)(uri=ht
+ tp://liferay.com/tld/portlet))",osgi.extender;filter:="(&(osgi.extend
+ er=jsp.taglib)(uri=http://liferay.com/tld/theme))",osgi.extender;filt
+ er:="(&(osgi.extender=jsp.taglib)(uri=http://liferay.com/tld/ui))",os
+ gi.extender;filter:="(&(osgi.extender=jsp.taglib)(uri=http://liferay.
+ com/tld/util))",osgi.service;filter:="(objectClass=com.liferay.announ
+ cements.kernel.service.AnnouncementsEntryLocalService)";effective:=ac
+ tive,osgi.service;filter:="(objectClass=com.liferay.announcements.ker
+ nel.service.AnnouncementsEntryService)";effective:=active,osgi.servic
+ e;filter:="(objectClass=com.liferay.portal.kernel.model.Release)";eff
+ ective:=active,osgi.service;filter:="(objectClass=com.liferay.portal.
+ kernel.module.framework.ModuleServiceLifecycle)";effective:=active,os
+ gi.service;filter:="(objectClass=com.liferay.portal.kernel.scheduler.
+ SchedulerEngineHelper)";effective:=active,osgi.service;filter:="(obje
+ ctClass=com.liferay.portal.kernel.scheduler.TriggerFactory)";effectiv
+ e:=active,osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.7))"
+Service-Component: OSGI-INF/com.liferay.announcements.web.internal.mes
+ saging.CheckEntryMessageListener.xml,OSGI-INF/com.liferay.announcemen
+ ts.web.internal.portlet.AlertsEditPortletProvider.xml,OSGI-INF/com.li
+ feray.announcements.web.internal.portlet.AlertsPortlet.xml,OSGI-INF/c
+ om.liferay.announcements.web.internal.portlet.AnnouncementsEditPortle
+ tProvider.xml,OSGI-INF/com.liferay.announcements.web.internal.portlet
+ .AnnouncementsPortlet.xml,OSGI-INF/com.liferay.announcements.web.inte
+ rnal.portlet.action.AnnouncementsConfigurationAction.xml,OSGI-INF/com
+ .liferay.announcements.web.internal.portlet.action.EditEntryMVCAction
+ Command.xml,OSGI-INF/com.liferay.announcements.web.internal.portlet.a
+ ction.EditEntryMVCRenderCommand.xml,OSGI-INF/com.liferay.announcement
+ s.web.internal.portlet.action.PreviewEntryMVCRenderCommand.xml,OSGI-I
+ NF/com.liferay.announcements.web.internal.portlet.action.ViewMVCRende
+ rCommand.xml,OSGI-INF/com.liferay.announcements.web.internal.upgrade.
+ AnnouncementsWebUpgrade.xml
+Tool: Bnd-3.2.0.201605172007
+Web-ContextPath: /announcements-web

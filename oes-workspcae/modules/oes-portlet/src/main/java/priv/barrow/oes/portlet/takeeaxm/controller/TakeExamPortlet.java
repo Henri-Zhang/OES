@@ -68,7 +68,7 @@ public class TakeExamPortlet extends MVCPortlet {
             throws IOException, PortletException {
         ThemeDisplay themeDisplay = (ThemeDisplay) renderRequest.getAttribute(WebKeys.THEME_DISPLAY);
         if (!themeDisplay.isSignedIn()) {
-            include(helpTemplate, renderRequest, renderResponse);
+            include("/META-INF/resources/html/redirect_home.jsp", renderRequest, renderResponse);
             return;
         }
         long studentId = themeDisplay.getUserId();
@@ -129,9 +129,10 @@ public class TakeExamPortlet extends MVCPortlet {
         }
 
         studentExamLink.setDone(true);
+        studentExamLink.setInProgress(false);
         StudentExamLinkLocalServiceUtil.updateStudentExamLink(studentExamLink);
 
-        String reviewExamURL = String.format(ExamConstants.REVIEW_EXAM_URL_WITH_EXAM_ID, examId);
+        String reviewExamURL = String.format(ExamConstants.REVIEW_EXAM_URL_WITH_EXAM_STUDENT_ID, examId, studentId);
         try {
             actionResponse.sendRedirect(reviewExamURL);
         } catch (IOException e) {

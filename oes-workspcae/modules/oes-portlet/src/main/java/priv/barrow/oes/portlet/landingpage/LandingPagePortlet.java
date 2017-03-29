@@ -23,7 +23,7 @@ import com.liferay.portal.kernel.util.WebKeys;
     property = {
         "com.liferay.portlet.display-category=Tools",
         "com.liferay.portlet.instanceable=true",
-        "javax.portlet.display-name=Landing Page",
+        "javax.portlet.display-name=Loading...",
         "javax.portlet.init-param.template-path=/",
         "javax.portlet.init-param.view-template=/html/landingpage/landing_page.jsp",
         "javax.portlet.resource-bundle=content.Language",

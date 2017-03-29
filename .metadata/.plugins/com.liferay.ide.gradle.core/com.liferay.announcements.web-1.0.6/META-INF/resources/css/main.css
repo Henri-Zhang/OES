@@ -1,0 +1,5 @@
+.portlet-announcements .entry-content, .portlet-alerts .entry-content {
+  padding: 1em; }
+
+.portlet-announcements .important, .portlet-alerts .important {
+  font-weight: normal; }

@@ -1,0 +1,135 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1469308501976
+Bundle-ManifestVersion: 2
+Bundle-Name: Liferay Product Navigation Control Menu Web
+Bundle-SymbolicName: com.liferay.product.navigation.control.menu.web
+Bundle-Vendor: Liferay, Inc.
+Bundle-Version: 2.0.5
+Created-By: 1.8.0_92 (Oracle Corporation)
+Import-Package: com.liferay.asset.kernel;version="[1.1,2)",com.liferay
+ .asset.kernel.model;version="[1.1,2)",com.liferay.asset.kernel.servic
+ e.persistence;version="[1.0,2)",com.liferay.expando.kernel.model;vers
+ ion="[1.0,2)",com.liferay.exportimport.kernel.lar;version="[1.1,2)",c
+ om.liferay.portal.kernel.annotation;version="[6.3,7)",com.liferay.por
+ tal.kernel.application.type;version="[1.0,2)",com.liferay.portal.kern
+ el.atom;version="[7.0,8)",com.liferay.portal.kernel.dao.orm;version="
+ [7.0,8)",com.liferay.portal.kernel.dao.search;version="[7.2,8)",com.l
+ iferay.portal.kernel.exception;version="[7.0,8)",com.liferay.portal.k
+ ernel.json;version="[7.0,8)",com.liferay.portal.kernel.language;versi
+ on="[7.1,8)",com.liferay.portal.kernel.model;version="[1.0,2)",com.li
+ feray.portal.kernel.notifications;version="[7.1,8)",com.liferay.porta
+ l.kernel.plugin;version="[6.3,7)",com.liferay.portal.kernel.poller;ve
+ rsion="[7.0,8)",com.liferay.portal.kernel.pop;version="[6.2,7)",com.l
+ iferay.portal.kernel.portlet;version="[7.3,8)",com.liferay.portal.ker
+ nel.portlet.bridges.mvc;version="[1.2,2)",com.liferay.portal.kernel.r
+ esiliency.spi.agent.annotation;version="[6.2,7)",com.liferay.portal.k
+ ernel.scheduler;version="[7.0,8)",com.liferay.portal.kernel.search;ve
+ rsion="[7.2,8)",com.liferay.portal.kernel.security.auth;version="[1.0
+ ,2)",com.liferay.portal.kernel.security.permission;version="[1.1,2)",
+ com.liferay.portal.kernel.service;version="[1.4,2)",com.liferay.porta
+ l.kernel.service.permission;version="[1.0,2)",com.liferay.portal.kern
+ el.servlet;version="[7.2,8)",com.liferay.portal.kernel.servlet.taglib
+ .ui;version="[6.3,7)",com.liferay.portal.kernel.template;version="[7.
+ 1,8)",com.liferay.portal.kernel.theme;version="[1.0,2)",com.liferay.p
+ ortal.kernel.trash;version="[7.0,8)",com.liferay.portal.kernel.upload
+ ;version="[6.3,7)",com.liferay.portal.kernel.util;version="[7.4,8)",c
+ om.liferay.portal.kernel.util.comparator;version="[1.0,2)",com.lifera
+ y.portal.kernel.webdav;version="[7.0,8)",com.liferay.portal.kernel.wo
+ rkflow;version="[7.0,8)",com.liferay.portal.kernel.xml;version="[7.0,
+ 8)",com.liferay.portal.kernel.xmlrpc;version="[6.2,7)",com.liferay.po
+ rtal.util;version="[1.0,2)",com.liferay.portlet.asset.util;version="[
+ 1.0,2)",com.liferay.product.navigation.control.menu;version="[2.0,3)"
+ ,com.liferay.registry.collections,com.liferay.social.kernel.model;ver
+ sion="[1.0,2)",com.liferay.taglib.aui;version="[7.0,8)",javax.portlet
+ ;version="[2.0,3)",javax.servlet;version="[3.0,4)",javax.servlet.http
+ ;version="[3.0,4)",javax.xml.namespace
+Javac-Debug: on
+Javac-Deprecation: off
+Javac-Encoding: UTF-8
+Liferay-Releng-App-Description: Apps and Features: Application Display
+  Templates, Asset Publisher, Breadcrumb, Categories, Google Analytics
+ , IFrame, Language, Navigation, Recycle Bin, Related Content, RSS, Se
+ arch, Site and Page Templates, Sitemap, Sites Directory, Tags, Web Co
+ ntent, XSL Content<br /><br />The Web Experience suite provides featu
+ res that help create, manage, and track content. The Web Content app 
+ lets you express your ideas and plans by creating dynamic content tha
+ t can be structured to fit a specific design. You can also use templa
+ tes to design web content for an appealing look and feel. Templates c
+ an be used in other realms of Liferay besides web content too. Site a
+ nd Page Templates let you reproduce sites and pages that have been or
+ ganized to address specific needs. Application Display Templates are 
+ another type of Liferay template that lets you develop the look and f
+ eel of applications. The IFrame and XSL Content apps let you create o
+ ther forms of content by embedding HTML and XSL content on a site pag
+ e.<br /><br />As administrators create content, organization is criti
+ cal to keeping things tidy in your site. The suite's Tags and Categor
+ ies apps lets you organize your web content to follow an organization
+ al hierarchy. These organizational apps also aid with Liferay's Searc
+ h app, which you can utilize to dynamically search content you've cre
+ ated. The suite's Navigation, Breadcrumb, Sitemap, and Sites Director
+ y apps aid in Liferay's organizational structure, providing a top lev
+ el view of sites and their pages that have been created. To promote c
+ ontent in an organized way, the Asset Publisher and Related Assets ap
+ ps broadcast assets and their related information. Inevitably, some c
+ ontent you create becomes stale and requires removal; the Recycle Bin
+  app lets you delete content, with the option to restore that content
+ .<br /><br />As a site accumulates content, administrators should hav
+ e a way to easily track their content. The Google Analytics app allow
+ s the use of Google's tool set for analyzing site traffic data. The s
+ uite's RSS app provides a web feed used to publish updated works such
+  as blog entries and news articles. The suite's Language app provides
+  a way to change Liferay's language to cater to your site's internati
+ onal audience. This suite's content creation and organization focus l
+ ets site administrators develop dynamic content, organize content for
+  easy managing, and track content for ideas to better improve the con
+ tent creation process in the future.<br /><br />This suite may contai
+ n modules that depend on Foundation suite modules.
+Liferay-Releng-App-Title: Liferay CE Web Experience
+Liferay-Releng-Bundle: true
+Liferay-Releng-Category: Productivity
+Liferay-Releng-Deprecated: false
+Liferay-Releng-Labs: false
+Liferay-Releng-Marketplace: true
+Liferay-Releng-Module-Group-Title: Product Navigation
+Liferay-Releng-Portal-Required: true
+Liferay-Releng-Public: true
+Liferay-Releng-Restart-Required: true
+Liferay-Releng-Support-Url: http://www.liferay.com
+Liferay-Releng-Supported: false
+Private-Package: com.liferay.product.navigation.control.menu.web.inter
+ nal,com.liferay.product.navigation.control.menu.web.internal.constant
+ s,com.liferay.product.navigation.control.menu.web.internal.portlet,co
+ ntent
+Provide-Capability: osgi.service;objectClass:List<String>="com.liferay
+ .portal.kernel.portlet.ViewPortletProvider",osgi.service;objectClass:
+ List<String>="com.liferay.product.navigation.control.menu.ProductNavi
+ gationControlMenuEntry",osgi.service;objectClass:List<String>="javax.
+ portlet.Portlet",liferay.resource.bundle;bundle.symbolic.name="com.li
+ feray.product.navigation.control.menu.web";resource.bundle.base.name=
+ "content.Language"
+Require-Capability: osgi.extender;filter:="(&(osgi.extender=jsp.taglib
+ )(uri=http://java.sun.com/portlet_2_0))",osgi.extender;filter:="(&(os
+ gi.extender=jsp.taglib)(uri=http://liferay.com/tld/aui))",osgi.extend
+ er;filter:="(&(osgi.extender=jsp.taglib)(uri=http://liferay.com/tld/f
+ rontend))",osgi.extender;filter:="(&(osgi.extender=jsp.taglib)(uri=ht
+ tp://liferay.com/tld/portlet))",osgi.extender;filter:="(&(osgi.extend
+ er=jsp.taglib)(uri=http://liferay.com/tld/product-navigation))",osgi.
+ extender;filter:="(&(osgi.extender=jsp.taglib)(uri=http://liferay.com
+ /tld/theme))",osgi.extender;filter:="(&(osgi.extender=jsp.taglib)(uri
+ =http://liferay.com/tld/ui))",osgi.extender;filter:="(&(osgi.extender
+ =jsp.taglib)(uri=http://liferay.com/tld/util))",osgi.service;filter:=
+ "(objectClass=javax.servlet.ServletContext)";effective:=active,osgi.e
+ e;filter:="(&(osgi.ee=JavaSE)(version=1.7))"
+Service-Component: OSGI-INF/com.liferay.product.navigation.control.men
+ u.web.internal.AddContentProductNavigationControlMenuEntry.xml,OSGI-I
+ NF/com.liferay.product.navigation.control.menu.web.internal.PortletBa
+ ckLinkProductNavigationControlMenuEntry.xml,OSGI-INF/com.liferay.prod
+ uct.navigation.control.menu.web.internal.PortletHeaderProductNavigati
+ onControlMenuEntry.xml,OSGI-INF/com.liferay.product.navigation.contro
+ l.menu.web.internal.PortletOptionsProductNavigationControlMenuEntry.x
+ ml,OSGI-INF/com.liferay.product.navigation.control.menu.web.internal.
+ portlet.ProductNavigationControlMenuPortlet.xml,OSGI-INF/com.liferay.
+ product.navigation.control.menu.web.internal.portlet.ProductNavigatio
+ nControlMenuViewPortletProvider.xml
+Tool: Bnd-3.2.0.201605172007
+Web-ContextPath: /product-navigation-control-menu-web

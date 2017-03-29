@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="com.liferay.announcements.web.internal.portlet.AlertsPortlet" immediate="true">
+  <implementation class="com.liferay.announcements.web.internal.portlet.AlertsPortlet"/>
+  <service>
+    <provide interface="javax.portlet.Portlet"/>
+  </service>
+  <reference name="Release" interface="com.liferay.portal.kernel.model.Release" target="(&amp;(release.bundle.symbolic.name=com.liferay.announcements.web)(release.schema.version=1.0.1))" bind="setRelease"/>
+  <property name="javax.portlet.expiration-cache" type="String" value="0"/>
+  <property name="com.liferay.portlet.render-weight" type="String" value="50"/>
+  <property name="javax.portlet.security-role-ref" type="String" value="power-user,user"/>
+  <property name="javax.portlet.init-param.template-path" type="String" value="/"/>
+  <property name="com.liferay.portlet.private-session-attributes" type="String" value="false"/>
+  <property name="javax.portlet.init-param.always-display-default-configuration-icons" type="String" value="true"/>
+  <property name="javax.portlet.preferences" type="String" value="classpath:/META-INF/portlet-preferences/default-portlet-preferences.xml"/>
+  <property name="com.liferay.portlet.css-class-wrapper" type="String" value="portlet-alerts"/>
+  <property name="com.liferay.portlet.display-category" type="String" value="category.news"/>
+  <property name="com.liferay.portlet.preferences-company-wide" type="String" value="false"/>
+  <property name="com.liferay.portlet.preferences-owned-by-group" type="String" value="true"/>
+  <property name="javax.portlet.supports.mime-type" type="String" value="text/html"/>
+  <property name="javax.portlet.init-param.view-template" type="String" value="/alerts/view"/>
+  <property name="com.liferay.portlet.private-request-attributes" type="String" value="false"/>
+  <property name="javax.portlet.resource-bundle" type="String" value="content.Language"/>
+  <property name="javax.portlet.name" type="String" value="com_liferay_announcements_web_portlet_AlertsPortlet"/>
+  <property name="com.liferay.portlet.header-portlet-css" type="String" value="/css/main.css"/>
+  <property name="com.liferay.portlet.use-default-template" type="String" value="true"/>
+  <property name="javax.portlet.display-name" type="String" value="Alerts"/>
+  <property name="com.liferay.portlet.icon" type="String" value="/icons/announcements.png"/>
+</component>

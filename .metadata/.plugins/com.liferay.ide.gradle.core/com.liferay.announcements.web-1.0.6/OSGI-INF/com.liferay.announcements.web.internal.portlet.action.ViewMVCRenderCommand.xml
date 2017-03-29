@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="com.liferay.announcements.web.internal.portlet.action.ViewMVCRenderCommand">
+  <implementation class="com.liferay.announcements.web.internal.portlet.action.ViewMVCRenderCommand"/>
+  <service>
+    <provide interface="com.liferay.portal.kernel.portlet.bridges.mvc.MVCRenderCommand"/>
+  </service>
+  <property name="mvc.command.name" type="String">/
+/alerts/view
+/announcements/view</property>
+  <property name="javax.portlet.name" type="String">com_liferay_announcements_web_portlet_AlertsPortlet
+com_liferay_announcements_web_portlet_AnnouncementsPortlet</property>
+</component>

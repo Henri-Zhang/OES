@@ -1,0 +1,17 @@
+package priv.barrow.oes.portlet.util;
+
+import com.liferay.portal.kernel.model.Role;
+import com.liferay.portal.kernel.model.User;
+
+public class RoleUtil {
+
+    public static boolean isAdministrator(User user) {
+        Role roles = user.getRoles();
+        for (Role role : roles) {
+
+        }
+
+        return false;
+    }
+
+}

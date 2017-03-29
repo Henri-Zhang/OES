@@ -86,7 +86,6 @@ public class ReviewExamPortlet extends MVCPortlet {
             LOG.error(String.format("Get student by studentId failed. studentId: [%d]", studentId), e);
         }
 
-
         renderRequest.setAttribute(ExamConstants.EXAM, exam);
         renderRequest.setAttribute(ExamConstants.RESULT_MAP, resultMap);
         renderRequest.setAttribute(StudentConstants.STUDENT, student);

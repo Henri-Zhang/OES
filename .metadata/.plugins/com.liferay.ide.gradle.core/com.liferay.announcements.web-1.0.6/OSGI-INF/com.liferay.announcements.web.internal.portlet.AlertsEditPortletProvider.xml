@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="com.liferay.announcements.web.internal.portlet.AlertsEditPortletProvider" immediate="true">
+  <implementation class="com.liferay.announcements.web.internal.portlet.AlertsEditPortletProvider"/>
+  <service>
+    <provide interface="com.liferay.portal.kernel.portlet.EditPortletProvider"/>
+    <provide interface="com.liferay.portal.kernel.portlet.ManagePortletProvider"/>
+    <provide interface="com.liferay.portal.kernel.portlet.ViewPortletProvider"/>
+  </service>
+  <property name="model.class.name" type="String" value="com.liferay.announcements.kernel.model.AlertsEntry"/>
+</component>
