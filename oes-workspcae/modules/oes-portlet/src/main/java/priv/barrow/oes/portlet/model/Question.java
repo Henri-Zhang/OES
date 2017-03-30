@@ -19,7 +19,8 @@ public class Question {
     public Question() {}
 
     public Question(Long order, String description,
-            String optionA, String optionB, String optionC, String optionD, String answer) {
+            String optionA, String optionB, String optionC, String optionD, String answer,
+            long creatorId, String creatorName, Date createdTime, Date modifiedTime) {
         this.order = order;
         this.description = description;
         this.optionA = optionA;
@@ -27,6 +28,10 @@ public class Question {
         this.optionC = optionC;
         this.optionD = optionD;
         this.answer = answer;
+        this.creatorId = creatorId;
+        this.creatorName = creatorName;
+        this.createdTime = createdTime;
+        this.modifiedTime = modifiedTime;
     }
 
     public long getOrder() {
@@ -83,6 +88,38 @@ public class Question {
 
     public void setAnswer(String answer) {
         this.answer = answer;
+    }
+
+    public long getCreatorId() {
+        return creatorId;
+    }
+
+    public void setCreatorId(long creatorId) {
+        this.creatorId = creatorId;
+    }
+
+    public String getCreatorName() {
+        return creatorName;
+    }
+
+    public void setCreatorName(String creatorName) {
+        this.creatorName = creatorName;
+    }
+
+    public Date getCreatedTime() {
+        return createdTime;
+    }
+
+    public void setCreatedTime(Date createdTime) {
+        this.createdTime = createdTime;
+    }
+
+    public Date getModifiedTime() {
+        return modifiedTime;
+    }
+
+    public void setModifiedTime(Date modifiedTime) {
+        this.modifiedTime = modifiedTime;
     }
 
 }

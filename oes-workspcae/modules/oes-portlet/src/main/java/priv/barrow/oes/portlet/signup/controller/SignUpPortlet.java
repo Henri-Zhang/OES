@@ -60,7 +60,6 @@ public class SignUpPortlet extends MVCPortlet {
             throws IOException, PortletException {
 
         ThemeDisplay themeDisplay = (ThemeDisplay) renderRequest.getAttribute(WebKeys.THEME_DISPLAY);
-        System.out.println("~~~~~~~~~~~~~" + themeDisplay.getPathContext());
         if (themeDisplay.isSignedIn()) {
             include("/META-INF/resources/html/redirect_home.jsp", renderRequest, renderResponse);
             return;

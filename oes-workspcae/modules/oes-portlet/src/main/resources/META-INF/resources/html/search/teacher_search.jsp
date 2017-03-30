@@ -40,7 +40,7 @@
             <%
                 final String href = String.format("location.href='%s'", chooseTeacherURL.toString());;
             %>
-            <liferay-ui:search-container-column-button href="<%= href %>" name="choose"  />
+            <liferay-ui:search-container-column-button href="<%= href %>" name="choose" />
         </liferay-ui:search-container-row>
         <liferay-ui:search-iterator />
     </liferay-ui:search-container>

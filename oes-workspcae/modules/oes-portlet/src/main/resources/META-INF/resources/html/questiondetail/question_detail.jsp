@@ -23,12 +23,8 @@
         readOnly="true"
     />
 </aui:form>
-<aui:a href="#">
+<aui:a href="javascript:" onClick="self.location=document.referrer;">
     <liferay-ui:message key="return" />
 </aui:a>
-<aui:a href="/edit-question?questionOrder=${questionOrder }">
-    <liferay-ui:message key="edit" />
-</aui:a>
-<aui:a href="${deleteQuestionURL }">
-    <liferay-ui:message key="delete" />
-</aui:a>
+<aui:button name="edit" href="/edit-question?questionOrder=${questionOrder }" value="edit" cssClass="btn-primary" icon="icon-edit" />
+<aui:button name="delete" href="${deleteQuestionURL }" value="delete" cssClass="btn-danger" icon="icon-remove" />

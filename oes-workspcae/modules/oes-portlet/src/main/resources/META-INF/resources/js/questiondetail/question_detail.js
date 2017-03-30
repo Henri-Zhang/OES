@@ -4,7 +4,7 @@ AUI().use(
         var createDialog = function(questionOrder, node) {
         var modal = new A.Modal(
             {
-                bodyContent: 'Are you sure to delete Question ' + questionOrder + '?',
+                bodyContent: 'Are you sure to delete this Question?',
                 centered: true,
                 destroyOnHide: true,
                 headerContent: '<h3>Confirm Dialog</h3>',
@@ -40,13 +40,11 @@ AUI().use(
         return modal;
         }
 
-        A.all('a').on(
-        		// TODO Selector
+        A.one('a[id*=delete]').on(
             'click',
             function(event) {
                 event.preventDefault();
                 var node = event.target;
-                var questionOrder = "";
                 var confirmDialog = createDialog(questionOrder, node);
                 confirmDialog.show();
             }

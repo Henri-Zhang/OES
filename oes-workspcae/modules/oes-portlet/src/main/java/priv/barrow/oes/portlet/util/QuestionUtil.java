@@ -1,6 +1,7 @@
 package priv.barrow.oes.portlet.util;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
@@ -100,6 +101,11 @@ public class QuestionUtil {
         String answer = answerValue.getString(locale);
         answer = answer.substring(2, 3);
 
+        long creatorId = record.getUserId();
+        String creatorName = record.getUserName();
+        Date createdTime = record.getCreateDate();
+        Date modifiedTime = record.getModifiedDate();
+
         Question question = new Question(
                         questionRecordLink.getQuestionOrder(),
                         description,
@@ -107,7 +113,11 @@ public class QuestionUtil {
                         optionB,
                         optionC,
                         optionD,
-                        answer);
+                        answer,
+                        creatorId,
+                        creatorName,
+                        createdTime,
+                        modifiedTime);
 
         return question;
     }
@@ -162,6 +172,13 @@ public class QuestionUtil {
         QuestionRecordLink questionRecordLink =
                 QuestionRecordLinkLocalServiceUtil.findByDdlRecordId(questionRecordId).get(0);
 
+        DDLRecord record = DDLRecordLocalServiceUtil.fetchDDLRecord(questionRecordId);
+
+        long creatorId = record.getUserId();
+        String creatorName = record.getUserName();
+        Date createdTime = record.getCreateDate();
+        Date modifiedTime = record.getModifiedDate();
+
         Question question = new Question(
                         questionRecordLink.getQuestionOrder(),
                         description,
@@ -169,7 +186,11 @@ public class QuestionUtil {
                         optionB,
                         optionC,
                         optionD,
-                        answer);
+                        answer,
+                        creatorId,
+                        creatorName,
+                        createdTime,
+                        modifiedTime);
 
         return question;
     }

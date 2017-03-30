@@ -11,15 +11,16 @@
 
 <portlet:resourceURL var="resourceURL" />
 <c:set var="questions" value="${exam.questions }" scope="request"/>
+<aui:input name="size" type="hidden" value="${questions.size() }" />
 
 <h1>${exam.name }</h1>
-<aui:input name="switch" type="checkbox" label="auto-switch-next-question" /><br />
+<%-- <aui:input name="switch" type="checkbox" label="auto-switch-to-next-question" /><br /> --%>
 <aui:input name="resourceURL" type="hidden" value="<%=resourceURL.toString()%>" />
 <aui:input name="examId" type="hidden" value="${exam.examId }" />
 <aui:input name="studentId" type="hidden" value="${studentId }" />
-<!-- <aui:button name="prevQuestion" value="Previous" disabled="true" />
+<aui:button name="prevQuestion" value="Previous" icon="icon-backward" cssClass="btn-success" />
 <div class="question-container">
-    <div class="question-list"> -->
+    <div class="question-list">
         <c:forEach items="${questions }" var="question" varStatus="status">
             <div class="question-card">
                 <h3 id="index">${status.count }</h3>
@@ -60,10 +61,10 @@
                 <hr />
             </div>
         </c:forEach>
-<!--     </div>
+    </div>
 </div>
-<aui:button name="nextQuestion" value="Next" /> -->
+<aui:button name="nextQuestion" value="Next" icon=" icon-forward" cssClass="btn-success" />
 <portlet:actionURL name="submit" var="submitURL">
     <portlet:param name="examId" value="${exam.examId }"/>
 </portlet:actionURL>
-<aui:button href="${submitURL }" value="submit" />
+<aui:button name="submit" href="${submitURL }" value="submit" cssClass="hide btn-primary btn-block" />
