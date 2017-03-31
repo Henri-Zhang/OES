@@ -50,7 +50,7 @@ import priv.barrow.service.StudentExamLinkLocalServiceUtil;
         "com.liferay.portlet.requires-namespaced-parameters=false",
         "javax.portlet.display-name=Take Exam",
         "javax.portlet.init-param.template-path=/",
-        "com.liferay.portlet.footer-portlet-css=/css/takeexam/take_exa.css",
+        "com.liferay.portlet.footer-portlet-css=/css/takeexam/take_e.css",
         "com.liferay.portlet.footer-portlet-javascript=/js/takeexam/take_exammmmm.js",
         "javax.portlet.init-param.view-template=/html/takeexam/take_exam.jsp",
         "javax.portlet.resource-bundle=content.Language",

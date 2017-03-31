@@ -138,6 +138,9 @@ public interface StudentExamLinkLocalService extends BaseLocalService,
 
 	public List<StudentExamLink> findByExamRecordId(long examRecordId);
 
+	public List<StudentExamLink> findByExamRecordIdAndDone(long examRecordId,
+		boolean done);
+
 	public List<StudentExamLink> findByExamRecordIdAndStudentId(
 		long examRecordId, long studentId);
 

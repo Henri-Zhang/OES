@@ -10,6 +10,10 @@
         <finder name="ExamRecordId" return-type="Collection">
             <finder-column name="examRecordId" />
         </finder>
+        <finder name="ExamRecordIdAndDone" return-type="Collection">
+            <finder-column name="examRecordId" />
+            <finder-column name="done" />
+        </finder>
         <finder name="StudentId" return-type="Collection">
             <finder-column name="studentId" />
         </finder>

@@ -14,11 +14,24 @@
 <h2>
     <liferay-ui:message key="published-exams" />
 </h2>
-<c:forEach items="${exams }" var="exam">
-    <span>sharon</span>
-    <aui:a href="#">${exam.name }</aui:a>
-</c:forEach>
+<table class="table table-hover table-bordered">
+    <tr>
+        <th></th>
+        <th>Exam Name</th>
+        <th>Created Time</th>
+    </tr>
+    <c:forEach items="${exams }" var="exam"  varStatus="status">
+        <tr>
+            <td>${status.count }</td>
+            <td>
+                <aui:a href="/exam-situation?examId=${exam.examId }">${exam.name }</aui:a>
+            </td>
+            <td>
+                ${exam.createdTime }
+            </td>
+        </tr>
+    </c:forEach>
+</table>
+
 <hr />
-<aui:a calss="btn btn-lg btn-primary btn-default" href="/create-exam">
-    <liferay-ui:message key="new-exam" />
-</aui:a>
+<aui:button href="/create-exam" value="New Exam" icon="icon-plus" cssClass="btn btn-primary" />

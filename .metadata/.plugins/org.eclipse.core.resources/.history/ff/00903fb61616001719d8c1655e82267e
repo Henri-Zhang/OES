@@ -1,0 +1,40 @@
+.question-container {
+    display: block;
+    width: 500px;
+    height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid green;
+}
+
+.question-list {
+    display: inline-flex;
+    margin-left: 0px;
+}
+
+.question-card {
+    width: 500px;
+    height: 400px;
+    float: left;
+}
+
+.take {
+    width: 100%;
+    margin: 15px auto;
+    display: inline-flex;
+}
+
+.switch-button {
+    height: 40px;
+    position: relative;
+
+    .prev {
+        left: 150px;
+        top: 150px;
+    }
+
+    .prev {
+        left: 150px;
+        top: 150px;
+    }
+}

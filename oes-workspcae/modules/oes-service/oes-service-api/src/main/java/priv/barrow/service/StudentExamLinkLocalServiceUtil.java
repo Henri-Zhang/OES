@@ -141,6 +141,11 @@ public class StudentExamLinkLocalServiceUtil {
 		return getService().findByExamRecordId(examRecordId);
 	}
 
+	public static java.util.List<priv.barrow.model.StudentExamLink> findByExamRecordIdAndDone(
+		long examRecordId, boolean done) {
+		return getService().findByExamRecordIdAndDone(examRecordId, done);
+	}
+
 	public static java.util.List<priv.barrow.model.StudentExamLink> findByExamRecordIdAndStudentId(
 		long examRecordId, long studentId) {
 		return getService()

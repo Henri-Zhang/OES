@@ -275,6 +275,193 @@ public class StudentExamLinkUtil {
 	}
 
 	/**
+	* Returns all the student exam links where examRecordId = &#63; and done = &#63;.
+	*
+	* @param examRecordId the exam record ID
+	* @param done the done
+	* @return the matching student exam links
+	*/
+	public static List<StudentExamLink> findByExamRecordIdAndDone(
+		long examRecordId, boolean done) {
+		return getPersistence().findByExamRecordIdAndDone(examRecordId, done);
+	}
+
+	/**
+	* Returns a range of all the student exam links where examRecordId = &#63; and done = &#63;.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link StudentExamLinkModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param examRecordId the exam record ID
+	* @param done the done
+	* @param start the lower bound of the range of student exam links
+	* @param end the upper bound of the range of student exam links (not inclusive)
+	* @return the range of matching student exam links
+	*/
+	public static List<StudentExamLink> findByExamRecordIdAndDone(
+		long examRecordId, boolean done, int start, int end) {
+		return getPersistence()
+				   .findByExamRecordIdAndDone(examRecordId, done, start, end);
+	}
+
+	/**
+	* Returns an ordered range of all the student exam links where examRecordId = &#63; and done = &#63;.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link StudentExamLinkModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param examRecordId the exam record ID
+	* @param done the done
+	* @param start the lower bound of the range of student exam links
+	* @param end the upper bound of the range of student exam links (not inclusive)
+	* @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
+	* @return the ordered range of matching student exam links
+	*/
+	public static List<StudentExamLink> findByExamRecordIdAndDone(
+		long examRecordId, boolean done, int start, int end,
+		OrderByComparator<StudentExamLink> orderByComparator) {
+		return getPersistence()
+				   .findByExamRecordIdAndDone(examRecordId, done, start, end,
+			orderByComparator);
+	}
+
+	/**
+	* Returns an ordered range of all the student exam links where examRecordId = &#63; and done = &#63;.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link StudentExamLinkModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param examRecordId the exam record ID
+	* @param done the done
+	* @param start the lower bound of the range of student exam links
+	* @param end the upper bound of the range of student exam links (not inclusive)
+	* @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
+	* @param retrieveFromCache whether to retrieve from the finder cache
+	* @return the ordered range of matching student exam links
+	*/
+	public static List<StudentExamLink> findByExamRecordIdAndDone(
+		long examRecordId, boolean done, int start, int end,
+		OrderByComparator<StudentExamLink> orderByComparator,
+		boolean retrieveFromCache) {
+		return getPersistence()
+				   .findByExamRecordIdAndDone(examRecordId, done, start, end,
+			orderByComparator, retrieveFromCache);
+	}
+
+	/**
+	* Returns the first student exam link in the ordered set where examRecordId = &#63; and done = &#63;.
+	*
+	* @param examRecordId the exam record ID
+	* @param done the done
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the first matching student exam link
+	* @throws NoSuchStudentExamLinkException if a matching student exam link could not be found
+	*/
+	public static StudentExamLink findByExamRecordIdAndDone_First(
+		long examRecordId, boolean done,
+		OrderByComparator<StudentExamLink> orderByComparator)
+		throws priv.barrow.exception.NoSuchStudentExamLinkException {
+		return getPersistence()
+				   .findByExamRecordIdAndDone_First(examRecordId, done,
+			orderByComparator);
+	}
+
+	/**
+	* Returns the first student exam link in the ordered set where examRecordId = &#63; and done = &#63;.
+	*
+	* @param examRecordId the exam record ID
+	* @param done the done
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the first matching student exam link, or <code>null</code> if a matching student exam link could not be found
+	*/
+	public static StudentExamLink fetchByExamRecordIdAndDone_First(
+		long examRecordId, boolean done,
+		OrderByComparator<StudentExamLink> orderByComparator) {
+		return getPersistence()
+				   .fetchByExamRecordIdAndDone_First(examRecordId, done,
+			orderByComparator);
+	}
+
+	/**
+	* Returns the last student exam link in the ordered set where examRecordId = &#63; and done = &#63;.
+	*
+	* @param examRecordId the exam record ID
+	* @param done the done
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the last matching student exam link
+	* @throws NoSuchStudentExamLinkException if a matching student exam link could not be found
+	*/
+	public static StudentExamLink findByExamRecordIdAndDone_Last(
+		long examRecordId, boolean done,
+		OrderByComparator<StudentExamLink> orderByComparator)
+		throws priv.barrow.exception.NoSuchStudentExamLinkException {
+		return getPersistence()
+				   .findByExamRecordIdAndDone_Last(examRecordId, done,
+			orderByComparator);
+	}
+
+	/**
+	* Returns the last student exam link in the ordered set where examRecordId = &#63; and done = &#63;.
+	*
+	* @param examRecordId the exam record ID
+	* @param done the done
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the last matching student exam link, or <code>null</code> if a matching student exam link could not be found
+	*/
+	public static StudentExamLink fetchByExamRecordIdAndDone_Last(
+		long examRecordId, boolean done,
+		OrderByComparator<StudentExamLink> orderByComparator) {
+		return getPersistence()
+				   .fetchByExamRecordIdAndDone_Last(examRecordId, done,
+			orderByComparator);
+	}
+
+	/**
+	* Returns the student exam links before and after the current student exam link in the ordered set where examRecordId = &#63; and done = &#63;.
+	*
+	* @param studentExamLinkPK the primary key of the current student exam link
+	* @param examRecordId the exam record ID
+	* @param done the done
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the previous, current, and next student exam link
+	* @throws NoSuchStudentExamLinkException if a student exam link with the primary key could not be found
+	*/
+	public static StudentExamLink[] findByExamRecordIdAndDone_PrevAndNext(
+		priv.barrow.service.persistence.StudentExamLinkPK studentExamLinkPK,
+		long examRecordId, boolean done,
+		OrderByComparator<StudentExamLink> orderByComparator)
+		throws priv.barrow.exception.NoSuchStudentExamLinkException {
+		return getPersistence()
+				   .findByExamRecordIdAndDone_PrevAndNext(studentExamLinkPK,
+			examRecordId, done, orderByComparator);
+	}
+
+	/**
+	* Removes all the student exam links where examRecordId = &#63; and done = &#63; from the database.
+	*
+	* @param examRecordId the exam record ID
+	* @param done the done
+	*/
+	public static void removeByExamRecordIdAndDone(long examRecordId,
+		boolean done) {
+		getPersistence().removeByExamRecordIdAndDone(examRecordId, done);
+	}
+
+	/**
+	* Returns the number of student exam links where examRecordId = &#63; and done = &#63;.
+	*
+	* @param examRecordId the exam record ID
+	* @param done the done
+	* @return the number of matching student exam links
+	*/
+	public static int countByExamRecordIdAndDone(long examRecordId, boolean done) {
+		return getPersistence().countByExamRecordIdAndDone(examRecordId, done);
+	}
+
+	/**
 	* Returns all the student exam links where studentId = &#63;.
 	*
 	* @param studentId the student ID

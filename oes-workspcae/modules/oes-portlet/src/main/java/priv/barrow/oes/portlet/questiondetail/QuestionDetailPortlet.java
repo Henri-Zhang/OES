@@ -58,9 +58,10 @@ public class QuestionDetailPortlet extends MVCPortlet {
 
         HttpServletRequest request =
                 PortalUtil.getOriginalServletRequest(PortalUtil.getHttpServletRequest(renderRequest));
-        long questionOrder = ParamUtil.get(request, QuestionConstants.QUESTION_ORDER, 0L);
-        if (questionOrder == 0) {
-            throw new PortletException("No question to show.");
+        long questionOrder = ParamUtil.get(request, QuestionConstants.QUESTION_ORDER,
+                                QuestionConstants.INEXISTENT_QUESTION_ORDER);
+        if (questionOrder == QuestionConstants.INEXISTENT_QUESTION_ORDER) {
+            throw new PortletException("Lack of parameter questionOrder.");
         }
 
         QuestionRecordLink questionRecordLink = null;

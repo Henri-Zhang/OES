@@ -25,9 +25,9 @@
     <span>${question.optionC }</span><br />
     <span>D </span>
     <span>${question.optionD }</span><br />
-    <span>Your choice: </span>
-    <c:set var="questionOrder" value="${question.order }" />
-    <span>${resultMap[questionOrder] }</span><br />
     <span>Answer: </span>
     <span>${question.answer }</span>
+    <span>Choice: </span>
+    <c:set var="questionOrder" value="${question.order }" />
+    <span>${resultMap[questionOrder] }</span><br />
 </c:forEach>

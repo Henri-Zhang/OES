@@ -28,6 +28,7 @@ import com.liferay.portal.kernel.util.StringPool;
 import com.liferay.portal.kernel.util.Validator;
 import com.liferay.portal.kernel.util.WebKeys;
 
+import priv.barrow.oes.portlet.constants.CommanConstants;
 import priv.barrow.oes.portlet.exception.EmailRegisteredException;
 import priv.barrow.oes.portlet.signup.constant.Constants;
 import priv.barrow.oes.portlet.signup.model.SignUpModel;
@@ -61,7 +62,7 @@ public class SignUpPortlet extends MVCPortlet {
 
         ThemeDisplay themeDisplay = (ThemeDisplay) renderRequest.getAttribute(WebKeys.THEME_DISPLAY);
         if (themeDisplay.isSignedIn()) {
-            include("/META-INF/resources/html/redirect_home.jsp", renderRequest, renderResponse);
+            include(CommanConstants.REDIRECT_HOME_JSP, renderRequest, renderResponse);
             return;
         }
 

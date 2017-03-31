@@ -13,27 +13,75 @@
 
 <c:choose>
     <c:when test="${hasTeacher }">
-        <h3>
-            <liferay-ui:message key="exams-to-do" />
-        </h3>
-        <c:forEach items="${toDoExams }" var="exam">
-            <span>${exam.name }</span>
-            <aui:button cssClass="btn-primary" href="/take-exam?examId=${exam.examId }" value="start" icon="icon-pencil" />
-        </c:forEach>
-        <h3>
-            <liferay-ui:message key="exams-in-progress" />
-        </h3>
-        <c:forEach items="${inProgressExams }" var="exam">
-            <span>${exam.name }</span>
-            <aui:button cssClass="btn-primary" href="/take-exam?examId=${exam.examId }" value="continue" icon="icon-pencil" />
-        </c:forEach>
-        <h3>
-            <liferay-ui:message key="exams-completed" />
-        </h3>
-        <c:forEach items="${doneExams }" var="exam">
-            <span>${exam.name }</span>
-            <aui:button cssClass="btn-primary" href="/review-exam?examId=${exam.examId }&studentId=${studentId }" value="review" icon="icon-file" />
-        </c:forEach>
+        <c:if test="${toDoExams.size() > 0 }">
+            <h3>
+                <liferay-ui:message key="exams-to-do" />
+            </h3>
+            <table class="table table-hover table-bordered">
+                <tr>
+                    <th></th>
+                    <th>Exam Name</th>
+                    <th>Action</th>
+                </tr>
+                <c:forEach items="${toDoExams }" var="exam" varStatus="status">
+                    <tr>
+                        <td>${status.count }</td>
+                        <td>
+                            <span>${exam.name }</span>
+                        </td>
+                        <td>
+                            <aui:button cssClass="btn-primary" href="/take-exam?examId=${exam.examId }" value="start" icon="icon-pencil" />
+                        </td>
+                    </tr>
+                </c:forEach>
+            </table>
+        </c:if>
+        <c:if test="${inProgressExams.size() > 0 }">
+            <h3>
+                <liferay-ui:message key="exams-in-progress" />
+            </h3>
+            <table class="table table-hover table-bordered">
+                <tr>
+                    <th></th>
+                    <th>Exam Name</th>
+                    <th>Action</th>
+                </tr>
+                <c:forEach items="${inProgressExams }" var="exam" varStatus="status">
+                    <tr>
+                        <td>${status.count }</td>
+                        <td>
+                            <span>${exam.name }</span>
+                        </td>
+                        <td>
+                            <aui:button cssClass="btn-primary" href="/take-exam?examId=${exam.examId }" value="continue" icon="icon-pencil" />
+                        </td>
+                    </tr>
+                </c:forEach>
+            </table>
+        </c:if>
+        <c:if test="${doneExams.size() > 0 }">
+            <h3>
+                <liferay-ui:message key="exams-completed" />
+            </h3>
+            <table class="table table-hover table-bordered">
+                <tr>
+                    <th></th>
+                    <th>Exam Name</th>
+                    <th>Action</th>
+                </tr>
+                <c:forEach items="${doneExams }" var="exam" varStatus="status">
+                    <tr>
+                        <td>${status.count }</td>
+                        <td>
+                            <span>${exam.name }</span>
+                        </td>
+                        <td>
+                            <aui:button cssClass="btn-primary" href="/review-exam?examId=${exam.examId }&studentId=${studentId }" value="review" icon="icon-file" />
+                        </td>
+                    </tr>
+                </c:forEach>
+            </table>
+        </c:if>
     </c:when>
     <c:otherwise>
         <h4>

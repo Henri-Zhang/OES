@@ -19,5 +19,5 @@
         fields="${fields }"
         checkRequired="true"
     />
-    <aui:button type="submit" value="add" />
+    <aui:button type="submit" value="save" />
 </aui:form>
