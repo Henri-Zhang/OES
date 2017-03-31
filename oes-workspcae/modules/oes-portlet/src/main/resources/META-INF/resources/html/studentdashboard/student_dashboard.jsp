@@ -18,21 +18,21 @@
         </h3>
         <c:forEach items="${toDoExams }" var="exam">
             <span>${exam.name }</span>
-            <aui:button class="btn btn-lg btn-primary btn-default" href="/take-exam?examId=${exam.examId }" value="start" />
+            <aui:button cssClass="btn-primary" href="/take-exam?examId=${exam.examId }" value="start" icon="icon-pencil" />
         </c:forEach>
         <h3>
             <liferay-ui:message key="exams-in-progress" />
         </h3>
         <c:forEach items="${inProgressExams }" var="exam">
             <span>${exam.name }</span>
-            <aui:button class="btn btn-lg btn-primary btn-default" href="/take-exam?examId=${exam.examId }" value="continue" />
+            <aui:button cssClass="btn-primary" href="/take-exam?examId=${exam.examId }" value="continue" icon="icon-pencil" />
         </c:forEach>
         <h3>
             <liferay-ui:message key="exams-completed" />
         </h3>
         <c:forEach items="${doneExams }" var="exam">
             <span>${exam.name }</span>
-            <aui:button class="btn btn-lg btn-primary btn-default" href="/review-exam?examId=${exam.examId }&studentId=${studentId }" value="review" />
+            <aui:button cssClass="btn-primary" href="/review-exam?examId=${exam.examId }&studentId=${studentId }" value="review" icon="icon-file" />
         </c:forEach>
     </c:when>
     <c:otherwise>
