@@ -1,7 +1,0 @@
-package priv.barrow.oes.portlet.constants;
-
-public class CommanConstants {
-
-    public static final String EXAM = "exam";
-
-}

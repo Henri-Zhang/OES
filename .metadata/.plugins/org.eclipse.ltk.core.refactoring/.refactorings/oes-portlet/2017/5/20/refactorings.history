@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;oes-portlet/src/main/resources/META-INF/resources/js/questiondetail/question_detail.js&apos; to &apos;question_detaill.js&apos;" description="Rename resource &apos;question_detail.js&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/resources/META-INF/resources/js/questiondetail/question_detail.js" name="question_detaill.js" stamp="1494849893966" updateReferences="true"/>
+</session>

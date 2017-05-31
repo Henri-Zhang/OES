@@ -4,12 +4,19 @@
 <%@ taglib uri="http://liferay.com/tld/portlet" prefix="liferay-portlet" %>
 <%@ taglib uri="http://liferay.com/tld/theme" prefix="liferay-theme" %>
 <%@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
 <liferay-theme:defineObjects />
 
 <portlet:defineObjects />
 
 <h1>${exam.name }</h1>
+
+<h2>
+    Completion rate: 
+    <fmt:formatNumber type="number" value="${completedCount / studentCount * 100}" pattern="0.00" maxFractionDigits="2"/>
+    % (${completedCount} / ${studentCount })
+</h2>
 <h2>Completed Students:</h2>
 <c:forEach items="${completedStudents }" var="student">
     <aui:a href="/review-exam?examId=${exam.examId }&studentId=${student.userId }">${student.fullName }</aui:a>

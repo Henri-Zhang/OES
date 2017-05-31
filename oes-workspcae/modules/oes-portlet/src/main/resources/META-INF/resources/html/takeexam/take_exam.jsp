@@ -28,36 +28,34 @@
                     <c:set var="questionOrder" value="${question.order }" />
                     <c:choose>
                         <c:when test="${'A' eq resultMap[questionOrder] }">
-                            <aui:input name="${questionOrder }" type="radio" value="A" label="${question.optionA }" checked="true" /><br />
-                            <aui:input name="${questionOrder }" type="radio" value="B" label="${question.optionB }" /><br />
-                            <aui:input name="${questionOrder }" type="radio" value="C" label="${question.optionC }" /><br />
-                            <aui:input name="${questionOrder }" type="radio" value="D" label="${question.optionD }" /><br />
+                            <aui:input name="${questionOrder }" type="radio" value="A" label="A. ${question.optionA }" checked="true" /><br />
+                            <aui:input name="${questionOrder }" type="radio" value="B" label="B. ${question.optionB }" /><br />
+                            <aui:input name="${questionOrder }" type="radio" value="C" label="C. ${question.optionC }" /><br />
+                            <aui:input name="${questionOrder }" type="radio" value="D" label="D. ${question.optionD }" /><br />
                         </c:when>
                         <c:when test="${'B' eq resultMap[questionOrder] }">
-                            <small>A</small>
-                            <aui:input name="${questionOrder }" type="radio" value="A" label="${question.optionA }" /><br />
-                            <small>B</small>
-                            <aui:input name="${questionOrder }" type="radio" value="B" label="${question.optionB }" checked="true" /><br />
-                            <aui:input name="${questionOrder }" type="radio" value="C" label="${question.optionC }" /><br />
-                            <aui:input name="${questionOrder }" type="radio" value="D" label="${question.optionD }" /><br />
+                            <aui:input name="${questionOrder }" type="radio" value="A" label="A. ${question.optionA }" /><br />
+                            <aui:input name="${questionOrder }" type="radio" value="B" label="B. ${question.optionB }" checked="true" /><br />
+                            <aui:input name="${questionOrder }" type="radio" value="C" label="C. ${question.optionC }" /><br />
+                            <aui:input name="${questionOrder }" type="radio" value="D" label="D. ${question.optionD }" /><br />
                         </c:when>
                         <c:when test="${'C' eq resultMap[questionOrder] }">
-                            <aui:input name="${questionOrder }" type="radio" value="A" label="${question.optionA }" /><br />
-                            <aui:input name="${questionOrder }" type="radio" value="B" label="${question.optionB }" /><br />
-                            <aui:input name="${questionOrder }" type="radio" value="C" label="${question.optionC }" checked="true" /><br />
-                            <aui:input name="${questionOrder }" type="radio" value="D" label="${question.optionD }" /><br />
+                            <aui:input name="${questionOrder }" type="radio" value="A" label="A. ${question.optionA }" /><br />
+                            <aui:input name="${questionOrder }" type="radio" value="B" label="B. ${question.optionB }" /><br />
+                            <aui:input name="${questionOrder }" type="radio" value="C" label="C. ${question.optionC }" checked="true" /><br />
+                            <aui:input name="${questionOrder }" type="radio" value="D" label="D. ${question.optionD }" /><br />
                         </c:when>
                         <c:when test="${'D' eq resultMap[questionOrder] }">
-                            <aui:input name="${questionOrder }" type="radio" value="A" label="${question.optionA }" /><br />
-                            <aui:input name="${questionOrder }" type="radio" value="B" label="${question.optionB }" /><br />
-                            <aui:input name="${questionOrder }" type="radio" value="C" label="${question.optionC }" /><br />
-                            <aui:input name="${questionOrder }" type="radio" value="D" label="${question.optionD }" checked="true" /><br />
+                            <aui:input name="${questionOrder }" type="radio" value="A" label="A. ${question.optionA }" /><br />
+                            <aui:input name="${questionOrder }" type="radio" value="B" label="B. ${question.optionB }" /><br />
+                            <aui:input name="${questionOrder }" type="radio" value="C" label="C. ${question.optionC }" /><br />
+                            <aui:input name="${questionOrder }" type="radio" value="D" label="D. ${question.optionD }" checked="true" /><br />
                         </c:when>
                         <c:otherwise>
-                            <aui:input name="${questionOrder }" type="radio" value="A" label="${question.optionA }" /><br />
-                            <aui:input name="${questionOrder }" type="radio" value="B" label="${question.optionB }" /><br />
-                            <aui:input name="${questionOrder }" type="radio" value="C" label="${question.optionC }" /><br />
-                            <aui:input name="${questionOrder }" type="radio" value="D" label="${question.optionD }" /><br />
+                            <aui:input name="${questionOrder }" type="radio" value="A" label="A. ${question.optionA }" /><br />
+                            <aui:input name="${questionOrder }" type="radio" value="B" label="B. ${question.optionB }" /><br />
+                            <aui:input name="${questionOrder }" type="radio" value="C" label="C. ${question.optionC }" /><br />
+                            <aui:input name="${questionOrder }" type="radio" value="D" label="D. ${question.optionD }" /><br />
                         </c:otherwise>
                     </c:choose>
                     <hr />

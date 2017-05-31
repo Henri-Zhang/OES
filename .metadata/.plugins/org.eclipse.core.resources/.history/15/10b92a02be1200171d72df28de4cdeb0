@@ -1,5 +1,0 @@
-package priv.barrow.oes.portlet.landingpage;
-
-public enum OESRoles {
-    
-}

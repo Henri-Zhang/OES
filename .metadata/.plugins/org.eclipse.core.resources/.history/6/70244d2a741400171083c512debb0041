@@ -1,4 +1,0 @@
-Bundle-Name: oes-custom-core-jsps
-Bundle-SymbolicName: oes.custom.core.jsps
-Bundle-Version: 1.0.0
-Fragment-Host: com.liferay.announcements.web;bundle-version="1.0.6"

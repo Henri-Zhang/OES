@@ -1,8 +1,0 @@
-<input id="landingPage" type="hidden" value="${landingPage }"/>
-<script>
-    AUI.use('node',
-        function() {
-            
-        }
-    );
-</script>

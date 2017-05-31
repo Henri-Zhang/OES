@@ -79,6 +79,8 @@ public class ExamSituationPortlet extends MVCPortlet {
         renderRequest.setAttribute(ExamConstants.EXAM, exam);
         renderRequest.setAttribute(ExamConstants.COMPLETED_STUDENTS, completedStudents);
         renderRequest.setAttribute(ExamConstants.UNCOMPLETED_STUDENTS, uncompletedStudents);
+        renderRequest.setAttribute(ExamConstants.COMPLETED_COUNT, completedStudents.size());
+        renderRequest.setAttribute(ExamConstants.STUDENT_COUNT, completedStudents.size() + uncompletedStudents.size());
 
         super.doView(renderRequest, renderResponse);
     }

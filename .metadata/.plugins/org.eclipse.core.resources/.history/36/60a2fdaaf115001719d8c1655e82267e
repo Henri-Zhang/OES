@@ -1,7 +1,0 @@
-package priv.barrow.oes.portlet.examsituation;
-
-import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
-
-public class ExamSituationPortlet extends MVCPortlet {
-
-}

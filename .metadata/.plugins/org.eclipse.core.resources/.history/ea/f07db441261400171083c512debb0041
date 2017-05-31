@@ -1,9 +1,0 @@
-package priv.barrow.oes.portlet.util;
-
-public class RoleUtil {
-
-    public static return_type name() {
-
-    }
-
-}

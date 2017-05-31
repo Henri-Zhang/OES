@@ -20,5 +20,7 @@ public class ExamConstants {
     public static final String REVIEW_EXAM_URL_WITH_EXAM_STUDENT_ID = "/review-exam?examId=%d&studentId=%d";
     public static final String COMPLETED_STUDENTS = "completedStudents";
     public static final String UNCOMPLETED_STUDENTS = "uncompletedStudents";
+    public static final String COMPLETED_COUNT = "completedCount";
+    public static final String STUDENT_COUNT = "studentCount";
 
 }

@@ -40,7 +40,7 @@ import priv.barrow.service.QuestionRecordLinkLocalServiceUtil;
         "javax.portlet.display-name=Question Detail",
         "javax.portlet.init-param.template-path=/",
         "com.liferay.portlet.header-portlet-css=/css/questiondetail/question_detail.css",
-        "com.liferay.portlet.footer-portlet-javascript=/js/questiondetail/question_detail.js",
+        "com.liferay.portlet.footer-portlet-javascript=/js/questiondetail/question_detaill.js",
         "javax.portlet.init-param.view-template=/html/questiondetail/question_detail.jsp",
         "javax.portlet.resource-bundle=content.Language",
         "javax.portlet.security-role-ref=power-user,user"
